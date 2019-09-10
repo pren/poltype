@@ -1,0 +1,9 @@
+###############
+Change history:
+###############
+June 2015
+* HF to kcal unit conversion error (621 instead of 627) corrected
+* ameobna_v2_new_head.prm updated to remove the opbendunit, the opbend force constants now 71.94x bigger than before (changed in valence.py). This is consistent with amoebapro2013.prm and amoeba09.prm.
+July 3, 2015
+Mono Cl vdw parameters updated according to JPCB 2014, 118 (24), pp 6456–6465.
+Can NOT detect multiple Cl and assign the corresponding parameters yet

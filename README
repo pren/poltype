@@ -1,0 +1,45 @@
+Poltype README
+--------------
+
+Poltype is an automatic parameterization tool for the AMOEBA polarizable force field.
+
+
+INSTALLATION:
+
+http://biomol.bme.utexas.edu/wiki/index.php/Research_ex:Poltype#Babel.2FPython_binding_installation
+
+*Install Open Babel available at http://openbabel.org
+*Set up env 
+
+# The following Installation is no longer needed.
+#Modify the BABELINC and BABELLIB variables in the Makefile in the top-level poltype
+#directory. To install, run :
+#
+#   make all
+#
+#Then go in to the modified TINKER directory and run make
+#
+#   cd tinker-poltype-mod/source
+#   make
+#
+#Modify the Makefile in the directoy as necessary to use the Fortran compiler available
+#to your system.
+
+
+
+=====================================================================
+Poltype is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License version 3 (gpl-3.0.txt)
+as published by the Free Software Foundation.
+
+Poltype is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Poltype; if not, write to:
+Free Software Foundation, Inc.
+59 Temple Place, Suite 330
+Boston, MA 02111-1307  USA
+

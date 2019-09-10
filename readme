@@ -1,0 +1,13 @@
+poltype copied from ~gchattree/Research/ligand_param/poltype-1.1.3-dev
+
+Opt HF changed to MP2
+	tmpfh.write("%s MP2/%s freq Guess=INDO MaxDisk=%s\n" % (optstr,optbasi
+
+the spin multiplicity needs to change to "-2 1" for nuclic acid etc.
+
+source ~pren/.cshrc.poltype (set up tinker, Gaussian, babel)
+#source ~pren/.g09gh
+
+Example:
+~pren/poltype-1.1.3-dev/poltype.py -s *.sdf  -n 8  -m 6000MB -M 200GB&
+~pren/poltype-1.1.3-dev/poltype.py.tor -s *.sdf  -n 8  -m 6500MB -M 200GB --do-tor-qm-opt &
