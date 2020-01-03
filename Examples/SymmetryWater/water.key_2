@@ -1,0 +1,32 @@
+parameters /home/bdw2292/poltype/amoebabio18_header.prm
+bondterm none
+angleterm none
+torsionterm none
+vdwterm none
+fix-monopole
+potential-offset 1.0
+
+parameters /home/bdw2292/poltype/amoebabio18_header.prm
+bondterm none
+angleterm none
+torsionterm none
+vdwterm none
+fix-monopole
+potential-offset 1.0
+
+atom          401    401    O     "water               "         8    15.999    2
+atom          402    402    H     "water               "         1     1.008    1
+
+multipole    401   -402   -402             -0.37752
+                                      0.00000    0.00000    0.34999
+                                      0.50812
+                                      0.00000   -0.60562
+                                      0.00000    0.00000    0.09750
+multipole    402    401    402              0.18876
+                                     -0.03174    0.00000   -0.10855
+                                     -0.05871
+                                      0.00000   -0.07216
+                                     -0.02701    0.00000    0.13087
+
+polarize           401          0.8370     0.3900 402
+polarize           402          0.4960     0.3900 401

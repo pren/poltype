@@ -1,0 +1,11 @@
+molecule { 
+0 1
+ O    1.023500   -0.100600   -0.009700
+ H    0.744600    0.599400    0.599500
+ H    1.991400   -0.065600    0.020700
+}
+memory 700MB
+set_num_threads(1)
+psi4_io.set_default_path("/scratch/bdw2292")
+optimize('mp2/6-31G*')
+clean()

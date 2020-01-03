@@ -1,0 +1,12 @@
+ Total Electric Charge :                 -0.00000 Electrons
+
+ Dipole Moment Magnitude :                  1.693 Debye
+
+ Dipole X,Y,Z-Components :                  0.564        0.293       -1.569
+
+ Quadrupole Moment Tensor :                 0.959       -0.249        1.334
+      (Buckinghams)                        -0.249        1.310        0.693
+                                            1.334        0.693       -2.269
+
+ Principal Axes Quadrupole :               -2.878        1.439        1.439
+

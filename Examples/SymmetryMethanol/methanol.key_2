@@ -1,0 +1,46 @@
+parameters /home/bdw2292/poltype/amoebabio18_header.prm
+bondterm none
+angleterm none
+torsionterm none
+vdwterm none
+fix-monopole
+potential-offset 1.0
+
+parameters /home/bdw2292/poltype/amoebabio18_header.prm
+bondterm none
+angleterm none
+torsionterm none
+vdwterm none
+fix-monopole
+potential-offset 1.0
+
+atom          402    402    O     "methanol            "         8    15.999    2
+atom          401    401    C     "methanol            "         6    12.011    4
+atom          403    403    H     "methanol            "         1     1.008    1
+atom          404    404    H     "methanol            "         1     1.008    1
+
+multipole    401    402    404              0.20115
+                                      0.02471    0.00000    0.45720
+                                     -0.46762
+                                      0.00000   -0.37754
+                                      0.04441    0.00000    0.84516
+multipole    402    401    404             -0.44311
+                                      0.24044    0.00000    0.20571
+                                      0.19476
+                                      0.00000   -0.58499
+                                     -0.24996    0.00000    0.39023
+multipole    403    401    402              0.01250
+                                     -0.01693    0.00000   -0.14961
+                                      0.00442
+                                      0.00000    0.00047
+                                     -0.01855    0.00000   -0.00488
+multipole    404    402    401              0.20445
+                                     -0.02473    0.00000   -0.08566
+                                     -0.05300
+                                      0.00000   -0.08658
+                                     -0.02892    0.00000    0.13958
+
+polarize           402          0.8370     0.3900 401 404
+polarize           401          1.3340     0.3900 402 403
+polarize           403          0.4960     0.3900 401
+polarize           404          0.4960     0.3900 402

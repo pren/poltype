@@ -1,0 +1,677 @@
+Sun Dec 29 14:03:14 2019 Psi4 detected; it will be used as the QM engine
+Sun Dec 29 14:03:14 2019 Running on host: bme-nova.bme.utexas.edu
+Sun Dec 29 14:03:14 2019 NEED QM Density Matrix: Executing Gaussian Opt and SP
+Sun Dec 29 14:03:14 2019  Calling: babel --title "methanol Gaussian Optimization on bme-nova.bme.utexas.edu" methanol.sdf methanol-tmp.com
+1 molecule converted
+15 audit log messages 
+Sun Dec 29 14:03:14 2019  Calling: mkdir /scratch/bdw2292
+mkdir: cannot create directory `/scratch/bdw2292': File exists
+Sun Dec 29 14:03:14 2019 Calling: Psi4 Optimization
+Sun Dec 29 14:03:14 2019  Calling: psi4 methanol-opt_psi4.dat methanol-opt.log
+Optimizer: Optimization complete!
+Sun Dec 29 14:03:20 2019  Calling: babel --title "methanol Gaussian SP Calculation on bme-nova.bme.utexas.edu" -i g03 methanol-opt.log methanol-tmp.com
+0 molecules converted
+2 audit log messages 
+Sun Dec 29 14:03:20 2019 Calling: Psi4 Gradient for DMA
+Sun Dec 29 14:03:20 2019  Calling: psi4 methanol-dma_psi4.dat methanol-dma.log
+Sun Dec 29 14:03:27 2019 NEED DMA: Executing GDMA
+Sun Dec 29 14:03:27 2019  Calling: gdma < methanol.gdmain > methanol.gdmaout
+Sun Dec 29 14:03:27 2019  Calling: poledit.x 1 methanol.gdmaout /home/bdw2292/poltype/amoebabio18_header.prm < methanol-peditin.txt
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                          Version 8.7  June 2019                          ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2019               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Global Frame Cartesian Multipole Moments :
+
+ Site:       1         Name:   O         Atomic Number:       8
+
+ Coordinates:            0.693690       0.037165       0.012584
+
+ Charge:                 -0.44312
+ Dipole:                 -0.20133       -0.23123       -0.07827
+ Quadrupole:              0.39921
+                         -0.23326        0.10655
+                         -0.07895        0.23407       -0.50576
+
+ Site:       2         Name:   C         Atomic Number:       6
+
+ Coordinates:           -0.729241       0.012777       0.004320
+
+ Charge:                  0.20115
+ Dipole:                  0.45757       -0.01557       -0.00527
+ Quadrupole:              0.84633
+                         -0.01955       -0.45941
+                         -0.00661       -0.02771       -0.38692
+
+ Site:       3         Name:   H         Atomic Number:       1
+
+ Coordinates:           -1.136719      -0.738656       0.691357
+
+ Charge:                 -0.00249
+ Dipole:                 -0.07702       -0.09886        0.09214
+ Quadrupole:             -0.01051
+                         -0.01627        0.00440
+                          0.01495       -0.00241        0.00611
+
+ Site:       4         Name:   H         Atomic Number:       1
+
+ Coordinates:           -1.136708      -0.166886      -0.997879
+
+ Charge:                 -0.00249
+ Dipole:                 -0.07702       -0.02258       -0.13325
+ Quadrupole:             -0.01051
+                         -0.00384        0.00271
+                         -0.02176       -0.00019        0.00780
+
+ Site:       5         Name:   H         Atomic Number:       1
+
+ Coordinates:           -1.053311       0.998093       0.337827
+
+ Charge:                  0.04249
+ Dipole:                 -0.04971        0.12490        0.04228
+ Quadrupole:             -0.00696
+                          0.00684        0.00977
+                          0.00232        0.00481       -0.00281
+
+ Site:       6         Name:   H         Atomic Number:       1
+
+ Coordinates:            1.000320      -0.834513      -0.282457
+
+ Charge:                  0.20445
+ Dipole:                  0.05054       -0.06958       -0.02355
+ Quadrupole:             -0.05110
+                         -0.03279        0.11463
+                         -0.01110        0.06810       -0.06353
+
+ Local Frame Definition for Multipole Sites :
+
+     Atom     Name      Axis Type     Z Axis  X Axis  Y Axis
+
+       1      O         Z-then-X         2       6       0
+       2      C         Z-then-X         1       3       0
+       3      H         Z-then-X         2       1       0
+       4      H         Z-then-X         2       1       0
+       5      H         Z-then-X         2       1       0
+       6      H         Z-then-X         1       2       0
+
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Local Frame Definition for Multipole Sites :
+
+     Atom     Name      Axis Type     Z Axis  X Axis  Y Axis
+
+       1      O         Z-then-X         2       6       0
+       2      C         Z-then-X         1       6       0
+       3      H         Z-then-X         2       1       0
+       4      H         Z-then-X         2       1       0
+       5      H         Z-then-X         2       1       0
+       6      H         Z-then-X         1       2       0
+
+ Choose Either the AMOEBA or HIPPO Polarization Model [A] :  
+ Polarizability Parameters for Multipole Sites :
+
+     Atom     Name       Polarize          Thole
+
+       1      O            0.8370         0.3900
+       2      C            1.3340         0.3900
+       3      H            0.4960         0.3900
+       4      H            0.4960         0.3900
+       5      H            0.4960         0.3900
+       6      H            0.4960         0.3900
+
+ Enter Atom Number, Polarizability & Thole Values :  
+ The default is to place all atoms into one polarization group;
+ This can be altered by entering a series of bonded atom pairs
+ that separate the molecule into distinct polarization groups
+
+ Enter a Bond between Polarization Groups [<Enter>=Exit] :  
+ Polarization Groups for Multipole Sites :
+
+     Atom     Name       Polarization Group Definition
+
+       1      O               2     6
+       2      C               1     3     4     5
+       3      H               2
+       4      H               2
+       5      H               2
+       6      H               1
+
+ Electrostatic and Polarization Scale Factors :
+
+                    1-2         1-3         1-4         1-5
+
+ M-Scale:         0.0000      0.0000      0.4000      0.8000
+ P-Inter:         0.0000      0.0000      1.0000      1.0000
+ P-Intra:         0.0000      0.0000      0.5000      1.0000
+ W-Scale:         1.0000      1.0000      1.0000      1.0000
+
+                    1-1         1-2         1-3         1-4
+
+ D-Scale:         0.0000      1.0000      1.0000      1.0000
+ U-Scale:         1.0000      1.0000      1.0000      1.0000
+
+ Use Thole Damping:           True
+ Charge Penetration:          False
+ Set D Equal to P:            False
+
+ Determination of Intergroup Induced Dipoles :
+
+    Iter        RMS Change (Debye)
+
+       1           0.0000000000
+
+ Local Frame Intergroup Induced Dipole Moments (Debye) :
+
+    Atom              X           Y           Z         Total
+
+       1           0.0000      0.0000      0.0000      0.0000
+       2           0.0000      0.0000      0.0000      0.0000
+       3           0.0000      0.0000      0.0000      0.0000
+       4           0.0000      0.0000      0.0000      0.0000
+       5           0.0000      0.0000      0.0000      0.0000
+       6           0.0000      0.0000      0.0000      0.0000
+
+ Condense Symmetric Atoms to Equivalent Types [Y] :  
+ Final Atomic Multipole Moments after Regularization :
+
+ Atom:       1         Name:   O         Atomic Number:       8
+
+ Local Frame:            Z-then-X             2       6       0
+
+ Charge:                 -0.44311
+ Dipole:                  0.24044        0.00000        0.20571
+ Quadrupole:              0.19476
+                          0.00000       -0.58499
+                         -0.24996        0.00000        0.39023
+
+ Atom:       2         Name:   C         Atomic Number:       6
+
+ Local Frame:            Z-then-X             1       6       0
+
+ Charge:                  0.20115
+ Dipole:                  0.02471        0.00000        0.45720
+ Quadrupole:             -0.46762
+                          0.00000       -0.37754
+                          0.04441        0.00000        0.84516
+
+ Atom:       3         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             2       1       0
+
+ Charge:                 -0.00249
+ Dipole:                 -0.02127        0.00000       -0.15408
+ Quadrupole:              0.00724
+                          0.00000        0.00292
+                         -0.02224        0.00000       -0.01016
+
+ Atom:       4         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             2       1       0
+
+ Charge:                 -0.00249
+ Dipole:                 -0.02127        0.00000       -0.15408
+ Quadrupole:              0.00724
+                          0.00000        0.00292
+                         -0.02224        0.00000       -0.01016
+
+ Atom:       5         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             2       1       0
+
+ Charge:                  0.04249
+ Dipole:                 -0.00824        0.00000       -0.14068
+ Quadrupole:             -0.00123
+                          0.00000       -0.00444
+                         -0.01116        0.00000        0.00567
+
+ Atom:       6         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             1       2       0
+
+ Charge:                  0.20445
+ Dipole:                 -0.02473        0.00000       -0.08566
+ Quadrupole:             -0.05300
+                          0.00000       -0.08658
+                         -0.02892        0.00000        0.13958
+Sun Dec 29 14:03:28 2019  Calling: potential.x 1 methanol.xyz -k methanol.key
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                          Version 8.7  June 2019                          ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2019               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+       1      1     O     methanol                     8     15.999     2
+       2      2     C     methanol                     6     12.011     4
+       3      3     H     methanol                     1      1.008     1
+       4      4     H     methanol                     1      1.008     1
+       5      5     H     methanol                     1      1.008     1
+       6      6     H     methanol                     1      1.008     1
+
+ Electrostatic Potential Grid Points :                  5762
+
+ Gaussian CUBEGEN Input Written To :   methanol.grid
+
+ Next, run the Gaussian CUBEGEN program; for example:
+ cubegen 0 potential=MP2 xxx.fchk xxx.cube -5 h < xxx.grid
+
+ See the Gaussian documentation for additional details;
+ After CUBEGEN, rerun Tinker POTENTIAL using Option 2
+Sun Dec 29 14:03:28 2019 Calling: Psi4 Gradient for ESP
+Sun Dec 29 14:03:28 2019  Calling: psi4 methanol-esp_psi4.dat methanol-esp_psi4.log
+Sun Dec 29 14:03:41 2019 Calling: Generating CUBE File from PSI4
+Sun Dec 29 14:03:41 2019  Calling: potential.x 2 methanol.cube
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                          Version 8.7  June 2019                          ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2019               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Electrostatic Potential Written To :  methanol.pot
+Sun Dec 29 14:03:41 2019  Calling: /home/bdw2292/poltype/avgmpoles.pl methanol.key methanol.xyz methanol-groups.txt methanol.key_2 methanol.xyz_2 401
+Sun Dec 29 14:03:41 2019  Calling: potential.x 6 methanol.xyz_2 -k methanol.key_2 methanol.pot N 0.1
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                          Version 8.7  June 2019                          ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2019               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+     402    402     O     methanol                     8     15.999     2
+     401    401     C     methanol                     6     12.011     4
+     403    403     H     methanol                     1      1.008     1
+     404    404     H     methanol                     1      1.008     1
+
+ Electrostatic Potential Grid Points :                  5762
+
+ Electrostatic Parameter Restraint Value :            1.0000
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+     402    402     O     methanol                     8     15.999     2
+     401    401     C     methanol                     6     12.011     4
+     403    403     H     methanol                     1      1.008     1
+     404    404     H     methanol                     1      1.008     1
+
+ Additional Atomic Multipole Parameters :
+
+     Atom Type     Coordinate Frame Definition         Multipole Moments
+
+         401      402    404      0   Z-then-X     0.20115
+                                                   0.02471  0.00000  0.45720
+                                                  -0.46762
+                                                   0.00000 -0.37754
+                                                   0.04441  0.00000  0.84516
+
+         402      401    404      0   Z-then-X    -0.44311
+                                                   0.24044  0.00000  0.20571
+                                                   0.19476
+                                                   0.00000 -0.58499
+                                                  -0.24996  0.00000  0.39023
+
+         403      401    402      0   Z-then-X     0.01250
+                                                  -0.01693  0.00000 -0.14961
+                                                   0.00442
+                                                   0.00000  0.00047
+                                                  -0.01855  0.00000 -0.00488
+
+         404      402    401      0   Z-then-X     0.20445
+                                                  -0.02473  0.00000 -0.08566
+                                                  -0.05300
+                                                   0.00000 -0.08658
+                                                  -0.02892  0.00000  0.13958
+
+ Additional Atomic Dipole Polarizability Parameters :
+
+     Atom Type           Alpha       Thole     Group Atom Types
+
+         402             0.837       0.390         401  404
+         401             1.334       0.390         402  403
+         403             0.496       0.390         401
+         404             0.496       0.390         402
+
+ Average Electrostatic Potential over Atoms :
+      (Kcal/mole per unit charge)
+
+   Structure   Atom      Points      Potential        Target        RMS Diff
+
+        1        1        1234       -10.0707        -9.7983         0.7137
+        1        2         682         0.5335         1.0390         0.9589
+        1        3         937         4.0554         3.4737         0.7390
+        1        4         939         4.0587         3.4803         0.7397
+        1        5         930        -1.8196        -0.7021         1.2209
+        1        6        1040         5.3715         4.9887         0.4217
+
+ Electrostatic Potential over all Grid Points :
+
+ Average Potential Value for Model :                 -0.0969
+ Average Potential Magnitude for Model :              5.6207
+ Average Potential Value for Target :                -0.0563
+ Average Potential Magnitude for Target :             5.1866
+
+ Average Signed Potential Difference :               -0.0406
+ Average Unsigned Potential Difference :              0.6608
+ Root Mean Square Potential Difference :              0.8177
+
+ Potential Fitting of Electrostatic Parameters :
+
+ Parameter      Atom Type         Category            Value         Fixed
+
+    --            402             Monopole          -0.44310          X
+     1            402             X-Dipole           0.24044
+    --            402             Y-Dipole           0.00000          X
+     2            402             Z-Dipole           0.20571
+     3            402             XX-Quad            0.19476
+    --            402             XY-Quad            0.00000          X
+     4            402             XZ-Quad           -0.24996
+     5            402             YY-Quad           -0.58499
+    --            402             YZ-Quad            0.00000          X
+    --            402             ZZ-Quad            0.39023
+    --            401             Monopole           0.20115          X
+     6            401             X-Dipole           0.02471
+    --            401             Y-Dipole           0.00000          X
+     7            401             Z-Dipole           0.45720
+     8            401             XX-Quad           -0.46762
+    --            401             XY-Quad            0.00000          X
+     9            401             XZ-Quad            0.04441
+    10            401             YY-Quad           -0.37754
+    --            401             YZ-Quad            0.00000          X
+    --            401             ZZ-Quad            0.84516
+    --            403             Monopole           0.01250          X
+    11            403             X-Dipole          -0.01693
+    --            403             Y-Dipole           0.00000          X
+    12            403             Z-Dipole          -0.14961
+    13            403             XX-Quad            0.00442
+    --            403             XY-Quad            0.00000          X
+    14            403             XZ-Quad           -0.01855
+    15            403             YY-Quad            0.00047
+    --            403             YZ-Quad            0.00000          X
+    --            403             ZZ-Quad           -0.00489
+    --            404             Monopole           0.20445          X
+    16            404             X-Dipole          -0.02473
+    --            404             Y-Dipole           0.00000          X
+    17            404             Z-Dipole          -0.08566
+    18            404             XX-Quad           -0.05300
+    --            404             XY-Quad            0.00000          X
+    19            404             XZ-Quad           -0.02892
+    20            404             YY-Quad           -0.08658
+    --            404             YZ-Quad            0.00000          X
+    --            404             ZZ-Quad            0.13958
+
+ Levenberg-Marquardt Nonlinear Least Squares :
+
+ LS Iter     F Value      Total G     Active G    N Active   F Calls
+
+     0     1926.2636    1804.2219    1804.2219        20        21
+     1       96.9026     155.3280     155.3280        20        42
+     2       40.9277      10.3067      10.3067        20        63
+     3       29.5921       0.0000       0.0000        20        84
+
+ SQUARE  --  Normal Termination of Least Squares
+
+ Potential Fitting of Electrostatic Parameters :
+
+ Parameter      Atom Type         Category            Value         Fixed
+
+    --            402             Monopole          -0.44310          X
+     1            402             X-Dipole           0.20220
+    --            402             Y-Dipole           0.00000          X
+     2            402             Z-Dipole           0.26936
+     3            402             XX-Quad            0.19865
+    --            402             XY-Quad            0.00000          X
+     4            402             XZ-Quad           -0.28271
+     5            402             YY-Quad           -0.68388
+    --            402             YZ-Quad            0.00000          X
+    --            402             ZZ-Quad            0.48523
+    --            401             Monopole           0.20115          X
+     6            401             X-Dipole          -0.06855
+    --            401             Y-Dipole           0.00000          X
+     7            401             Z-Dipole           0.43481
+     8            401             XX-Quad           -0.40385
+    --            401             XY-Quad            0.00000          X
+     9            401             XZ-Quad            0.02369
+    10            401             YY-Quad           -0.41196
+    --            401             YZ-Quad            0.00000          X
+    --            401             ZZ-Quad            0.81581
+    --            403             Monopole           0.01250          X
+    11            403             X-Dipole          -0.00332
+    --            403             Y-Dipole           0.00000          X
+    12            403             Z-Dipole          -0.10515
+    13            403             XX-Quad            0.01903
+    --            403             XY-Quad            0.00000          X
+    14            403             XZ-Quad           -0.02563
+    15            403             YY-Quad            0.00721
+    --            403             YZ-Quad            0.00000          X
+    --            403             ZZ-Quad           -0.02624
+    --            404             Monopole           0.20445          X
+    16            404             X-Dipole          -0.02338
+    --            404             Y-Dipole           0.00000          X
+    17            404             Z-Dipole          -0.12046
+    18            404             XX-Quad            0.02741
+    --            404             XY-Quad            0.00000          X
+    19            404             XZ-Quad           -0.02377
+    20            404             YY-Quad           -0.08720
+    --            404             YZ-Quad            0.00000          X
+    --            404             ZZ-Quad            0.05979
+
+ Average Electrostatic Potential over Atoms :
+      (Kcal/mole per unit charge)
+
+   Structure   Atom      Points      Potential        Target        RMS Diff
+
+        1        1        1234        -9.7949        -9.7983         0.0654
+        1        2         682         0.9850         1.0390         0.1107
+        1        3         937         3.4696         3.4737         0.0413
+        1        4         939         3.4766         3.4803         0.0417
+        1        5         930        -0.7375        -0.7021         0.0687
+        1        6        1040         4.9597         4.9887         0.0565
+
+ Electrostatic Potential over all Grid Points :
+
+ Average Potential Value for Model :                 -0.0742
+ Average Potential Magnitude for Model :              5.1846
+ Average Potential Value for Target :                -0.0563
+ Average Potential Magnitude for Target :             5.1866
+
+ Average Signed Potential Difference :               -0.0179
+ Average Unsigned Potential Difference :              0.0440
+ Root Mean Square Potential Difference :              0.0653
+Sun Dec 29 14:03:42 2019  Calling: sed -e '/\(.* none$\|^#\|^fix\|^potential-offset\)/d' methanol.key_3 > methanol.key_3_tmp
+Sun Dec 29 14:03:42 2019 
+Sun Dec 29 14:03:42 2019 =========================================================
+Sun Dec 29 14:03:42 2019 Electrostatic Potential Comparision
+
+Sun Dec 29 14:03:42 2019  Calling: potential.x 5 methanol.xyz_2 -k methanol.key_3 methanol.pot N > RMSPD.txt
+****************************************************************************************************
+Sun Dec 29 14:03:42 2019 
+Sun Dec 29 14:03:42 2019 =========================================================
+Sun Dec 29 14:03:42 2019 Minimizing structure
+
+Sun Dec 29 14:03:42 2019  Calling: cp methanol.xyz_2 ttt.xyz
+Sun Dec 29 14:03:42 2019  Calling: cp methanol.key_5 ttt.key
+Sun Dec 29 14:03:42 2019  Calling: minimize.x -k ttt.key ttt.xyz 0.1
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                          Version 8.7  June 2019                          ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2019               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+     402    402     O     methanol                     8     15.999     2
+     401    401     C     methanol                     6     12.011     4
+     403    403     H     methanol                     1      1.008     1
+     404    404     H     methanol                     1      1.008     1
+
+ Additional Bond Stretching Parameters :
+
+     Atom Classes             K(S)         Length
+
+       402 404             615.900         0.9700
+       401 402             500.100         1.4232
+       401 403             385.000         1.0967
+
+ Additional Angle Bending Parameters :
+
+     Atom Classes             K(B)          Angle
+
+     403 401 403            40.570        108.504
+     402 401 403            60.990        106.267
+     401 402 404            64.960        107.391
+
+ Additional Stretch-Bend Parameters :
+
+     Atom Classes          K(SB)-1        K(SB)-2
+
+     402 401 403            -4.500         38.000
+     401 402 404            -4.500         38.000
+
+ Additional Torsional Parameters :
+
+     Atom Classes     1-Fold    2-Fold    3-Fold    4-Fold    5-Fold    6-Fold
+
+   403 401 402 404   0.00   0  0.00 180  0.00   0  0.00   0  0.00   0  0.00   0
+
+ Additional van der Waals Parameters :
+
+     Atom Class               Size        Epsilon        Reduction
+
+         402                3.4050         0.1100          0.000
+         401                3.7600         0.1010          0.000
+         403                2.8700         0.0240          0.910
+         404                2.6550         0.0135          0.910
+
+ Additional Atomic Multipole Parameters :
+
+     Atom Type     Coordinate Frame Definition         Multipole Moments
+
+         401      402    404      0   Z-then-X     0.20115
+                                                  -0.06855  0.00000  0.43481
+                                                  -0.40385
+                                                   0.00000 -0.41196
+                                                   0.02369  0.00000  0.81581
+
+         402      401    404      0   Z-then-X    -0.44310
+                                                   0.20220  0.00000  0.26936
+                                                   0.11919
+                                                   0.00000 -0.41033
+                                                  -0.16963  0.00000  0.29114
+
+         403      401    402      0   Z-then-X     0.01250
+                                                  -0.00332  0.00000 -0.10515
+                                                   0.01903
+                                                   0.00000  0.00721
+                                                  -0.02563  0.00000 -0.02624
+
+         404      402    401      0   Z-then-X     0.20445
+                                                  -0.02338  0.00000 -0.12046
+                                                   0.02741
+                                                   0.00000 -0.08720
+                                                  -0.02377  0.00000  0.05979
+
+ Additional Atomic Dipole Polarizability Parameters :
+
+     Atom Type           Alpha       Thole     Group Atom Types
+
+         402             0.837       0.390         401  404
+         401             1.334       0.390         402  403
+         403             0.496       0.390         401
+         404             0.496       0.390         402
+
+ Limited Memory BFGS Quasi-Newton Optimization :
+
+ QN Iter     F Value      G RMS      F Move   X Move   Angle  FG Call  Comment
+
+     0        1.3789    11.0431                                   1
+     1        1.1271     9.1838      0.2518   0.0079    0.00      3    Success 
+     2        0.9533     6.5792      0.1738   0.0047   38.92      4    Success 
+     3        0.7350     3.7052      0.2183   0.0111   37.67      5    Success 
+     4        0.7001     5.7291      0.0349   0.0100   39.16      6    Success 
+     5        0.6552     2.2220      0.0448   0.0021   18.60      7    Success 
+     6        0.6348     1.6583      0.0204   0.0021   22.62      8    Success 
+     7        0.6072     1.6795      0.0276   0.0052   37.48      9    Success 
+     8        0.5976     0.6816      0.0097   0.0043   62.45     10    Success 
+     9        0.5966     0.1344      0.0009   0.0007   38.65     11    Success 
+    10        0.5966     0.0422      0.0001   0.0002   49.52     12   SmallGrad
+
+ LBFGS  --  Normal Termination due to SmallGrad
+
+ Final Function Value :            0.5966
+ Final RMS Gradient :              0.0422
+ Final Gradient Norm :             0.1034
+Sun Dec 29 14:03:43 2019 
+Sun Dec 29 14:03:43 2019 =========================================================
+Sun Dec 29 14:03:43 2019 QM Dipole moment
+
+Sun Dec 29 14:03:43 2019 QM Dipole moment = 1.8856
+Sun Dec 29 14:03:43 2019 
+Sun Dec 29 14:03:43 2019 =========================================================
+Sun Dec 29 14:03:43 2019 MM Dipole moment
+
+Sun Dec 29 14:03:43 2019  Calling: analyze.x methanol.xyz_2 em | grep -A11 Charge>MMDipole.txt
+Sun Dec 29 14:03:43 2019 MM Dipole moment = 1.886
+****************************************************************************************************
+Sun Dec 29 14:03:43 2019 Poltype Job Finished
+
