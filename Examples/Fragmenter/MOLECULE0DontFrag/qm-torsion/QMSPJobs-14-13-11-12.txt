@@ -1,0 +1,14 @@
+source /home/bdw2292/.poltype.bashrc
+cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-14-13-11-12-004_psi4.dat MOLECULE0-sp-14-13-11-12-004_psi4.log
+cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-14-13-11-12-032_psi4.dat MOLECULE0-sp-14-13-11-12-032_psi4.log
+cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-14-13-11-12-060_psi4.dat MOLECULE0-sp-14-13-11-12-060_psi4.log
+cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-14-13-11-12-088_psi4.dat MOLECULE0-sp-14-13-11-12-088_psi4.log
+cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-14-13-11-12-116_psi4.dat MOLECULE0-sp-14-13-11-12-116_psi4.log
+cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-14-13-11-12-144_psi4.dat MOLECULE0-sp-14-13-11-12-144_psi4.log
+cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-14-13-11-12-340_psi4.dat MOLECULE0-sp-14-13-11-12-340_psi4.log
+cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-14-13-11-12-312_psi4.dat MOLECULE0-sp-14-13-11-12-312_psi4.log
+cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-14-13-11-12-284_psi4.dat MOLECULE0-sp-14-13-11-12-284_psi4.log
+cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-14-13-11-12-256_psi4.dat MOLECULE0-sp-14-13-11-12-256_psi4.log
+cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-14-13-11-12-228_psi4.dat MOLECULE0-sp-14-13-11-12-228_psi4.log
+cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-14-13-11-12-200_psi4.dat MOLECULE0-sp-14-13-11-12-200_psi4.log
+cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-14-13-11-12-172_psi4.dat MOLECULE0-sp-14-13-11-12-172_psi4.log

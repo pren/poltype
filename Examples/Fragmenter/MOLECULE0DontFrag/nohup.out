@@ -1,0 +1,193 @@
+Poltype -- Polarizable atom typer of small molecules for the AMOEBA polarizable force field
+
+
+
+Please cite:
+
+Wu, J.C.; Chattree, G.; Ren, P.Y.; Automation of AMOEBA polarizable force field 
+
+parameterization for small molecules. Theor Chem Acc. 
+
+
+
+Version 2.2.1 February 2020
+
+
+
+Copyright (c)  Johnny Wu, Gaurav Chattree, Brandon Walker, Matthew Harger and Pengyu Ren 2019
+
+
+
+All Rights Reserved
+
+##############################################################################################################
+
+
+
+lengths check  13 13 13
+lengths check  13 13 13
+lengths check  13 13 13
+lengths check  13 13 13
+lengths check  12 12 12
+lengths check  12 12 12
+lengths check  12 12 12
+Optimization terminated successfully.
+         Current function value: 0.828220
+         Iterations: 17
+         Function evaluations: 34
+Optimization terminated successfully.
+         Current function value: 4.172381
+         Iterations: 16
+         Function evaluations: 32
+Optimization terminated successfully.
+         Current function value: 2.522053
+         Iterations: 14
+         Function evaluations: 28
+Optimization terminated successfully.
+         Current function value: 9.684274
+         Iterations: 16
+         Function evaluations: 32
+Optimization terminated successfully.
+         Current function value: 0.622588
+         Iterations: 16
+         Function evaluations: 32
+Optimization terminated successfully.
+         Current function value: 7.297158
+         Iterations: 16
+         Function evaluations: 32
+Optimization terminated successfully.
+         Current function value: 1.248622
+         Iterations: 14
+         Function evaluations: 28
+Optimization terminated successfully.
+         Current function value: 6.879303
+         Iterations: 16
+         Function evaluations: 32
+Optimization terminated successfully.
+         Current function value: 0.998003
+         Iterations: 17
+         Function evaluations: 34
+Optimization terminated successfully.
+         Current function value: 6.184839
+         Iterations: 16
+         Function evaluations: 32
+Optimization terminated successfully.
+         Current function value: 2.375602
+         Iterations: 19
+         Function evaluations: 38
+Optimization terminated successfully.
+         Current function value: 8.366316
+         Iterations: 16
+         Function evaluations: 32
+Optimization terminated successfully.
+         Current function value: 6.481689
+         Iterations: 19
+         Function evaluations: 38
+Optimization terminated successfully.
+         Current function value: 17.915619
+         Iterations: 16
+         Function evaluations: 32
+{1: -14.352119261207186, 2: 1.3692600789848257, 3: -25.5663224960419}
+{1: 19.477872947451516, 2: -6.429776969538746, 3: 25.56744142079567}
+{1: 12.8125321719349, 2: 23.182908222996183, 3: 29.719044629677512}
+{1: 12.8125321719349, 2: 23.182908222996183, 3: 29.719044629677512}
+{1: -14.352119261207186, 2: 1.3692600789848257, 3: -25.5663224960419}
+{1: 25.56744416083235, 2: 25.567443525078392, 3: 21.024894362872608}
+{1: -14.25385327127581, 2: -25.508184327821848, 3: -32.29524948439736}
+{1: 24.684684198465895, 2: 15.614892954721592, 3: 32.85049906783174}
+{1: 0.0, 2: 0.0, 3: 0.0}
+{1: -51.49936169393571, 2: 53.734487437702136, 3: -29.597144811125876}
+{1: 54.77437611602109, 2: -5.192567851310646, 3: -15.138473113812298}
+{1: -45.42892203745443, 2: -47.31266063132615, 3: -11.78386256519178}
+{1: -47.31266062520292, 2: 47.312660631356835, 3: -47.31266063132609}
+{1: -14.25385327127581, 2: -25.508184327821848, 3: -32.29524948439736}
+{2: -23.114862891016337}
+{1: -52.70749765054043, 2: -37.7154554035652, 3: -15.845579227089598}
+{2: 19.79279475209714}
+{1: 69.92308146389442, 2: -40.466084455560406, 3: 53.402762807006894}
+{1: -69.92308145641223, 2: -62.16225015034148, 3: -53.25618354101486}
+{1: 83.744553612359, 2: -90.24150882577317, 3: -90.24150881405228}
+{1: 90.24150880747845, 2: -72.66193102238364, 3: 52.893515928936836}
+{1: 31.518431746880648, 2: -31.60795906872988, 3: -1.4407554838864813}
+Optimization terminated successfully.
+         Current function value: 3.521435
+         Iterations: 20
+         Function evaluations: 40
+Optimization terminated successfully.
+         Current function value: 7.059317
+         Iterations: 22
+         Function evaluations: 44
+Optimization terminated successfully.
+         Current function value: 4.350258
+         Iterations: 17
+         Function evaluations: 34
+Optimization terminated successfully.
+         Current function value: 11.804070
+         Iterations: 20
+         Function evaluations: 40
+Optimization terminated successfully.
+         Current function value: 1.021855
+         Iterations: 16
+         Function evaluations: 32
+Optimization terminated successfully.
+         Current function value: 8.349918
+         Iterations: 18
+         Function evaluations: 36
+Optimization terminated successfully.
+         Current function value: 7.488197
+         Iterations: 23
+         Function evaluations: 46
+Optimization terminated successfully.
+         Current function value: 11.753367
+         Iterations: 26
+         Function evaluations: 52
+Optimization terminated successfully.
+         Current function value: 2.717973
+         Iterations: 19
+         Function evaluations: 38
+Optimization terminated successfully.
+         Current function value: 10.453951
+         Iterations: 21
+         Function evaluations: 42
+Optimization terminated successfully.
+         Current function value: 5.337426
+         Iterations: 21
+         Function evaluations: 42
+Optimization terminated successfully.
+         Current function value: 19.747945
+         Iterations: 27
+         Function evaluations: 54
+Optimization terminated successfully.
+         Current function value: 18.366149
+         Iterations: 23
+         Function evaluations: 46
+Optimization terminated successfully.
+         Current function value: 27.341968
+         Iterations: 27
+         Function evaluations: 54
+Poltype -- Polarizable atom typer of small molecules for the AMOEBA polarizable force field
+
+
+
+Please cite:
+
+Wu, J.C.; Chattree, G.; Ren, P.Y.; Automation of AMOEBA polarizable force field 
+
+parameterization for small molecules. Theor Chem Acc. 
+
+
+
+Version 2.2.1 February 2020
+
+
+
+Copyright (c)  Johnny Wu, Gaurav Chattree, Brandon Walker, Matthew Harger and Pengyu Ren 2019
+
+
+
+All Rights Reserved
+
+##############################################################################################################
+
+
+

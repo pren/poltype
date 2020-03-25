@@ -1,0 +1,17 @@
+nohup: appending output to ‘nohup.out’
+Traceback (most recent call last):
+  File "/home/liuchw/Softwares/poltype/poltype.py", line 753, in <module>
+    params=poltype.main()
+  File "/home/liuchw/Softwares/poltype/poltype.py", line 599, in main
+    params= self.GenerateParameters(self.mol)
+  File "/home/liuchw/Softwares/poltype/poltype.py", line 733, in GenerateParameters
+    torgen.gen_torsion(self,optmol,self.torsionrestraint)
+  File "/home/liuchw/Softwares/poltype/PoltypeModules/torsiongenerator.py", line 291, in gen_torsion
+    listoftinkertorstructuresclock=tinker_minimize_angles(poltype,poltype.molecprefix,a,b,c,d,optmol,consttorlist,clock,prevstrctfname,torsionrestraint,torang,bondtopology)
+  File "/home/liuchw/Softwares/poltype/PoltypeModules/torsiongenerator.py", line 185, in tinker_minimize_angles
+    prevstrctfname,torxyzfname,newtorxyzfname,keyfname=tinker_minimize(poltype,molecprefix,a,b,c,d,optmol,consttorlist,phaseangle,torsionrestraint,prevstruct,torang,'_preQMOPTprefit',poltype.key4fname,'../')
+  File "/home/liuchw/Softwares/poltype/PoltypeModules/torsiongenerator.py", line 241, in tinker_minimize
+    cartxyz=ConvertTinktoXYZ(poltype,torxyzfname+'_2')
+  File "/home/liuchw/Softwares/poltype/PoltypeModules/torsiongenerator.py", line 502, in ConvertTinktoXYZ
+    temp=open(os.getcwd()+r'/'+filename,'r')
+FileNotFoundError: [Errno 2] No such file or directory: '/home/liuchw/forCheXing/poltype/MOLECULE0/qm-torsion/MOLECULE0-opt-2-3-7-8-335_preQMOPTprefit.xyz_2'
