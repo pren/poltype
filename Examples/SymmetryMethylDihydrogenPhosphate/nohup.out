@@ -1,0 +1,104 @@
+Poltype -- Polarizable atom typer of small molecules for the AMOEBA polarizable force field
+
+
+
+Please cite:
+
+Wu, J.C.; Chattree, G.; Ren, P.Y.; Automation of AMOEBA polarizable force field 
+
+parameterization for small molecules. Theor Chem Acc. 
+
+
+
+Version 2.2.5 February 2020
+
+
+
+Copyright (c)  Johnny Wu, Gaurav Chattree, Brandon Walker, Matthew Harger and Pengyu Ren 2019
+
+
+
+All Rights Reserved
+
+##############################################################################################################
+
+
+
+idxtosymclass  {1: 401, 2: 402, 6: 403, 8: 406, 9: 406, 7: 406, 3: 409, 4: 409, 10: 410, 11: 410, 5: 411}
+atomidx  1
+highestsymneighbnorepeatidx 5
+val  4 highestsymneighbnorepeatval 1
+uniqueneighbtypesofhighestsymneighbnorepeat [401]
+uniqueneighbtypes [409, 402, 411]
+z-then-x
+atomidx  2
+highestsymneighbnorepeatidx 6
+val  2 highestsymneighbnorepeatval 4
+uniqueneighbtypesofhighestsymneighbnorepeat [402, 406]
+uniqueneighbtypes [401, 403]
+z-then-x
+atomidx  3
+highestsymneighbnorepeatidx 10
+val  2 highestsymneighbnorepeatval 1
+uniqueneighbtypesofhighestsymneighbnorepeat [409]
+uniqueneighbtypes [401, 410]
+z-then-x
+atomidx  4
+highestsymneighbnorepeatidx 11
+val  2 highestsymneighbnorepeatval 1
+uniqueneighbtypesofhighestsymneighbnorepeat [409]
+uniqueneighbtypes [401, 410]
+z-then-x
+atomidx  5
+highestsymneighbnorepeatidx 1
+val  1 highestsymneighbnorepeatval 4
+uniqueneighbtypesofhighestsymneighbnorepeat [409, 402, 411]
+uniqueneighbtypes [401]
+z-then-x
+atomidx  6
+highestsymneighbnorepeatidx 2
+val  4 highestsymneighbnorepeatval 2
+uniqueneighbtypesofhighestsymneighbnorepeat [401, 403]
+uniqueneighbtypes [402, 406]
+z-then-x
+atomidx  7
+highestsymneighbnorepeatidx 6
+val  1 highestsymneighbnorepeatval 4
+uniqueneighbtypesofhighestsymneighbnorepeat [402, 406]
+uniqueneighbtypes [403]
+z-then-x
+atomidx  8
+highestsymneighbnorepeatidx 6
+val  1 highestsymneighbnorepeatval 4
+uniqueneighbtypesofhighestsymneighbnorepeat [402, 406]
+uniqueneighbtypes [403]
+z-then-x
+atomidx  9
+highestsymneighbnorepeatidx 6
+val  1 highestsymneighbnorepeatval 4
+uniqueneighbtypesofhighestsymneighbnorepeat [402, 406]
+uniqueneighbtypes [403]
+z-then-x
+atomidx  10
+highestsymneighbnorepeatidx 3
+val  1 highestsymneighbnorepeatval 2
+uniqueneighbtypesofhighestsymneighbnorepeat [401, 410]
+uniqueneighbtypes [409]
+z-then-x
+atomidx  11
+highestsymneighbnorepeatidx 4
+val  1 highestsymneighbnorepeatval 2
+uniqueneighbtypesofhighestsymneighbnorepeat [401, 410]
+uniqueneighbtypes [409]
+z-then-x
+no bisector and no trisector 1
+no bisector and no trisector 2
+no bisector and no trisector 3
+no bisector and no trisector 4
+no bisector and no trisector 5
+no bisector and no trisector 6
+no bisector and no trisector 7
+no bisector and no trisector 8
+no bisector and no trisector 9
+no bisector and no trisector 10
+no bisector and no trisector 11

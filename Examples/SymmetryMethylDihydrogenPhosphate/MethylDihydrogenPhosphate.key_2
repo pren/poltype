@@ -1,0 +1,60 @@
+parameters /home/bdw2292/poltypepackage/amoebabio18_header.prm
+bondterm none
+angleterm none
+torsionterm none
+vdwterm none
+fix-monopole
+potential-offset 1.0
+
+TARGET-DIPOLE -1.89 -2.42 0.851
+atom          401    401    P     "MethylDihydrogenPhos"        15    30.974    4
+atom          402    402    O     "MethylDihydrogenPhos"         8    15.999    2
+atom          409    409    O     "MethylDihydrogenPhos"         8    15.999    2
+atom          411    411    O     "MethylDihydrogenPhos"         8    15.999    1
+atom          403    403    C     "MethylDihydrogenPhos"         6    12.011    4
+atom          406    406    H     "MethylDihydrogenPhos"         1     1.008    1
+atom         410   410    H     "MethylDihydrogenPhos"         1     1.008    1
+
+multipole    401    411    402              1.83106
+                                      0.06203    0.00000   -0.26959
+                                     -0.08942
+                                      0.00000   -0.10930
+                                      0.01893    0.00000    0.19872
+multipole    402    403    401             -0.57708
+                                      0.07565    0.00000    0.35035
+                                     -0.09371
+                                      0.00000   -0.45581
+                                     -0.13234    0.00000    0.54952
+multipole    403    402    401              0.13681
+                                     -0.02594    0.00000    0.40972
+                                     -0.48217
+                                      0.00000   -0.40437
+                                     -0.02959    0.00000    0.88654
+multipole    406    403    402              0.04288
+                                     -0.01570    0.00000   -0.15969
+                                      0.00687
+                                      0.00000    0.00149
+                                     -0.02047    0.00000   -0.00836
+multipole    409    410    401             -0.58803
+                                      0.05445    0.00000    0.26556
+                                      0.03110
+                                      0.00000   -0.45589
+                                     -0.16287    0.00000    0.42479
+multipole    410    409    401              0.24929
+                                     -0.01783    0.00000   -0.12790
+                                     -0.04888
+                                      0.00000   -0.05439
+                                     -0.00183    0.00000    0.10326
+multipole    411    401    402             -0.84193
+                                      0.03677    0.00000    0.00597
+                                     -0.20560
+                                      0.00000   -0.19843
+                                      0.01509    0.00000    0.40403
+
+polarize           401          1.8280     0.3900 402 409 411
+polarize           402          0.8370     0.3900 401 403
+polarize           409          0.8370     0.3900 401 410
+polarize           411          0.8370     0.3900 401
+polarize           403          1.3340     0.3900 402 406
+polarize           406          0.4960     0.3900 403
+polarize          410          0.4960     0.3900 409
