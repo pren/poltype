@@ -9,7 +9,7 @@ import re
 import shutil
 import time
 import numpy as np
-import openbabel
+from openbabel import openbabel
 
 def gen_esp_grid(poltype,mol):
     """

@@ -8,7 +8,7 @@ import os
 import sys
 import numpy
 import time
-import openbabel
+from openbabel import openbabel
 from rdkit import Chem
 from rdkit.Chem import rdmolfiles,rdMolDescriptors
 import shutil

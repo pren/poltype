@@ -1,6 +1,6 @@
 import os
 import sys
-import openbabel
+from openbabel import openbabel
 import time
 from rdkit import Chem
 from MDAnalysis import Universe, Merge

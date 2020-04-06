@@ -1,6 +1,6 @@
 import sys
 import os
-import openbabel
+from openbabel import openbabel
 import rdkit
 from rdkit import Chem
 from rdkit.Chem import rdmolfiles

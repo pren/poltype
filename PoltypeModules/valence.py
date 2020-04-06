@@ -25,7 +25,7 @@
 # Boston, MA 02111-1307  USA
 #
 ##################################################################
-import openbabel
+from openbabel import openbabel
 import math
 import sys
 import os
