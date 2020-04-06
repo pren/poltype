@@ -1,22 +1,8 @@
-Sun Dec 29 13:59:35 2019 Psi4 detected; it will be used as the QM engine
-Sun Dec 29 13:59:35 2019 Running on host: bme-nova.bme.utexas.edu
-Sun Dec 29 13:59:35 2019 NEED QM Density Matrix: Executing Gaussian Opt and SP
-Sun Dec 29 13:59:35 2019  Calling: babel --title "ethene Gaussian Optimization on bme-nova.bme.utexas.edu" ethene.sdf ethene-tmp.com
-1 molecule converted
-16 audit log messages 
-Sun Dec 29 13:59:35 2019  Calling: mkdir /scratch/bdw2292
-mkdir: cannot create directory `/scratch/bdw2292': File exists
-Sun Dec 29 13:59:35 2019 Calling: Psi4 Optimization
-Sun Dec 29 13:59:35 2019  Calling: psi4 ethene-opt_psi4.dat ethene-opt.log
-Optimizer: Optimization complete!
-Sun Dec 29 13:59:39 2019  Calling: babel --title "ethene Gaussian SP Calculation on bme-nova.bme.utexas.edu" -i g03 ethene-opt.log ethene-tmp.com
-0 molecules converted
-2 audit log messages 
-Sun Dec 29 13:59:39 2019 Calling: Psi4 Gradient for DMA
-Sun Dec 29 13:59:39 2019  Calling: psi4 ethene-dma_psi4.dat ethene-dma.log
-Sun Dec 29 13:59:47 2019 NEED DMA: Executing GDMA
-Sun Dec 29 13:59:47 2019  Calling: gdma < ethene.gdmain > ethene.gdmaout
-Sun Dec 29 13:59:47 2019  Calling: poledit.x 1 ethene.gdmaout /home/bdw2292/poltype/amoebabio18_header.prm < ethene-peditin.txt
+Mon Apr  6 14:07:48 2020 Running on host: bme-nova.bme.utexas.edu
+Mon Apr  6 14:07:48 2020 NEED QM Density Matrix: Executing Gaussian Opt and SP
+Mon Apr  6 14:07:48 2020 Calling: Psi4 Optimization
+Mon Apr  6 14:07:48 2020 Calling: Psi4 Gradient for DMA
+Mon Apr  6 14:07:48 2020  Calling: poledit.x 1 ethene.gdmaout /home/bdw2292/poltypepackage/amoebabio18_header.prm < ethene-peditin.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryEthene
 
      ######################################################################
    ##########################################################################
@@ -118,10 +104,10 @@ Sun Dec 29 13:59:47 2019  Calling: poledit.x 1 ethene.gdmaout /home/bdw2292/polt
 
        1      C         Z-Only           2       0       0
        2      C         Z-Only           1       0       0
-       3      H         Z-Only           1       0       0
-       4      H         Z-Only           1       0       0
-       5      H         Z-Only           2       0       0
-       6      H         Z-Only           2       0       0
+       3      H         Z-then-X         1       4       0
+       4      H         Z-then-X         1       3       0
+       5      H         Z-then-X         2       6       0
+       6      H         Z-then-X         2       5       0
 
  Choose Either the AMOEBA or HIPPO Polarization Model [A] :  
  Polarizability Parameters for Multipole Sites :
@@ -212,44 +198,50 @@ Sun Dec 29 13:59:47 2019  Calling: poledit.x 1 ethene.gdmaout /home/bdw2292/polt
 
  Atom:       3         Name:   H         Atomic Number:       1
 
- Local Frame:            Z-Only               1       0       0
+ Local Frame:            Z-then-X             1       4       0
 
  Charge:                  0.03015
- Dipole:                  0.00000        0.00000       -0.17317
- Quadrupole:              0.00548
-                          0.00000        0.00548
-                          0.00000        0.00000       -0.01096
+ Dipole:                  0.01192        0.00000       -0.17317
+ Quadrupole:              0.01289
+                          0.00000       -0.00193
+                          0.01272        0.00000       -0.01096
 
  Atom:       4         Name:   H         Atomic Number:       1
 
- Local Frame:            Z-Only               1       0       0
+ Local Frame:            Z-then-X             1       3       0
 
  Charge:                  0.03015
- Dipole:                  0.00000        0.00000       -0.17317
- Quadrupole:              0.00548
-                          0.00000        0.00548
-                          0.00000        0.00000       -0.01096
+ Dipole:                  0.01192        0.00000       -0.17317
+ Quadrupole:              0.01289
+                          0.00000       -0.00193
+                          0.01272        0.00000       -0.01096
 
  Atom:       5         Name:   H         Atomic Number:       1
 
- Local Frame:            Z-Only               2       0       0
+ Local Frame:            Z-then-X             2       6       0
 
  Charge:                  0.03015
- Dipole:                  0.00000        0.00000       -0.17317
- Quadrupole:              0.00548
-                          0.00000        0.00548
-                          0.00000        0.00000       -0.01096
+ Dipole:                  0.01192        0.00000       -0.17317
+ Quadrupole:              0.01289
+                          0.00000       -0.00193
+                          0.01272        0.00000       -0.01096
 
  Atom:       6         Name:   H         Atomic Number:       1
 
- Local Frame:            Z-Only               2       0       0
+ Local Frame:            Z-then-X             2       5       0
 
  Charge:                  0.03015
- Dipole:                  0.00000        0.00000       -0.17317
- Quadrupole:              0.00548
-                          0.00000        0.00548
-                          0.00000        0.00000       -0.01096
-Sun Dec 29 13:59:47 2019  Calling: potential.x 1 ethene.xyz -k ethene.key
+ Dipole:                  0.01192        0.00000       -0.17317
+ Quadrupole:              0.01289
+                          0.00000       -0.00193
+                          0.01272        0.00000       -0.01096
+Mon Apr  6 14:07:50 2020 Calling: Generating CUBE File from PSI4
+Mon Apr  6 14:07:50 2020  Calling: /home/bdw2292/poltypepackage/avgmpoles.pl ethene.key ethene.xyz ethene-groups.txt ethene.key_2 ethene.xyz_2 401 path = /home/bdw2292/poltypepackage/Examples/SymmetryEthene
+Mon Apr  6 14:07:50 2020 
+Mon Apr  6 14:07:50 2020 =========================================================
+Mon Apr  6 14:07:50 2020 QM Dipole moment
+
+Mon Apr  6 14:07:50 2020  Calling: potential.x 6 ethene.xyz_2 -k ethene.key_2 ethene.pot N 0.1 path = /home/bdw2292/poltypepackage/Examples/SymmetryEthene
 
      ######################################################################
    ##########################################################################
@@ -269,65 +261,8 @@ Sun Dec 29 13:59:47 2019  Calling: potential.x 1 ethene.xyz -k ethene.key
 
      Type  Class  Symbol  Description               Atomic    Mass   Valence
 
-       1      1     C     ethene                       6     12.011     3
-       2      2     C     ethene                       6     12.011     3
-       3      3     H     ethene                       1      1.008     1
-       4      4     H     ethene                       1      1.008     1
-       5      5     H     ethene                       1      1.008     1
-       6      6     H     ethene                       1      1.008     1
-
- Electrostatic Potential Grid Points :                  6013
-
- Gaussian CUBEGEN Input Written To :   ethene.grid
-
- Next, run the Gaussian CUBEGEN program; for example:
- cubegen 0 potential=MP2 xxx.fchk xxx.cube -5 h < xxx.grid
-
- See the Gaussian documentation for additional details;
- After CUBEGEN, rerun Tinker POTENTIAL using Option 2
-Sun Dec 29 13:59:47 2019 Calling: Psi4 Gradient for ESP
-Sun Dec 29 13:59:47 2019  Calling: psi4 ethene-esp_psi4.dat ethene-esp_psi4.log
-Sun Dec 29 14:00:01 2019 Calling: Generating CUBE File from PSI4
-Sun Dec 29 14:00:01 2019  Calling: potential.x 2 ethene.cube
-
-     ######################################################################
-   ##########################################################################
-  ###                                                                      ###
- ###            Tinker  ---  Software Tools for Molecular Design            ###
- ##                                                                          ##
- ##                          Version 8.7  June 2019                          ##
- ##                                                                          ##
- ##               Copyright (c)  Jay William Ponder  1990-2019               ##
- ###                           All Rights Reserved                          ###
-  ###                                                                      ###
-   ##########################################################################
-     ######################################################################
-
-
- Electrostatic Potential Written To :  ethene.pot
-Sun Dec 29 14:00:01 2019  Calling: /home/bdw2292/poltype/avgmpoles.pl ethene.key ethene.xyz ethene-groups.txt ethene.key_2 ethene.xyz_2 401
-Sun Dec 29 14:00:01 2019  Calling: potential.x 6 ethene.xyz_2 -k ethene.key_2 ethene.pot N 0.1
-
-     ######################################################################
-   ##########################################################################
-  ###                                                                      ###
- ###            Tinker  ---  Software Tools for Molecular Design            ###
- ##                                                                          ##
- ##                          Version 8.7  June 2019                          ##
- ##                                                                          ##
- ##               Copyright (c)  Jay William Ponder  1990-2019               ##
- ###                           All Rights Reserved                          ###
-  ###                                                                      ###
-   ##########################################################################
-     ######################################################################
-
-
- Additional Atom Definition Parameters :
-
-     Type  Class  Symbol  Description               Atomic    Mass   Valence
-
-     401    401     C     ethene                       6     12.011     3
-     402    402     H     ethene                       1      1.008     1
+     402    402     C     ethene                       6     12.011     3
+     406    406     H     ethene                       1      1.008     1
 
  Electrostatic Potential Grid Points :                  6013
 
@@ -337,87 +272,88 @@ Sun Dec 29 14:00:01 2019  Calling: potential.x 6 ethene.xyz_2 -k ethene.key_2 et
 
      Type  Class  Symbol  Description               Atomic    Mass   Valence
 
-     401    401     C     ethene                       6     12.011     3
-     402    402     H     ethene                       1      1.008     1
+     402    402     C     ethene                       6     12.011     3
+     406    406     H     ethene                       1      1.008     1
 
  Additional Atomic Multipole Parameters :
 
      Atom Type     Coordinate Frame Definition         Multipole Moments
 
-         401      401      0      0   Z-Only      -0.06030
+         402      402      0      0   Z-Only      -0.06030
                                                    0.00000  0.00000 -0.07630
                                                    0.03022
                                                    0.00000  0.03022
                                                    0.00000  0.00000 -0.06044
 
-         402      401      0      0   Z-Only       0.03015
-                                                   0.00000  0.00000 -0.17317
-                                                   0.00548
-                                                   0.00000  0.00548
-                                                   0.00000  0.00000 -0.01096
+         406      402    406      0   Z-then-X     0.03015
+                                                   0.01192  0.00000 -0.17317
+                                                   0.01289
+                                                   0.00000 -0.00193
+                                                   0.01272  0.00000 -0.01096
 
  Additional Atomic Dipole Polarizability Parameters :
 
      Atom Type           Alpha       Thole     Group Atom Types
 
-         401             1.750       0.390         401  402
-         402             0.696       0.390         401
+         402             1.750       0.390         402  406
+         406             0.696       0.390         402
 
  Average Electrostatic Potential over Atoms :
       (Kcal/mole per unit charge)
 
    Structure   Atom      Points      Potential        Target        RMS Diff
 
-        1        1        1152        -2.2408        -2.4576         0.7773
-        1        2        1157        -2.2182        -2.4230         0.7763
-        1        3         927         1.1001         1.2957         0.3921
-        1        4         926         1.1048         1.3010         0.3923
-        1        5         926         1.0845         1.2714         0.3803
-        1        6         925         1.0953         1.2872         0.3861
+        1        1        1152        -2.2592        -2.4576         0.6388
+        1        2        1157        -2.2364        -2.4230         0.6409
+        1        3         927         1.0954         1.2957         0.4205
+        1        4         926         1.1010         1.3010         0.4181
+        1        5         926         1.0788         1.2714         0.4079
+        1        6         925         1.0896         1.2872         0.4171
 
  Electrostatic Potential over all Grid Points :
 
- Average Potential Value for Model :                 -0.1809
- Average Potential Magnitude for Model :              1.6936
+ Average Potential Value for Model :                 -0.1910
+ Average Potential Magnitude for Model :              1.7525
  Average Potential Value for Target :                -0.1432
  Average Potential Magnitude for Target :             1.9899
 
- Average Signed Potential Difference :               -0.0377
- Average Unsigned Potential Difference :              0.3874
- Root Mean Square Potential Difference :              0.5695
+ Average Signed Potential Difference :               -0.0478
+ Average Unsigned Potential Difference :              0.3346
+ Root Mean Square Potential Difference :              0.5136
 
  Potential Fitting of Electrostatic Parameters :
 
  Parameter      Atom Type         Category            Value         Fixed
 
-    --            401             Monopole          -0.06030          X
-    --            401             X-Dipole           0.00000          X
-    --            401             Y-Dipole           0.00000          X
-     1            401             Z-Dipole          -0.07630
-    --            401             XX-Quad            0.03022
-    --            401             XY-Quad            0.00000          X
-    --            401             XZ-Quad            0.00000          X
-    --            401             YY-Quad            0.03022
-    --            401             YZ-Quad            0.00000          X
-     2            401             ZZ-Quad           -0.06044
-    --            402             Monopole           0.03015          X
+    --            402             Monopole          -0.06030          X
     --            402             X-Dipole           0.00000          X
     --            402             Y-Dipole           0.00000          X
-     3            402             Z-Dipole          -0.17317
-    --            402             XX-Quad            0.00548
+     1            402             Z-Dipole          -0.07630
+    --            402             XX-Quad            0.03022
     --            402             XY-Quad            0.00000          X
     --            402             XZ-Quad            0.00000          X
-    --            402             YY-Quad            0.00548
+    --            402             YY-Quad            0.03022
     --            402             YZ-Quad            0.00000          X
-     4            402             ZZ-Quad           -0.01096
+     2            402             ZZ-Quad           -0.06044
+    --            406             Monopole           0.03015          X
+     3            406             X-Dipole           0.01192
+    --            406             Y-Dipole           0.00000          X
+     4            406             Z-Dipole          -0.17317
+     5            406             XX-Quad            0.01289
+    --            406             XY-Quad            0.00000          X
+     6            406             XZ-Quad            0.01272
+     7            406             YY-Quad           -0.00193
+    --            406             YZ-Quad            0.00000          X
+    --            406             ZZ-Quad           -0.01096
 
  Levenberg-Marquardt Nonlinear Least Squares :
 
  LS Iter     F Value      Total G     Active G    N Active   F Calls
 
-     0      975.0607    1651.0991    1651.0991         4         5
-     1      595.4437     739.2834     739.2834         4        10
-     2      471.2730       0.0000       0.0000         4        15
+     0      793.0654    1074.1198    1074.1198         7         8
+     1      259.8767     301.1897     301.1897         7        17
+     2      180.3960     107.2248     107.2248         7        25
+     3      148.9646       0.0000       0.0000         7        33
 
  SQUARE  --  Normal Termination of Least Squares
 
@@ -425,158 +361,78 @@ Sun Dec 29 14:00:01 2019  Calling: potential.x 6 ethene.xyz_2 -k ethene.key_2 et
 
  Parameter      Atom Type         Category            Value         Fixed
 
-    --            401             Monopole          -0.06030          X
-    --            401             X-Dipole           0.00000          X
-    --            401             Y-Dipole           0.00000          X
-     1            401             Z-Dipole          -0.09804
-    --            401             XX-Quad            0.02323
-    --            401             XY-Quad            0.00000          X
-    --            401             XZ-Quad            0.00000          X
-    --            401             YY-Quad            0.02323
-    --            401             YZ-Quad            0.00000          X
-     2            401             ZZ-Quad           -0.04646
-    --            402             Monopole           0.03015          X
+    --            402             Monopole          -0.06030          X
     --            402             X-Dipole           0.00000          X
     --            402             Y-Dipole           0.00000          X
-     3            402             Z-Dipole          -0.21640
-    --            402             XX-Quad            0.04655
+     1            402             Z-Dipole          -0.13068
+    --            402             XX-Quad            0.02066
     --            402             XY-Quad            0.00000          X
     --            402             XZ-Quad            0.00000          X
-    --            402             YY-Quad            0.04655
+    --            402             YY-Quad            0.02066
     --            402             YZ-Quad            0.00000          X
-     4            402             ZZ-Quad           -0.09310
+     2            402             ZZ-Quad           -0.04132
+    --            406             Monopole           0.03015          X
+     3            406             X-Dipole          -0.00382
+    --            406             Y-Dipole           0.00000          X
+     4            406             Z-Dipole          -0.20835
+     5            406             XX-Quad            0.12877
+    --            406             XY-Quad            0.00000          X
+     6            406             XZ-Quad            0.06302
+     7            406             YY-Quad            0.03036
+    --            406             YZ-Quad            0.00000          X
+    --            406             ZZ-Quad           -0.15913
 
  Average Electrostatic Potential over Atoms :
       (Kcal/mole per unit charge)
 
    Structure   Atom      Points      Potential        Target        RMS Diff
 
-        1        1        1152        -2.5325        -2.4576         0.3797
-        1        2        1157        -2.5052        -2.4230         0.3870
-        1        3         927         1.2427         1.2957         0.3295
-        1        4         926         1.2486         1.3010         0.3270
-        1        5         926         1.2238         1.2714         0.3198
-        1        6         925         1.2363         1.2872         0.3272
+        1        1        1152        -2.5072        -2.4576         0.2099
+        1        2        1157        -2.4748        -2.4230         0.2125
+        1        3         927         1.2604         1.2957         0.0971
+        1        4         926         1.2662         1.3010         0.0947
+        1        5         926         1.2370         1.2714         0.0939
+        1        6         925         1.2518         1.2872         0.0976
 
  Electrostatic Potential over all Grid Points :
 
- Average Potential Value for Model :                 -0.2047
- Average Potential Magnitude for Model :              1.9499
+ Average Potential Value for Model :                 -0.1842
+ Average Potential Magnitude for Model :              1.9834
  Average Potential Value for Target :                -0.1432
  Average Potential Magnitude for Target :             1.9899
 
- Average Signed Potential Difference :               -0.0616
- Average Unsigned Potential Difference :              0.2361
- Root Mean Square Potential Difference :              0.3491
-Sun Dec 29 14:00:02 2019  Calling: sed -e '/\(.* none$\|^#\|^fix\|^potential-offset\)/d' ethene.key_3 > ethene.key_3_tmp
-Sun Dec 29 14:00:02 2019 
-Sun Dec 29 14:00:02 2019 =========================================================
-Sun Dec 29 14:00:02 2019 Electrostatic Potential Comparision
+ Average Signed Potential Difference :               -0.0410
+ Average Unsigned Potential Difference :              0.0888
+ Root Mean Square Potential Difference :              0.1509
+Mon Apr  6 14:07:51 2020  Calling: sed -e '/\(.* none$\|^#\|^fix\|^potential-offset\)/d' ethene.key_3 > ethene.key_3_tmp path = /home/bdw2292/poltypepackage/Examples/SymmetryEthene
+Mon Apr  6 14:07:51 2020 
+Mon Apr  6 14:07:51 2020 =========================================================
+Mon Apr  6 14:07:51 2020 Electrostatic Potential Comparison
 
-Sun Dec 29 14:00:02 2019  Calling: potential.x 5 ethene.xyz_2 -k ethene.key_3 ethene.pot N > RMSPD.txt
+Mon Apr  6 14:07:51 2020  Calling: potential.x 5 ethene.xyz_2 -k ethene.key_3 ethene.pot N > RMSPD.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryEthene
+Mon Apr  6 14:07:53 2020 missing torsions []
 ****************************************************************************************************
-Sun Dec 29 14:00:02 2019 
-Sun Dec 29 14:00:02 2019 =========================================================
-Sun Dec 29 14:00:02 2019 Minimizing structure
+[]
+Torsion parameters for torsion   406   402   402   406     0.0000 0.0 1    10.0000 180.0 2     0.0000 0.0 3 assigned from SMILES [*]~[C]=[C]~[*] 6,2,1,4
+Mon Apr  6 14:07:53 2020 postfit min Alz about to run
+Mon Apr  6 14:07:53 2020 about to evalaute_rot_bonds
+Mon Apr  6 14:07:53 2020 
+Mon Apr  6 14:07:53 2020 =========================================================
+Mon Apr  6 14:07:53 2020 Minimizing structure
 
-Sun Dec 29 14:00:02 2019  Calling: cp ethene.xyz_2 ttt.xyz
-Sun Dec 29 14:00:02 2019  Calling: cp ethene.key_5 ttt.key
-Sun Dec 29 14:00:02 2019  Calling: minimize.x -k ttt.key ttt.xyz 0.1
+Mon Apr  6 14:07:53 2020  Calling: cp ethene.xyz_2 ttt.xyz path = /home/bdw2292/poltypepackage/Examples/SymmetryEthene
+Mon Apr  6 14:07:53 2020  Calling: cp ethene.key_5 ttt.key path = /home/bdw2292/poltypepackage/Examples/SymmetryEthene
+Mon Apr  6 14:07:53 2020  Calling: minimize.x -k ttt.key ttt.xyz 0.1 > Minimizedttt.out path = /home/bdw2292/poltypepackage/Examples/SymmetryEthene
+Mon Apr  6 14:07:55 2020 
+Mon Apr  6 14:07:55 2020 =========================================================
+Mon Apr  6 14:07:55 2020 QM Dipole moment
 
-     ######################################################################
-   ##########################################################################
-  ###                                                                      ###
- ###            Tinker  ---  Software Tools for Molecular Design            ###
- ##                                                                          ##
- ##                          Version 8.7  June 2019                          ##
- ##                                                                          ##
- ##               Copyright (c)  Jay William Ponder  1990-2019               ##
- ###                           All Rights Reserved                          ###
-  ###                                                                      ###
-   ##########################################################################
-     ######################################################################
+Mon Apr  6 14:07:55 2020 QM Dipole moment = 0.0
+Mon Apr  6 14:07:55 2020 
+Mon Apr  6 14:07:55 2020 =========================================================
+Mon Apr  6 14:07:55 2020 MM Dipole moment
 
+Mon Apr  6 14:07:55 2020  Calling: analyze.x ethene.xyz_2 -k ttt.key em | grep -A11 Charge>MMDipole.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryEthene
+Mon Apr  6 14:07:57 2020 MM Dipole moment = 0.0
+Mon Apr  6 14:07:57 2020 Poltype Job Finished
 
- Additional Atom Definition Parameters :
-
-     Type  Class  Symbol  Description               Atomic    Mass   Valence
-
-     401    401     C     ethene                       6     12.011     3
-     402    402     H     ethene                       1      1.008     1
-
- Additional Bond Stretching Parameters :
-
-     Atom Classes             K(S)         Length
-
-       401 401             680.000         1.3350
-       401 402             341.000         1.0847
-
- Additional Angle Bending Parameters :
-
-     Atom Classes             K(B)          Angle
-
-     401 401 402            32.000        121.700
-     402 401 402            39.570        116.600
-
- Additional Torsional Parameters :
-
-     Atom Classes     1-Fold    2-Fold    3-Fold    4-Fold    5-Fold    6-Fold
-
-   402 401 401 402   0.00   0  0.00 180  0.00   0  0.00   0  0.00   0  0.00   0
-
- Additional van der Waals Parameters :
-
-     Atom Class               Size        Epsilon        Reduction
-
-         401                3.8000         0.0890          0.000
-         402                2.9800         0.0240          0.940
-
- Additional Atomic Multipole Parameters :
-
-     Atom Type     Coordinate Frame Definition         Multipole Moments
-
-         401      401      0      0   Z-Only      -0.06030
-                                                   0.00000  0.00000 -0.09804
-                                                   0.02323
-                                                   0.00000  0.02323
-                                                   0.00000  0.00000 -0.04646
-
-         402      401      0      0   Z-Only       0.03015
-                                                   0.00000  0.00000 -0.21640
-                                                   0.04655
-                                                   0.00000  0.04655
-                                                   0.00000  0.00000 -0.09310
-
- Additional Atomic Dipole Polarizability Parameters :
-
-     Atom Type           Alpha       Thole     Group Atom Types
-
-         401             1.750       0.390         401  402
-         402             0.696       0.390         401
-
- Limited Memory BFGS Quasi-Newton Optimization :
-
- QN Iter     F Value      G RMS      F Move   X Move   Angle  FG Call  Comment
-
-     0        0.5876     0.8663                                   1
-     1        0.5795     0.6032      0.0081   0.0031    0.00      3    Success 
-     2        0.5782     0.7735      0.0013   0.0009   34.85      5    Success 
-     3        0.5771     0.2568      0.0011   0.0006   57.40      6    Success 
-     4        0.5770     0.0012      0.0001   0.0003   56.99      7   SmallGrad
-
- LBFGS  --  Normal Termination due to SmallGrad
-
- Final Function Value :            0.5770
- Final RMS Gradient :              0.0012
- Final Gradient Norm :             0.0030
-Sun Dec 29 14:00:03 2019 
-Sun Dec 29 14:00:03 2019 =========================================================
-Sun Dec 29 14:00:03 2019 QM Dipole moment
-
-Sun Dec 29 14:00:03 2019 QM Dipole moment = 0.0
-Sun Dec 29 14:00:03 2019 
-Sun Dec 29 14:00:03 2019 =========================================================
-Sun Dec 29 14:00:03 2019 MM Dipole moment
-
-Sun Dec 29 14:00:03 2019  Calling: analyze.x ethene.xyz_2 em | grep -A11 Charge>MMDipole.txt
-Sun Dec 29 14:00:03 2019 MM Dipole moment = 0.0

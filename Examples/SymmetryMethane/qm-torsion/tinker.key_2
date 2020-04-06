@@ -1,27 +1,30 @@
-parameters /home/bdw2292/poltype/amoebabio18_header.prm
+parameters /home/bdw2292/poltypepackage/amoebabio18_header.prm
 
-parameters /home/bdw2292/poltype/amoebabio18_header.prm
-
+TARGET-DIPOLE 0.0 0.0 -0.0
 atom          401    401    C     "methane             "         6    12.011    4
-atom          402    402    H     "methane             "         1     1.008    1
+atom          405    405    H     "methane             "         1     1.008    1
 
 vdw       401  3.7800   0.1010
-vdw       402  2.9000   0.0220 0.900
-bond      401   402   395.5000    1.0895
-angle     402   401   402    29.5700  109.4712
+SOLUTE 401 [CH4] 3.78 3.78
 
-multipole   401  402                   -0.17068
+vdw       405  2.9000   0.0220 0.900
+SOLUTE 405 [#1]([CH4]) 2.9 2.9
+
+bond      401   405   395.5000    1.0895
+angle     405   401   405    29.5700  109.4712
+
+multipole   401  405                   -0.17068
                                         0.00000    0.00000    0.00000
                                         0.00000
                                         0.00000    0.00000
                                         0.00000    0.00000    0.00000
-multipole   402  401                    0.04267
+multipole   405  401                    0.04267
                                         0.00000    0.00000   -0.09408
                                         0.00281
                                         0.00000    0.00281
                                         0.00000    0.00000   -0.00562
 
-polarize           401          1.3340     0.3900 402
-polarize           402          0.4960     0.3900 401
+polarize           401          1.3340     0.3900 405
+polarize           405          0.4960     0.3900 401
 
 

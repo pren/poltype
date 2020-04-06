@@ -1,22 +1,8 @@
-Sun Dec 29 13:25:21 2019 Psi4 detected; it will be used as the QM engine
-Sun Dec 29 13:25:21 2019 Running on host: bme-nova.bme.utexas.edu
-Sun Dec 29 13:25:21 2019 NEED QM Density Matrix: Executing Gaussian Opt and SP
-Sun Dec 29 13:25:21 2019  Calling: babel --title "methane Gaussian Optimization on bme-nova.bme.utexas.edu" methane.sdf methane-tmp.com
-1 molecule converted
-15 audit log messages 
-Sun Dec 29 13:25:21 2019  Calling: mkdir /scratch/bdw2292
-mkdir: cannot create directory `/scratch/bdw2292': File exists
-Sun Dec 29 13:25:21 2019 Calling: Psi4 Optimization
-Sun Dec 29 13:25:21 2019  Calling: psi4 methane-opt_psi4.dat methane-opt.log
-Optimizer: Optimization complete!
-Sun Dec 29 13:25:23 2019  Calling: babel --title "methane Gaussian SP Calculation on bme-nova.bme.utexas.edu" -i g03 methane-opt.log methane-tmp.com
-0 molecules converted
-2 audit log messages 
-Sun Dec 29 13:25:23 2019 Calling: Psi4 Gradient for DMA
-Sun Dec 29 13:25:23 2019  Calling: psi4 methane-dma_psi4.dat methane-dma.log
-Sun Dec 29 13:25:27 2019 NEED DMA: Executing GDMA
-Sun Dec 29 13:25:27 2019  Calling: gdma < methane.gdmain > methane.gdmaout
-Sun Dec 29 13:25:27 2019  Calling: poledit.x 1 methane.gdmaout /home/bdw2292/poltype/amoebabio18_header.prm < methane-peditin.txt
+Mon Apr  6 12:23:04 2020 Running on host: bme-nova.bme.utexas.edu
+Mon Apr  6 12:23:04 2020 NEED QM Density Matrix: Executing Gaussian Opt and SP
+Mon Apr  6 12:23:04 2020 Calling: Psi4 Optimization
+Mon Apr  6 12:23:04 2020 Calling: Psi4 Gradient for DMA
+Mon Apr  6 12:23:04 2020  Calling: poledit.x 1 methane.gdmaout /home/bdw2292/poltypepackage/amoebabio18_header.prm < methane-peditin.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryMethane
 
      ######################################################################
    ##########################################################################
@@ -223,63 +209,13 @@ Sun Dec 29 13:25:27 2019  Calling: poledit.x 1 methane.gdmaout /home/bdw2292/pol
  Quadrupole:             -0.00644
                           0.00000       -0.00644
                           0.00000        0.00000        0.01288
-Sun Dec 29 13:25:27 2019  Calling: potential.x 1 methane.xyz -k methane.key
+Mon Apr  6 12:23:06 2020 Calling: Generating CUBE File from PSI4
+Mon Apr  6 12:23:06 2020  Calling: /home/bdw2292/poltypepackage/avgmpoles.pl methane.key methane.xyz methane-groups.txt methane.key_2 methane.xyz_2 401 path = /home/bdw2292/poltypepackage/Examples/SymmetryMethane
+Mon Apr  6 12:23:06 2020 
+Mon Apr  6 12:23:06 2020 =========================================================
+Mon Apr  6 12:23:06 2020 QM Dipole moment
 
-     ######################################################################
-   ##########################################################################
-  ###                                                                      ###
- ###            Tinker  ---  Software Tools for Molecular Design            ###
- ##                                                                          ##
- ##                          Version 8.7  June 2019                          ##
- ##                                                                          ##
- ##               Copyright (c)  Jay William Ponder  1990-2019               ##
- ###                           All Rights Reserved                          ###
-  ###                                                                      ###
-   ##########################################################################
-     ######################################################################
-
-
- Additional Atom Definition Parameters :
-
-     Type  Class  Symbol  Description               Atomic    Mass   Valence
-
-       1      1     C     methane                      6     12.011     4
-       2      2     H     methane                      1      1.008     1
-       3      3     H     methane                      1      1.008     1
-       4      4     H     methane                      1      1.008     1
-       5      5     H     methane                      1      1.008     1
-
- Electrostatic Potential Grid Points :                  5139
-
- Gaussian CUBEGEN Input Written To :   methane.grid
-
- Next, run the Gaussian CUBEGEN program; for example:
- cubegen 0 potential=MP2 xxx.fchk xxx.cube -5 h < xxx.grid
-
- See the Gaussian documentation for additional details;
- After CUBEGEN, rerun Tinker POTENTIAL using Option 2
-Sun Dec 29 13:25:28 2019 Calling: Psi4 Gradient for ESP
-Sun Dec 29 13:25:28 2019  Calling: psi4 methane-esp_psi4.dat methane-esp_psi4.log
-Sun Dec 29 13:25:34 2019 Calling: Generating CUBE File from PSI4
-Sun Dec 29 13:25:34 2019  Calling: potential.x 2 methane.cube
-
-     ######################################################################
-   ##########################################################################
-  ###                                                                      ###
- ###            Tinker  ---  Software Tools for Molecular Design            ###
- ##                                                                          ##
- ##                          Version 8.7  June 2019                          ##
- ##                                                                          ##
- ##               Copyright (c)  Jay William Ponder  1990-2019               ##
- ###                           All Rights Reserved                          ###
-  ###                                                                      ###
-   ##########################################################################
-     ######################################################################
-
-
- Electrostatic Potential Written To :  methane.pot
-Sun Dec 29 13:25:34 2019  Calling: /home/bdw2292/poltype/avgmpoles.pl methane.key methane.xyz methane-groups.txt methane.key_2 methane.xyz_2 401
-Sun Dec 29 13:25:34 2019  Calling: potential.x 6 methane.xyz_2 -k methane.key_2 methane.pot N 0.1
+Mon Apr  6 12:23:06 2020  Calling: potential.x 6 methane.xyz_2 -k methane.key_2 methane.pot N 0.1 path = /home/bdw2292/poltypepackage/Examples/SymmetryMethane
 
      ######################################################################
    ##########################################################################
@@ -300,7 +236,7 @@ Sun Dec 29 13:25:34 2019  Calling: potential.x 6 methane.xyz_2 -k methane.key_2 
      Type  Class  Symbol  Description               Atomic    Mass   Valence
 
      401    401     C     methane                      6     12.011     4
-     402    402     H     methane                      1      1.008     1
+     405    405     H     methane                      1      1.008     1
 
  Electrostatic Potential Grid Points :                  5139
 
@@ -311,19 +247,19 @@ Sun Dec 29 13:25:34 2019  Calling: potential.x 6 methane.xyz_2 -k methane.key_2 
      Type  Class  Symbol  Description               Atomic    Mass   Valence
 
      401    401     C     methane                      6     12.011     4
-     402    402     H     methane                      1      1.008     1
+     405    405     H     methane                      1      1.008     1
 
  Additional Atomic Multipole Parameters :
 
      Atom Type     Coordinate Frame Definition         Multipole Moments
 
-         401      402      0      0   Z-Only      -0.17068
+         401      405      0      0   Z-Only      -0.17068
                                                    0.00000  0.00000  0.00000
                                                    0.00000
                                                    0.00000  0.00000
                                                    0.00000  0.00000  0.00000
 
-         402      401      0      0   Z-Only       0.04267
+         405      401      0      0   Z-Only       0.04267
                                                    0.00000  0.00000 -0.13731
                                                   -0.00644
                                                    0.00000 -0.00644
@@ -333,8 +269,8 @@ Sun Dec 29 13:25:34 2019  Calling: potential.x 6 methane.xyz_2 -k methane.key_2 
 
      Atom Type           Alpha       Thole     Group Atom Types
 
-         401             1.334       0.390         402
-         402             0.496       0.390         401
+         401             1.334       0.390         405
+         405             0.496       0.390         401
 
  Average Electrostatic Potential over Atoms :
       (Kcal/mole per unit charge)
@@ -372,16 +308,16 @@ Sun Dec 29 13:25:34 2019  Calling: potential.x 6 methane.xyz_2 -k methane.key_2 
     --            401             YY-Quad            0.00000          X
     --            401             YZ-Quad            0.00000          X
     --            401             ZZ-Quad            0.00000          X
-    --            402             Monopole           0.04267          X
-    --            402             X-Dipole           0.00000          X
-    --            402             Y-Dipole           0.00000          X
-     1            402             Z-Dipole          -0.13731
-    --            402             XX-Quad           -0.00644
-    --            402             XY-Quad            0.00000          X
-    --            402             XZ-Quad            0.00000          X
-    --            402             YY-Quad           -0.00644
-    --            402             YZ-Quad            0.00000          X
-     2            402             ZZ-Quad            0.01288
+    --            405             Monopole           0.04267          X
+    --            405             X-Dipole           0.00000          X
+    --            405             Y-Dipole           0.00000          X
+     1            405             Z-Dipole          -0.13731
+    --            405             XX-Quad           -0.00644
+    --            405             XY-Quad            0.00000          X
+    --            405             XZ-Quad            0.00000          X
+    --            405             YY-Quad           -0.00644
+    --            405             YZ-Quad            0.00000          X
+     2            405             ZZ-Quad            0.01288
 
  Levenberg-Marquardt Nonlinear Least Squares :
 
@@ -406,16 +342,16 @@ Sun Dec 29 13:25:34 2019  Calling: potential.x 6 methane.xyz_2 -k methane.key_2 
     --            401             YY-Quad            0.00000          X
     --            401             YZ-Quad            0.00000          X
     --            401             ZZ-Quad            0.00000          X
-    --            402             Monopole           0.04267          X
-    --            402             X-Dipole           0.00000          X
-    --            402             Y-Dipole           0.00000          X
-     1            402             Z-Dipole          -0.09408
-    --            402             XX-Quad            0.00281
-    --            402             XY-Quad            0.00000          X
-    --            402             XZ-Quad            0.00000          X
-    --            402             YY-Quad            0.00281
-    --            402             YZ-Quad            0.00000          X
-     2            402             ZZ-Quad           -0.00562
+    --            405             Monopole           0.04267          X
+    --            405             X-Dipole           0.00000          X
+    --            405             Y-Dipole           0.00000          X
+     1            405             Z-Dipole          -0.09408
+    --            405             XX-Quad            0.00281
+    --            405             XY-Quad            0.00000          X
+    --            405             XZ-Quad            0.00000          X
+    --            405             YY-Quad            0.00281
+    --            405             YZ-Quad            0.00000          X
+     2            405             ZZ-Quad           -0.00562
 
  Average Electrostatic Potential over Atoms :
       (Kcal/mole per unit charge)
@@ -438,103 +374,34 @@ Sun Dec 29 13:25:34 2019  Calling: potential.x 6 methane.xyz_2 -k methane.key_2 
  Average Signed Potential Difference :               -0.0252
  Average Unsigned Potential Difference :              0.0857
  Root Mean Square Potential Difference :              0.1329
-Sun Dec 29 13:25:34 2019  Calling: sed -e '/\(.* none$\|^#\|^fix\|^potential-offset\)/d' methane.key_3 > methane.key_3_tmp
-Sun Dec 29 13:25:34 2019 
-Sun Dec 29 13:25:34 2019 =========================================================
-Sun Dec 29 13:25:34 2019 Electrostatic Potential Comparision
+Mon Apr  6 12:23:07 2020  Calling: sed -e '/\(.* none$\|^#\|^fix\|^potential-offset\)/d' methane.key_3 > methane.key_3_tmp path = /home/bdw2292/poltypepackage/Examples/SymmetryMethane
+Mon Apr  6 12:23:07 2020 
+Mon Apr  6 12:23:07 2020 =========================================================
+Mon Apr  6 12:23:07 2020 Electrostatic Potential Comparison
 
-Sun Dec 29 13:25:34 2019  Calling: potential.x 5 methane.xyz_2 -k methane.key_3 methane.pot N > RMSPD.txt
+Mon Apr  6 12:23:07 2020  Calling: potential.x 5 methane.xyz_2 -k methane.key_3 methane.pot N > RMSPD.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryMethane
+Mon Apr  6 12:23:09 2020 missing torsions []
 ****************************************************************************************************
-Sun Dec 29 13:25:35 2019 
-Sun Dec 29 13:25:35 2019 =========================================================
-Sun Dec 29 13:25:35 2019 Minimizing structure
+[]
+Mon Apr  6 12:23:09 2020 postfit min Alz about to run
+Mon Apr  6 12:23:09 2020 about to evalaute_rot_bonds
+Mon Apr  6 12:23:09 2020 
+Mon Apr  6 12:23:09 2020 =========================================================
+Mon Apr  6 12:23:09 2020 Minimizing structure
 
-Sun Dec 29 13:25:35 2019  Calling: cp methane.xyz_2 ttt.xyz
-Sun Dec 29 13:25:35 2019  Calling: cp methane.key_5 ttt.key
-Sun Dec 29 13:25:35 2019  Calling: minimize.x -k ttt.key ttt.xyz 0.1
+Mon Apr  6 12:23:09 2020  Calling: cp methane.xyz_2 ttt.xyz path = /home/bdw2292/poltypepackage/Examples/SymmetryMethane
+Mon Apr  6 12:23:09 2020  Calling: cp methane.key_5 ttt.key path = /home/bdw2292/poltypepackage/Examples/SymmetryMethane
+Mon Apr  6 12:23:09 2020  Calling: minimize.x -k ttt.key ttt.xyz 0.1 > Minimizedttt.out path = /home/bdw2292/poltypepackage/Examples/SymmetryMethane
+Mon Apr  6 12:23:10 2020 
+Mon Apr  6 12:23:10 2020 =========================================================
+Mon Apr  6 12:23:10 2020 QM Dipole moment
 
-     ######################################################################
-   ##########################################################################
-  ###                                                                      ###
- ###            Tinker  ---  Software Tools for Molecular Design            ###
- ##                                                                          ##
- ##                          Version 8.7  June 2019                          ##
- ##                                                                          ##
- ##               Copyright (c)  Jay William Ponder  1990-2019               ##
- ###                           All Rights Reserved                          ###
-  ###                                                                      ###
-   ##########################################################################
-     ######################################################################
+Mon Apr  6 12:23:10 2020 QM Dipole moment = 0.0
+Mon Apr  6 12:23:10 2020 
+Mon Apr  6 12:23:10 2020 =========================================================
+Mon Apr  6 12:23:10 2020 MM Dipole moment
 
+Mon Apr  6 12:23:10 2020  Calling: analyze.x methane.xyz_2 -k ttt.key em | grep -A11 Charge>MMDipole.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryMethane
+Mon Apr  6 12:23:12 2020 MM Dipole moment = 0.0
+Mon Apr  6 12:23:12 2020 Poltype Job Finished
 
- Additional Atom Definition Parameters :
-
-     Type  Class  Symbol  Description               Atomic    Mass   Valence
-
-     401    401     C     methane                      6     12.011     4
-     402    402     H     methane                      1      1.008     1
-
- Additional Bond Stretching Parameters :
-
-     Atom Classes             K(S)         Length
-
-       401 402             395.500         1.0895
-
- Additional Angle Bending Parameters :
-
-     Atom Classes             K(B)          Angle
-
-     402 401 402            29.570        109.471
-
- Additional van der Waals Parameters :
-
-     Atom Class               Size        Epsilon        Reduction
-
-         401                3.7800         0.1010          0.000
-         402                2.9000         0.0220          0.900
-
- Additional Atomic Multipole Parameters :
-
-     Atom Type     Coordinate Frame Definition         Multipole Moments
-
-         401      402      0      0   Z-Only      -0.17068
-                                                   0.00000  0.00000  0.00000
-                                                   0.00000
-                                                   0.00000  0.00000
-                                                   0.00000  0.00000  0.00000
-
-         402      401      0      0   Z-Only       0.04267
-                                                   0.00000  0.00000 -0.09408
-                                                   0.00281
-                                                   0.00000  0.00281
-                                                   0.00000  0.00000 -0.00562
-
- Additional Atomic Dipole Polarizability Parameters :
-
-     Atom Type           Alpha       Thole     Group Atom Types
-
-         401             1.334       0.390         402
-         402             0.496       0.390         401
-
- Limited Memory BFGS Quasi-Newton Optimization :
-
- QN Iter     F Value      G RMS      F Move   X Move   Angle  FG Call  Comment
-
-     0        0.0000     0.0127                                   1
-
- LBFGS  --  Normal Termination due to SmallGrad
-
- Final Function Value :            0.0000
- Final RMS Gradient :              0.0127
- Final Gradient Norm :             0.0284
-Sun Dec 29 13:25:35 2019 
-Sun Dec 29 13:25:35 2019 =========================================================
-Sun Dec 29 13:25:35 2019 QM Dipole moment
-
-Sun Dec 29 13:25:35 2019 QM Dipole moment = 0.0
-Sun Dec 29 13:25:35 2019 
-Sun Dec 29 13:25:35 2019 =========================================================
-Sun Dec 29 13:25:35 2019 MM Dipole moment
-
-Sun Dec 29 13:25:35 2019  Calling: analyze.x methane.xyz_2 em | grep -A11 Charge>MMDipole.txt
-Sun Dec 29 13:25:35 2019 MM Dipole moment = 0.0

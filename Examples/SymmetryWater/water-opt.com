@@ -3,13 +3,12 @@
 %Chk=water-opt.chk
 %Mem=700MB
 %Nproc=1
-#P opt=(maxcycle=400) MP2/6-31G* Guess=INDO MaxDisk=100GB
+#P opt=(maxcycle=400) wB97X-D/6-31G* Guess=INDO MaxDisk=100GB
 
-water Gaussian SP Calculation on bme-nova.bme.utexas.edu
+water Gaussian OPT Calculation on bme-nova.bme.utexas.edu
 
 0 1
- O    1.023500   -0.100600   -0.009700
- H    0.744600    0.599400    0.599500
- H    1.991400   -0.065600    0.020700
-
+ O    2.536900   -0.155000    0.000000
+ H    3.073900    0.155000    0.000000
+ H    2.000000    0.155000    0.000000
 

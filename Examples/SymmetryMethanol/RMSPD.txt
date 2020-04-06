@@ -17,10 +17,10 @@
 
      Type  Class  Symbol  Description               Atomic    Mass   Valence
 
-     402    402     O     methanol                     8     15.999     2
-     401    401     C     methanol                     6     12.011     4
-     403    403     H     methanol                     1      1.008     1
-     404    404     H     methanol                     1      1.008     1
+     401    401     O     methanol                     8     15.999     2
+     402    402     C     methanol                     6     12.011     4
+     405    405     H     methanol                     1      1.008     1
+     406    406     H     methanol                     1      1.008     1
 
  Electrostatic Potential Grid Points :                  5762
 
@@ -28,67 +28,67 @@
 
      Type  Class  Symbol  Description               Atomic    Mass   Valence
 
-     402    402     O     methanol                     8     15.999     2
-     401    401     C     methanol                     6     12.011     4
-     403    403     H     methanol                     1      1.008     1
-     404    404     H     methanol                     1      1.008     1
+     401    401     O     methanol                     8     15.999     2
+     402    402     C     methanol                     6     12.011     4
+     405    405     H     methanol                     1      1.008     1
+     406    406     H     methanol                     1      1.008     1
 
  Additional Atomic Multipole Parameters :
 
      Atom Type     Coordinate Frame Definition         Multipole Moments
 
-         401      402    404      0   Z-then-X     0.20115
-                                                  -0.06855  0.00000  0.43481
-                                                  -0.40385
-                                                   0.00000 -0.41196
-                                                   0.02369  0.00000  0.81581
+         401      406    402      0   Z-then-X    -0.44310
+                                                   0.30870  0.00000  0.12837
+                                                   0.23658
+                                                   0.00000 -0.68103
+                                                  -0.29385  0.00000  0.44445
 
-         402      401    404      0   Z-then-X    -0.44310
-                                                   0.20220  0.00000  0.26936
-                                                   0.19865
-                                                   0.00000 -0.68388
-                                                  -0.28271  0.00000  0.48523
+         402      401    406      0   Z-then-X     0.20115
+                                                  -0.06764  0.00000  0.42872
+                                                  -0.40749
+                                                   0.00000 -0.40203
+                                                   0.02870  0.00000  0.80952
 
-         403      401    402      0   Z-then-X     0.01250
-                                                  -0.00332  0.00000 -0.10515
-                                                   0.01903
-                                                   0.00000  0.00721
-                                                  -0.02563  0.00000 -0.02624
+         405      402    401      0   Z-then-X     0.01250
+                                                  -0.00457  0.00000 -0.10640
+                                                   0.01624
+                                                   0.00000  0.01122
+                                                  -0.02907  0.00000 -0.02746
 
-         404      402    401      0   Z-then-X     0.20445
-                                                  -0.02338  0.00000 -0.12046
-                                                   0.02741
-                                                   0.00000 -0.08720
-                                                  -0.02377  0.00000  0.05979
+         406      401    402      0   Z-then-X     0.20445
+                                                  -0.02542  0.00000 -0.10676
+                                                   0.02834
+                                                   0.00000 -0.10074
+                                                  -0.02968  0.00000  0.07240
 
  Additional Atomic Dipole Polarizability Parameters :
 
      Atom Type           Alpha       Thole     Group Atom Types
 
-         402             0.837       0.390         401  404
-         401             1.334       0.390         402  403
-         403             0.496       0.390         401
-         404             0.496       0.390         402
+         401             0.837       0.390         402  406
+         402             1.334       0.390         401  405
+         405             0.496       0.390         402
+         406             0.496       0.390         401
 
  Average Electrostatic Potential over Atoms :
       (Kcal/mole per unit charge)
 
    Structure   Atom      Points      Potential        Target        RMS Diff
 
-        1        1        1234        -9.7949        -9.7983         0.0654
-        1        2         682         0.9850         1.0390         0.1107
-        1        3         937         3.4696         3.4737         0.0413
-        1        4         939         3.4766         3.4803         0.0417
-        1        5         930        -0.7375        -0.7021         0.0687
-        1        6        1040         4.9597         4.9887         0.0565
+        1        1        1234        -9.7901        -9.7983         0.0757
+        1        2         682         0.9810         1.0390         0.1203
+        1        3         937         3.4670         3.4737         0.0454
+        1        4         939         3.4741         3.4803         0.0456
+        1        5         930        -0.7344        -0.7021         0.0700
+        1        6        1040         4.9591         4.9887         0.0551
 
  Electrostatic Potential over all Grid Points :
 
- Average Potential Value for Model :                 -0.0742
- Average Potential Magnitude for Model :              5.1846
+ Average Potential Value for Model :                 -0.0741
+ Average Potential Magnitude for Model :              5.1827
  Average Potential Value for Target :                -0.0563
  Average Potential Magnitude for Target :             5.1866
 
- Average Signed Potential Difference :               -0.0179
- Average Unsigned Potential Difference :              0.0440
- Root Mean Square Potential Difference :              0.0653
+ Average Signed Potential Difference :               -0.0178
+ Average Unsigned Potential Difference :              0.0469
+ Root Mean Square Potential Difference :              0.0704

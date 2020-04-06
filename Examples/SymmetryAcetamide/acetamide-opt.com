@@ -3,9 +3,9 @@
 %Chk=acetamide-opt.chk
 %Mem=700MB
 %Nproc=1
-#P opt=(maxcycle=400) MP2/6-31G* Guess=INDO MaxDisk=100GB
+#P opt=(maxcycle=400) wB97X-D/6-31G* Guess=INDO MaxDisk=100GB
 
-acetamide Gaussian SP Calculation on bme-nova.bme.utexas.edu
+acetamide Gaussian OPT Calculation on bme-nova.bme.utexas.edu
 
 0 1
  O    0.607300   -1.165700    0.001800
@@ -17,5 +17,4 @@ acetamide Gaussian SP Calculation on bme-nova.bme.utexas.edu
  H   -1.727400    1.065500   -0.408400
  H    1.766700    1.149200    0.003100
  H    0.281500    2.029800    0.008100
-
 

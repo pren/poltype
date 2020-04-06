@@ -11,6 +11,7 @@ memory 700MB
 set_num_threads(1)
 psi4_io.set_default_path("/scratch/bdw2292")
 set freeze_core True
-E, wfn = energy('mp2/6-311++G(2d,2p)',return_wfn=True)
-oeprop(wfn,"DIPOLE","GRID_ESP")
+set PROPERTIES_ORIGIN ["COM"]
+E, wfn = properties('mp2/6-311++G(2d,2p)',properties=['dipole'],return_wfn=True)
+oeprop(wfn,"GRID_ESP","WIBERG_LOWDIN_INDICES")
 clean()

@@ -1,4 +1,4 @@
-parameters /home/bdw2292/poltype/amoebabio18_header.prm
+parameters /home/bdw2292/poltypepackage/amoebabio18_header.prm
 bondterm none
 angleterm none
 torsionterm none
@@ -13,11 +13,11 @@ atom          4    4    H     "methanol            "         1     1.008    1
 atom          5    5    H     "methanol            "         1     1.008    1
 atom          6    6    H     "methanol            "         1     1.008    1
 
-multipole     1    2    6              -0.44311
-                                        0.24044    0.00000    0.20571
-                                        0.19476
-                                        0.00000   -0.58499
-                                       -0.24996    0.00000    0.39023
+multipole     1    6    2              -0.44311
+                                        0.26817    0.00000    0.16796
+                                        0.23018
+                                        0.00000   -0.58500
+                                       -0.26105    0.00000    0.35482
 multipole     2    1    6               0.20115
                                         0.02471    0.00000    0.45720
                                        -0.46762

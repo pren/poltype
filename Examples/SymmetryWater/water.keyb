@@ -1,4 +1,4 @@
-parameters /home/bdw2292/poltype/amoebabio18_header.prm
+parameters /home/bdw2292/poltypepackage/amoebabio18_header.prm
 bondterm none
 angleterm none
 torsionterm none

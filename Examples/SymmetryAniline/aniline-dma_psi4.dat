@@ -19,7 +19,7 @@ memory 700MB
 set_num_threads(1)
 psi4_io.set_default_path("/scratch/bdw2292")
 set freeze_core True
-E, wfn = energy('mp2/6-311G**',return_wfn=True)
-gdma(wfn)
+set PROPERTIES_ORIGIN ["COM"]
+E, wfn = energy('mp2/6-311G**',properties=['dipole'],return_wfn=True)
 fchk(wfn, "aniline-dma.fchk")
 clean()

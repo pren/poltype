@@ -1,22 +1,8 @@
-Sun Dec 29 13:28:32 2019 Psi4 detected; it will be used as the QM engine
-Sun Dec 29 13:28:32 2019 Running on host: bme-nova.bme.utexas.edu
-Sun Dec 29 13:28:32 2019 NEED QM Density Matrix: Executing Gaussian Opt and SP
-Sun Dec 29 13:28:32 2019  Calling: babel --title "water Gaussian Optimization on bme-nova.bme.utexas.edu" water.sdf water-tmp.com
-1 molecule converted
-15 audit log messages 
-Sun Dec 29 13:28:32 2019  Calling: mkdir /scratch/bdw2292
-mkdir: cannot create directory `/scratch/bdw2292': File exists
-Sun Dec 29 13:28:32 2019 Calling: Psi4 Optimization
-Sun Dec 29 13:28:32 2019  Calling: psi4 water-opt_psi4.dat water-opt.log
-Optimizer: Optimization complete!
-Sun Dec 29 13:28:34 2019  Calling: babel --title "water Gaussian SP Calculation on bme-nova.bme.utexas.edu" -i g03 water-opt.log water-tmp.com
-0 molecules converted
-2 audit log messages 
-Sun Dec 29 13:28:34 2019 Calling: Psi4 Gradient for DMA
-Sun Dec 29 13:28:34 2019  Calling: psi4 water-dma_psi4.dat water-dma.log
-Sun Dec 29 13:28:36 2019 NEED DMA: Executing GDMA
-Sun Dec 29 13:28:36 2019  Calling: gdma < water.gdmain > water.gdmaout
-Sun Dec 29 13:28:36 2019  Calling: poledit.x 1 water.gdmaout /home/bdw2292/poltype/amoebabio18_header.prm < water-peditin.txt
+Mon Apr  6 14:08:34 2020 Running on host: bme-nova.bme.utexas.edu
+Mon Apr  6 14:08:34 2020 NEED QM Density Matrix: Executing Gaussian Opt and SP
+Mon Apr  6 14:08:34 2020 Calling: Psi4 Optimization
+Mon Apr  6 14:08:34 2020 Calling: Psi4 Gradient for DMA
+Mon Apr  6 14:08:34 2020  Calling: poledit.x 1 water.gdmaout /home/bdw2292/poltypepackage/amoebabio18_header.prm < water-peditin.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryWater
 
      ######################################################################
    ##########################################################################
@@ -171,62 +157,13 @@ Sun Dec 29 13:28:36 2019  Calling: poledit.x 1 water.gdmaout /home/bdw2292/polty
  Quadrupole:             -0.05871
                           0.00000       -0.07216
                          -0.02700        0.00000        0.13087
-Sun Dec 29 13:28:36 2019  Calling: potential.x 1 water.xyz -k water.key
+Mon Apr  6 14:08:36 2020 Calling: Generating CUBE File from PSI4
+Mon Apr  6 14:08:36 2020  Calling: /home/bdw2292/poltypepackage/avgmpoles.pl water.key water.xyz water-groups.txt water.key_2 water.xyz_2 401 path = /home/bdw2292/poltypepackage/Examples/SymmetryWater
+About to zero the x dipole and xz quadrupoleMon Apr  6 14:08:36 2020 
+Mon Apr  6 14:08:36 2020 =========================================================
+Mon Apr  6 14:08:36 2020 QM Dipole moment
 
-     ######################################################################
-   ##########################################################################
-  ###                                                                      ###
- ###            Tinker  ---  Software Tools for Molecular Design            ###
- ##                                                                          ##
- ##                          Version 8.7  June 2019                          ##
- ##                                                                          ##
- ##               Copyright (c)  Jay William Ponder  1990-2019               ##
- ###                           All Rights Reserved                          ###
-  ###                                                                      ###
-   ##########################################################################
-     ######################################################################
-
-
- Additional Atom Definition Parameters :
-
-     Type  Class  Symbol  Description               Atomic    Mass   Valence
-
-       1      1     O     water                        8     15.999     2
-       2      2     H     water                        1      1.008     1
-       3      3     H     water                        1      1.008     1
-
- Electrostatic Potential Grid Points :                  4356
-
- Gaussian CUBEGEN Input Written To :   water.grid
-
- Next, run the Gaussian CUBEGEN program; for example:
- cubegen 0 potential=MP2 xxx.fchk xxx.cube -5 h < xxx.grid
-
- See the Gaussian documentation for additional details;
- After CUBEGEN, rerun Tinker POTENTIAL using Option 2
-Sun Dec 29 13:28:37 2019 Calling: Psi4 Gradient for ESP
-Sun Dec 29 13:28:37 2019  Calling: psi4 water-esp_psi4.dat water-esp_psi4.log
-Sun Dec 29 13:28:40 2019 Calling: Generating CUBE File from PSI4
-Sun Dec 29 13:28:40 2019  Calling: potential.x 2 water.cube
-
-     ######################################################################
-   ##########################################################################
-  ###                                                                      ###
- ###            Tinker  ---  Software Tools for Molecular Design            ###
- ##                                                                          ##
- ##                          Version 8.7  June 2019                          ##
- ##                                                                          ##
- ##               Copyright (c)  Jay William Ponder  1990-2019               ##
- ###                           All Rights Reserved                          ###
-  ###                                                                      ###
-   ##########################################################################
-     ######################################################################
-
-
- Electrostatic Potential Written To :  water.pot
-Sun Dec 29 13:28:40 2019  Calling: /home/bdw2292/poltype/avgmpoles.pl water.key water.xyz water-groups.txt water.key_2 water.xyz_2 401
-tmpval2-2 -402 -402
-About to zero the x dipole and xz quadrupoleSun Dec 29 13:28:40 2019  Calling: potential.x 6 water.xyz_2 -k water.key_2 water.pot N 0.1
+Mon Apr  6 14:08:36 2020  Calling: potential.x 6 water.xyz_2 -k water.key_2 water.pot N 0.1 path = /home/bdw2292/poltypepackage/Examples/SymmetryWater
 
      ######################################################################
    ##########################################################################
@@ -247,7 +184,7 @@ About to zero the x dipole and xz quadrupoleSun Dec 29 13:28:40 2019  Calling: p
      Type  Class  Symbol  Description               Atomic    Mass   Valence
 
      401    401     O     water                        8     15.999     2
-     402    402     H     water                        1      1.008     1
+     403    403     H     water                        1      1.008     1
 
  Electrostatic Potential Grid Points :                  4356
 
@@ -258,19 +195,19 @@ About to zero the x dipole and xz quadrupoleSun Dec 29 13:28:40 2019  Calling: p
      Type  Class  Symbol  Description               Atomic    Mass   Valence
 
      401    401     O     water                        8     15.999     2
-     402    402     H     water                        1      1.008     1
+     403    403     H     water                        1      1.008     1
 
  Additional Atomic Multipole Parameters :
 
      Atom Type     Coordinate Frame Definition         Multipole Moments
 
-         401      402    402      0   Bisector    -0.37752
+         401      403    403      0   Bisector    -0.37752
                                                    0.00000  0.00000  0.34999
                                                    0.50812
                                                    0.00000 -0.60562
                                                    0.00000  0.00000  0.09750
 
-         402      401    402      0   Z-then-X     0.18876
+         403      401    403      0   Z-then-X     0.18876
                                                   -0.03174  0.00000 -0.10855
                                                   -0.05871
                                                    0.00000 -0.07216
@@ -280,8 +217,8 @@ About to zero the x dipole and xz quadrupoleSun Dec 29 13:28:40 2019  Calling: p
 
      Atom Type           Alpha       Thole     Group Atom Types
 
-         401             0.837       0.390         402
-         402             0.496       0.390         401
+         401             0.837       0.390         403
+         403             0.496       0.390         401
 
  Average Electrostatic Potential over Atoms :
       (Kcal/mole per unit charge)
@@ -317,25 +254,25 @@ About to zero the x dipole and xz quadrupoleSun Dec 29 13:28:40 2019  Calling: p
      3            401             YY-Quad           -0.60562
     --            401             YZ-Quad            0.00000          X
     --            401             ZZ-Quad            0.09750
-    --            402             Monopole           0.18876          X
-     4            402             X-Dipole          -0.03174
-    --            402             Y-Dipole           0.00000          X
-     5            402             Z-Dipole          -0.10855
-     6            402             XX-Quad           -0.05871
-    --            402             XY-Quad            0.00000          X
-     7            402             XZ-Quad           -0.02701
-     8            402             YY-Quad           -0.07216
-    --            402             YZ-Quad            0.00000          X
-    --            402             ZZ-Quad            0.13087
+    --            403             Monopole           0.18876          X
+     4            403             X-Dipole          -0.03174
+    --            403             Y-Dipole           0.00000          X
+     5            403             Z-Dipole          -0.10855
+     6            403             XX-Quad           -0.05871
+    --            403             XY-Quad            0.00000          X
+     7            403             XZ-Quad           -0.02701
+     8            403             YY-Quad           -0.07216
+    --            403             YZ-Quad            0.00000          X
+    --            403             ZZ-Quad            0.13087
 
  Levenberg-Marquardt Nonlinear Least Squares :
 
  LS Iter     F Value      Total G     Active G    N Active   F Calls
 
-     0      589.0322    2414.4327    2414.4327         8         9
-     1       69.0928     445.1833     445.1833         8        18
-     2       32.6400      34.5954      34.5954         8        27
-     3       22.5124       0.0000       0.0000         8        36
+     0     1074.1704    5566.9280    5566.9280         8         9
+     1       65.9718     703.4946     703.4946         8        18
+     2       33.9239      29.7024      29.7024         8        27
+     3       22.5184       0.0000       0.0000         8        36
 
  SQUARE  --  Normal Termination of Least Squares
 
@@ -346,140 +283,71 @@ About to zero the x dipole and xz quadrupoleSun Dec 29 13:28:40 2019  Calling: p
     --            401             Monopole          -0.37752          X
     --            401             X-Dipole           0.00000          X
     --            401             Y-Dipole           0.00000          X
-     1            401             Z-Dipole           0.32107
-     2            401             XX-Quad            0.50381
+     1            401             Z-Dipole           0.32111
+     2            401             XX-Quad            0.50384
     --            401             XY-Quad            0.00000          X
     --            401             XZ-Quad            0.00000          X
-     3            401             YY-Quad           -0.66799
+     3            401             YY-Quad           -0.66797
     --            401             YZ-Quad            0.00000          X
-    --            401             ZZ-Quad            0.16418
-    --            402             Monopole           0.18876          X
-     4            402             X-Dipole          -0.05911
-    --            402             Y-Dipole           0.00000          X
-     5            402             Z-Dipole          -0.13377
-     6            402             XX-Quad            0.00381
-    --            402             XY-Quad            0.00000          X
-     7            402             XZ-Quad           -0.03319
-     8            402             YY-Quad           -0.07478
-    --            402             YZ-Quad            0.00000          X
-    --            402             ZZ-Quad            0.07097
+    --            401             ZZ-Quad            0.16413
+    --            403             Monopole           0.18876          X
+     4            403             X-Dipole          -0.05910
+    --            403             Y-Dipole           0.00000          X
+     5            403             Z-Dipole          -0.13379
+     6            403             XX-Quad            0.00378
+    --            403             XY-Quad            0.00000          X
+     7            403             XZ-Quad           -0.03323
+     8            403             YY-Quad           -0.07477
+    --            403             YZ-Quad            0.00000          X
+    --            403             ZZ-Quad            0.07099
 
  Average Electrostatic Potential over Atoms :
       (Kcal/mole per unit charge)
 
    Structure   Atom      Points      Potential        Target        RMS Diff
 
-        1        1        1846        -8.3909        -8.3887         0.0687
-        1        2        1253         6.0509         6.0770         0.0505
-        1        3        1257         6.0319         6.0581         0.0506
+        1        1        1846        -8.3916        -8.3887         0.0690
+        1        2        1253         6.0514         6.0770         0.0503
+        1        3        1257         6.0324         6.0581         0.0504
 
  Electrostatic Potential over all Grid Points :
 
  Average Potential Value for Model :                 -0.0748
- Average Potential Magnitude for Model :              7.2942
+ Average Potential Magnitude for Model :              7.2948
  Average Potential Value for Target :                -0.0588
  Average Potential Magnitude for Target :             7.3047
 
  Average Signed Potential Difference :               -0.0160
- Average Unsigned Potential Difference :              0.0430
- Root Mean Square Potential Difference :              0.0589
-Sun Dec 29 13:28:41 2019  Calling: sed -e '/\(.* none$\|^#\|^fix\|^potential-offset\)/d' water.key_3 > water.key_3_tmp
-Sun Dec 29 13:28:41 2019 
-Sun Dec 29 13:28:41 2019 =========================================================
-Sun Dec 29 13:28:41 2019 Electrostatic Potential Comparision
+ Average Unsigned Potential Difference :              0.0431
+ Root Mean Square Potential Difference :              0.0590
+Mon Apr  6 14:08:37 2020  Calling: sed -e '/\(.* none$\|^#\|^fix\|^potential-offset\)/d' water.key_3 > water.key_3_tmp path = /home/bdw2292/poltypepackage/Examples/SymmetryWater
+Mon Apr  6 14:08:37 2020 
+Mon Apr  6 14:08:37 2020 =========================================================
+Mon Apr  6 14:08:37 2020 Electrostatic Potential Comparison
 
-Sun Dec 29 13:28:41 2019  Calling: potential.x 5 water.xyz_2 -k water.key_3 water.pot N > RMSPD.txt
+Mon Apr  6 14:08:37 2020  Calling: potential.x 5 water.xyz_2 -k water.key_3 water.pot N > RMSPD.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryWater
+Mon Apr  6 14:08:39 2020 missing torsions []
 ****************************************************************************************************
-Sun Dec 29 13:28:41 2019 
-Sun Dec 29 13:28:41 2019 =========================================================
-Sun Dec 29 13:28:41 2019 Minimizing structure
+[]
+Mon Apr  6 14:08:39 2020 postfit min Alz about to run
+Mon Apr  6 14:08:39 2020 about to evalaute_rot_bonds
+Mon Apr  6 14:08:39 2020 
+Mon Apr  6 14:08:39 2020 =========================================================
+Mon Apr  6 14:08:39 2020 Minimizing structure
 
-Sun Dec 29 13:28:41 2019  Calling: cp water.xyz_2 ttt.xyz
-Sun Dec 29 13:28:41 2019  Calling: cp water.key_5 ttt.key
-Sun Dec 29 13:28:41 2019  Calling: minimize.x -k ttt.key ttt.xyz 0.1
+Mon Apr  6 14:08:39 2020  Calling: cp water.xyz_2 ttt.xyz path = /home/bdw2292/poltypepackage/Examples/SymmetryWater
+Mon Apr  6 14:08:39 2020  Calling: cp water.key_5 ttt.key path = /home/bdw2292/poltypepackage/Examples/SymmetryWater
+Mon Apr  6 14:08:39 2020  Calling: minimize.x -k ttt.key ttt.xyz 0.1 > Minimizedttt.out path = /home/bdw2292/poltypepackage/Examples/SymmetryWater
+Mon Apr  6 14:08:41 2020 
+Mon Apr  6 14:08:41 2020 =========================================================
+Mon Apr  6 14:08:41 2020 QM Dipole moment
 
-     ######################################################################
-   ##########################################################################
-  ###                                                                      ###
- ###            Tinker  ---  Software Tools for Molecular Design            ###
- ##                                                                          ##
- ##                          Version 8.7  June 2019                          ##
- ##                                                                          ##
- ##               Copyright (c)  Jay William Ponder  1990-2019               ##
- ###                           All Rights Reserved                          ###
-  ###                                                                      ###
-   ##########################################################################
-     ######################################################################
+Mon Apr  6 14:08:41 2020 QM Dipole moment = 2.08
+Mon Apr  6 14:08:41 2020 
+Mon Apr  6 14:08:41 2020 =========================================================
+Mon Apr  6 14:08:41 2020 MM Dipole moment
 
+Mon Apr  6 14:08:41 2020  Calling: analyze.x water.xyz_2 -k ttt.key em | grep -A11 Charge>MMDipole.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryWater
+Mon Apr  6 14:08:42 2020 MM Dipole moment = 2.08
+Mon Apr  6 14:08:42 2020 Poltype Job Finished
 
- Additional Atom Definition Parameters :
-
-     Type  Class  Symbol  Description               Atomic    Mass   Valence
-
-     401    401     O     water                        8     15.999     2
-     402    402     H     water                        1      1.008     1
-
- Additional Bond Stretching Parameters :
-
-     Atom Classes             K(S)         Length
-
-       401 402             529.600         0.9686
-
- Additional Angle Bending Parameters :
-
-     Atom Classes             K(B)          Angle
-
-     402 401 402            34.050        103.992
-
- Additional van der Waals Parameters :
-
-     Atom Class               Size        Epsilon        Reduction
-
-         401                3.4050         0.1100          0.000
-         402                2.6550         0.0135          0.910
-
- Additional Atomic Multipole Parameters :
-
-     Atom Type     Coordinate Frame Definition         Multipole Moments
-
-         401      402    402      0   Bisector    -0.37752
-                                                   0.00000  0.00000  0.32107
-                                                   0.50381
-                                                   0.00000 -0.66799
-                                                   0.00000  0.00000  0.16418
-
-         402      401    402      0   Z-then-X     0.18876
-                                                  -0.05911  0.00000 -0.13377
-                                                   0.00381
-                                                   0.00000 -0.07478
-                                                  -0.03319  0.00000  0.07097
-
- Additional Atomic Dipole Polarizability Parameters :
-
-     Atom Type           Alpha       Thole     Group Atom Types
-
-         401             0.837       0.390         402
-         402             0.496       0.390         401
-
- Limited Memory BFGS Quasi-Newton Optimization :
-
- QN Iter     F Value      G RMS      F Move   X Move   Angle  FG Call  Comment
-
-     0        0.0000     0.0115                                   1
-
- LBFGS  --  Normal Termination due to SmallGrad
-
- Final Function Value :            0.0000
- Final RMS Gradient :              0.0115
- Final Gradient Norm :             0.0199
-Sun Dec 29 13:28:42 2019 
-Sun Dec 29 13:28:42 2019 =========================================================
-Sun Dec 29 13:28:42 2019 QM Dipole moment
-
-Sun Dec 29 13:28:42 2019 QM Dipole moment = 2.0798
-Sun Dec 29 13:28:42 2019 
-Sun Dec 29 13:28:42 2019 =========================================================
-Sun Dec 29 13:28:42 2019 MM Dipole moment
-
-Sun Dec 29 13:28:42 2019  Calling: analyze.x water.xyz_2 em | grep -A11 Charge>MMDipole.txt
-Sun Dec 29 13:28:42 2019 MM Dipole moment = 2.079

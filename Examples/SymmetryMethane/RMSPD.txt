@@ -18,7 +18,7 @@
      Type  Class  Symbol  Description               Atomic    Mass   Valence
 
      401    401     C     methane                      6     12.011     4
-     402    402     H     methane                      1      1.008     1
+     405    405     H     methane                      1      1.008     1
 
  Electrostatic Potential Grid Points :                  5139
 
@@ -27,19 +27,19 @@
      Type  Class  Symbol  Description               Atomic    Mass   Valence
 
      401    401     C     methane                      6     12.011     4
-     402    402     H     methane                      1      1.008     1
+     405    405     H     methane                      1      1.008     1
 
  Additional Atomic Multipole Parameters :
 
      Atom Type     Coordinate Frame Definition         Multipole Moments
 
-         401      402      0      0   Z-Only      -0.17068
+         401      405      0      0   Z-Only      -0.17068
                                                    0.00000  0.00000  0.00000
                                                    0.00000
                                                    0.00000  0.00000
                                                    0.00000  0.00000  0.00000
 
-         402      401      0      0   Z-Only       0.04267
+         405      401      0      0   Z-Only       0.04267
                                                    0.00000  0.00000 -0.09408
                                                    0.00281
                                                    0.00000  0.00281
@@ -49,8 +49,8 @@
 
      Atom Type           Alpha       Thole     Group Atom Types
 
-         401             1.334       0.390         402
-         402             0.496       0.390         401
+         401             1.334       0.390         405
+         405             0.496       0.390         401
 
  Average Electrostatic Potential over Atoms :
       (Kcal/mole per unit charge)

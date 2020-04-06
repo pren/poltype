@@ -10,7 +10,7 @@ parameterization for small molecules. Theor Chem Acc.
 
 
 
-Version 2.0.0 December 2019
+Version 2.2.5 February 2020
 
 
 
@@ -24,3 +24,102 @@ All Rights Reserved
 
 
 
+idxtosymclass  {1: 401, 2: 402, 3: 407, 4: 407, 5: 406, 6: 406, 7: 405, 8: 412, 9: 412, 10: 411, 11: 411, 12: 410, 13: 414, 14: 414}
+atomidx  1
+highestsymneighbnorepeatidx 2
+val  3 highestsymneighbnorepeatval 3
+uniqueneighbtypesofhighestsymneighbnorepeat [401, 407]
+uniqueneighbtypes [402, 414]
+CH3PO3 Aniline
+atomidx  2
+highestsymneighbnorepeatidx 1
+val  3 highestsymneighbnorepeatval 3
+uniqueneighbtypesofhighestsymneighbnorepeat [402, 414]
+uniqueneighbtypes [401, 407]
+CH3PO3 Aniline
+atomidx  3
+highestsymneighbnorepeatidx 8
+val  3 highestsymneighbnorepeatval 1
+uniqueneighbtypesofhighestsymneighbnorepeat [407]
+uniqueneighbtypes [402, 412, 406]
+z-then-x
+atomidx  4
+highestsymneighbnorepeatidx 9
+val  3 highestsymneighbnorepeatval 1
+uniqueneighbtypesofhighestsymneighbnorepeat [407]
+uniqueneighbtypes [402, 412, 406]
+z-then-x
+atomidx  5
+highestsymneighbnorepeatidx 10
+val  3 highestsymneighbnorepeatval 1
+uniqueneighbtypesofhighestsymneighbnorepeat [406]
+uniqueneighbtypes [411, 405, 407]
+z-then-x
+atomidx  6
+highestsymneighbnorepeatidx 11
+val  3 highestsymneighbnorepeatval 1
+uniqueneighbtypesofhighestsymneighbnorepeat [406]
+uniqueneighbtypes [411, 405, 407]
+z-then-x
+atomidx  7
+highestsymneighbnorepeatidx 12
+val  3 highestsymneighbnorepeatval 1
+uniqueneighbtypesofhighestsymneighbnorepeat [405]
+uniqueneighbtypes [410, 406]
+H on bottom ring of Aniline or C connected to that H
+atomidx  8
+highestsymneighbnorepeatidx 3
+val  1 highestsymneighbnorepeatval 3
+uniqueneighbtypesofhighestsymneighbnorepeat [402, 412, 406]
+uniqueneighbtypes [407]
+z-then-x
+atomidx  9
+highestsymneighbnorepeatidx 4
+val  1 highestsymneighbnorepeatval 3
+uniqueneighbtypesofhighestsymneighbnorepeat [402, 412, 406]
+uniqueneighbtypes [407]
+z-then-x
+atomidx  10
+highestsymneighbnorepeatidx 5
+val  1 highestsymneighbnorepeatval 3
+uniqueneighbtypesofhighestsymneighbnorepeat [411, 405, 407]
+uniqueneighbtypes [406]
+z-then-x
+atomidx  11
+highestsymneighbnorepeatidx 6
+val  1 highestsymneighbnorepeatval 3
+uniqueneighbtypesofhighestsymneighbnorepeat [411, 405, 407]
+uniqueneighbtypes [406]
+z-then-x
+atomidx  12
+highestsymneighbnorepeatidx 7
+val  1 highestsymneighbnorepeatval 3
+uniqueneighbtypesofhighestsymneighbnorepeat [410, 406]
+uniqueneighbtypes [405]
+H on bottom ring of Aniline or C connected to that H
+atomidx  13
+highestsymneighbnorepeatidx 1
+val  1 highestsymneighbnorepeatval 3
+uniqueneighbtypesofhighestsymneighbnorepeat [402, 414]
+uniqueneighbtypes [401]
+z-then-x
+atomidx  14
+highestsymneighbnorepeatidx 1
+val  1 highestsymneighbnorepeatval 3
+uniqueneighbtypesofhighestsymneighbnorepeat [402, 414]
+uniqueneighbtypes [401]
+z-then-x
+no bisector and no trisector 1
+no bisector and no trisector 2
+no bisector and no trisector 3
+no bisector and no trisector 4
+no bisector and no trisector 5
+no bisector and no trisector 6
+no bisector and no trisector 7
+no bisector and no trisector 8
+no bisector and no trisector 9
+no bisector and no trisector 10
+no bisector and no trisector 11
+no bisector and no trisector 12
+no bisector and no trisector 13
+no bisector and no trisector 14

@@ -5,10 +5,12 @@
 %Nproc=1
 #P MP2/6-311G** Sp Density=MP2 MaxDisk=100GB
 
- water Gaussian Optimization on bme-nova.bme.utexas.edu
+water Gaussian SP Calculation on bme-nova.bme.utexas.edu
 
 0 1
-O	
-H	
-H	
-	
+ O   -0.054497    0.038535    0.000000
+ H    0.873105    0.317390    0.000000
+ H   -0.008204   -0.928968    0.000000
+
+$nbo bndidx $end
+

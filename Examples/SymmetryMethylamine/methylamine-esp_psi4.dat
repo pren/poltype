@@ -1,0 +1,18 @@
+molecule { 
+0 1
+N           -0.722893621046     0.000490991181     0.005516236285
+C            0.734078574992    -0.005873778113    -0.065371307355
+H            1.257776691236     0.081142038317     0.901897547269
+H            1.066421288456     0.821296371660    -0.700844511797
+H            1.066434324584    -0.933171243584    -0.543016840225
+H           -1.043527900354     0.855953511482     0.449082032278
+H           -1.043515059629    -0.762104611620     0.594602210770
+}
+memory 700MB
+set_num_threads(1)
+psi4_io.set_default_path("/scratch/bdw2292")
+set freeze_core True
+set PROPERTIES_ORIGIN ["COM"]
+E, wfn = properties('mp2/6-311++G(2d,2p)',properties=['dipole'],return_wfn=True)
+oeprop(wfn,"GRID_ESP","WIBERG_LOWDIN_INDICES")
+clean()

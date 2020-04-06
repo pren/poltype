@@ -4,9 +4,9 @@
 
  Dipole X,Y,Z-Components :                  0.000       -0.000        0.000
 
- Quadrupole Moment Tensor :                 1.640        0.000        0.000
-      (Buckinghams)                         0.000        2.099        0.000
-                                            0.000        0.000       -3.739
+ Quadrupole Moment Tensor :                 1.693        0.000        0.000
+      (Buckinghams)                         0.000        2.111        0.000
+                                            0.000        0.000       -3.804
 
- Principal Axes Quadrupole :               -3.739        1.640        2.099
+ Principal Axes Quadrupole :               -3.804        1.693        2.111
 

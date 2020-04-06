@@ -10,7 +10,7 @@ parameterization for small molecules. Theor Chem Acc.
 
 
 
-Version 2.0.0 December 2019
+Version 2.2.5 February 2020
 
 
 
@@ -24,3 +24,46 @@ All Rights Reserved
 
 
 
+idxtosymclass  {1: 401, 2: 402, 3: 405, 4: 405, 5: 405, 6: 406}
+atomidx  1
+highestsymneighbnorepeatidx 6
+val  2 highestsymneighbnorepeatval 1
+uniqueneighbtypesofhighestsymneighbnorepeat [401]
+uniqueneighbtypes [402, 406]
+z-then-x
+atomidx  2
+highestsymneighbnorepeatidx 1
+val  4 highestsymneighbnorepeatval 2
+uniqueneighbtypesofhighestsymneighbnorepeat [402, 406]
+uniqueneighbtypes [401, 405]
+z-then-x
+atomidx  3
+highestsymneighbnorepeatidx 2
+val  1 highestsymneighbnorepeatval 4
+uniqueneighbtypesofhighestsymneighbnorepeat [401, 405]
+uniqueneighbtypes [402]
+z-then-x
+atomidx  4
+highestsymneighbnorepeatidx 2
+val  1 highestsymneighbnorepeatval 4
+uniqueneighbtypesofhighestsymneighbnorepeat [401, 405]
+uniqueneighbtypes [402]
+z-then-x
+atomidx  5
+highestsymneighbnorepeatidx 2
+val  1 highestsymneighbnorepeatval 4
+uniqueneighbtypesofhighestsymneighbnorepeat [401, 405]
+uniqueneighbtypes [402]
+z-then-x
+atomidx  6
+highestsymneighbnorepeatidx 1
+val  1 highestsymneighbnorepeatval 2
+uniqueneighbtypesofhighestsymneighbnorepeat [402, 406]
+uniqueneighbtypes [401]
+z-then-x
+no bisector and no trisector 1
+no bisector and no trisector 2
+no bisector and no trisector 3
+no bisector and no trisector 4
+no bisector and no trisector 5
+no bisector and no trisector 6

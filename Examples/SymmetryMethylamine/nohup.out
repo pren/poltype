@@ -10,7 +10,7 @@ parameterization for small molecules. Theor Chem Acc.
 
 
 
-Version 2.3.0 December 2019
+Version 2.2.5 February 2020
 
 
 
@@ -24,4 +24,46 @@ All Rights Reserved
 
 
 
-Calling: analyze.x /home/bdw2292/poltype/poltype.py/water.xyz -k /home/bdw2292/poltype/poltype.py/water.key e> version.out
+idxtosymclass  {1: 401, 2: 402, 3: 405, 4: 405, 5: 405, 6: 407, 7: 407}
+atomidx  1
+highestsymneighbnorepeatidx 2
+val  3 highestsymneighbnorepeatval 4
+uniqueneighbtypesofhighestsymneighbnorepeat [401, 405]
+uniqueneighbtypes [402, 407]
+methylamine
+atomidx  2
+highestsymneighbnorepeatidx 1
+val  4 highestsymneighbnorepeatval 3
+uniqueneighbtypesofhighestsymneighbnorepeat [402, 407]
+uniqueneighbtypes [401, 405]
+methylamine
+atomidx  3
+highestsymneighbnorepeatidx 2
+val  1 highestsymneighbnorepeatval 4
+uniqueneighbtypesofhighestsymneighbnorepeat [401, 405]
+uniqueneighbtypes [402]
+z-then-x
+atomidx  4
+highestsymneighbnorepeatidx 2
+val  1 highestsymneighbnorepeatval 4
+uniqueneighbtypesofhighestsymneighbnorepeat [401, 405]
+uniqueneighbtypes [402]
+z-then-x
+atomidx  5
+highestsymneighbnorepeatidx 2
+val  1 highestsymneighbnorepeatval 4
+uniqueneighbtypesofhighestsymneighbnorepeat [401, 405]
+uniqueneighbtypes [402]
+z-then-x
+atomidx  6
+highestsymneighbnorepeatidx 1
+val  1 highestsymneighbnorepeatval 3
+uniqueneighbtypesofhighestsymneighbnorepeat [402, 407]
+uniqueneighbtypes [401]
+z-then-x
+atomidx  7
+highestsymneighbnorepeatidx 1
+val  1 highestsymneighbnorepeatval 3
+uniqueneighbtypesofhighestsymneighbnorepeat [402, 407]
+uniqueneighbtypes [401]
+z-then-x

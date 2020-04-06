@@ -3,9 +3,9 @@
 %Chk=aniline-opt.chk
 %Mem=700MB
 %Nproc=1
-#P opt=(maxcycle=400) MP2/6-31G* Guess=INDO MaxDisk=100GB
+#P opt=(maxcycle=400) wB97X-D/6-31G* Guess=INDO MaxDisk=100GB
 
-aniline Gaussian SP Calculation on bme-nova.bme.utexas.edu
+aniline Gaussian OPT Calculation on bme-nova.bme.utexas.edu
 
 0 1
  N   -2.404600    0.000000    0.000500
@@ -22,5 +22,4 @@ aniline Gaussian SP Calculation on bme-nova.bme.utexas.edu
  H    2.881800    0.000400    0.000600
  H   -2.910900   -0.875500   -0.000500
  H   -2.910700    0.875600   -0.000600
-
 

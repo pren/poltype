@@ -7,8 +7,11 @@ molecule {
  H   -1.063200    0.978600    0.331200
  H    0.993600   -0.880400   -0.298000
 }
+set {
+ geom_maxiter 400
+}
 memory 700MB
 set_num_threads(1)
 psi4_io.set_default_path("/scratch/bdw2292")
-optimize('mp2/6-31G*')
+optimize('wb97x-d/6-31G*')
 clean()

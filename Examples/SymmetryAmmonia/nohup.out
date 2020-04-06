@@ -12,7 +12,7 @@ parameterization for small molecules. Theor Chem Acc.
 
 
 
-Version 2.0.0 December 2019
+Version 2.2.5 February 2020
 
 
 
@@ -26,3 +26,29 @@ All Rights Reserved
 
 
 
+idxtosymclass  {1: 401, 2: 404, 3: 404, 4: 404}
+atomidx  1
+uniqueneighbtypes [404]
+Ammonia N
+atomidx  2
+highestsymneighbnorepeatidx 1
+val  1 highestsymneighbnorepeatval 3
+uniqueneighbtypesofhighestsymneighbnorepeat [404]
+uniqueneighbtypes [401]
+Ammonia H
+atomidx  3
+highestsymneighbnorepeatidx 1
+val  1 highestsymneighbnorepeatval 3
+uniqueneighbtypesofhighestsymneighbnorepeat [404]
+uniqueneighbtypes [401]
+Ammonia H
+atomidx  4
+highestsymneighbnorepeatidx 1
+val  1 highestsymneighbnorepeatval 3
+uniqueneighbtypesofhighestsymneighbnorepeat [404]
+uniqueneighbtypes [401]
+Ammonia H
+trisect idxs 1
+doing the idxtobisectthenzbool 2
+doing the idxtobisectthenzbool 3
+doing the idxtobisectthenzbool 4

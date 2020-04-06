@@ -1,0 +1,129 @@
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                          Version 8.7  June 2019                          ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2019               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+     401    401     P     DiMethylPhosphate1H         15     30.974     4
+     407    407     O     DiMethylPhosphate1H          8     15.999     2
+     412    412     O     DiMethylPhosphate1H          8     15.999     2
+     414    414     O     DiMethylPhosphate1H          8     15.999     1
+     408    408     C     DiMethylPhosphate1H          6     12.011     4
+     411    411     H     DiMethylPhosphate1H          1      1.008     1
+     413    413     H     DiMethylPhosphate1H          1      1.008     1
+
+ Electrostatic Potential Grid Points :                  9527
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+     401    401     P     DiMethylPhosphate1H         15     30.974     4
+     407    407     O     DiMethylPhosphate1H          8     15.999     2
+     412    412     O     DiMethylPhosphate1H          8     15.999     2
+     414    414     O     DiMethylPhosphate1H          8     15.999     1
+     408    408     C     DiMethylPhosphate1H          6     12.011     4
+     411    411     H     DiMethylPhosphate1H          1      1.008     1
+     413    413     H     DiMethylPhosphate1H          1      1.008     1
+
+ Additional Atomic Multipole Parameters :
+
+     Atom Type     Coordinate Frame Definition         Multipole Moments
+
+         401      414    412      0   Z-then-X     1.83826
+                                                   0.09369  0.00000  0.00881
+                                                  -0.03627
+                                                   0.00000 -0.03756
+                                                  -0.23039  0.00000  0.07383
+
+         407      408    401      0   Z-then-X    -0.59254
+                                                  -0.03004  0.00000  0.36012
+                                                  -0.04021
+                                                   0.00000 -0.55660
+                                                  -0.16892  0.00000  0.59681
+
+         408      407    401      0   Z-then-X     0.14078
+                                                  -0.07837  0.00000  0.41841
+                                                  -0.47534
+                                                   0.00000 -0.40463
+                                                  -0.11287  0.00000  0.87997
+
+         411      408    407      0   Z-then-X     0.04076
+                                                  -0.01421  0.00000 -0.07638
+                                                  -0.03018
+                                                   0.00000 -0.01014
+                                                  -0.02047  0.00000  0.04032
+
+         412      413    401      0   Z-then-X    -0.58038
+                                                  -0.01860  0.00000  0.11803
+                                                  -0.01623
+                                                   0.00000 -0.44022
+                                                  -0.13887  0.00000  0.45645
+
+         413      412    401      0   Z-then-X     0.25208
+                                                  -0.08498  0.00000 -0.11748
+                                                  -0.06462
+                                                   0.00000 -0.06756
+                                                  -0.04211  0.00000  0.13218
+
+         414      401    412      0   Z-then-X    -0.85100
+                                                  -0.04109  0.00000 -0.15710
+                                                  -0.16576
+                                                   0.00000 -0.19109
+                                                  -0.04270  0.00000  0.35685
+
+ Additional Atomic Dipole Polarizability Parameters :
+
+     Atom Type           Alpha       Thole     Group Atom Types
+
+         401             1.828       0.390         407  412  414
+         407             0.837       0.390         401  408
+         412             0.837       0.390         401  413
+         414             0.837       0.390         401
+         408             1.334       0.390         407  411
+         411             0.496       0.390         408
+         413             0.496       0.390         412
+
+ Average Electrostatic Potential over Atoms :
+      (Kcal/mole per unit charge)
+
+   Structure   Atom      Points      Potential        Target        RMS Diff
+
+        1        1         126        -5.9421        -6.2028         0.3037
+        1        2         514        -8.5395        -8.4998         0.0995
+        1        3         425        -4.2146        -4.2292         0.1123
+        1        4         718        -1.4479        -1.4676         0.0833
+        1        5        1398       -14.3863       -14.4300         0.1346
+        1        6         570         5.0284         5.1258         0.1704
+        1        7         573         3.5098         3.5694         0.1860
+        1        8         505         6.2610         6.2232         0.1129
+        1        9         934         4.3338         4.4278         0.1205
+        1       10         640         3.2370         3.3489         0.1419
+        1       11         670        -1.9419        -1.7298         0.2527
+        1       12         551         4.8392         4.7571         0.1421
+        1       13         936         4.7638         4.7649         0.1165
+        1       14         967         4.1864         4.2076         0.0940
+
+ Electrostatic Potential over all Grid Points :
+
+ Average Potential Value for Model :                 -0.4251
+ Average Potential Magnitude for Model :              6.1352
+ Average Potential Value for Target :                -0.3984
+ Average Potential Magnitude for Target :             6.1546
+
+ Average Signed Potential Difference :               -0.0267
+ Average Unsigned Potential Difference :              0.1052
+ Root Mean Square Potential Difference :              0.1437

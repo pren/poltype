@@ -1,22 +1,8 @@
-Sun Dec 29 14:06:07 2019 Psi4 detected; it will be used as the QM engine
-Sun Dec 29 14:06:07 2019 Running on host: bme-nova.bme.utexas.edu
-Sun Dec 29 14:06:07 2019 NEED QM Density Matrix: Executing Gaussian Opt and SP
-Sun Dec 29 14:06:07 2019  Calling: babel --title "ammonia Gaussian Optimization on bme-nova.bme.utexas.edu" ammonia.sdf ammonia-tmp.com
-1 molecule converted
-15 audit log messages 
-Sun Dec 29 14:06:07 2019  Calling: mkdir /scratch/bdw2292
-mkdir: cannot create directory `/scratch/bdw2292': File exists
-Sun Dec 29 14:06:07 2019 Calling: Psi4 Optimization
-Sun Dec 29 14:06:07 2019  Calling: psi4 ammonia-opt_psi4.dat ammonia-opt.log
-Optimizer: Optimization complete!
-Sun Dec 29 14:06:11 2019  Calling: babel --title "ammonia Gaussian SP Calculation on bme-nova.bme.utexas.edu" -i g03 ammonia-opt.log ammonia-tmp.com
-0 molecules converted
-2 audit log messages 
-Sun Dec 29 14:06:11 2019 Calling: Psi4 Gradient for DMA
-Sun Dec 29 14:06:11 2019  Calling: psi4 ammonia-dma_psi4.dat ammonia-dma.log
-Sun Dec 29 14:06:14 2019 NEED DMA: Executing GDMA
-Sun Dec 29 14:06:14 2019  Calling: gdma < ammonia.gdmain > ammonia.gdmaout
-Sun Dec 29 14:06:14 2019  Calling: poledit.x 1 ammonia.gdmaout /home/bdw2292/poltype/amoebabio18_header.prm < ammonia-peditin.txt
+Mon Apr  6 14:07:10 2020 Running on host: bme-nova.bme.utexas.edu
+Mon Apr  6 14:07:10 2020 NEED QM Density Matrix: Executing Gaussian Opt and SP
+Mon Apr  6 14:07:10 2020 Calling: Psi4 Optimization
+Mon Apr  6 14:07:10 2020 Calling: Psi4 Gradient for DMA
+Mon Apr  6 14:07:10 2020  Calling: poledit.x 1 ammonia.gdmaout /home/bdw2292/poltypepackage/amoebabio18_header.prm < ammonia-peditin.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryAmmonia
 
      ######################################################################
    ##########################################################################
@@ -197,75 +183,13 @@ Sun Dec 29 14:06:14 2019  Calling: poledit.x 1 ammonia.gdmaout /home/bdw2292/pol
  Quadrupole:             -0.00926
                           0.00000        0.00660
                           0.01440        0.00000        0.00266
-Sun Dec 29 14:06:14 2019  Calling: potential.x 1 ammonia.xyz -k ammonia.key
+Mon Apr  6 14:07:11 2020 Calling: Generating CUBE File from PSI4
+Mon Apr  6 14:07:11 2020  Calling: /home/bdw2292/poltypepackage/avgmpoles.pl ammonia.key ammonia.xyz ammonia-groups.txt ammonia.key_2 ammonia.xyz_2 401 path = /home/bdw2292/poltypepackage/Examples/SymmetryAmmonia
+multipole401-404-404-404multipole404401-404-404Mon Apr  6 14:07:11 2020 
+Mon Apr  6 14:07:11 2020 =========================================================
+Mon Apr  6 14:07:11 2020 QM Dipole moment
 
-     ######################################################################
-   ##########################################################################
-  ###                                                                      ###
- ###            Tinker  ---  Software Tools for Molecular Design            ###
- ##                                                                          ##
- ##                          Version 8.7  June 2019                          ##
- ##                                                                          ##
- ##               Copyright (c)  Jay William Ponder  1990-2019               ##
- ###                           All Rights Reserved                          ###
-  ###                                                                      ###
-   ##########################################################################
-     ######################################################################
-
-
- Additional Atom Definition Parameters :
-
-     Type  Class  Symbol  Description               Atomic    Mass   Valence
-
-       1      1     N     ammonia                      7     14.007     3
-       2      2     H     ammonia                      1      1.008     1
-       3      3     H     ammonia                      1      1.008     1
-       4      4     H     ammonia                      1      1.008     1
-
- Electrostatic Potential Grid Points :                  4770
-
- Gaussian CUBEGEN Input Written To :   ammonia.grid
-
- Next, run the Gaussian CUBEGEN program; for example:
- cubegen 0 potential=MP2 xxx.fchk xxx.cube -5 h < xxx.grid
-
- See the Gaussian documentation for additional details;
- After CUBEGEN, rerun Tinker POTENTIAL using Option 2
-Sun Dec 29 14:06:14 2019 Calling: Psi4 Gradient for ESP
-Sun Dec 29 14:06:14 2019  Calling: psi4 ammonia-esp_psi4.dat ammonia-esp_psi4.log
-Sun Dec 29 14:06:19 2019 Calling: Generating CUBE File from PSI4
-Sun Dec 29 14:06:19 2019  Calling: potential.x 2 ammonia.cube
-
-     ######################################################################
-   ##########################################################################
-  ###                                                                      ###
- ###            Tinker  ---  Software Tools for Molecular Design            ###
- ##                                                                          ##
- ##                          Version 8.7  June 2019                          ##
- ##                                                                          ##
- ##               Copyright (c)  Jay William Ponder  1990-2019               ##
- ###                           All Rights Reserved                          ###
-  ###                                                                      ###
-   ##########################################################################
-     ######################################################################
-
-
- Electrostatic Potential Written To :  ammonia.pot
-Sun Dec 29 14:06:19 2019  Calling: /home/bdw2292/poltype/avgmpoles.pl ammonia.key ammonia.xyz ammonia-groups.txt ammonia.key_2 ammonia.xyz_2 401
-line: multipole     1   -2   -3   -4         -0.18504
-
-Content temp c3: -4
-tmpval2-2 -402 -402
-line: multipole     2    1   -3   -4          0.06168
-
-Content temp c3: -4
-line: multipole     3    1   -2   -4          0.06168
-
-Content temp c3: -4
-line: multipole     4    1   -2   -3          0.06168
-
-Content temp c3: -3
-multipole401-402-402-402multipole402401-402-402Sun Dec 29 14:06:19 2019  Calling: potential.x 6 ammonia.xyz_2 -k ammonia.key_2 ammonia.pot N 0.1
+Mon Apr  6 14:07:11 2020  Calling: potential.x 6 ammonia.xyz_2 -k ammonia.key_2 ammonia.pot N 0.1 path = /home/bdw2292/poltypepackage/Examples/SymmetryAmmonia
 
      ######################################################################
    ##########################################################################
@@ -286,7 +210,7 @@ multipole401-402-402-402multipole402401-402-402Sun Dec 29 14:06:19 2019  Calling
      Type  Class  Symbol  Description               Atomic    Mass   Valence
 
      401    401     N     ammonia                      7     14.007     3
-     402    402     H     ammonia                      1      1.008     1
+     404    404     H     ammonia                      1      1.008     1
 
  Electrostatic Potential Grid Points :                  4770
 
@@ -297,19 +221,19 @@ multipole401-402-402-402multipole402401-402-402Sun Dec 29 14:06:19 2019  Calling
      Type  Class  Symbol  Description               Atomic    Mass   Valence
 
      401    401     N     ammonia                      7     14.007     3
-     402    402     H     ammonia                      1      1.008     1
+     404    404     H     ammonia                      1      1.008     1
 
  Additional Atomic Multipole Parameters :
 
      Atom Type     Coordinate Frame Definition         Multipole Moments
 
-         401      402    402    402   3-Fold      -0.18504
+         401      404    404    404   3-Fold      -0.18504
                                                    0.00000  0.00000  0.33744
                                                    0.44899
                                                    0.00000  0.44899
                                                    0.00000  0.00000 -0.89798
 
-         402      401    402    402   Z-Bisect     0.06168
+         404      401    404    404   Z-Bisect     0.06168
                                                    0.00320  0.00000 -0.19273
                                                   -0.00926
                                                    0.00000  0.00660
@@ -319,8 +243,8 @@ multipole401-402-402-402multipole402401-402-402Sun Dec 29 14:06:19 2019  Calling
 
      Atom Type           Alpha       Thole     Group Atom Types
 
-         401             1.073       0.390         402
-         402             0.496       0.390         401
+         401             1.073       0.390         404
+         404             0.496       0.390         401
 
  Average Electrostatic Potential over Atoms :
       (Kcal/mole per unit charge)
@@ -357,25 +281,25 @@ multipole401-402-402-402multipole402401-402-402Sun Dec 29 14:06:19 2019  Calling
     --            401             YY-Quad            0.44899
     --            401             YZ-Quad            0.00000          X
      2            401             ZZ-Quad           -0.89798
-    --            402             Monopole           0.06168          X
-     3            402             X-Dipole           0.00320
-    --            402             Y-Dipole           0.00000          X
-     4            402             Z-Dipole          -0.19273
-     5            402             XX-Quad           -0.00926
-    --            402             XY-Quad            0.00000          X
-     6            402             XZ-Quad            0.01440
-     7            402             YY-Quad            0.00660
-    --            402             YZ-Quad            0.00000          X
-    --            402             ZZ-Quad            0.00266
+    --            404             Monopole           0.06168          X
+     3            404             X-Dipole           0.00320
+    --            404             Y-Dipole           0.00000          X
+     4            404             Z-Dipole          -0.19273
+     5            404             XX-Quad           -0.00926
+    --            404             XY-Quad            0.00000          X
+     6            404             XZ-Quad            0.01440
+     7            404             YY-Quad            0.00660
+    --            404             YZ-Quad            0.00000          X
+    --            404             ZZ-Quad            0.00266
 
  Levenberg-Marquardt Nonlinear Least Squares :
 
  LS Iter     F Value      Total G     Active G    N Active   F Calls
 
-     0      472.4333    2121.7851    2121.7851         7         8
-     1       41.8666     211.7050     211.7050         7        16
-     2       27.3215      12.0154      12.0154         7        24
-     3       23.2252       0.0000       0.0000         7        32
+     0      825.3599    5160.0458    5160.0458         7         8
+     1       41.5963     367.0086     367.0086         7        16
+     2       29.0021      13.6670      13.6670         7        24
+     3       23.5605       0.0000       0.0000         7        32
 
  SQUARE  --  Normal Termination of Least Squares
 
@@ -386,150 +310,74 @@ multipole401-402-402-402multipole402401-402-402Sun Dec 29 14:06:19 2019  Calling
     --            401             Monopole          -0.18504          X
     --            401             X-Dipole           0.00000          X
     --            401             Y-Dipole           0.00000          X
-     1            401             Z-Dipole           0.36419
-    --            401             XX-Quad            0.46116
+     1            401             Z-Dipole           0.36447
+    --            401             XX-Quad            0.46126
     --            401             XY-Quad            0.00000          X
     --            401             XZ-Quad            0.00000          X
-    --            401             YY-Quad            0.46116
+    --            401             YY-Quad            0.46126
     --            401             YZ-Quad            0.00000          X
-     2            401             ZZ-Quad           -0.92232
-    --            402             Monopole           0.06168          X
-     3            402             X-Dipole          -0.02018
-    --            402             Y-Dipole           0.00000          X
-     4            402             Z-Dipole          -0.19411
-     5            402             XX-Quad           -0.01586
-    --            402             XY-Quad            0.00000          X
-     6            402             XZ-Quad            0.01941
-     7            402             YY-Quad            0.05450
-    --            402             YZ-Quad            0.00000          X
-    --            402             ZZ-Quad           -0.03864
+     2            401             ZZ-Quad           -0.92252
+    --            404             Monopole           0.06168          X
+     3            404             X-Dipole          -0.02006
+    --            404             Y-Dipole           0.00000          X
+     4            404             Z-Dipole          -0.19442
+     5            404             XX-Quad           -0.01586
+    --            404             XY-Quad            0.00000          X
+     6            404             XZ-Quad            0.01906
+     7            404             YY-Quad            0.05454
+    --            404             YZ-Quad            0.00000          X
+    --            404             ZZ-Quad           -0.03868
 
  Average Electrostatic Potential over Atoms :
       (Kcal/mole per unit charge)
 
    Structure   Atom      Points      Potential        Target        RMS Diff
 
-        1        1        1565        -7.4042        -7.3661         0.1096
-        1        2        1070         3.5134         3.5401         0.0499
-        1        3        1073         3.5223         3.5495         0.0502
-        1        4        1062         3.5014         3.5286         0.0502
+        1        1        1565        -7.4127        -7.3661         0.1131
+        1        2        1070         3.5176         3.5401         0.0470
+        1        3        1073         3.5264         3.5495         0.0472
+        1        4        1062         3.5054         3.5286         0.0474
 
  Electrostatic Potential over all Grid Points :
 
- Average Potential Value for Model :                 -0.0692
- Average Potential Magnitude for Model :              5.4399
+ Average Potential Value for Model :                 -0.0693
+ Average Potential Magnitude for Model :              5.4471
  Average Potential Value for Target :                -0.0386
  Average Potential Magnitude for Target :             5.4452
 
  Average Signed Potential Difference :               -0.0307
- Average Unsigned Potential Difference :              0.0491
- Root Mean Square Potential Difference :              0.0750
-Sun Dec 29 14:06:19 2019  Calling: sed -e '/\(.* none$\|^#\|^fix\|^potential-offset\)/d' ammonia.key_3 > ammonia.key_3_tmp
-Sun Dec 29 14:06:19 2019 
-Sun Dec 29 14:06:19 2019 =========================================================
-Sun Dec 29 14:06:19 2019 Electrostatic Potential Comparision
+ Average Unsigned Potential Difference :              0.0486
+ Root Mean Square Potential Difference :              0.0754
+Mon Apr  6 14:07:13 2020  Calling: sed -e '/\(.* none$\|^#\|^fix\|^potential-offset\)/d' ammonia.key_3 > ammonia.key_3_tmp path = /home/bdw2292/poltypepackage/Examples/SymmetryAmmonia
+Mon Apr  6 14:07:13 2020 
+Mon Apr  6 14:07:13 2020 =========================================================
+Mon Apr  6 14:07:13 2020 Electrostatic Potential Comparison
 
-Sun Dec 29 14:06:19 2019  Calling: potential.x 5 ammonia.xyz_2 -k ammonia.key_3 ammonia.pot N > RMSPD.txt
+Mon Apr  6 14:07:13 2020  Calling: potential.x 5 ammonia.xyz_2 -k ammonia.key_3 ammonia.pot N > RMSPD.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryAmmonia
+Mon Apr  6 14:07:15 2020 missing torsions []
 ****************************************************************************************************
-Sun Dec 29 14:06:20 2019 
-Sun Dec 29 14:06:20 2019 =========================================================
-Sun Dec 29 14:06:20 2019 Minimizing structure
+[]
+Mon Apr  6 14:07:15 2020 postfit min Alz about to run
+Mon Apr  6 14:07:15 2020 about to evalaute_rot_bonds
+Mon Apr  6 14:07:15 2020 
+Mon Apr  6 14:07:15 2020 =========================================================
+Mon Apr  6 14:07:15 2020 Minimizing structure
 
-Sun Dec 29 14:06:20 2019  Calling: cp ammonia.xyz_2 ttt.xyz
-Sun Dec 29 14:06:20 2019  Calling: cp ammonia.key_5 ttt.key
-Sun Dec 29 14:06:20 2019  Calling: minimize.x -k ttt.key ttt.xyz 0.1
+Mon Apr  6 14:07:15 2020  Calling: cp ammonia.xyz_2 ttt.xyz path = /home/bdw2292/poltypepackage/Examples/SymmetryAmmonia
+Mon Apr  6 14:07:15 2020  Calling: cp ammonia.key_5 ttt.key path = /home/bdw2292/poltypepackage/Examples/SymmetryAmmonia
+Mon Apr  6 14:07:15 2020  Calling: minimize.x -k ttt.key ttt.xyz 0.1 > Minimizedttt.out path = /home/bdw2292/poltypepackage/Examples/SymmetryAmmonia
+Mon Apr  6 14:07:16 2020 
+Mon Apr  6 14:07:16 2020 =========================================================
+Mon Apr  6 14:07:16 2020 QM Dipole moment
 
-     ######################################################################
-   ##########################################################################
-  ###                                                                      ###
- ###            Tinker  ---  Software Tools for Molecular Design            ###
- ##                                                                          ##
- ##                          Version 8.7  June 2019                          ##
- ##                                                                          ##
- ##               Copyright (c)  Jay William Ponder  1990-2019               ##
- ###                           All Rights Reserved                          ###
-  ###                                                                      ###
-   ##########################################################################
-     ######################################################################
+Mon Apr  6 14:07:16 2020 QM Dipole moment = 1.697
+Mon Apr  6 14:07:16 2020 
+Mon Apr  6 14:07:16 2020 =========================================================
+Mon Apr  6 14:07:16 2020 MM Dipole moment
 
+Mon Apr  6 14:07:16 2020  Calling: analyze.x ammonia.xyz_2 -k ttt.key em | grep -A11 Charge>MMDipole.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryAmmonia
+Mon Apr  6 14:07:18 2020 MM Dipole moment = 1.696
+Mon Apr  6 14:07:18 2020 Poltype Job Finished
 
- Additional Atom Definition Parameters :
-
-     Type  Class  Symbol  Description               Atomic    Mass   Valence
-
-     401    401     N     ammonia                      7     14.007     3
-     402    402     H     ammonia                      1      1.008     1
-
- Additional Bond Stretching Parameters :
-
-     Atom Classes             K(S)         Length
-
-       401 402             461.900         1.0168
-
- Additional Angle Bending Parameters :
-
-     Atom Classes             K(B)          Angle
-
-     402 401 402            43.520        106.353
-
- Additional Stretch-Bend Parameters :
-
-     Atom Classes          K(SB)-1        K(SB)-2
-
-     402 401 402             4.300          7.200
-
- Additional van der Waals Parameters :
-
-     Atom Class               Size        Epsilon        Reduction
-
-         401                3.7100         0.1050          0.000
-         402                2.7000         0.0200          0.910
-
- Additional Atomic Multipole Parameters :
-
-     Atom Type     Coordinate Frame Definition         Multipole Moments
-
-         401      402    402    402   3-Fold      -0.18504
-                                                   0.00000  0.00000  0.36419
-                                                   0.46116
-                                                   0.00000  0.46116
-                                                   0.00000  0.00000 -0.92232
-
-         402      401    402    402   Z-Bisect     0.06168
-                                                  -0.02018  0.00000 -0.19411
-                                                  -0.01586
-                                                   0.00000  0.05450
-                                                   0.01941  0.00000 -0.03864
-
- Additional Atomic Dipole Polarizability Parameters :
-
-     Atom Type           Alpha       Thole     Group Atom Types
-
-         401             1.073       0.390         402
-         402             0.496       0.390         401
-
- Limited Memory BFGS Quasi-Newton Optimization :
-
- QN Iter     F Value      G RMS      F Move   X Move   Angle  FG Call  Comment
-
-     0        0.0000     0.0140                                   1
-
- LBFGS  --  Normal Termination due to SmallGrad
-
- Final Function Value :            0.0000
- Final RMS Gradient :              0.0140
- Final Gradient Norm :             0.0280
-Sun Dec 29 14:06:20 2019 
-Sun Dec 29 14:06:20 2019 =========================================================
-Sun Dec 29 14:06:20 2019 QM Dipole moment
-
-Sun Dec 29 14:06:20 2019 QM Dipole moment = 1.6975
-Sun Dec 29 14:06:20 2019 
-Sun Dec 29 14:06:20 2019 =========================================================
-Sun Dec 29 14:06:20 2019 MM Dipole moment
-
-Sun Dec 29 14:06:20 2019  Calling: analyze.x ammonia.xyz_2 em | grep -A11 Charge>MMDipole.txt
-Sun Dec 29 14:06:21 2019 MM Dipole moment = 1.693
 ****************************************************************************************************
-Sun Dec 29 14:06:21 2019 Poltype Job Finished
-
+[]

@@ -1,0 +1,46 @@
+parameters /home/bdw2292/poltypepackage/amoebabio18_header.prm
+bondterm none
+angleterm none
+torsionterm none
+vdwterm none
+fix-monopole
+potential-offset 1.0
+
+TARGET-DIPOLE 0.003 -5.968 -0.0
+atom          401    401    P     "DiMethylPhosphate0H "        15    30.974    4
+atom          407    407    O     "DiMethylPhosphate0H "         8    15.999    2
+atom          413    413    O     "DiMethylPhosphate0H "         8    15.999    1
+atom          408    408    C     "DiMethylPhosphate0H "         6    12.011    4
+atom          411    411    H     "DiMethylPhosphate0H "         1     1.008    1
+
+multipole    401   -413   -413              1.57549
+                                      0.00000    0.00000   -0.24168
+                                      0.23633
+                                      0.00000   -0.22713
+                                      0.00000    0.00000   -0.00920
+multipole    407    408    401             -0.55707
+                                      0.16820    0.00000    0.29745
+                                      0.02016
+                                      0.00000   -0.57978
+                                     -0.08385    0.00000    0.55961
+multipole    408    407    401              0.14772
+                                     -0.02093    0.00000    0.41814
+                                     -0.38792
+                                      0.00000   -0.38000
+                                     -0.06585    0.00000    0.76792
+multipole    411    408    407              0.00477
+                                     -0.00023    0.00000   -0.12549
+                                      0.01152
+                                      0.00000   -0.00428
+                                     -0.01924    0.00000   -0.00725
+multipole    413    401    413             -0.89270
+                                      0.06406    0.00000    0.00412
+                                     -0.23167
+                                      0.00000   -0.16222
+                                      0.06986    0.00000    0.39388
+
+polarize           401          1.8280     0.3900 407 413
+polarize           407          0.8370     0.3900 401 408
+polarize           413          0.8370     0.3900 401
+polarize           408          1.3340     0.3900 407 411
+polarize           411          0.4960     0.3900 408

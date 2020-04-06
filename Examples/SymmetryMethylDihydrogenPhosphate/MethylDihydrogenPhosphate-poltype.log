@@ -1,0 +1,422 @@
+Mon Apr  6 14:33:12 2020 Running on host: bme-nova.bme.utexas.edu
+Mon Apr  6 14:33:12 2020 NEED QM Density Matrix: Executing Gaussian Opt and SP
+Mon Apr  6 14:33:12 2020 Calling: Psi4 Optimization
+Mon Apr  6 14:33:12 2020  Calling: cd /home/bdw2292/poltypepackage/Examples/SymmetryMethylDihydrogenPhosphate && psi4 MethylDihydrogenPhosphate-opt_psi4.dat MethylDihydrogenPhosphate-opt.log path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylDihydrogenPhosphate
+Optimizer: Optimization complete!
+Mon Apr  6 14:40:19 2020 Normal termination: logfile=/home/bdw2292/poltypepackage/Examples/SymmetryMethylDihydrogenPhosphate/MethylDihydrogenPhosphate-opt.log path=/home/bdw2292/poltypepackage/Examples/SymmetryMethylDihydrogenPhosphate
+Mon Apr  6 14:41:19 2020 **********************************************
+Mon Apr  6 14:41:19 2020 All jobs have terminated 
+Mon Apr  6 14:41:19 2020 Calling: Psi4 Gradient for DMA
+Mon Apr  6 14:41:19 2020  Calling: cd /home/bdw2292/poltypepackage/Examples/SymmetryMethylDihydrogenPhosphate && psi4 MethylDihydrogenPhosphate-dma_psi4.dat MethylDihydrogenPhosphate-dma.log path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylDihydrogenPhosphate
+Mon Apr  6 14:41:24 2020 Normal termination: logfile=/home/bdw2292/poltypepackage/Examples/SymmetryMethylDihydrogenPhosphate/MethylDihydrogenPhosphate-dma.log path=/home/bdw2292/poltypepackage/Examples/SymmetryMethylDihydrogenPhosphate
+Mon Apr  6 14:42:24 2020 **********************************************
+Mon Apr  6 14:42:24 2020 All jobs have terminated 
+Mon Apr  6 14:42:24 2020 NEED DMA: Executing GDMA
+Mon Apr  6 14:42:24 2020  Calling: gdma < MethylDihydrogenPhosphate.gdmain > MethylDihydrogenPhosphate.gdmaout path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylDihydrogenPhosphate
+Mon Apr  6 14:42:24 2020  Calling: poledit.x 1 MethylDihydrogenPhosphate.gdmaout /home/bdw2292/poltypepackage/amoebabio18_header.prm < MethylDihydrogenPhosphate-peditin.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylDihydrogenPhosphate
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                          Version 8.7  June 2019                          ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2019               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Global Frame Cartesian Multipole Moments :
+
+ Site:       1         Name:   P         Atomic Number:      15
+
+ Coordinates:            0.419913       0.060155      -0.012430
+
+ Charge:                  1.83105
+ Dipole:                 -0.25626       -0.10467       -0.00333
+ Quadrupole:              0.08536
+                          0.13962        0.01505
+                         -0.03916       -0.07668       -0.10041
+
+ Site:       2         Name:   O         Atomic Number:       8
+
+ Coordinates:           -0.950522       0.860595      -0.054200
+
+ Charge:                 -0.57708
+ Dipole:                 -0.27152       -0.23376        0.01145
+ Quadrupole:              0.51335
+                          0.19686       -0.05952
+                         -0.03054       -0.02672       -0.45382
+
+ Site:       3         Name:   O         Atomic Number:       8
+
+ Coordinates:            0.194925      -1.009264      -1.189076
+
+ Charge:                 -0.58354
+ Dipole:                  0.25979       -0.09647       -0.03660
+ Quadrupole:              0.15616
+                         -0.25555       -0.01227
+                         -0.09057        0.32967       -0.14388
+
+ Site:       4         Name:   O         Atomic Number:       8
+
+ Coordinates:            0.336845      -0.884886       1.297506
+
+ Charge:                 -0.59252
+ Dipole:                  0.16946        0.13821        0.14758
+ Quadrupole:             -0.26121
+                          0.21245       -0.11344
+                          0.29150       -0.00286        0.37465
+
+ Site:       5         Name:   O         Atomic Number:       8
+
+ Coordinates:            1.620394       0.902291      -0.067180
+
+ Charge:                 -0.84193
+ Dipole:                 -0.02606        0.02607       -0.01043
+ Quadrupole:              0.21666
+                          0.28153       -0.01908
+                         -0.01126       -0.01290       -0.19759
+
+ Site:       6         Name:   C         Atomic Number:       6
+
+ Coordinates:           -2.206150       0.178552      -0.003221
+
+ Charge:                  0.13681
+ Dipole:                  0.34731        0.21727       -0.03039
+ Quadrupole:              0.54804
+                          0.58710       -0.14525
+                         -0.08017       -0.01667       -0.40279
+
+ Site:       7         Name:   H         Atomic Number:       1
+
+ Coordinates:           -2.971831       0.952438       0.051759
+
+ Charge:                  0.05993
+ Dipole:                 -0.11088        0.09580        0.00682
+ Quadrupole:             -0.01137
+                         -0.00227        0.01571
+                         -0.00005        0.00094       -0.00434
+
+ Site:       8         Name:   H         Atomic Number:       1
+
+ Coordinates:           -2.261020      -0.460625       0.882817
+
+ Charge:                  0.02958
+ Dipole:                 -0.02530       -0.10651        0.12852
+ Quadrupole:              0.00861
+                         -0.01294       -0.01263
+                          0.01937        0.01198        0.00402
+
+ Site:       9         Name:   H         Atomic Number:       1
+
+ Coordinates:           -2.348355      -0.422099      -0.905343
+
+ Charge:                  0.03912
+ Dipole:                 -0.03317       -0.09961       -0.12864
+ Quadrupole:              0.00562
+                         -0.01332       -0.01163
+                         -0.01793       -0.01028        0.00601
+
+ Site:      10         Name:   H         Atomic Number:       1
+
+ Coordinates:            1.014857      -1.467467      -1.414667
+
+ Charge:                  0.24770
+ Dipole:                  0.10259       -0.07001       -0.04631
+ Quadrupole:              0.05961
+                         -0.06011       -0.01618
+                         -0.02622        0.01675       -0.04343
+
+ Site:      11         Name:   H         Atomic Number:       1
+
+ Coordinates:            0.858354      -0.493738       2.011334
+
+ Charge:                  0.25087
+ Dipole:                  0.06760        0.03524        0.10018
+ Quadrupole:             -0.01132
+                          0.03833       -0.02508
+                          0.06163        0.04820        0.03640
+
+ Local Frame Definition for Multipole Sites :
+
+     Atom     Name      Axis Type     Z Axis  X Axis  Y Axis
+
+       1      P         Z-then-X         5       2       0
+       2      O         Z-then-X         1       6       0
+       3      O         Z-then-X         1      10       0
+       4      O         Z-then-X         1      11       0
+       5      O         Z-then-X         1       2       0
+       6      C         Z-then-X         2       7       0
+       7      H         Z-then-X         6       2       0
+       8      H         Z-then-X         6       2       0
+       9      H         Z-then-X         6       2       0
+      10      H         Z-then-X         3       1       0
+      11      H         Z-then-X         4       1       0
+
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Local Frame Definition for Multipole Sites :
+
+     Atom     Name      Axis Type     Z Axis  X Axis  Y Axis
+
+       1      P         Z-then-X         5       2       0
+       2      O         Z-then-X         6       1       0
+       3      O         Z-then-X        10       1       0
+       4      O         Z-then-X        11       1       0
+       5      O         Z-then-X         1       2       0
+       6      C         Z-then-X         2       1       0
+       7      H         Z-then-X         6       2       0
+       8      H         Z-then-X         6       2       0
+       9      H         Z-then-X         6       2       0
+      10      H         Z-then-X         3       1       0
+      11      H         Z-then-X         4       1       0
+
+ Choose Either the AMOEBA or HIPPO Polarization Model [A] :  
+ Polarizability Parameters for Multipole Sites :
+
+     Atom     Name       Polarize          Thole
+
+       1      P            1.8280         0.3900
+       2      O            0.8370         0.3900
+       3      O            0.8370         0.3900
+       4      O            0.8370         0.3900
+       5      O            0.8370         0.3900
+       6      C            1.3340         0.3900
+       7      H            0.4960         0.3900
+       8      H            0.4960         0.3900
+       9      H            0.4960         0.3900
+      10      H            0.4960         0.3900
+      11      H            0.4960         0.3900
+
+ Enter Atom Number, Polarizability & Thole Values :  
+ The default is to place all atoms into one polarization group;
+ This can be altered by entering a series of bonded atom pairs
+ that separate the molecule into distinct polarization groups
+
+ Enter a Bond between Polarization Groups [<Enter>=Exit] :  
+ Polarization Groups for Multipole Sites :
+
+     Atom     Name       Polarization Group Definition
+
+       1      P               2     3     4     5
+       2      O               1     6
+       3      O               1    10
+       4      O               1    11
+       5      O               1
+       6      C               2     7     8     9
+       7      H               6
+       8      H               6
+       9      H               6
+      10      H               3
+      11      H               4
+
+ Electrostatic and Polarization Scale Factors :
+
+                    1-2         1-3         1-4         1-5
+
+ M-Scale:         0.0000      0.0000      0.4000      0.8000
+ P-Inter:         0.0000      0.0000      1.0000      1.0000
+ P-Intra:         0.0000      0.0000      0.5000      1.0000
+ W-Scale:         1.0000      1.0000      1.0000      1.0000
+
+                    1-1         1-2         1-3         1-4
+
+ D-Scale:         0.0000      1.0000      1.0000      1.0000
+ U-Scale:         1.0000      1.0000      1.0000      1.0000
+
+ Use Thole Damping:           True
+ Charge Penetration:          False
+ Set D Equal to P:            False
+
+ Determination of Intergroup Induced Dipoles :
+
+    Iter        RMS Change (Debye)
+
+       1           0.0000000000
+
+ Local Frame Intergroup Induced Dipole Moments (Debye) :
+
+    Atom              X           Y           Z         Total
+
+       1           0.0000      0.0000      0.0000      0.0000
+       2           0.0000      0.0000      0.0000      0.0000
+       3           0.0000      0.0000      0.0000      0.0000
+       4           0.0000      0.0000      0.0000      0.0000
+       5           0.0000      0.0000      0.0000      0.0000
+       6           0.0000      0.0000      0.0000      0.0000
+       7           0.0000      0.0000      0.0000      0.0000
+       8           0.0000      0.0000      0.0000      0.0000
+       9           0.0000      0.0000      0.0000      0.0000
+      10           0.0000      0.0000      0.0000      0.0000
+      11           0.0000      0.0000      0.0000      0.0000
+
+ Condense Symmetric Atoms to Equivalent Types [Y] :  
+ Final Atomic Multipole Moments after Regularization :
+
+ Atom:       1         Name:   P         Atomic Number:      15
+
+ Local Frame:            Z-then-X             5       2       0
+
+ Charge:                  1.83106
+ Dipole:                  0.06203        0.00000       -0.26959
+ Quadrupole:             -0.08942
+                          0.00000       -0.10930
+                          0.01893        0.00000        0.19872
+
+ Atom:       2         Name:   O         Atomic Number:       8
+
+ Local Frame:            Z-then-X             6       1       0
+
+ Charge:                 -0.57708
+ Dipole:                  0.07565        0.00000        0.35035
+ Quadrupole:             -0.09371
+                          0.00000       -0.45581
+                         -0.13234        0.00000        0.54952
+
+ Atom:       3         Name:   O         Atomic Number:       8
+
+ Local Frame:            Z-then-X            10       1       0
+
+ Charge:                 -0.58354
+ Dipole:                  0.05000        0.00000        0.27482
+ Quadrupole:              0.01353
+                          0.00000       -0.43015
+                         -0.15731        0.00000        0.41662
+
+ Atom:       4         Name:   O         Atomic Number:       8
+
+ Local Frame:            Z-then-X            11       1       0
+
+ Charge:                 -0.59252
+ Dipole:                  0.05890        0.00000        0.25631
+ Quadrupole:              0.04867
+                          0.00000       -0.48163
+                         -0.16843        0.00000        0.43296
+
+ Atom:       5         Name:   O         Atomic Number:       8
+
+ Local Frame:            Z-then-X             1       2       0
+
+ Charge:                 -0.84193
+ Dipole:                  0.03677        0.00000        0.00597
+ Quadrupole:             -0.20560
+                          0.00000       -0.19843
+                          0.01509        0.00000        0.40403
+
+ Atom:       6         Name:   C         Atomic Number:       6
+
+ Local Frame:            Z-then-X             2       1       0
+
+ Charge:                  0.13681
+ Dipole:                 -0.02594        0.00000        0.40972
+ Quadrupole:             -0.48217
+                          0.00000       -0.40437
+                         -0.02959        0.00000        0.88654
+
+ Atom:       7         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             6       2       0
+
+ Charge:                  0.05993
+ Dipole:                 -0.01143        0.00000       -0.14625
+ Quadrupole:             -0.00024
+                          0.00000       -0.00439
+                         -0.01352        0.00000        0.00463
+
+ Atom:       8         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             6       2       0
+
+ Charge:                  0.02958
+ Dipole:                 -0.01995        0.00000       -0.16760
+ Quadrupole:              0.01093
+                          0.00000        0.00439
+                         -0.02486        0.00000       -0.01532
+
+ Atom:       9         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             6       2       0
+
+ Charge:                  0.03912
+ Dipole:                 -0.01571        0.00000       -0.16522
+ Quadrupole:              0.00992
+                          0.00000        0.00448
+                         -0.02303        0.00000       -0.01440
+
+ Atom:      10         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             3       1       0
+
+ Charge:                  0.24770
+ Dipole:                 -0.01928        0.00000       -0.13111
+ Quadrupole:             -0.04777
+                          0.00000       -0.05168
+                         -0.00256        0.00000        0.09945
+
+ Atom:      11         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             4       1       0
+
+ Charge:                  0.25087
+ Dipole:                 -0.01637        0.00000       -0.12470
+ Quadrupole:             -0.04998
+                          0.00000       -0.05710
+                         -0.00109        0.00000        0.10708
+Mon Apr  6 14:42:25 2020  Calling: potential.x 1 MethylDihydrogenPhosphate.xyz -k MethylDihydrogenPhosphate.key path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylDihydrogenPhosphate
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                          Version 8.7  June 2019                          ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2019               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+       1      1     P     MethylDihydrogenPhos        15     30.974     4
+       2      2     O     MethylDihydrogenPhos         8     15.999     2
+       3      3     O     MethylDihydrogenPhos         8     15.999     2
+       4      4     O     MethylDihydrogenPhos         8     15.999     2
+       5      5     O     MethylDihydrogenPhos         8     15.999     1
+       6      6     C     MethylDihydrogenPhos         6     12.011     4
+       7      7     H     MethylDihydrogenPhos         1      1.008     1
+       8      8     H     MethylDihydrogenPhos         1      1.008     1
+       9      9     H     MethylDihydrogenPhos         1      1.008     1
+      10     10     H     MethylDihydrogenPhos         1      1.008     1
+      11     11     H     MethylDihydrogenPhos         1      1.008     1
+
+ Electrostatic Potential Grid Points :                  8610
+
+ Gaussian CUBEGEN Input Written To :   MethylDihydrogenPhosphate.grid
+
+ Next, run the Gaussian CUBEGEN program; for example:
+ cubegen 0 potential=MP2 xxx.fchk xxx.cube -5 h < xxx.grid
+
+ See the Gaussian documentation for additional details;
+ After CUBEGEN, rerun Tinker POTENTIAL using Option 2
+Mon Apr  6 14:42:26 2020 Calling: Psi4 Gradient for ESP
+Mon Apr  6 14:42:26 2020  Calling: cd /home/bdw2292/poltypepackage/Examples/SymmetryMethylDihydrogenPhosphate && psi4 MethylDihydrogenPhosphate-esp_psi4.dat MethylDihydrogenPhosphate-esp_psi4.log path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylDihydrogenPhosphate
+Mon Apr  6 14:44:31 2020 Normal termination: logfile=/home/bdw2292/poltypepackage/Examples/SymmetryMethylDihydrogenPhosphate/MethylDihydrogenPhosphate-esp_psi4.log path=/home/bdw2292/poltypepackage/Examples/SymmetryMethylDihydrogenPhosphate
