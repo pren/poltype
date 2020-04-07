@@ -1,8 +1,8 @@
-Mon Apr  6 14:05:19 2020 Running on host: bme-nova.bme.utexas.edu
-Mon Apr  6 14:05:19 2020 NEED QM Density Matrix: Executing Gaussian Opt and SP
-Mon Apr  6 14:05:19 2020 Calling: Psi4 Optimization
-Mon Apr  6 14:05:19 2020 Calling: Psi4 Gradient for DMA
-Mon Apr  6 14:05:19 2020  Calling: poledit.x 1 methylamine.gdmaout /home/bdw2292/poltypepackage/amoebabio18_header.prm < methylamine-peditin.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylamine
+Tue Apr  7 16:00:32 2020 Running on host: bme-nova.bme.utexas.edu
+Tue Apr  7 16:00:32 2020 NEED QM Density Matrix: Executing Gaussian Opt and SP
+Tue Apr  7 16:00:32 2020 Calling: Psi4 Optimization
+Tue Apr  7 16:00:32 2020 Calling: Psi4 Gradient for DMA
+Tue Apr  7 16:00:32 2020  Calling: poledit.x 1 methylamine.gdmaout /home/bdw2292/poltypepackage/amoebabio18_header.prm < methylamine-peditin.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylamine
 
      ######################################################################
    ##########################################################################
@@ -261,13 +261,13 @@ Mon Apr  6 14:05:19 2020  Calling: poledit.x 1 methylamine.gdmaout /home/bdw2292
  Quadrupole:             -0.00929
                           0.00000       -0.00418
                          -0.00357        0.00000        0.01347
-Mon Apr  6 14:05:21 2020 Calling: Generating CUBE File from PSI4
-Mon Apr  6 14:05:21 2020  Calling: /home/bdw2292/poltypepackage/avgmpoles.pl methylamine.key methylamine.xyz methylamine-groups.txt methylamine.key_2 methylamine.xyz_2 401 path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylamine
-multipole401402-407-407multipole402401-407-407Mon Apr  6 14:05:21 2020 
-Mon Apr  6 14:05:21 2020 =========================================================
-Mon Apr  6 14:05:21 2020 QM Dipole moment
+Tue Apr  7 16:00:33 2020 Calling: Generating CUBE File from PSI4
+Tue Apr  7 16:00:33 2020  Calling: /home/bdw2292/poltypepackage/avgmpoles.pl methylamine.key methylamine.xyz methylamine-groups.txt methylamine.key_2 methylamine.xyz_2 401 path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylamine
+multipole401402-407-407multipole402401-407-407Tue Apr  7 16:00:33 2020 
+Tue Apr  7 16:00:33 2020 =========================================================
+Tue Apr  7 16:00:33 2020 QM Dipole moment
 
-Mon Apr  6 14:05:21 2020  Calling: potential.x 6 methylamine.xyz_2 -k methylamine.key_2 methylamine.pot N 0.1 path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylamine
+Tue Apr  7 16:00:33 2020  Calling: potential.x 6 methylamine.xyz_2 -k methylamine.key_2 methylamine.pot N 0.1 path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylamine
 
      ######################################################################
    ##########################################################################
@@ -490,35 +490,38 @@ Mon Apr  6 14:05:21 2020  Calling: potential.x 6 methylamine.xyz_2 -k methylamin
  Average Signed Potential Difference :               -0.0389
  Average Unsigned Potential Difference :              0.0851
  Root Mean Square Potential Difference :              0.1261
-Mon Apr  6 14:05:23 2020  Calling: sed -e '/\(.* none$\|^#\|^fix\|^potential-offset\)/d' methylamine.key_3 > methylamine.key_3_tmp path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylamine
-Mon Apr  6 14:05:23 2020 missing torsions []
+Tue Apr  7 16:00:34 2020  Calling: sed -e '/\(.* none$\|^#\|^fix\|^potential-offset\)/d' methylamine.key_3 > methylamine.key_3_tmp path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylamine
+Tue Apr  7 16:00:34 2020 
+Tue Apr  7 16:00:34 2020 =========================================================
+Tue Apr  7 16:00:34 2020 Electrostatic Potential Comparison
+
+Tue Apr  7 16:00:34 2020  Calling: potential.x 5 methylamine.xyz_2 -k methylamine.key_3 methylamine.pot N > RMSPD.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylamine
+Tue Apr  7 16:00:35 2020 missing torsions []
 ****************************************************************************************************
-[]
 Torsion parameters for torsion   407   401   402   405     0.0000 0.0 1     0.6610 180.0 2     0.2880 0.0 3 assigned from SMILES [#1][C][N][#1] 5,2,1,7
-Torsion parameters for torsion   405   401   402   405     0.0000 0.0 1     0.6610 180.0 2     0.2880 0.0 3 assigned from SMILES [#1][C][N][#1] 5,2,1,6
-Mon Apr  6 14:05:23 2020 postfit min Alz about to run
-Mon Apr  6 14:05:23 2020 about to evalaute_rot_bonds
-Mon Apr  6 14:05:23 2020 
-Mon Apr  6 14:05:23 2020 =========================================================
-Mon Apr  6 14:05:23 2020 Minimizing structure
+Tue Apr  7 16:00:35 2020 All jobs have terminated 
+Tue Apr  7 16:00:35 2020 All jobs have terminated 
+Tue Apr  7 16:00:35 2020 postfit min Alz about to run
+Tue Apr  7 16:00:36 2020 about to evalaute_rot_bonds
+Tue Apr  7 16:00:36 2020 
+Tue Apr  7 16:00:36 2020 =========================================================
+Tue Apr  7 16:00:36 2020 Minimizing structure
 
-Mon Apr  6 14:05:23 2020  Calling: cp methylamine.xyz_2 ttt.xyz path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylamine
-Mon Apr  6 14:05:23 2020  Calling: cp methylamine.key_5 ttt.key path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylamine
-Mon Apr  6 14:05:23 2020  Calling: minimize.x -k ttt.key ttt.xyz 0.1 > Minimizedttt.out path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylamine
-Mon Apr  6 14:05:24 2020 
-Mon Apr  6 14:05:24 2020 =========================================================
-Mon Apr  6 14:05:24 2020 QM Dipole moment
+Tue Apr  7 16:00:36 2020  Calling: cp methylamine.xyz_2 ttt.xyz path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylamine
+Tue Apr  7 16:00:36 2020  Calling: cp methylamine.key_5 ttt.key path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylamine
+Tue Apr  7 16:00:36 2020  Calling: minimize.x -k ttt.key ttt.xyz 0.1 > Minimizedttt.out path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylamine
+Tue Apr  7 16:00:37 2020 
+Tue Apr  7 16:00:37 2020 =========================================================
+Tue Apr  7 16:00:37 2020 QM Dipole moment
 
-Mon Apr  6 14:05:24 2020 QM Dipole moment = 1.415
-Mon Apr  6 14:05:24 2020 
-Mon Apr  6 14:05:24 2020 =========================================================
-Mon Apr  6 14:05:24 2020 MM Dipole moment
+Tue Apr  7 16:00:37 2020 QM Dipole moment = 1.415
+Tue Apr  7 16:00:37 2020 
+Tue Apr  7 16:00:37 2020 =========================================================
+Tue Apr  7 16:00:37 2020 MM Dipole moment
 
-Mon Apr  6 14:05:24 2020  Calling: analyze.x methylamine.xyz_2 -k ttt.key em | grep -A11 Charge>MMDipole.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylamine
-Mon Apr  6 14:05:26 2020 MM Dipole moment = 1.413
-Mon Apr  6 14:05:26 2020 Poltype Job Finished
+Tue Apr  7 16:00:37 2020  Calling: analyze.x methylamine.xyz_2 -k ttt.key em | grep -A11 Charge>MMDipole.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryMethylamine
+Tue Apr  7 16:00:38 2020 MM Dipole moment = 1.413
+Tue Apr  7 16:00:38 2020 Poltype Job Finished
 
 ****************************************************************************************************
-[]
 Torsion parameters for torsion   407   401   402   405     0.0000 0.0 1     0.6610 180.0 2     0.2880 0.0 3 assigned from SMILES [#1][C][N][#1] 5,2,1,7
-Torsion parameters for torsion   405   401   402   405     0.0000 0.0 1     0.6610 180.0 2     0.2880 0.0 3 assigned from SMILES [#1][C][N][#1] 5,2,1,6

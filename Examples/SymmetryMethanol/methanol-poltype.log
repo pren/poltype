@@ -1,8 +1,8 @@
-Mon Apr  6 14:04:35 2020 Running on host: bme-nova.bme.utexas.edu
-Mon Apr  6 14:04:35 2020 NEED QM Density Matrix: Executing Gaussian Opt and SP
-Mon Apr  6 14:04:35 2020 Calling: Psi4 Optimization
-Mon Apr  6 14:04:35 2020 Calling: Psi4 Gradient for DMA
-Mon Apr  6 14:04:35 2020  Calling: poledit.x 1 methanol.gdmaout /home/bdw2292/poltypepackage/amoebabio18_header.prm < methanol-peditin.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryMethanol
+Tue Apr  7 16:01:07 2020 Running on host: bme-nova.bme.utexas.edu
+Tue Apr  7 16:01:07 2020 NEED QM Density Matrix: Executing Gaussian Opt and SP
+Tue Apr  7 16:01:07 2020 Calling: Psi4 Optimization
+Tue Apr  7 16:01:07 2020 Calling: Psi4 Gradient for DMA
+Tue Apr  7 16:01:07 2020  Calling: poledit.x 1 methanol.gdmaout /home/bdw2292/poltypepackage/amoebabio18_header.prm < methanol-peditin.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryMethanol
 
      ######################################################################
    ##########################################################################
@@ -235,13 +235,13 @@ Mon Apr  6 14:04:35 2020  Calling: poledit.x 1 methanol.gdmaout /home/bdw2292/po
  Quadrupole:             -0.05300
                           0.00000       -0.08658
                          -0.02892        0.00000        0.13958
-Mon Apr  6 14:04:36 2020 Calling: Generating CUBE File from PSI4
-Mon Apr  6 14:04:36 2020  Calling: /home/bdw2292/poltypepackage/avgmpoles.pl methanol.key methanol.xyz methanol-groups.txt methanol.key_2 methanol.xyz_2 401 path = /home/bdw2292/poltypepackage/Examples/SymmetryMethanol
-Mon Apr  6 14:04:37 2020 
-Mon Apr  6 14:04:37 2020 =========================================================
-Mon Apr  6 14:04:37 2020 QM Dipole moment
+Tue Apr  7 16:01:08 2020 Calling: Generating CUBE File from PSI4
+Tue Apr  7 16:01:08 2020  Calling: /home/bdw2292/poltypepackage/avgmpoles.pl methanol.key methanol.xyz methanol-groups.txt methanol.key_2 methanol.xyz_2 401 path = /home/bdw2292/poltypepackage/Examples/SymmetryMethanol
+Tue Apr  7 16:01:08 2020 
+Tue Apr  7 16:01:08 2020 =========================================================
+Tue Apr  7 16:01:08 2020 QM Dipole moment
 
-Mon Apr  6 14:04:37 2020  Calling: potential.x 6 methanol.xyz_2 -k methanol.key_2 methanol.pot N 0.1 path = /home/bdw2292/poltypepackage/Examples/SymmetryMethanol
+Tue Apr  7 16:01:08 2020  Calling: potential.x 6 methanol.xyz_2 -k methanol.key_2 methanol.pot N 0.1 path = /home/bdw2292/poltypepackage/Examples/SymmetryMethanol
 
      ######################################################################
    ##########################################################################
@@ -462,42 +462,38 @@ Mon Apr  6 14:04:37 2020  Calling: potential.x 6 methanol.xyz_2 -k methanol.key_
  Average Signed Potential Difference :               -0.0178
  Average Unsigned Potential Difference :              0.0469
  Root Mean Square Potential Difference :              0.0704
-Mon Apr  6 14:04:38 2020  Calling: sed -e '/\(.* none$\|^#\|^fix\|^potential-offset\)/d' methanol.key_3 > methanol.key_3_tmp path = /home/bdw2292/poltypepackage/Examples/SymmetryMethanol
-Mon Apr  6 14:04:38 2020 
-Mon Apr  6 14:04:38 2020 =========================================================
-Mon Apr  6 14:04:38 2020 Electrostatic Potential Comparison
+Tue Apr  7 16:01:10 2020  Calling: sed -e '/\(.* none$\|^#\|^fix\|^potential-offset\)/d' methanol.key_3 > methanol.key_3_tmp path = /home/bdw2292/poltypepackage/Examples/SymmetryMethanol
+Tue Apr  7 16:01:10 2020 
+Tue Apr  7 16:01:10 2020 =========================================================
+Tue Apr  7 16:01:10 2020 Electrostatic Potential Comparison
 
-Mon Apr  6 14:04:38 2020  Calling: potential.x 5 methanol.xyz_2 -k methanol.key_3 methanol.pot N > RMSPD.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryMethanol
-Mon Apr  6 14:04:41 2020 missing torsions []
+Tue Apr  7 16:01:10 2020  Calling: potential.x 5 methanol.xyz_2 -k methanol.key_3 methanol.pot N > RMSPD.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryMethanol
+Tue Apr  7 16:01:11 2020 missing torsions []
 ****************************************************************************************************
-[]
 Torsion parameters for torsion   406   401   402   405     0.0000 0.0 1     0.0000 180.0 2     0.2740 0.0 3 assigned from SMILES [#1][O][C][#1] 6,1,2,5
-Torsion parameters for torsion   405   401   402   405     0.0000 0.0 1     0.0000 180.0 2     0.2740 0.0 3 assigned from SMILES [#1][CH3][O][#1] 5,2,1,6
-Torsion parameters for torsion   406   401   402   402     0.0000 0.0 1     0.0000 180.0 2     0.2740 0.0 3 assigned from SMILES [#1][O][C][#1] 6,1,2,3
-Mon Apr  6 14:04:41 2020 postfit min Alz about to run
-Mon Apr  6 14:04:41 2020 about to evalaute_rot_bonds
-Mon Apr  6 14:04:41 2020 
-Mon Apr  6 14:04:41 2020 =========================================================
-Mon Apr  6 14:04:41 2020 Minimizing structure
+Tue Apr  7 16:01:11 2020 All jobs have terminated 
+Tue Apr  7 16:01:11 2020 All jobs have terminated 
+Tue Apr  7 16:01:11 2020 postfit min Alz about to run
+Tue Apr  7 16:01:11 2020 about to evalaute_rot_bonds
+Tue Apr  7 16:01:11 2020 
+Tue Apr  7 16:01:11 2020 =========================================================
+Tue Apr  7 16:01:11 2020 Minimizing structure
 
-Mon Apr  6 14:04:41 2020  Calling: cp methanol.xyz_2 ttt.xyz path = /home/bdw2292/poltypepackage/Examples/SymmetryMethanol
-Mon Apr  6 14:04:41 2020  Calling: cp methanol.key_5 ttt.key path = /home/bdw2292/poltypepackage/Examples/SymmetryMethanol
-Mon Apr  6 14:04:41 2020  Calling: minimize.x -k ttt.key ttt.xyz 0.1 > Minimizedttt.out path = /home/bdw2292/poltypepackage/Examples/SymmetryMethanol
-Mon Apr  6 14:04:42 2020 
-Mon Apr  6 14:04:42 2020 =========================================================
-Mon Apr  6 14:04:42 2020 QM Dipole moment
+Tue Apr  7 16:01:11 2020  Calling: cp methanol.xyz_2 ttt.xyz path = /home/bdw2292/poltypepackage/Examples/SymmetryMethanol
+Tue Apr  7 16:01:11 2020  Calling: cp methanol.key_5 ttt.key path = /home/bdw2292/poltypepackage/Examples/SymmetryMethanol
+Tue Apr  7 16:01:11 2020  Calling: minimize.x -k ttt.key ttt.xyz 0.1 > Minimizedttt.out path = /home/bdw2292/poltypepackage/Examples/SymmetryMethanol
+Tue Apr  7 16:01:12 2020 
+Tue Apr  7 16:01:12 2020 =========================================================
+Tue Apr  7 16:01:12 2020 QM Dipole moment
 
-Mon Apr  6 14:04:42 2020 QM Dipole moment = 1.885
-Mon Apr  6 14:04:42 2020 
-Mon Apr  6 14:04:42 2020 =========================================================
-Mon Apr  6 14:04:42 2020 MM Dipole moment
+Tue Apr  7 16:01:12 2020 QM Dipole moment = 1.885
+Tue Apr  7 16:01:12 2020 
+Tue Apr  7 16:01:12 2020 =========================================================
+Tue Apr  7 16:01:12 2020 MM Dipole moment
 
-Mon Apr  6 14:04:42 2020  Calling: analyze.x methanol.xyz_2 -k ttt.key em | grep -A11 Charge>MMDipole.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryMethanol
-Mon Apr  6 14:04:44 2020 MM Dipole moment = 1.885
-Mon Apr  6 14:04:44 2020 Poltype Job Finished
+Tue Apr  7 16:01:12 2020  Calling: analyze.x methanol.xyz_2 -k ttt.key em | grep -A11 Charge>MMDipole.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryMethanol
+Tue Apr  7 16:01:13 2020 MM Dipole moment = 1.885
+Tue Apr  7 16:01:13 2020 Poltype Job Finished
 
 ****************************************************************************************************
-[]
-Torsion parameters for torsion   406   401   402   405     0.0000 0.0 1     0.0000 180.0 2     0.2740 0.0 3 assigned from SMILES [#1][O][C][#1] 6,1,2,5
-Torsion parameters for torsion   405   401   402   405     0.0000 0.0 1     0.0000 180.0 2     0.2740 0.0 3 assigned from SMILES [#1][CH3][O][#1] 5,2,1,6
-Torsion parameters for torsion   406   401   402   402     0.0000 0.0 1     0.0000 180.0 2     0.2740 0.0 3 assigned from SMILES [#1][O][C][#1] 6,1,2,3
+Torsion parameters for torsion   406   401   402   405     0.0000 0.0 1     0.0000 180.0 2     0.2740 0.0 3 assigned from SMILES [#1][O][C][#1] 6,1,2,3

@@ -1,8 +1,8 @@
-Mon Apr  6 14:27:43 2020 Running on host: bme-nova.bme.utexas.edu
-Mon Apr  6 14:27:43 2020 NEED QM Density Matrix: Executing Gaussian Opt and SP
-Mon Apr  6 14:27:43 2020 Calling: Psi4 Optimization
-Mon Apr  6 14:27:43 2020 Calling: Psi4 Gradient for DMA
-Mon Apr  6 14:27:43 2020  Calling: poledit.x 1 aniline.gdmaout /home/bdw2292/poltypepackage/amoebabio18_header.prm < aniline-peditin.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryAniline
+Tue Apr  7 15:59:51 2020 Running on host: bme-nova.bme.utexas.edu
+Tue Apr  7 15:59:51 2020 NEED QM Density Matrix: Executing Gaussian Opt and SP
+Tue Apr  7 15:59:51 2020 Calling: Psi4 Optimization
+Tue Apr  7 15:59:51 2020 Calling: Psi4 Gradient for DMA
+Tue Apr  7 15:59:51 2020  Calling: poledit.x 1 aniline.gdmaout /home/bdw2292/poltypepackage/amoebabio18_header.prm < aniline-peditin.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryAniline
 
      ######################################################################
    ##########################################################################
@@ -473,13 +473,13 @@ Mon Apr  6 14:27:43 2020  Calling: poledit.x 1 aniline.gdmaout /home/bdw2292/pol
  Quadrupole:              0.00865
                           0.00000        0.00342
                           0.00448        0.00000       -0.01207
-Mon Apr  6 14:27:44 2020 Calling: Generating CUBE File from PSI4
-Mon Apr  6 14:27:44 2020  Calling: /home/bdw2292/poltypepackage/avgmpoles.pl aniline.key aniline.xyz aniline-groups.txt aniline.key_2 aniline.xyz_2 401 path = /home/bdw2292/poltypepackage/Examples/SymmetryAniline
-Mon Apr  6 14:27:44 2020 
-Mon Apr  6 14:27:44 2020 =========================================================
-Mon Apr  6 14:27:44 2020 QM Dipole moment
+Tue Apr  7 15:59:52 2020 Calling: Generating CUBE File from PSI4
+Tue Apr  7 15:59:52 2020  Calling: /home/bdw2292/poltypepackage/avgmpoles.pl aniline.key aniline.xyz aniline-groups.txt aniline.key_2 aniline.xyz_2 401 path = /home/bdw2292/poltypepackage/Examples/SymmetryAniline
+Tue Apr  7 15:59:52 2020 
+Tue Apr  7 15:59:52 2020 =========================================================
+Tue Apr  7 15:59:52 2020 QM Dipole moment
 
-Mon Apr  6 14:27:44 2020  Calling: potential.x 6 aniline.xyz_2 -k aniline.key_2 aniline.pot N 0.1 path = /home/bdw2292/poltypepackage/Examples/SymmetryAniline
+Tue Apr  7 15:59:52 2020  Calling: potential.x 6 aniline.xyz_2 -k aniline.key_2 aniline.pot N 0.1 path = /home/bdw2292/poltypepackage/Examples/SymmetryAniline
 
      ######################################################################
    ##########################################################################
@@ -862,15 +862,14 @@ Mon Apr  6 14:27:44 2020  Calling: potential.x 6 aniline.xyz_2 -k aniline.key_2 
  Average Signed Potential Difference :               -0.0494
  Average Unsigned Potential Difference :              0.1974
  Root Mean Square Potential Difference :              0.3012
-Mon Apr  6 14:27:46 2020  Calling: sed -e '/\(.* none$\|^#\|^fix\|^potential-offset\)/d' aniline.key_3 > aniline.key_3_tmp path = /home/bdw2292/poltypepackage/Examples/SymmetryAniline
-Mon Apr  6 14:27:46 2020 
-Mon Apr  6 14:27:46 2020 =========================================================
-Mon Apr  6 14:27:46 2020 Electrostatic Potential Comparison
+Tue Apr  7 15:59:53 2020  Calling: sed -e '/\(.* none$\|^#\|^fix\|^potential-offset\)/d' aniline.key_3 > aniline.key_3_tmp path = /home/bdw2292/poltypepackage/Examples/SymmetryAniline
+Tue Apr  7 15:59:53 2020 
+Tue Apr  7 15:59:53 2020 =========================================================
+Tue Apr  7 15:59:53 2020 Electrostatic Potential Comparison
 
-Mon Apr  6 14:27:46 2020  Calling: potential.x 5 aniline.xyz_2 -k aniline.key_3 aniline.pot N > RMSPD.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryAniline
-Mon Apr  6 14:27:48 2020 missing torsions [[414, 401, 402, 407]]
+Tue Apr  7 15:59:53 2020  Calling: potential.x 5 aniline.xyz_2 -k aniline.key_3 aniline.pot N > RMSPD.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryAniline
+Tue Apr  7 15:59:54 2020 missing torsions [[414, 401, 402, 407]]
 ****************************************************************************************************
-[]
 Torsion parameters for torsion   401   402   407   406     0.0000 0.0 1    14.0000 180.0 2     0.0000 0.0 3 assigned from SMILES [*]~cc~[*] 6,4,2,1
 Torsion parameters for torsion   401   402   407   412     0.0000 0.0 1    14.0000 180.0 2     0.0000 0.0 3 assigned from SMILES [*]~cc~[*] 9,4,2,1
 Torsion parameters for torsion   405   406   407   402    -0.6700 0.0 1     4.0040 180.0 2     0.0000 0.0 3 assigned from SMILES [cH0]ccc 2,4,6,7
@@ -883,30 +882,31 @@ Torsion parameters for torsion   406   405   406   411     0.5500 0.0 1     4.53
 Torsion parameters for torsion   405   406   407   412     0.5500 0.0 1     4.5340 180.0 2    -0.5500 0.0 3 assigned from SMILES ccc[#1] 7,6,4,9
 Torsion parameters for torsion   411   406   407   412     0.0000 0.0 1     4.0720 180.0 2     0.0000 0.0 3 assigned from SMILES [#1]cc([#1])([cH0]) 11,6,4,9,2
 Torsion parameters for torsion   410   405   406   411     0.0000 0.0 1     4.0720 180.0 2     0.0000 0.0 3 assigned from SMILES [#1]cc([#1])(c[cH0]) 12,7,6,11,4,2
-Mon Apr  6 14:27:48 2020 postfit min Alz about to run
-Mon Apr  6 14:27:48 2020 about to evalaute_rot_bonds
-Mon Apr  6 14:27:48 2020 
-Mon Apr  6 14:27:48 2020 =========================================================
-Mon Apr  6 14:27:48 2020 Minimizing structure
+Tue Apr  7 15:59:54 2020 All jobs have terminated 
+Tue Apr  7 15:59:54 2020 All jobs have terminated 
+Tue Apr  7 15:59:55 2020 postfit min Alz about to run
+Tue Apr  7 15:59:55 2020 about to evalaute_rot_bonds
+Tue Apr  7 15:59:55 2020 
+Tue Apr  7 15:59:55 2020 =========================================================
+Tue Apr  7 15:59:55 2020 Minimizing structure
 
-Mon Apr  6 14:27:48 2020  Calling: cp aniline.xyz_2 ttt.xyz path = /home/bdw2292/poltypepackage/Examples/SymmetryAniline
-Mon Apr  6 14:27:48 2020  Calling: cp aniline.key_5 ttt.key path = /home/bdw2292/poltypepackage/Examples/SymmetryAniline
-Mon Apr  6 14:27:48 2020  Calling: minimize.x -k ttt.key ttt.xyz 0.1 > Minimizedttt.out path = /home/bdw2292/poltypepackage/Examples/SymmetryAniline
-Mon Apr  6 14:27:50 2020 
-Mon Apr  6 14:27:50 2020 =========================================================
-Mon Apr  6 14:27:50 2020 QM Dipole moment
+Tue Apr  7 15:59:55 2020  Calling: cp aniline.xyz_2 ttt.xyz path = /home/bdw2292/poltypepackage/Examples/SymmetryAniline
+Tue Apr  7 15:59:55 2020  Calling: cp aniline.key_5 ttt.key path = /home/bdw2292/poltypepackage/Examples/SymmetryAniline
+Tue Apr  7 15:59:55 2020  Calling: minimize.x -k ttt.key ttt.xyz 0.1 > Minimizedttt.out path = /home/bdw2292/poltypepackage/Examples/SymmetryAniline
+Tue Apr  7 15:59:57 2020 
+Tue Apr  7 15:59:57 2020 =========================================================
+Tue Apr  7 15:59:57 2020 QM Dipole moment
 
-Mon Apr  6 14:27:50 2020 QM Dipole moment = 1.445
-Mon Apr  6 14:27:50 2020 
-Mon Apr  6 14:27:50 2020 =========================================================
-Mon Apr  6 14:27:50 2020 MM Dipole moment
+Tue Apr  7 15:59:57 2020 QM Dipole moment = 1.445
+Tue Apr  7 15:59:57 2020 
+Tue Apr  7 15:59:57 2020 =========================================================
+Tue Apr  7 15:59:57 2020 MM Dipole moment
 
-Mon Apr  6 14:27:50 2020  Calling: analyze.x aniline.xyz_2 -k ttt.key em | grep -A11 Charge>MMDipole.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryAniline
-Mon Apr  6 14:27:51 2020 MM Dipole moment = 1.459
-Mon Apr  6 14:27:51 2020 Poltype Job Finished
+Tue Apr  7 15:59:57 2020  Calling: analyze.x aniline.xyz_2 -k ttt.key em | grep -A11 Charge>MMDipole.txt path = /home/bdw2292/poltypepackage/Examples/SymmetryAniline
+Tue Apr  7 15:59:58 2020 MM Dipole moment = 1.459
+Tue Apr  7 15:59:58 2020 Poltype Job Finished
 
 ****************************************************************************************************
-[]
 Torsion parameters for torsion   401   402   407   406     0.0000 0.0 1    14.0000 180.0 2     0.0000 0.0 3 assigned from SMILES [*]~cc~[*] 6,4,2,1
 Torsion parameters for torsion   401   402   407   412     0.0000 0.0 1    14.0000 180.0 2     0.0000 0.0 3 assigned from SMILES [*]~cc~[*] 9,4,2,1
 Torsion parameters for torsion   405   406   407   402    -0.6700 0.0 1     4.0040 180.0 2     0.0000 0.0 3 assigned from SMILES [cH0]ccc 2,3,5,7
