@@ -1,0 +1,114 @@
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                          Version 8.7  June 2019                          ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2019               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+     401    401     P     TrimethylPhosphate          15     30.974     4
+     412    412     O     TrimethylPhosphate           8     15.999     2
+     417    417     O     TrimethylPhosphate           8     15.999     1
+     413    413     C     TrimethylPhosphate           6     12.011     4
+     416    416     H     TrimethylPhosphate           1      1.008     1
+
+ Electrostatic Potential Grid Points :                 10657
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+     401    401     P     TrimethylPhosphate          15     30.974     4
+     412    412     O     TrimethylPhosphate           8     15.999     2
+     417    417     O     TrimethylPhosphate           8     15.999     1
+     413    413     C     TrimethylPhosphate           6     12.011     4
+     416    416     H     TrimethylPhosphate           1      1.008     1
+
+ Additional Atomic Multipole Parameters :
+
+     Atom Type     Coordinate Frame Definition         Multipole Moments
+
+         401      417      0      0   Z-Only       1.83773
+                                                   0.00000  0.00000 -0.04719
+                                                  -0.04866
+                                                   0.00000 -0.04866
+                                                   0.00000  0.00000  0.09732
+
+         412      413    401      0   Z-then-X    -0.60125
+                                                   0.01133  0.00000  0.23364
+                                                  -0.09097
+                                                   0.00000 -0.60743
+                                                  -0.28417  0.00000  0.69840
+
+         413      412    401      0   Z-then-X     0.14985
+                                                  -0.09597  0.00000  0.43051
+                                                  -0.49598
+                                                   0.00000 -0.37729
+                                                  -0.14012  0.00000  0.87327
+
+         416      413    412      0   Z-then-X     0.04086
+                                                  -0.01249  0.00000 -0.07883
+                                                  -0.01906
+                                                   0.00000 -0.00894
+                                                  -0.02508  0.00000  0.02800
+
+         417      401      0      0   Z-Only      -0.85127
+                                                   0.00000  0.00000 -0.15284
+                                                  -0.20535
+                                                   0.00000 -0.20535
+                                                   0.00000  0.00000  0.41070
+
+ Additional Atomic Dipole Polarizability Parameters :
+
+     Atom Type           Alpha       Thole     Group Atom Types
+
+         401             1.828       0.390         412  417
+         412             0.837       0.390         401  413
+         417             0.837       0.390         401
+         413             1.334       0.390         412  416
+         416             0.496       0.390         413
+
+ Average Electrostatic Potential over Atoms :
+      (Kcal/mole per unit charge)
+
+   Structure   Atom      Points      Potential        Target        RMS Diff
+
+        1        1          81       -12.7102       -13.6266         1.0113
+        1        2         242        -5.1466        -4.9058         0.4393
+        1        3         151         1.2347         0.7569         0.5253
+        1        4         525       -10.3811       -10.6879         0.4514
+        1        5        1235       -16.8163       -17.0789         0.4472
+        1        6         649         2.3740         2.7066         0.3912
+        1        7         550         3.8537         3.7701         0.3240
+        1        8         598         3.7567         3.8389         0.2203
+        1        9         667        -2.5080        -2.0445         0.4931
+        1       10         650         4.0272         4.0824         0.1540
+        1       11         928         3.6352         3.9914         0.3796
+        1       12         657         2.6972         2.4113         0.3217
+        1       13         933         5.6511         5.3206         0.3832
+        1       14         649        -2.3684        -1.9994         0.4214
+        1       15         535         5.8157         5.5449         0.2931
+        1       16         942         3.0124         3.0958         0.1423
+        1       17         665         2.3799         2.7252         0.3944
+
+ Electrostatic Potential over all Grid Points :
+
+ Average Potential Value for Model :                 -0.4732
+ Average Potential Magnitude for Model :              6.0464
+ Average Potential Value for Target :                -0.4518
+ Average Potential Magnitude for Target :             6.0697
+
+ Average Signed Potential Difference :               -0.0214
+ Average Unsigned Potential Difference :              0.3047
+ Root Mean Square Potential Difference :              0.3766
