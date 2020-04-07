@@ -1,9 +1,9 @@
 %RWF=/scratch/bdw2292/Gau-MonoMethylPhosphate0H/,150GB
 %Nosave
-%Chk=MonoMethylPhosphate0H-esp.chk
+%Chk=MonoMethylPhosphate0H-dma_temp.chk
 %Mem=100GB
 %Nproc=8
-#P MP2/6-311++G(2d,2p) Sp Density=MP2 SCF=Save Guess=Huckel MaxDisk=150GB Pop=NBORead
+#P MP2/6-311G** Sp Density=MP2 MaxDisk=150GB
 
 MonoMethylPhosphate0H Gaussian SP Calculation on node37.bme.utexas.edu
 
