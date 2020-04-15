@@ -173,7 +173,7 @@ def AssignJobForEveryNode(jobs,nodes,nodetojoblist,jobtoscratchspace):
             continue
         else:
             newnodes.append(node)
-    for i in range(len(jobs)):
+    for i in range(len(newnodes)):
         node=newnodes[i]
         job=jobs[i]
         if node not in nodetojoblist.keys():
@@ -299,9 +299,9 @@ def ConvertOutput(output):
     return output
 
 def MakeScratch(node,jobpath,bashrcpath,loghandle,scratchdir):
-    cmdstr='cd '+scratchdir
+    cmdstr='[ -d "%s" ] && echo "Directory Exists"'%(scratchdir)
     output=CheckOutputFromExternalNode(node,cmdstr)
-    if output==False:
+    while CheckOutputFromExternalNode(node,cmdstr)==False:
         mkstr='mkdir '+scratchdir
         process,nodedead=CallSubprocess(node,jobpath,bashrcpath,mkstr,loghandle)                            
         time.sleep(2)
@@ -314,7 +314,7 @@ def SubmitJob(node,jobpath,bashrcpath,job,loghandle,jobtoprocess,jobtoscratchdir
             MakeScratch(node,jobpath,bashrcpath,loghandle,scratchdir)
         process,nodedead=CallSubprocess(node,jobpath,bashrcpath,job,loghandle)
         jobtoprocess[job]=process
-        RemoveJobInfoFromQueue(job,jobinfo,jobtoprocess)
+        RemoveJobInfoFromQueue(jobinfo,jobtoprocess)
     return jobtoprocess
 
 def PollProcess(jobtoprocess,job,finishedjoblist,loghandle,node,polledjobs):
@@ -410,12 +410,11 @@ def SpecifyGPUCard(cardvalue,job):
     return job
 
 
-def RemoveJobInfoFromQueue(job,jobinfo,jobtoprocess):
-    jobinfo=ReadJobInfoFromFile(jobinfo,jobtoinfo)
-    jobinfo=RemoveAlreadySubmittedJobs(jobtoprocess,jobinfo,job)
+def RemoveJobInfoFromQueue(jobinfo,jobtoprocess):
+    jobinfo=RemoveAlreadySubmittedJobs(jobtoprocess,jobinfo)
     WriteOutJobInfo(jobinfo,jobtoinfo)
 
-def RemoveAlreadySubmittedJobs(jobtoprocess,jobinfo,job):
+def RemoveAlreadySubmittedJobs(jobtoprocess,jobinfo):
     newjobinfo={}
     for key in jobinfo.keys():
         d=jobinfo[key]
@@ -428,6 +427,8 @@ def RemoveAlreadySubmittedJobs(jobtoprocess,jobinfo,job):
 
 def WriteOutJobInfo(jobinfo,filepath):
     bufsize=1
+    if os.path.isfile(filepath):
+        os.remove(filepath)
     temp=open(filepath,'w',buffering=bufsize)
     jobtologname=jobinfo['logname']
     jobtoscratch=jobinfo['scratch']
