@@ -60,6 +60,17 @@ def RemoveDeadAndAlreadyActiveNodes(nodelist,programexceptionlist):
         output=CheckOutputFromExternalNode(node,cmdstr)
         if output==False:
             keepnode=True
+        else:
+            cmdstr1='ps -p %s'%(output)
+            cmdstr2='ps -p %s'%(output)+' -u'
+            output1=CheckOutputFromExternalNode(node,cmdstr1)
+            output2=CheckOutputFromExternalNode(node,cmdstr2)
+            if type(output1)==str:
+                WriteToLogFile(output1)
+            if type(output2)==str:
+                WriteToLogFile(output2)
+
+
         cmdstr='nohup ls > temp.out'
         process = subprocess.Popen(cmdstr,shell=True)
         nodedead=CheckForDeadNode(process,node) 
@@ -80,10 +91,10 @@ def CheckOutputFromExternalNode(node,cmdstr):
 
     try: # if it has output that means this process is running
          output=subprocess.check_output(job,stderr=subprocess.STDOUT,shell=True)
+         output=ConvertOutput(output)
     except: #if it fails, that means no process with the program is running or node is dead/unreachable
          output=False
-    return output
-
+    return output 
 
 def ReadNodeList(nodelistfilepath):
     nodelist=[]
@@ -200,6 +211,11 @@ def CheckScratchSpace(node):
     else:
         scratchavail='0G'
         WriteToLogFile(' node '+node+' has no scratch')
+    if scratchavail==False:
+        cmdstr="du -h /scratch | sort -n -r | head -n 15"
+        output=CheckOutputFromExternalNode(node,cmdstr)
+        WriteToLogFile(output)
+
     return scratchavail
 
 
@@ -249,7 +265,7 @@ def SplitScratch(string):
 def CheckIfPreviousJobsFinished(jobtoprocess,previousjobs,finishedjoblist,jobtologhandle,node,polledjobs):
     previousjobsfinished=True
     for job in previousjobs:
-        if job not in jobtoprocess.keys():
+        if job not in jobtoprocess.keys() and job not in polledjobs:
             previousjobsfinished=False
         else:
             loghandle=jobtologhandle[job]
@@ -353,7 +369,7 @@ def SubmitJobs(cpunodetojoblist,gpunodetojoblist,bashrcpath,sleeptime,jobtologha
         WriteToLogFile('*************************************')
         cpunodes,gpucards=GrabCPUGPUNodes()
         jobinfo=ReadTempJobInfoFiles(jobinfo)
-        AddJobInfoToDictionary(jobinfo,jobtoinfo)
+        AddJobInfoToDictionary(jobinfo,jobtoinfo,jobtoprocess)
         jobinfo=ReadJobInfoFromFile(jobinfo,jobtoinfo)
         cpujobs,gpujobs=PartitionJobs(jobinfo,cpuprogramlist,gpuprogramlist)
         jobtologhandle=CreateNewLogHandles(jobinfo['logname'],jobtologhandle)
@@ -411,8 +427,8 @@ def SpecifyGPUCard(cardvalue,job):
 
 
 def RemoveJobInfoFromQueue(jobinfo,jobtoprocess):
-    jobinfo=RemoveAlreadySubmittedJobs(jobtoprocess,jobinfo)
-    WriteOutJobInfo(jobinfo,jobtoinfo)
+    newjobinfo=RemoveAlreadySubmittedJobs(jobtoprocess,jobinfo)
+    WriteOutJobInfo(newjobinfo,jobtoinfo,jobtoprocess)
 
 def RemoveAlreadySubmittedJobs(jobtoprocess,jobinfo):
     newjobinfo={}
@@ -425,7 +441,7 @@ def RemoveAlreadySubmittedJobs(jobtoprocess,jobinfo):
                 newjobinfo[key][job]=d[job]
     return newjobinfo
 
-def WriteOutJobInfo(jobinfo,filepath):
+def WriteOutJobInfo(jobinfo,filepath,jobtoprocess):
     bufsize=1
     if os.path.isfile(filepath):
         os.remove(filepath)
@@ -434,6 +450,8 @@ def WriteOutJobInfo(jobinfo,filepath):
     jobtoscratch=jobinfo['scratch']
     jobtoscratchspace=jobinfo['scratchspace']
     for job,log in jobtologname.items():
+        if job in jobtoprocess.keys():
+            continue
         scratch=jobtoscratch[job]
         scratchspace=jobtoscratchspace[job]
         temp.write('--job='+job+' '+'--outputlogpath='+log+' '+'--scratchdir='+scratch+' '+'--scratchspace='+scratchspace+'\n')
@@ -443,12 +461,12 @@ def WriteOutJobInfo(jobinfo,filepath):
     temp.close()
 
 
-def AddJobInfoToDictionary(jobinfo,filepath):
+def AddJobInfoToDictionary(jobinfo,filepath,jobtoprocess):
     jobinfoprev=ReadJobInfoFromFile(jobinfo,jobtoinfo)
     for key in jobinfo.keys():
         prevd=jobinfo[key]
         jobinfo[key].update(prevd)
-    WriteOutJobInfo(jobinfo,filepath)
+    WriteOutJobInfo(jobinfo,filepath,jobtoprocess)
 
 
 def ParseJobInfo(line):
@@ -538,11 +556,15 @@ def PartitionJobs(jobinfo,cpuprogramlist,gpuprogramlist):
     return cpujobs,gpujobs
 
 def GrabCPUGPUNodes():
+    WriteToLogFile('*************************************')
+    WriteToLogFile("Checking available CPU nodes")
     cpunodes=ReadNodeList(cpunodelistfilepath)
     cpunodes=RemoveDeadAndAlreadyActiveNodes(cpunodes,cpuprogramexceptionlist)
     gpucards=ReadNodeList(gpucardlistfilepath)
     gpucardtonode=GPUCardToNode(gpucards)
     gpunodes=list(set(gpucardtonode.values()))
+    WriteToLogFile('*************************************')
+    WriteToLogFile("Checking available GPU cards")
     gpunodes=RemoveDeadAndAlreadyActiveNodes(gpunodes,gpuprogramexceptionlist)
     gpucards=PruneBadNodes(gpucardtonode,gpunodes)
     return cpunodes,gpucards
@@ -552,15 +574,15 @@ jobinfo['logname']={}
 jobinfo['scratch']={}
 jobinfo['scratchspace']={}
 jobinfo=ReadJobInfoFromFile(jobinfo,jobinfofilepath)
-
+jobtoprocess={}
 if os.path.isfile(pidfile):
     head,tail=os.path.split(jobinfofilepath)
     tempfilepath=writepath+tail.replace('.txt','_TEMP.txt')
-    WriteOutJobInfo(jobinfo,tempfilepath)
+    WriteOutJobInfo(jobinfo,tempfilepath,jobtoprocess)
     sys.exit()
 else:
     WritePIDFile()
-    AddJobInfoToDictionary(jobinfo,jobtoinfo)
+    AddJobInfoToDictionary(jobinfo,jobtoinfo,jobtoprocess)
     try:
         jobtologhandle={}
         cpunodetojoblist={} 
