@@ -1,0 +1,1 @@
+--job=cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-2-3-7-8-335_psi4.dat MOLECULE0-sp-2-3-7-8-335_psi4.log --outputlogpath=/home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion/MOLECULE0-poltype.log --scratchdir=/scratch/bdw2292 --scratchspace=100GB

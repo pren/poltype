@@ -1,0 +1,1 @@
+--job=cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && GAUSS_SCRDIR=/scratch/bdw2292/Gau-MOLECULE0 g09 MOLECULE0-opt-23-22-21-36-327.com --outputlogpath=/home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/MOLECULE0-poltype.log --scratchdir=/scratch/bdw2292/Gau-MOLECULE0 --scratchspace=100GB

@@ -1,25 +1,7 @@
-Wed Mar 25 12:52:34 2020 Calling: ssh node35 "cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion;source /home/bdw2292/.poltype.bashrc;cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && GAUSS_SCRDIR=/scratch/bdw2292/Gau-MOLECULE0 g09 MOLECULE0-opt-2-3-7-8-003.com"
-Wed Mar 25 12:52:35 2020 Calling: ssh node36 "cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion;source /home/bdw2292/.poltype.bashrc;cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && GAUSS_SCRDIR=/scratch/bdw2292/Gau-MOLECULE0 g09 MOLECULE0-opt-2-3-7-8-031.com"
-Wed Mar 25 12:52:36 2020 Calling: ssh node37 "cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion;source /home/bdw2292/.poltype.bashrc;cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && GAUSS_SCRDIR=/scratch/bdw2292/Gau-MOLECULE0 g09 MOLECULE0-opt-2-3-7-8-059.com"
-Wed Mar 25 12:52:39 2020 Calling: ssh node38 "cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion;source /home/bdw2292/.poltype.bashrc;cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && GAUSS_SCRDIR=/scratch/bdw2292/Gau-MOLECULE0 g09 MOLECULE0-opt-2-3-7-8-087.com"
-Wed Mar 25 12:52:40 2020 Calling: ssh node40 "cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion;source /home/bdw2292/.poltype.bashrc;cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && GAUSS_SCRDIR=/scratch/bdw2292/Gau-MOLECULE0 g09 MOLECULE0-opt-2-3-7-8-115.com"
-Wed Mar 25 12:52:42 2020 Calling: ssh node42 "cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion;source /home/bdw2292/.poltype.bashrc;cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && GAUSS_SCRDIR=/scratch/bdw2292/Gau-MOLECULE0 g09 MOLECULE0-opt-2-3-7-8-311.com"
-Wed Mar 25 12:52:44 2020 Calling: ssh node44 "cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion;source /home/bdw2292/.poltype.bashrc;cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && GAUSS_SCRDIR=/scratch/bdw2292/Gau-MOLECULE0 g09 MOLECULE0-opt-2-3-7-8-283.com"
-Wed Mar 25 12:52:46 2020 Calling: ssh node46 "cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion;source /home/bdw2292/.poltype.bashrc;cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && GAUSS_SCRDIR=/scratch/bdw2292/Gau-MOLECULE0 g09 MOLECULE0-opt-2-3-7-8-255.com"
-Wed Mar 25 12:52:48 2020 Calling: ssh node48 "cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion;source /home/bdw2292/.poltype.bashrc;cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && GAUSS_SCRDIR=/scratch/bdw2292/Gau-MOLECULE0 g09 MOLECULE0-opt-2-3-7-8-227.com"
-Wed Mar 25 12:52:49 2020 Calling: ssh node49 "cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion;source /home/bdw2292/.poltype.bashrc;cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && GAUSS_SCRDIR=/scratch/bdw2292/Gau-MOLECULE0 g09 MOLECULE0-opt-2-3-7-8-199.com"
-Wed Mar 25 12:52:51 2020 Calling: ssh node50 "cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion;source /home/bdw2292/.poltype.bashrc;cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && GAUSS_SCRDIR=/scratch/bdw2292/Gau-MOLECULE0 g09 MOLECULE0-opt-2-3-7-8-171.com"
-Wed Mar 25 12:52:53 2020 Calling: ssh node51 "cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion;source /home/bdw2292/.poltype.bashrc;mkdir /scratch/bdw2292/Gau-MOLECULE0"
-Wed Mar 25 12:52:56 2020 Calling: ssh node51 "cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion;source /home/bdw2292/.poltype.bashrc;cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && GAUSS_SCRDIR=/scratch/bdw2292/Gau-MOLECULE0 g09 MOLECULE0-opt-2-3-7-8-143.com"
-Erroneous write. Write 1094704 instead of 1525224.
-fd = 4
-orig len = 1525224 left = 1525224
-g_write: Success
-Error: segmentation violation
-   rax 0000000000000000, rbx 000000000010b430, rcx ffffffffffffffff
-   rdx 000000000000e8fa, rsp 00007fffecc48968, rbp 00000000001745e8
-   rsi 000000000000000b, rdi 000000000000e8fa, r8  00002ac4aeebf160
-   r9  0000000000000000, r10 00007fffecc486f0, r11 0000000000000202
-   r12 00000000001745e8, r13 00002ac4aeec3fd0, r14 0000000000000004
-   r15 00000000001745e8
-  0  0x3a16032777
+Mon Mar 30 10:31:22 2020 Calling: ssh node72 "cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion;source /home/bdw2292/.poltype.bashrc;cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-2-3-7-8-335_psi4.dat MOLECULE0-sp-2-3-7-8-335_psi4.log"
+Mon Mar 30 10:34:42 2020 cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-2-3-7-8-335_psi4.dat MOLECULE0-sp-2-3-7-8-335_psi4.log has not terminated on node node72
+Mon Mar 30 10:38:00 2020 cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-2-3-7-8-335_psi4.dat MOLECULE0-sp-2-3-7-8-335_psi4.log has not terminated on node node72
+Mon Mar 30 10:41:13 2020 cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-2-3-7-8-335_psi4.dat MOLECULE0-sp-2-3-7-8-335_psi4.log has not terminated on node node72
+Mon Mar 30 10:44:43 2020 cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-2-3-7-8-335_psi4.dat MOLECULE0-sp-2-3-7-8-335_psi4.log has not terminated on node node72
+Mon Mar 30 10:48:13 2020 cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-2-3-7-8-335_psi4.dat MOLECULE0-sp-2-3-7-8-335_psi4.log has not terminated on node node72
+Mon Mar 30 10:52:09 2020 cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-2-3-7-8-335_psi4.dat MOLECULE0-sp-2-3-7-8-335_psi4.log has terminated on node node72

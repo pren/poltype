@@ -3,9 +3,9 @@
 %Chk=MOLECULE0-opt-29-28-25-24-337.chk
 %Mem=20GB
 %Nproc=6
-#P opt=(,maxcycle=400) wB97XD/6-31G* MaxDisk=100GB
+#P opt=(maxcycle=5,Loose) wB97XD/6-31G* MaxDisk=100GB
 
-MOLECULE0 Rotatable Bond Optimization on g2-node38.bme.utexas.edu
+MOLECULE0 Rotatable Bond Optimization on node37.bme.utexas.edu
 
 0 1
  C   -1.904036    1.572042    5.185284
@@ -77,18 +77,14 @@ MOLECULE0 Rotatable Bond Optimization on g2-node38.bme.utexas.edu
  H    6.178403   -3.715798    3.353422
  H    6.296019   -5.182964    2.385358
 
-29 28 25 24 F
-29 28 25 26 F
-14 13 11 12 F
-14 13 11 10 F
-15 14 13 11 F
-19 14 13 11 F
+24 25 28 29 F
+26 25 28 29 F
+12 11 13 14 F
+10 11 13 14 F
 19 18 20 21 F
 17 18 20 21 F
-22 21 20 18 F
-36 21 20 18 F
-20 21 22 23 F
 36 21 22 23 F
+20 21 22 23 F
 36 21 22 27 F
 20 21 22 27 F
 25 28 29 35 F

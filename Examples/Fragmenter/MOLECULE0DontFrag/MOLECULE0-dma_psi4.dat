@@ -75,6 +75,5 @@ psi4_io.set_default_path("/scratch/bdw2292")
 set freeze_core True
 set PROPERTIES_ORIGIN ["COM"]
 E, wfn = energy('mp2/6-311G**',properties=['dipole'],return_wfn=True)
-gdma(wfn)
 fchk(wfn, "MOLECULE0-dma.fchk")
 clean()
