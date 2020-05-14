@@ -759,7 +759,7 @@ def gen_torcomfile (poltype,comfname,numproc,maxmem,maxdisk,prevstruct,xyzf):
 
         commentstr = poltype.molecprefix + " Rotatable Bond SP Calculation on " + gethostname()   
 
-    bset=re.search('6-31\S+',operationstr)
+    bset=re.search(r'6-31\S+',operationstr)
     if ('I ' in poltype.mol.GetSpacedFormula()):
         operationstr=re.sub(r'6-31\S+',r'Gen',operationstr)
     tmpfh.write(operationstr)

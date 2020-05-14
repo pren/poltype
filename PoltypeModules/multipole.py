@@ -548,7 +548,7 @@ def rm_esp_terms_keyfile(poltype,keyfilename):
     Intent: Remove unnecessary terms from the key file
     """
     tmpfname = keyfilename + "_tmp"
-    cmdstr = "sed -e \'/\(.* none$\|^#\|^fix\|^potential-offset\)/d\' " +  keyfilename + " > " + tmpfname
+    cmdstr = r"sed -e \'/\(.* none$\|^#\|^fix\|^potential-offset\)/d\' " +  keyfilename + " > " + tmpfname
     poltype.call_subsystem(cmdstr,True)
     shutil.move(tmpfname, keyfilename)
     # Removes redundant multipole definitions created after potential fitting

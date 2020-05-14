@@ -205,7 +205,7 @@ def gen_comfile(poltype,comfname,numproc,maxmem,maxdisk,chkname,tailfname,mol):
         opstr="#P %s/%s Sp Density=%s SCF=Save Guess=Huckel MaxDisk=%s Pop=NBORead\n" % (poltype.espmethod,poltype.espbasisset, densitystring,maxdisk)
 
 
-    bset=re.search('(?i)(6-31|aug-cc)\S+',opstr)
+    bset=re.search(r'(?i)(6-31|aug-cc)\S+',opstr)
     if ('I ' in mol.GetSpacedFormula()):
         opstr=re.sub(r'(?i)(6-31|aug-cc)\S+',r'Gen',opstr)
     tmpfh.write(opstr)
