@@ -83,7 +83,7 @@ def NumberInLine(poltype,line):
         try:
             float(e)
             numinline=True
-        except:
+        except Exception:
             continue
             
     return numinline

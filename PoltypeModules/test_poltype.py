@@ -111,7 +111,7 @@ class TestPoltype(unittest.TestCase):
                 testpolconntypes=testatom.connected_types
                 examplepolconntypes=exampleatom.connected_types
                 self.assertEqual(testpolconntypes,examplepolconntypes)
-        except:
+        except Exception:
             pass
 
     def GenericFolderCopy(self,testcasepath):

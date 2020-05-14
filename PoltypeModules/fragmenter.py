@@ -127,7 +127,7 @@ def GrabTorsionParametersFromFragments(poltype,torlist,rotbndindextofragmentfile
 def GrabWBOMatrixGaussian(poltype,outputlog,mol):
     try:
         WBOmatrix=numpy.empty((mol.GetNumAtoms(),mol.GetNumAtoms()))
-    except:
+    except Exception:
         WBOmatrix=numpy.empty((mol.NumAtoms(),mol.NumAtoms()))
     temp=open(outputlog,'r')
     results=temp.readlines()
@@ -160,7 +160,7 @@ def GrabWBOMatrixGaussian(poltype,outputlog,mol):
 def GrabWBOMatrixPsi4(poltype,outputlog,molecule):
     try:
         WBOmatrix=numpy.empty((molecule.GetNumAtoms(),molecule.GetNumAtoms()))
-    except:
+    except Exception:
         WBOmatrix=numpy.empty((molecule.NumAtoms(),molecule.NumAtoms()))
     temp=open(outputlog,'r')
     results=temp.readlines()
@@ -488,7 +488,7 @@ def GrabAtomOrder(poltype,smirks):
         prevchar=smirks[i-1]
         try:
             nextchar=smirks[i+1]
-        except:
+        except Exception:
             break
         if prevchar==':' and e.isdigit() and nextchar!='-' and nextchar!=')' and nextchar!=':' and nextchar!='=':
             atomindex=GrabAtomIndex(poltype,i,smirks)
@@ -677,7 +677,7 @@ def GenerateWBOMatrix(poltype,molecule,structfname):
         cmdstr='psi4 '+inputname+' '+outputname
         try:
              poltype.call_subsystem(cmdstr,True)
-        except:
+        except Exception:
              error=True
     if not error:
         WBOmatrix=GrabWBOMatrixPsi4(poltype,outputname,molecule)

@@ -177,7 +177,7 @@ def tinker_minimize_angles(poltype,molecprefix,a,b,c,d,optmol,consttorlist,phase
         obConversion.WriteFile(prevstruct, 'temp.mol2')
         try:
             rdmol=MolFromMol2File('temp.mol2',False,False)   
-        except:
+        except Exception:
             rdmol=MolFromMol2File('temp.mol2',True,False)
         conf = rdmol.GetConformer()
         dihedral = optmol.GetTorsion(a,b,c,d)
@@ -185,7 +185,7 @@ def tinker_minimize_angles(poltype,molecprefix,a,b,c,d,optmol,consttorlist,phase
         rdmt.SetDihedralDeg(conf, a-1, b-1, c-1, d-1, newdihedral)
         try:
             print(Chem.MolToMolBlock(rdmol,kekulize=True),file=open('tempout.mol','w+'))
-        except:
+        except Exception:
             print(Chem.MolToMolBlock(rdmol,kekulize=False),file=open('tempout.mol','w+'))
 
         obConversion.ReadFile(prevstruct, 'tempout.mol')

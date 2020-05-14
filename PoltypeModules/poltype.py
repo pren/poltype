@@ -441,7 +441,7 @@ class PolarizableTyper():
         def is_exe(fpath):
             try:
                  return os.path.isfile(fpath) and os.access(fpath, os.X_OK)
-            except:
+            except Exception:
                  return None
     
         fpath, fname = os.path.split(program)
@@ -487,7 +487,7 @@ class PolarizableTyper():
         try:
             print('Calling: '+cmdstr) 
             returned_value = subprocess.call(cmdstr, shell=True)
-        except:
+        except Exception:
             raise ValueError("ERROR: " + cmdstr+' '+'path'+' = '+os.getcwd())      
         temp=open('version.out','r')
         results=temp.readlines()

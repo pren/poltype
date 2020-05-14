@@ -78,7 +78,7 @@ def GrabAtomOrder(poltype,smirks):
         prevchar=smirks[i-1]
         try:
             nextchar=smirks[i+1]
-        except:
+        except Exception:
             break
         if prevchar==':' and e.isdigit() and nextchar!='/' and nextchar!='-' and nextchar!=')' and nextchar!=':' and nextchar!='=':
             atomindex=GrabAtomIndex(poltype,i,smirks)

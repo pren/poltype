@@ -46,7 +46,7 @@ def GrabModifiedResidueProteinIndexes(poltype,modifiedproteinpdbname,knownresidu
             try:
                 resnumber=linesplit[5]
                 int(resnumber)
-            except:
+            except Exception:
                 resnumber=linesplit[4]
             if PDBcode not in knownresiduesymbs and atomindex!=totalatomnumber:
                 proatomidx=int(linesplit[1])
@@ -1867,7 +1867,7 @@ def GrabAtomOrder(poltype,smirks):
         prevchar=smirks[i-1]
         try:
             nextchar=smirks[i+1]
-        except:
+        except Exception:
             break
         if prevchar==':' and e.isdigit() and nextchar!='-' and nextchar!=')' and nextchar!=':' and nextchar!='=':
             atomindex=GrabAtomIndex(poltype,i,smirks)
@@ -2519,7 +2519,7 @@ def ShiftParameterDefintions(poltype,parameterarray,oldtypetonewtype):
         for line in array:
             try:
                 linesplitall=re.split(r'(\s+)', line)
-            except:
+            except Exception:
                 print('Error ',line)
             for i in range(len(linesplitall)):
                 element=linesplitall[i]
