@@ -16,9 +16,9 @@ def CalculateSymmetry(poltype,m):
     tempidxtosymclass={}
     for match in matches:
         for idx1,idx2 in enumerate(match):
-            incorrectatomindex1=incorrectidxarray[idx1] 
+            incorrectatomindex1=incorrectidxarray[idx1]
             correctatomindex1=incorrectidxtocorrectidx[incorrectatomindex1]
-            incorrectatomindex2=incorrectidxarray[idx2] 
+            incorrectatomindex2=incorrectidxarray[idx2]
             correctatomindex2=incorrectidxtocorrectidx[incorrectatomindex2]
             if (correctatomindex1) not in tempidxtosymclass.keys():
                 tempidxtosymclass[correctatomindex1]=[]
@@ -35,7 +35,7 @@ def CalculateSymmetry(poltype,m):
     for item in sortedatomindextomass:
         index=item[0]
         keylist=tempidxtosymclass[index]
-   
+
         uniquekeys=list(set(keylist))
         if set(keylist) not in uniquekeysalreadyused:
             uniquekeysalreadyused.append(set(keylist))
@@ -65,7 +65,7 @@ def ParseSMARTSString(poltype,smarts):
         else:
             string+=e
     return string
-      
+
 def GrabAtomOrder(poltype,smirks):
     atomorder=[]
     for i in range(len(smirks)):
@@ -98,6 +98,6 @@ def GrabAtomIndex(poltype,i,smirks):
         if char==']':
             break
     atomindex=int(''.join(num))
-    return atomindex 
+    return atomindex
 
 

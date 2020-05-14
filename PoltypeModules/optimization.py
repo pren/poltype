@@ -48,7 +48,7 @@ def CreatePsi4OPTInputFile(poltype,comfilecoords,comfilename,mol):
         temp.write( 'g_convergence GAU_LOOSE'+'\n')
         temp.write('}'+'\n')
 
-        
+
     temp.write('memory '+poltype.maxmem+'\n')
     temp.write('set_num_threads(%s)'%(poltype.numproc)+'\n')
     temp.write('psi4_io.set_default_path("%s")'%(poltype.scratchdir)+'\n')
@@ -77,14 +77,14 @@ def CreatePsi4OPTInputFile(poltype,comfilecoords,comfilename,mol):
 def NumberInLine(poltype,line):
     numinline=False
     linesplit=line.split()
-    
+
     for e in linesplit:
         try:
             float(e)
             numinline=True
         except Exception:
             continue
-            
+
     return numinline
 
 
@@ -106,7 +106,7 @@ def GrabFinalXYZStructure(poltype,logname,filename):
             if 'Cartesian Geometry' in line and lineidx==lastidx:
                 finalmarker=True
                 lengthchange=False
-            if finalmarker and lineidx>lastidx:    
+            if finalmarker and lineidx>lastidx:
                 linesplit=line.split()
                 if len(linesplit)!=4:
                     lengthchange=True
@@ -171,7 +171,7 @@ def gen_optcomfile(poltype,comfname,numproc,maxmem,maxdisk,chkname,molecule):
     tmpfh.write('\n')
 
     tmpfh.close()
-    
+
 def gen_opt_str(poltype,optimizeoptlist):
     optstr = "#P opt"
     if optimizeoptlist:
@@ -197,7 +197,7 @@ def CheckBondConnectivity(poltype,mol,optmol):
     atomitermol=openbabel.OBMolAtomIter(mol)
     atomiteroptmol=openbabel.OBMolAtomIter(optmol)
     for atm in atomitermol:
-       
+
         atmidxmol=atm.GetIdx()
         atmoptmol=optmol.GetAtom(atmidxmol)
         atmidxoptmol=atmoptmol.GetIdx()
@@ -224,11 +224,11 @@ def RaiseConnectivityError(poltype,diff,idxset):
     for atmidx in diff:
         print('The atom index '+str(atmidx)+' from structure '+idxset+' does not have the same connectivity before and after structure optimization')
         poltype.WriteToLog('The atom index '+str(atmidx)+' from structure '+idxset+' does not have the same connectivity before and after structure optimization')
-    sys.exit() 
+    sys.exit()
 
 def gen_superposeinfile(poltype):
     """
-    Intent: Initialize superpose input file (for tinker's superpose) 
+    Intent: Initialize superpose input file (for tinker's superpose)
     """
     f = open(poltype.superposeinfile, 'w')
     f.write('\n\n\n\n\n')
@@ -253,7 +253,7 @@ def StructureMinimization(poltype):
      poltype.WriteToLog("")
      poltype.WriteToLog("=========================================================")
      poltype.WriteToLog("Minimizing structure\n")
-    
+
      cmd='cp ' + poltype.xyzoutfile + ' ' + poltype.tmpxyzfile
      poltype.call_subsystem(cmd)
      cmd='cp ' + poltype.key5fname + ' ' + poltype.tmpkeyfile
@@ -276,7 +276,7 @@ def GeometryOptimization(poltype,mol):
     obConversion.ReadFile(OBOPTmol,OBOPTname)
     charge=poltype.totalcharge
     OBOPTmol.SetTotalCharge(charge) # for some reason obminimize does not print charge in output PDB
-    
+
     if not poltype.use_gaus and not poltype.use_gausoptonly:
         if not os.path.exists(poltype.scratchdir):
             mkdirstr='mkdir '+poltype.scratchdir
@@ -296,9 +296,9 @@ def GeometryOptimization(poltype,mol):
             jobtooutputlog={cmdstr:os.getcwd()+r'/'+poltype.logoptfname}
             jobtolog={cmdstr:os.getcwd()+r'/'+poltype.logfname}
             scratchdir=poltype.scrtmpdir
-            jobtologlistfilepathprefix=os.getcwd()+r'/'+'optimization_jobtolog_'+poltype.molecprefix 
+            jobtologlistfilepathprefix=os.getcwd()+r'/'+'optimization_jobtolog_'+poltype.molecprefix
             if os.path.isfile(poltype.chkoptfname):
-                os.remove(poltype.logoptfname) # if chk point exists just remove logfile, there could be error in it and we dont want WaitForTermination to catch error before job is resubmitted by daemon 
+                os.remove(poltype.logoptfname) # if chk point exists just remove logfile, there could be error in it and we dont want WaitForTermination to catch error before job is resubmitted by daemon
             if poltype.externalapi is None:
                 finishedjobs,errorjobs=poltype.CallJobsSeriallyLocalHost(jobtooutputlog,True) # have to skip errors because setting optmaxcycle to low number in gaussian causes it to crash
             else:
@@ -310,10 +310,10 @@ def GeometryOptimization(poltype,mol):
             poltype.call_subsystem(cmdstr)
         term,error=poltype.CheckNormalTermination(poltype.logoptfname)
         if error and not term:
-            poltype.RaiseOutputFileError(poltype.logoptfname) 
+            poltype.RaiseOutputFileError(poltype.logoptfname)
         optmol =  load_structfile(poltype,poltype.logoptfname)
         optmol=rebuild_bonds(poltype,optmol,mol)
-                
+
     else:
         gen_optcomfile(poltype,poltype.comoptfname,poltype.numproc,poltype.maxmem,poltype.maxdisk,poltype.chkoptfname,OBOPTmol)
         poltype.WriteToLog("Calling: " + "Psi4 Optimization")
@@ -333,10 +333,10 @@ def GeometryOptimization(poltype,mol):
                 if len(jobtooutputlog.keys())!=0:
                     call.CallExternalAPI(poltype,jobtolog,jobtologlistfilepathprefix,scratchdir)
                 finishedjobs,errorjobs=poltype.WaitForTermination(jobtooutputlog)
-            
+
         term,error=poltype.CheckNormalTermination(poltype.logoptfname) # now grabs final structure when finished with QM if using Psi4
         if error and not term:
-            poltype.RaiseOutputFileError(poltype.logoptfname) 
+            poltype.RaiseOutputFileError(poltype.logoptfname)
         GrabFinalXYZStructure(poltype,poltype.logoptfname,poltype.logoptfname.replace('.log','.xyz'))
         optmol =  load_structfile(poltype,poltype.logoptfname.replace('.log','.xyz'))
         optmol=rebuild_bonds(poltype,optmol,mol)
@@ -355,7 +355,7 @@ def load_structfile(poltype,structfname):
         structfname: structure file name
     Output:
         tmpmol: OBMol object with information loaded from structfname
-    Referenced By: run_gaussian, tor_opt_sp, compute_qm_tor_energy, compute_mm_tor_energy 
+    Referenced By: run_gaussian, tor_opt_sp, compute_qm_tor_energy, compute_mm_tor_energy
     Description: -
     """
     strctext = os.path.splitext(structfname)[1]

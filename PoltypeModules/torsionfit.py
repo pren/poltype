@@ -22,9 +22,9 @@ def insert_torprmdict_angle(poltype,angle, angledict):
 def tor_func_term (poltype,parms, x, nfold, C, angle, offset):
     """
     Intent: Returns energy vs dihedral angle profile of the torsion
-    Input: 
+    Input:
         parms: torsion parameter estimate
-        x: angle list in radians 
+        x: angle list in radians
         nfold: fold #
         C: number of times this torsion exists
         angle: current dihedral angle
@@ -39,17 +39,17 @@ def tor_func_term (poltype,parms, x, nfold, C, angle, offset):
 
 def fitfunc (poltype,parms, x, torprmdict, debug = False):
     """
-    Intent: Gives energy due to torsion around one rotatable bond 
+    Intent: Gives energy due to torsion around one rotatable bond
     (torsion energy vs. dihedral angle) given a set of parameters
     This function is used to make the callable function 'errfunc' used by leastsq
     Input:
         parms: current parameter estimate
-        x: angle list in radians 
+        x: angle list in radians
         torprmdict: contains information about the torsions (like nfolds)
     Output:
         tor_energy: energy due to torsion at various dihedral angles (found using 'parms')
                     (for one rotatable bond)
-    Referenced By: fit_rot_bond_tors 
+    Referenced By: fit_rot_bond_tors
     Description: Loops over torsions about this rotatable bond, then further loops about nfolds,
     making multiple calls to 'tor_func_term', summing its results in 'tor_energy'
     """
@@ -101,7 +101,7 @@ def compute_qm_tor_energy(poltype,a,b,c,d,startangle,phase_list = None):
     if phase_list is None:
         key=str(b)+' '+str(c)
         anginc=poltype.rotbndtoanginc[key]
-        phase_list=range(0,360,anginc) 
+        phase_list=range(0,360,anginc)
 
     energy_list = []
     angle_list = []
@@ -123,7 +123,7 @@ def compute_qm_tor_energy(poltype,a,b,c,d,startangle,phase_list = None):
             else:
                 WBOmatrix=frag.GrabWBOMatrixPsi4(poltype,minstrctfname,poltype.mol)
             WBOvalue=WBOmatrix[b-1,c-1]
-                
+
             tmpfh = open(minstrctfname, 'r')
             tor_energy = None
             if not poltype.use_gaus:
@@ -164,7 +164,7 @@ def compute_mm_tor_energy(poltype,mol,a,b,c,d,startangle,designatexyz,torang,pha
     Output:
         list(rows[1]): MM energies
         list(rows[0]): Dihedral angles
-        list(rows[2]): Energy just due to torsion 
+        list(rows[2]): Energy just due to torsion
     Referenced By: get_qmmm_rot_bond_energy, eval_rot_bond_parms
     Description:
     1. For each phase offset
@@ -179,16 +179,16 @@ def compute_mm_tor_energy(poltype,mol,a,b,c,d,startangle,designatexyz,torang,pha
     energy_list = []
     torse_list = []
     angle_list = []
-    
+
     for phaseangle in phase_list:
         angle = (startangle + phaseangle) % 360
         torxyzfname = '%s-opt-%d-%d-%d-%d' % (poltype.molecprefix,a,b,c,d)
-        torxyzfname+='-%03d%s.xyz' % (round((torang+phaseangle)%360),designatexyz) 
+        torxyzfname+='-%03d%s.xyz' % (round((torang+phaseangle)%360),designatexyz)
         newtorxyzfname=torxyzfname.replace('.xyz','.xyz_2')
         toralzfname = os.path.splitext(torxyzfname)[0] + '.alz'
         tot_energy = None
         tor_energy = None
-        if os.path.isfile(toralzfname):  
+        if os.path.isfile(toralzfname):
             tmpfh = open(toralzfname, 'r')
             for line in tmpfh:
                 m = re.search(r'Potential Energy :\s+(\-*\d+\.\d+)',line)
@@ -220,9 +220,9 @@ def find_del_list(poltype,mme_list,current_ang_list):
     Input:
         mme_list: list of MM energies (vs. angle)
         current_ang_list: list of angles
-    Output: 
+    Output:
         del_ang_list: List of angles to remove since the MM energy was not found for that angle
-    Referenced By: get_qmmm_rot_bond_energy, eval_rot_bond_parms 
+    Referenced By: get_qmmm_rot_bond_energy, eval_rot_bond_parms
     Description: -
     """
     del_ang_list = []
@@ -321,8 +321,8 @@ def prune_qme_error(poltype,del_ang_list,*arr_list):
 
 def get_qmmm_rot_bond_energy(poltype,mol,tmpkey1basename):
     """
-    Intent: Form dicts for each torsion in torlist, mapping the torsion class key ('clskey') to 
-    an energy profile (dihedral angle vs. energy). 'cls_mm_engy_dict' maps 'clskey' to pre-fit MM 
+    Intent: Form dicts for each torsion in torlist, mapping the torsion class key ('clskey') to
+    an energy profile (dihedral angle vs. energy). 'cls_mm_engy_dict' maps 'clskey' to pre-fit MM
     calculated energy profiles, 'cls_qm_engy_dict' maps 'clskey' to QM calculated energy profiles
     Input:
         mol: OBMol Structure
@@ -370,7 +370,7 @@ def get_qmmm_rot_bond_energy(poltype,mol,tmpkey1basename):
         qme_list,qang_list,WBOarray = compute_qm_tor_energy(poltype,a,b,c,d,initangle,anglist)
         mme_list,mang_list,tor_e_list = compute_mm_tor_energy(poltype,mol,
         a,b,c,d,initangle,'_postQMOPTprefit',torang,anglist,tmpkey1basename)
-        # delete members of the list where the energy was not able to be found 
+        # delete members of the list where the energy was not able to be found
         del_ang_list = find_del_list(poltype,mme_list,mang_list)
         (cls_angle_dict[clskey],cls_mm_engy_dict[clskey])=prune_mme_error(poltype,del_ang_list,cls_angle_dict[clskey],cls_mm_engy_dict[clskey])
         (mang_list,mme_list,qme_list,qang_list,tor_e_list)=prune_mme_error(poltype,del_ang_list,mang_list,mme_list,qme_list,qang_list,tor_e_list)
@@ -394,7 +394,7 @@ def get_qmmm_rot_bond_energy(poltype,mol,tmpkey1basename):
     return cls_mm_engy_dict,cls_qm_engy_dict,cls_angle_dict
 
 def check_cooperative_tor_terms(poltype,clskey, nfold, angle, xvals, torprmdict):
-    """ 
+    """
     Intent: Check if a cosine term for a torsion is cooperative with the corresponding cosine term of another torsion
     i.e. do they have equal or opposite phase shifts
     Input:
@@ -488,7 +488,7 @@ def insert_torphasedict (poltype,mol, toraboutbnd, torprmdict, initangle,write_p
 
 def insert_torprmdict(poltype,mol, torprmdict):
     """
-    Intent: Initialize the prmdicts in torprmdict 
+    Intent: Initialize the prmdicts in torprmdict
     Give each torsion intially 3 folds
     Input:
         mol: OBMol object
@@ -504,17 +504,17 @@ def insert_torprmdict(poltype,mol, torprmdict):
     # for each cls key
     for (chkclskey, torprm) in torprmdict.items():
         # for each parameter in the energy equation for this torsion
-        # nfoldlist = [1,2,3] 
+        # nfoldlist = [1,2,3]
         for nfold in poltype.nfoldlist:
             # init array
             test_tor_energy = numpy.zeros(len(tmpx))
-            # for each dihedral angle about this rotatable bond and the number of time it occurs 
+            # for each dihedral angle about this rotatable bond and the number of time it occurs
             # sum up test_tor_energy
             for (angle, scale) in torprm['phasedict'].items():
                 # create a test energy list (0 - 360, 10) starting from this angle
                 test_tor_energy += tor_func_term(poltype,1.0, tmpx, nfold, scale, torgen.rads(poltype,angle),torgen.rads(poltype,poltype.foldoffsetlist[nfold-1]))
 
-                # check if another torsion has a similar profile 
+                # check if another torsion has a similar profile
                 basetorkeys = check_cooperative_tor_terms(poltype,chkclskey, nfold, angle, tmpx, torprmdict)
 
             # normalize
@@ -522,11 +522,11 @@ def insert_torprmdict(poltype,mol, torprmdict):
             if torprm['phasedict']:
                 if basetorkeys is not None:
                     # if the energy profile for this torsion/fold is not so dissimilar from
-                    # another torsion/fold, then take its parameter 
+                    # another torsion/fold, then take its parameter
                     # in this case, prmidx is not increased by one
                     torprmdict[chkclskey]['prmdict'][nfold] = torprmdict[basetorkeys]['prmdict'][nfold]
                 # will come here first
-                
+
                 elif max(test_tor_energy) > 1e-10:
                     torprm['prmdict'][nfold] = prmidx
                     prmidx += 1
@@ -555,7 +555,7 @@ def is_torprmdict_all_empty (poltype,torprmdict):
 
 def fit_rot_bond_tors(poltype,mol,cls_mm_engy_dict,cls_qm_engy_dict,cls_angle_dict):
     """
-    Intent: Uses scipy's optimize.leastsq function to find estimates for the torsion 
+    Intent: Uses scipy's optimize.leastsq function to find estimates for the torsion
     parameters based on energy values found at various angles using qm and mm
     Each rotatable bond is fit for one at a time
     Input:
@@ -565,24 +565,24 @@ def fit_rot_bond_tors(poltype,mol,cls_mm_engy_dict,cls_qm_engy_dict,cls_angle_di
         cls_angle_dict: given a class key, this provides the angles that the energies
         above are based on
     Output:
-        write_prm_dict: map from class key to parameter information. 
+        write_prm_dict: map from class key to parameter information.
                         Used to write out new key file
         fitfunc_dict: energy profile (using the new parameters) to be plotted
     Referenced By: process_rot_bond_tors
     Description:
     1. Initialize 'fitfunc_dict' and 'write_prm_dict'
-    2. For each tor in torlist (essentially, for each rotatable bond) 
+    2. For each tor in torlist (essentially, for each rotatable bond)
     (the fit is done for each rotatable bond one at a time):
         a. Initialize 'torprmdict'
             i. For each torsion about the current rotatable bond, 'torprmdict' maps the torsion
                class key to a set of dictionaries containing information about that torsion.
-               The three dictionaries containing information are: 
-               *count: # times a torsion with this class key exists 
+               The three dictionaries containing information are:
+               *count: # times a torsion with this class key exists
                (there can be multiple torsions about the rotatable bond that have the same class
                key, for example two H-CC-O 's can exist)
                *prmdict: parameters for this torsion
                          The energy equation for the torsion is a sum of cosines
-                         'nfolds' is the number of cosines in the sum 
+                         'nfolds' is the number of cosines in the sum
                          each 'fold' or cosine has a coefficient
                          prmdict contains information on the number of folds and the parameters
                          for each fold
@@ -591,24 +591,24 @@ def fit_rot_bond_tors(poltype,mol,cls_mm_engy_dict,cls_qm_engy_dict,cls_angle_di
         b. Get the atoms involved in the main torsion around this rotatable bond
         c. Get the current dihedral angle and the class key
         d. Fill in the phasedict portion of 'torprmdict' by calling method 'insert_torphasedict'
-           on each torsion about the current rotatable bond 
+           on each torsion about the current rotatable bond
         e. Edit 'torprmdict' by calling 'insert_torprmdict'
            'prmidx' now equals: number of parameters to be fit
         f. 'angle_list', 'mm_energy_list', 'qm_energy_list' are all initialized for the current
             classkey
-        g. normalize the qm_energy_list and mm_energy_list by subtracting all values by the min 
+        g. normalize the qm_energy_list and mm_energy_list by subtracting all values by the min
         h. 'tor_energy_list" is created by subtracting mme from qme and is written to a file
         i. 'nfolds' list (of lists) is found. Should at least initially be [[1,2,3],[1,2,3],...]
             nfolds are the number of force constants per torsion in question
-        j. 'max_amp', max - min of tor_energy_list, is found 
+        j. 'max_amp', max - min of tor_energy_list, is found
         k. 'pzero' is initialized
         l. Remove parameters while # of parameters > # of data points
            This can happen if two torsions are very similar so their parameters can be combined
            into one set
-        m. now run optimize.leastsq. Keep rerunning it until the parameters no longer have to be 
+        m. now run optimize.leastsq. Keep rerunning it until the parameters no longer have to be
            'sanitized', meaning that none of the parameter estimates found by leastsq
            are greater than max_amp
-        n. If all of the parameter estimates ended up being deleted, leastsq is rerun, 
+        n. If all of the parameter estimates ended up being deleted, leastsq is rerun,
            this time fitting for only the main torsion
         o. fill in 'torprmdict' with parameter estimates found by leastsq
         p. write out a plot of the fit
@@ -619,7 +619,7 @@ def fit_rot_bond_tors(poltype,mol,cls_mm_engy_dict,cls_qm_engy_dict,cls_angle_di
     if len(poltype.torlist)==0:
         return write_prm_dict,fitfunc_dict
 
-    # For each rotatable bond 
+    # For each rotatable bond
     for tor in poltype.torlist:
         torprmdict = {}
         # get the atoms in the main torsion about this rotatable bond
@@ -628,7 +628,7 @@ def fit_rot_bond_tors(poltype,mol,cls_mm_engy_dict,cls_qm_engy_dict,cls_angle_di
         torang = mol.GetTorsion(a,b,c,d)
         # class key; ie symmetry classes key
         clskey = torgen.get_class_key(poltype,a,b,c,d)
-        
+
         # new list, post fitting
         mm_energy_list2 = [] # MM Energy after fitting
 
@@ -649,7 +649,7 @@ def fit_rot_bond_tors(poltype,mol,cls_mm_engy_dict,cls_qm_engy_dict,cls_angle_di
         mm_energy_list = [en - min(mm_energy_list) for en in mm_energy_list]
         if len(qm_energy_list)<round(prmidx*.5): # then might not be great fit any way, too many QM failed
             raise ValueError('Too many QM jobs have failed for '+str(tor)+' '+os.getcwd())
-        qmbarrier=max(qm_energy_list)-min(qm_energy_list) 
+        qmbarrier=max(qm_energy_list)-min(qm_energy_list)
         # Parameterize each group of rotatable bond (identified by
         #  atoms restrained during restrained rotation.
         # tor_energy_list is set as qm - mm
@@ -660,7 +660,7 @@ def fit_rot_bond_tors(poltype,mol,cls_mm_engy_dict,cls_qm_engy_dict,cls_angle_di
         torgen.write_arr_to_file(poltype,txtfname,[Tx,tor_energy_list])
 
         nfolds = [torprm['prmdict'].keys() for torprm in torprmdict.values()]
-        
+
 
         # max amplitude of function
         max_amp = max(tor_energy_list) - min(tor_energy_list)
@@ -670,7 +670,7 @@ def fit_rot_bond_tors(poltype,mol,cls_mm_engy_dict,cls_qm_engy_dict,cls_angle_di
 
         toralreadyremovedlist=[]
         while prmidx > len(mm_energy_list):
-            
+
             dellist= []
             least_conn_tor = find_least_connected_torsion(poltype,torprmdict,toralreadyremovedlist)
             for nfold in torprmdict[least_conn_tor]['prmdict']:
@@ -680,7 +680,7 @@ def fit_rot_bond_tors(poltype,mol,cls_mm_engy_dict,cls_qm_engy_dict,cls_angle_di
                 poltype.WriteToLog('torsion cosine terms that are being removed due to having too many parameters to fit '+str(dellist))
                 poltype.WriteToLog('number of parameters to fit for '+clskey+' are '+str(prmidx))
                 toralreadyremovedlist.append(least_conn_tor)
-            
+
         pzero = [ max_amp ] * prmidx
 
         # run leastsq until all the parameter estimates are reasonable
@@ -690,12 +690,12 @@ def fit_rot_bond_tors(poltype,mol,cls_mm_engy_dict,cls_qm_engy_dict,cls_angle_di
             dellist = []
             keylist = list(torprmdict.keys())
             keylist.reverse()
-            
+
             # creating a new function, errfunc
             # p: parameters
             # x: angle list
-            # torprmdict: torsion information 
-            # y: tor_energy_list 
+            # torprmdict: torsion information
+            # y: tor_energy_list
             errfunc = lambda p, x, torprmdict, y: fitfunc(poltype,p, x, torprmdict) - y
 
             # optimize.leastsq is run, found in the scipy library
@@ -718,7 +718,7 @@ def fit_rot_bond_tors(poltype,mol,cls_mm_engy_dict,cls_qm_engy_dict,cls_angle_di
             array=optimize.least_squares(errfunc, pzero, jac='2-point', bounds=(-max_amp, max_amp), args=(torgen.rads(poltype,numpy.array(angle_list)),torprmdict, tor_energy_list))
             p1=array['x']
 
-            # Remove parameters found by least.sq that aren't reasonable; 
+            # Remove parameters found by least.sq that aren't reasonable;
             # remove parameters found that are greater than max_amp
             for chkclskey in keylist:
                 for nfold in torprmdict[chkclskey]['prmdict']:
@@ -780,7 +780,7 @@ def fit_rot_bond_tors(poltype,mol,cls_mm_engy_dict,cls_qm_engy_dict,cls_angle_di
                 return numpy.sqrt(numpy.mean(numpy.square(numpy.add(numpy.subtract(fitfunc_dict[clskey],tor_energy_list),c))))
             result=fmin(RMSD,.5)
             minRMSD=RMSD(result[0])
-           
+
         figfname = '%s-fit-%d-%d' % (poltype.molecprefix,b,c)
         figfname+='.png'
         fig = plt.figure(figsize=(10,10))
@@ -828,10 +828,10 @@ def write_key_file(poltype,write_prm_dict,tmpkey1basename,tmpkey2basename):
 
 def eval_rot_bond_parms(poltype,mol,fitfunc_dict,tmpkey1basename,tmpkey2basename):
     """
-    Intent: 
+    Intent:
     For each torsion whose parameters were fit for:
         Using the new parameters, find the new MM Energy vs. Dihedral Angle Profile
-        Output the MM Energy (Pre-fit), MM Energy (Post-fit), and QM Energy profiles as 
+        Output the MM Energy (Pre-fit), MM Energy (Post-fit), and QM Energy profiles as
         plots in the file: *energy*.png
     Ideally the profiles of MM Energy (Post-fit) will be much closer to the QM Energy profiles
     than the MM Energy (Pre-fit) profiles were. Look at the *png post running poltype to confirm.
@@ -883,14 +883,14 @@ def eval_rot_bond_parms(poltype,mol,fitfunc_dict,tmpkey1basename,tmpkey2basename
         (mang_list,mm_energy_list,m2ang_list,mm2_energy_list,qm_energy_list,qang_list,tor_e_list,tor_e_list2,WBOarray)=prune_qme_error(poltype,del_ang_list,mang_list,mm_energy_list,m2ang_list,mm2_energy_list,qm_energy_list,qang_list,tor_e_list,tor_e_list2,WBOarray)
         del_ang_list = find_del_list(poltype,mm2_energy_list,m2ang_list)
         (mang_list,mm_energy_list,m2ang_list,mm2_energy_list,qm_energy_list,qang_list,tor_e_list,tor_e_list2,WBOarray)=prune_qme_error(poltype,del_ang_list,mang_list,mm_energy_list,m2ang_list,mm2_energy_list,qm_energy_list,qang_list,tor_e_list,tor_e_list2,WBOarray)
-        
+
 
         # normalize profiles
         qm_energy_list = [en - min(qm_energy_list) for en in qm_energy_list]
         mm_energy_list = [en - min(mm_energy_list) for en in mm_energy_list]
         mm2_energy_list = [en - min(mm2_energy_list) for en in mm2_energy_list]
 
-        # find the difference between the two energy due to torsion profiles 
+        # find the difference between the two energy due to torsion profiles
         tordif_list = [e2-e1 for (e1,e2) in zip(tor_e_list,tor_e_list2)]
         # normalize
         tordif_list = [en - min(tordif_list) for en in tordif_list]
@@ -936,7 +936,7 @@ def eval_rot_bond_parms(poltype,mol,fitfunc_dict,tmpkey1basename,tmpkey2basename
         plt.show()
         fig.savefig(figfname)
         txtfname = "%s-energy-%d-%d-%d-%d" % (poltype.molecprefix, a, b, c, d)
-        qmbarrier=max(qm_energy_list)-min(qm_energy_list) 
+        qmbarrier=max(qm_energy_list)-min(qm_energy_list)
 
 
         txtfname = "%s-energy-%d-%d-%d-%d.txt" % (poltype.molecprefix, a, b, c, d)
@@ -954,10 +954,10 @@ def eval_rot_bond_parms(poltype,mol,fitfunc_dict,tmpkey1basename,tmpkey2basename
 
 def gen_toromit_list(poltype):
     """
-    Intent: if 'omittorsion2' is True, read in the *.toromit file to see which torsions 
+    Intent: if 'omittorsion2' is True, read in the *.toromit file to see which torsions
     should not be scanned for
     Input: *.toromit is read in
-    Output: 
+    Output:
         toromit_list: list of torsions that scanning should be omitted for
     Referenced By: main
     Description: Read in file, append information to toromit_list
@@ -971,7 +971,7 @@ def sorttorsion(poltype,keylist):
     """
     Intent: Sort the torsion key by sorting the two outer terms and then two inner terms
     (e.g. 4-2-1-3 -> 3-1-2-4)
-    Input: 
+    Input:
         keylist: torsion key to be sorted
     Output:
         keylist is updated
@@ -981,7 +981,7 @@ def sorttorsion(poltype,keylist):
     if(keylist[1] > keylist[2] or (keylist[1] == keylist[2] and keylist[0] > keylist[3])):
         temp1 = keylist[1]
         keylist[1] = keylist[2]
-        keylist[2] = temp1 
+        keylist[2] = temp1
         temp2 = keylist[3]
         keylist[3] = keylist[0]
         keylist[0] = temp2
@@ -990,18 +990,18 @@ def sorttorsion(poltype,keylist):
 # Fit torsion parameters for rotatable bonds
 def process_rot_bond_tors(poltype,mol):
     """
-    Intent: Fit torsion parameters for torsions about rotatable bonds 
+    Intent: Fit torsion parameters for torsions about rotatable bonds
     Input:
         mol: OBMol structure
     Output:
         *.key_5 is written out, with updated torsion parameters
     Referenced By: main
     Description:
-    1. Get the QM Energy vs. Dihedral Angle and (Initial/Pre-Fit) MM Energy vs. Dihedral Angle 
-       profiles for each rotatable bond. 
+    1. Get the QM Energy vs. Dihedral Angle and (Initial/Pre-Fit) MM Energy vs. Dihedral Angle
+       profiles for each rotatable bond.
        Store these profiles in 'cls_qm_engy_dict' and 'cls_mm_engy_dict'.
     2. Use these profiles to fit for the torsion parameters by calling 'fit_rot_bond_tors'
-    3. Evaluate the new parameters output by the fitting fuction and output informational plots 
+    3. Evaluate the new parameters output by the fitting fuction and output informational plots
        by calling 'eval_rot_bond_parms'
     4. Write out the new keyfile (*.key_5) with these new torsion parameters
     """
@@ -1046,7 +1046,7 @@ def PostfitMinAlz(poltype,keybasename,keybasepath):
     for outputlog in poltype.optoutputtotorsioninfo.keys():
         term,error=poltype.CheckNormalTermination(outputlog)
         [a,b,c,d,torang,optmol,consttorlist,phaseangle,cartxyzname,bondtopology]=poltype.optoutputtotorsioninfo[outputlog]
-        if term:    
+        if term:
             if not poltype.use_gaus:
                 cartxyz,torxyzfname=torgen.tinker_minimize_analyze_QM_Struct(poltype,poltype.molecprefix,a,b,c,d,torang,optmol,consttorlist,phaseangle,cartxyzname,poltype.torsionrestraint,'_postQMOPTpostfit',keybasename,keybasepath,bondtopology)
             else:

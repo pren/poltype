@@ -52,7 +52,7 @@ class TestPoltype(unittest.TestCase):
             testreq=testitem.req
             examplereq=exampleitem.req
             self.assertEqual(testreq,examplereq)
-        for key in testparams.angles.keys():     
+        for key in testparams.angles.keys():
             testitem=testparams.angles[key]
             exampleitem=exampleparams.angles[key]
             testk=testitem.k
@@ -92,7 +92,7 @@ class TestPoltype(unittest.TestCase):
             for termidx in range(len(testmpoles)):
                 testterm=testmpoles[termidx]
                 exampleterm=examplempoles[termidx]
-                self.assertEqual(testterm,exampleterm)           
+                self.assertEqual(testterm,exampleterm)
 
         self.assertEqual(testparams.multipoles,exampleparams.multipoles)
         try: # parmED needs to be pushed to new branch, they had a bug, use exception until main branch has merged changes
@@ -141,7 +141,7 @@ class TestPoltype(unittest.TestCase):
                 filestodelete.append(f)
         for f in filestodelete:
             os.remove(f)
-   
+
     def GrabTorsions(self,folderpath):
         listoftorsions=[]
         listofqmminusmmtxtfiles=[]
@@ -244,7 +244,7 @@ class TestPoltype(unittest.TestCase):
         self.GenericFolderCopy(testcasepath)
         os.chdir(testcasepath)
         poltype.PolarizableTyper(dontfrag=False,structure=ptype.molstructfname,poltypeini=False,suppressdipoleerr=True,optmethod=ptype.optmethod,toroptmethod=ptype.toroptmethod,espmethod=ptype.espmethod,torspmethod=ptype.torspmethod,dmamethod=ptype.dmamethod,torspbasisset=ptype.torspbasisset,espbasisset=ptype.espbasisset,dmabasisset=ptype.dmabasisset,toroptbasisset=ptype.toroptbasisset,optbasisset=ptype.optbasisset,bashrcpath=ptype.bashrcpath,externalapi=ptype.externalapi,use_gaus=ptype.use_gaus,use_gausoptonly=ptype.use_gausoptonly,isfragjob=False,poltypepath=ptype.poltypepath,numproc=ptype.numproc,maxmem=ptype.maxmem,maxdisk=ptype.maxdisk,printoutput=True)
-        listofparenttorsions,listofparentqmminusmmtxtfiles=self.GrabTorsions(self.examplepath) 
+        listofparenttorsions,listofparentqmminusmmtxtfiles=self.GrabTorsions(self.examplepath)
         for i in range(len(listofparenttorsions)):
             torsion=listofparenttorsions=[i]
             parentqmminusmmtxtfile=listofparentqmminusmmtxtfiles[i]
@@ -291,12 +291,12 @@ class TestPoltype(unittest.TestCase):
                         result=fmin(RMSD,.5)
                         minRMSD=RMSD(result[0])
                         print('RMSD of parent QM-MM2 and fragment QM-MM2',minRMSD)
-                        self.assertLessEqual(minRMSD, 1) 
+                        self.assertLessEqual(minRMSD, 1)
 
 
 
 
-  
+
     def test_MethylamineCommonInputs(self):
         print('Testing common inputs')
         testcasefolder='TestMethylamineCommonInputs/'
@@ -306,7 +306,7 @@ class TestPoltype(unittest.TestCase):
         examplekeyfilepath=self.GenericCopy(testcasepath,examplefolder,examplestructure)
         ptype=poltype.PolarizableTyper(dontfrag=True,structure=examplestructure,numproc=4,maxmem='20GB',maxdisk='100GB',ptypeini=False,printoutput=True)
         self.GenericTest(exampleparentfolder,testcasepath,examplefolder,examplestructure,ptype,examplekeyfilepath)
-    
+
 
     def test_MethylaminePsi4(self):
         print('Testing Gaussian')
@@ -329,7 +329,7 @@ class TestPoltype(unittest.TestCase):
         ptype=poltype.PolarizableTyper(dontfrag=True,use_gausoptonly=True,structure=examplestructure,numproc=4,maxmem='20GB',maxdisk='100GB',ptypeini=False,printoutput=True)
         self.GenericTest(exampleparentfolder,testcasepath,examplefolder,examplestructure,ptype,examplekeyfilepath)
 
-    
+
     def test_MethylamineDMAESPOptions(self):
         print('Testing DMA and ESP options')
         testcasefolder='TestMethylamineDMAESPOptions/'
@@ -338,9 +338,9 @@ class TestPoltype(unittest.TestCase):
         examplestructure='methylamine.sdf'
         examplekeyfilepath=self.GenericCopy(testcasepath,examplefolder,examplestructure)
         ptype=poltype.PolarizableTyper(dontfrag=True,qmonly=True,espbasisset='aug-cc-pVTZ',dmabasisset='cc-pVTZ',structure=examplestructure,numproc=4,maxmem='20GB',maxdisk='100GB',ptypeini=False,printoutput=True)
-   
 
- 
+
+
     def test_MethylamineGeometryOptimizationOptions(self):
         print('Testing Geometry Optimization options ')
         testcasefolder='TestMethylamineGeometryOptimizationOptions/'
@@ -350,7 +350,7 @@ class TestPoltype(unittest.TestCase):
         examplekeyfilepath=self.GenericCopy(testcasepath,examplefolder,examplestructure)
         ptype=poltype.PolarizableTyper(dontfrag=True,structure=examplestructure,numproc=4,maxmem='20GB',maxdisk='100GB',optbasisset='6-311G*',gausoptcoords='cartesian',freq=True,optpcm=True,optmaxcycle=500,optmethod='HF',ptypeini=False,printoutput=True)
         self.GenericTest(exampleparentfolder,testcasepath,examplefolder,examplestructure,ptype,examplekeyfilepath)
-    
+
     def test_MethanolTorsion(self):
         print('Testing torsion options')
         testcasefolder='TestMethanolTorsion/'
@@ -370,8 +370,8 @@ class TestPoltype(unittest.TestCase):
         examplekeyfilepath=self.GenericCopy(testcasepath,examplefolder,examplestructure)
         ptype=poltype.PolarizableTyper(dontfrag=True,use_gaus=True,rotalltors=True,optpcm=True,torsppcm=True,toroptpcm=True,torsionrestraint=.2,foldnum=4,tordatapointsnum=13,toroptmethod='HF',torspmethod='MP2',toroptbasisset='6-311G*',torspbasisset='6-311++G(2d,2p)',structure=examplestructure,numproc=4,maxmem='20GB',maxdisk='100GB',ptypeini=False,printoutput=True)
         self.GenericTest(exampleparentfolder,testcasepath,examplefolder,examplestructure,ptype,examplekeyfilepath)
-     
- 
+
+
     def test_MethanolOnlyRotBnd(self):
         print('Testing onlyrotbnd')
         testcasefolder='TestMethanolOnlyRotBnd/'
@@ -403,7 +403,7 @@ class TestPoltype(unittest.TestCase):
         examplekeyfilepath=self.GenericCopy(testcasepath,examplefolder,examplestructure)
         ptype=poltype.PolarizableTyper(dontfrag=True,rotalltors=True,dontdotorfit=True,structure=examplestructure,numproc=4,maxmem='20GB',maxdisk='100GB',ptypeini=False,printoutput=True)
 
-    
+
     def test_MethylamineDontDoTor(self):
         print('Testing dontdotor')
         testcasefolder='TestMethylamineDontDoTor/'
@@ -412,7 +412,7 @@ class TestPoltype(unittest.TestCase):
         examplestructure='methylamine.sdf'
         examplekeyfilepath=self.GenericCopy(testcasepath,examplefolder,examplestructure)
         ptype=poltype.PolarizableTyper(dontfrag=True,dontdotor=True,structure=examplestructure,numproc=4,maxmem='20GB',maxdisk='100GB',ptypeini=False,printoutput=True)
-    
+
 
     def test_ModifiedAminoAcid(self):
         print('Testing modified amino acids')
@@ -421,7 +421,7 @@ class TestPoltype(unittest.TestCase):
         examplefolder='ModifiedAminoAcid/'
         examplestructure='methylamine.sdf'
         examplekeyfilepath=self.GenericCopy(testcasepath,examplefolder,examplestructure)
-        ptype=poltype.PolarizableTyper(dontfrag=True,use_gaus=True,amoebabioprmpath='/home/bdw2292/Tinker-release/params/amoebabio18.prm',unmodifiedproteinpdbname='SNase_WT_H.pdb',mutatedresiduenumber='102',mutatedsidechain='CNC.sdf',modifiedresiduepdbcode='CNC',numproc=4,maxmem='20GB',maxdisk='100GB',ptypeini=False,printoutput=True) 
+        ptype=poltype.PolarizableTyper(dontfrag=True,use_gaus=True,amoebabioprmpath='/home/bdw2292/Tinker-release/params/amoebabio18.prm',unmodifiedproteinpdbname='SNase_WT_H.pdb',mutatedresiduenumber='102',mutatedsidechain='CNC.sdf',modifiedresiduepdbcode='CNC',numproc=4,maxmem='20GB',maxdisk='100GB',ptypeini=False,printoutput=True)
         self.GenericTest(exampleparentfolder,testcasepath,examplefolder,examplestructure,ptype,examplekeyfilepath)
 
     def test_Methane(self):
@@ -484,7 +484,7 @@ class TestPoltype(unittest.TestCase):
         examplekeyfilepath=self.GenericCopy(testcasepath,examplefolder,examplestructure)
         ptype=poltype.PolarizableTyper(dontfrag=True,structure=examplestructure,numproc=4,maxmem='20GB',maxdisk='100GB',ptypeini=False,printoutput=True)
         self.GenericTest(exampleparentfolder,testcasepath,examplefolder,examplestructure,ptype,examplekeyfilepath)
-    
+
 
 if __name__ == '__main__':
     command_line_param = sys.argv[1:]
@@ -500,7 +500,7 @@ if __name__ == '__main__':
             method=a
         elif o in ("--dontremovetestcase"):
             dontremovetestcase=True
- 
+
     suite = unittest.TestSuite()
     suite.addTest(TestPoltype(method,examplepath,dontremovetestcase))
     runner = unittest.TextTestRunner()

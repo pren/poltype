@@ -14,10 +14,10 @@ def gen_esp_grid(poltype,mol):
     """
     Intent: Find the QM Electrostatic Potential Grid which can be used for multipole fitting
     Input:
-    Output: 
+    Output:
             *.grid: CUBEGEN input file; written out by tinker's potential utility
             *.cube: CUBEGEN output file
-            *.cube_2: *.cube cleaned up and with QM potential values for each point of the grid 
+            *.cube_2: *.cube cleaned up and with QM potential values for each point of the grid
     Referenced By: main
     Description:
     1. Run tinker's potential utility with option 1 which says:
@@ -36,7 +36,7 @@ def gen_esp_grid(poltype,mol):
             sys.stdout.flush()
             poltype.WriteToLog('Waiting to flush system stdout for grid.dat and grid_esp.dat')
             Vvals,gridpts=GrabGridData(poltype)
-   
+
         # Generate a "cube" file.  I have no idea what the format should be (it's not a
         # regular cube file) so I reverse engineered one by looking at TINKER source.
         with open(poltype.qmespfname, 'w') as fp:
@@ -44,7 +44,7 @@ def gen_esp_grid(poltype,mol):
             fp.write("%5d\n%5d\n\n\n" % (0,len(Vvals)))
             for xyz,v in zip(gridpts, Vvals):
                 fp.write("%s %s\n" % (xyz.rstrip(), v))
-        
+
     if not os.path.isfile(poltype.qmespfname):
         fckfname = poltype.fckespfname
         if not poltype.espfit:
@@ -64,7 +64,7 @@ def gen_esp_grid(poltype,mol):
     if not os.path.isfile(poltype.qmesp2fname):
         genqmpotcmd = poltype.potentialexe + " 2 " + poltype.qmespfname
         poltype.call_subsystem(genqmpotcmd,True)
-       
+
 def GrabGridData(poltype):
     temp=open('grid_esp.dat','r')
     results=temp.readlines()
@@ -74,7 +74,7 @@ def GrabGridData(poltype):
         linesplit=line.split()
         if len(linesplit)!=0:
             Vvals.append(linesplit[0])
-        
+
     poltype.WriteToLog("Calling: " + "Generating CUBE File from PSI4")
     with open('grid.dat', 'r') as fp:
         gridpts = fp.readlines()
@@ -152,7 +152,7 @@ def GrabFinalPsi4Energy(poltype,logname):
         if foundfinalenergies and 'SCS Total Energy' in line:
             energy=float(linesplit[4])
     return energy
-            
+
 def CheckRMSPD(poltype):
     rmspdexists=False
     if os.path.isfile('RMSPD.txt'):
@@ -165,7 +165,7 @@ def CheckRMSPD(poltype):
         if rmspdexists:
             if float(RMSPD)>poltype.maxRMSPD:
                 poltype.WriteToLog('Warning: RMSPD of QM and MM optimized structures is high, RMSPD = '+ RMSPD+' Tolerance is '+str(poltype.maxRMSPD)+' kcal/mol ')
-            
+
                 raise ValueError(os.getcwd()+' '+'Warning: RMSPD of QM and MM optimized structures is high, RMSPD = '+str(RMSPD))
     return rmspdexists
 
@@ -177,7 +177,7 @@ def gen_comfile(poltype,comfname,numproc,maxmem,maxdisk,chkname,tailfname,mol):
         numproc: number of processors
         maxmem: max memory size
         chkname: chk file name
-        tailfname: tmp com file 
+        tailfname: tmp com file
         mol: OBMol object
     Output:
         *.com is written
@@ -201,7 +201,7 @@ def gen_comfile(poltype,comfname,numproc,maxmem,maxdisk,chkname,tailfname,mol):
             densitystring='MP2'
         else:
             densitystring='SCF'
-        
+
         opstr="#P %s/%s Sp Density=%s SCF=Save Guess=Huckel MaxDisk=%s Pop=NBORead\n" % (poltype.espmethod,poltype.espbasisset, densitystring,maxdisk)
 
 
@@ -256,7 +256,7 @@ def SPForDMA(poltype,optmol,mol):
             scratchdir=poltype.scratchdir
             jobtologlistfilenameprefix=os.getcwd()+r'/'+'dma_jobtolog_'+poltype.molecprefix
             if os.path.isfile(poltype.logdmafname):
-                os.remove(poltype.logdmafname) # if chk point exists just remove logfile, there could be error in it and we dont want WaitForTermination to catch error before job is resubmitted by daemon 
+                os.remove(poltype.logdmafname) # if chk point exists just remove logfile, there could be error in it and we dont want WaitForTermination to catch error before job is resubmitted by daemon
 
 
             if poltype.externalapi is not None:
@@ -268,9 +268,9 @@ def SPForDMA(poltype,optmol,mol):
 
             term,error=poltype.CheckNormalTermination(poltype.logdmafname)
             if error:
-                poltype.RaiseOutputFileError(poltype.logdmafname) 
+                poltype.RaiseOutputFileError(poltype.logdmafname)
 
-        
+
     else:
         term,error=poltype.CheckNormalTermination(poltype.logdmafname)
         if not term:
@@ -278,7 +278,7 @@ def SPForDMA(poltype,optmol,mol):
                 os.remove(poltype.chkdmafname)
             gen_comfile(poltype,poltype.comdmafname,poltype.numproc,poltype.maxmem,poltype.maxdisk,poltype.chkdmafname,poltype.comtmp,optmol)
             cmdstr = 'cd '+os.getcwd()+' && '+'GAUSS_SCRDIR=' + poltype.scrtmpdir + ' ' + poltype.gausexe + " " + poltype.comdmafname
-            
+
             jobtooutputlog={cmdstr:os.getcwd()+r'/'+poltype.logdmafname}
             jobtolog={cmdstr:os.getcwd()+r'/'+poltype.logfname}
             scratchdir=poltype.scrtmpdir
@@ -297,7 +297,7 @@ def SPForDMA(poltype,optmol,mol):
             poltype.call_subsystem(cmdstr,True)
             term,error=poltype.CheckNormalTermination(poltype.logdmafname)
             if error:
-                poltype.RaiseOutputFileError(poltype.logdmafname) 
+                poltype.RaiseOutputFileError(poltype.logdmafname)
 
 
 def SPForESP(poltype,optmol,mol):
@@ -305,7 +305,7 @@ def SPForESP(poltype,optmol,mol):
         gengridcmd = poltype.potentialexe + " 1 " + poltype.xyzfname+' -k '+poltype.keyfname
         poltype.call_subsystem(gengridcmd,True)
     if not poltype.use_gaus or poltype.use_gausoptonly:
-        shutil.copy(poltype.espgrdfname, 'grid.dat') 
+        shutil.copy(poltype.espgrdfname, 'grid.dat')
         inputname,outputname=CreatePsi4ESPInputFile(poltype,poltype.logoptfname.replace('.log','.xyz'),poltype.comespfname,mol,poltype.maxdisk,poltype.maxmem,poltype.numproc,poltype.totalcharge,True)
         term,error=poltype.CheckNormalTermination(outputname)
         if not term:
@@ -314,7 +314,7 @@ def SPForESP(poltype,optmol,mol):
             jobtooutputlog={cmdstr:os.getcwd()+r'/'+outputname}
             jobtolog={cmdstr:os.getcwd()+r'/'+poltype.logfname}
             scratchdir=poltype.scratchdir
-            jobtologlistfilenameprefix=os.getcwd()+r'/'+'esp_jobtolog_'+poltype.molecprefix 
+            jobtologlistfilenameprefix=os.getcwd()+r'/'+'esp_jobtolog_'+poltype.molecprefix
             if os.path.isfile(outputname):
                 os.remove(outputname)
 
@@ -327,7 +327,7 @@ def SPForESP(poltype,optmol,mol):
 
             term,error=poltype.CheckNormalTermination(outputname)
             if error:
-                poltype.RaiseOutputFileError(outputname) 
+                poltype.RaiseOutputFileError(outputname)
 
 
     else:
@@ -376,7 +376,7 @@ def GrabQMDipoles(poltype,optmol,logname):
                 nextlinesplit=nextline.split()
                 dipole=np.array([float(nextlinesplit[1]),float(nextlinesplit[3]),float(nextlinesplit[5])])
 
-                
+
     else:
         grepcmd = 'grep -A7 "Dipole moment" ' + logname+'>'+'QMDipole.txt'
         poltype.call_subsystem(grepcmd,True)
@@ -399,7 +399,7 @@ def CheckDipoleMoments(poltype,optmol):
         logname=poltype.logespfname.replace('.log','_psi4.log')
     dipole=GrabQMDipoles(poltype,optmol,logname)
     qmdipole=round(np.linalg.norm(dipole),3)
-    poltype.WriteToLog('QM Dipole moment = '+str(qmdipole))    
+    poltype.WriteToLog('QM Dipole moment = '+str(qmdipole))
     poltype.WriteToLog("")
     poltype.WriteToLog("=========================================================")
     poltype.WriteToLog("MM Dipole moment\n")
@@ -421,7 +421,7 @@ def CheckDipoleMoments(poltype,optmol):
             diff=qmdipole-mmdipole
             ratio=np.abs(diff/qmdipole)
             if ratio>poltype.dipoletol and not poltype.suppressdipoleerr:
-                raise ValueError('Relative error of '+str(ratio)+' for QMDipole '+str(qmdipole)+' and '+str(mmdipole)+' for MMDipole '+'is bigger than '+str(poltype.dipoletol)+' '+os.getcwd()) 
+                raise ValueError('Relative error of '+str(ratio)+' for QMDipole '+str(qmdipole)+' and '+str(mmdipole)+' for MMDipole '+'is bigger than '+str(poltype.dipoletol)+' '+os.getcwd())
 
 def ConvertDipoleToCOMFrame(poltype,dipole,optmol):
     nucsum = 0.0
@@ -457,7 +457,7 @@ def ConvertDipoleToCOMFrame(poltype,dipole,optmol):
     COM=np.array([com_x,com_y,com_z])
     COC=np.array([coc_x,coc_y,coc_z])
     debye2eA= 0.20819434
-    # 1 debye = 0.393456 ebohr 
+    # 1 debye = 0.393456 ebohr
     bohr_e2debye = 0.393456
     bohr2A = 0.529177210
     debye2eA= 0.20819434

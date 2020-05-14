@@ -48,7 +48,7 @@ class Valence():
         return self.missed_torsions
 
 
-    
+
     def opbset (self,smarts, opbval, opbhash, mol):
         """
         Intent: Set out-of-plane bend (opbend) parameters using Smarts Patterns
@@ -68,7 +68,7 @@ class Valence():
                 else:
                     if opbkey not in opbhash:
                         opbhash[opbkey] = [self.defopbendval, False,smarts]
-    
+
     def gen_valinfile (self,mol):
         """
         Intent: Find aromatic carbon and bonded hydrogens to correct polarizability
@@ -78,12 +78,12 @@ class Valence():
             mol: OBMol molecule object
         Output:
             opbhash.items(): list of opbend values
-            rotbndprmlist: rotatable bonds for valence.py. 
+            rotbndprmlist: rotatable bonds for valence.py.
                            This lets valence.py know to set certain torsions as 0.
         Referenced By: main
         Description: -
         """
-        
+
         #Search for structures that require opbend parameters
         # OP-Bend parameters is between first and second atom in search string
         opbhash = {}      #Create empty dictionary
@@ -92,22 +92,22 @@ class Valence():
         self.opbset('C(-N)(=O)', 1.0, opbhash, mol)
         self.opbset('[OX1]=N[Oh1]', 0.2, opbhash, mol)
         self.opbset('[Oh1]N=[OX1]', 0.2, opbhash, mol)
-    
+
         #self.opbset('C-C(O)', 1.7, 1, opbhash, mol)
-    
+
         # 37 51 0 0 acetamide [CH3](-C=O)
         # 37 60 0 0 acetaldehyde [CH3](-C=O)
         self.opbset('[CH3](-C=O)', 0.590, opbhash, mol)
         # 37 54 0 0 methylformamide [CH3](-NC=O)
         self.opbset('[CH3](-NC=O)', 0.180, opbhash, mol)
-    
+
         # 52 51 0 0 formamide HC=O
         self.opbset('[#1]C=O', 1.950, opbhash, mol)
-    
+
         # 53 51 0 0 amide O=C
         # 53 60 0 0 carboxylic acid/aldehyde O=C
         self.opbset('O=C', 0.650, opbhash, mol)
-    
+
         # 54 51 0 0 amide NC=O
         self.opbset('NC=O', 1.500, opbhash, mol)
         # 55 54 0 0 amide HN
@@ -122,7 +122,7 @@ class Valence():
         # 77 76 0 0 benzene Hc
         # 79 78 0 0 ethylbenzene/phenol/toluene/p-cresol Hc1aaaaa1
         self.opbset('[#1]c', 0.210, opbhash, mol)
-    
+
         # 80 83 0 0 3-formylindole n1caaa1
         self.opbset('n1caaa1', 0.200, opbhash, mol)
         # 83 83 0 0 3-formylindole c1caaa1
@@ -159,9 +159,9 @@ class Valence():
         # 76 76 0 0 benzene cc
         # 78 78 0 0 ethylbenzene cc
         self.opbset('cc', 0.200, opbhash, mol)
-        #self.opbset('[#6D3][*]', 0.200, opbhash, mol)    
+        #self.opbset('[#6D3][*]', 0.200, opbhash, mol)
         #print('hash items ',opbhash.items())
-        
+
         return opbhash.items()
 
     def RotatableBonds(self,rotbndlist):
@@ -183,14 +183,14 @@ class Valence():
         #many of these can be merged
 
         vdwparamvals3 = dict({
-        
 
-        #91   C    "Carbon Tetrachloride CCl4" 
+
+        #91   C    "Carbon Tetrachloride CCl4"
         '[C][Cl][Cl][Cl][Cl]' : [3.898,.319],
 
-        #92   C    "Chloroform CHCl3" 
+        #92   C    "Chloroform CHCl3"
         '[CH][Cl][Cl][Cl]' : [3.898,.340],
-        #93   C    "Dichloromethane CH2Cl2" 
+        #93   C    "Dichloromethane CH2Cl2"
         '[CH2][Cl][Cl]' : [3.898,.362],
         #94   C    "Methane, chloro- CH3Cl"
         '[CH3][Cl]' : [3.898,.413],
@@ -508,12 +508,12 @@ class Valence():
 
         vdwvals1 = dict({
         '[#1](c)' : [2.980, .026, .92],
-        # HC+ 
+        # HC+
         '[#1][#6;D3]' : [2.583, .0260, .92],
         '[#1]([#6;D4]([!#1])([#1])([#1]))' : [2.96, .024, .92],
         '[#1]([#6;D4]([!#1])([!#1])([#1]))' : [2.98, .024, .94],
         '[#1]([#6]([!#1])([!#1])([!#1]))' : [2.98, .024, .94],
-        # HN+ 
+        # HN+
         '[#1]([#7]([#6]=[#8]))' : [2.59, .022, .90],
         # HO+
         '[#1][#8;D3]' : [2.398, .0150, .91],
@@ -1575,15 +1575,15 @@ class Valence():
                             key2 = 'anglep%8d%6d%6d%11.4f%10.4f' % (key1[0], key1[1], key1[2], v[skey][0], angle)
                         else:
                             key2 = 'angle%8d%6d%6d%11.4f%10.4f' % (key1[0], key1[1], key1[2], v[skey][0], angle)
-              
+
                     else:
                         key2 = 'angle%8d%6d%6d%11.4f%10.4f' % (key1[0], key1[1], key1[2], v[skey][0], angle)
-              
-                                    
+
+
                     key1string = '%d %d %d' % (key1[0], key1[1], key1[2])
                     d.update({key1string : key2})
 
-        
+
 
         return list(d.values())
 
@@ -2565,7 +2565,7 @@ class Valence():
         vals.append(torvals5)
         vals.append(torparamvals1)
 
-        
+
         torsunit = .5
         torkeytoSMILES={}
         torkeytoindexlist={}
@@ -2585,7 +2585,7 @@ class Valence():
                     key1 = self.sorttorsion(sortedlist)
                     if(len(v[skey]) == 7):
                         aidx=ia[v[skey][0] - 1]
-                        bidx=ia[v[skey][1] - 1] 
+                        bidx=ia[v[skey][1] - 1]
                         cidx=ia[v[skey][2] - 1]
                         didx=ia[v[skey][3] - 1]
 
@@ -2604,7 +2604,7 @@ class Valence():
                     neighborindexes=firstneighborindexes+secondneighborindexes
                     check=self.CheckIfNeighborsExistInSMARTMatch(neighborindexes,ia)
                     rot=bond.IsRotor()
-                   
+
                     if not check and not self.dontfrag and not self.isfragjob and rot:
                         zeroed=True
                     if(dorot):
@@ -2629,7 +2629,7 @@ class Valence():
                     torkeytoindexlist[key1string]=ia
                     d.update({key1string : key2})
                     zeroed = False
-        
+
         for key1string,key2 in d.items():
             skey=torkeytoSMILES[key1string]
             indexlist=torkeytoindexlist[key1string]
@@ -2643,7 +2643,7 @@ class Valence():
                 pass
             else:
                 self.logfh.write('Torsion parameters for '+key2+ ' assigned from SMILES '+skey+' '+stringindexlist+'\n')
-        
+
         x = []
 
         for v in dict.values(d):
@@ -2656,7 +2656,7 @@ class Valence():
         x=list(d.values())
         return x
 
-    
+
 
     def FindAllNeighborIndexes(self,mol):
         indextoneighbidxs={}
@@ -2669,7 +2669,7 @@ class Valence():
                 neighbatmidx=neighbatm.GetIdx()
                 if neighbatmidx not in indextoneighbidxs[atmidx]:
                     indextoneighbidxs[atmidx].append(neighbatmidx)
-                
+
 
         return indextoneighbidxs
 
@@ -2820,7 +2820,7 @@ class Valence():
         if(keylist[1] > keylist[2] or (keylist[1] == keylist[2] and keylist[0] > keylist[3])):
             temp1 = keylist[1]
             keylist[1] = keylist[2]
-            keylist[2] = temp1 
+            keylist[2] = temp1
             temp2 = keylist[3]
             keylist[3] = keylist[0]
             keylist[0] = temp2
