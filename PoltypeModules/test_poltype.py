@@ -1,5 +1,7 @@
 import unittest
-import os,sys,inspect
+import os
+import sys
+import inspect
 import poltype
 import shutil
 from parmed.tinker import parameterfile
