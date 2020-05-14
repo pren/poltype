@@ -62,7 +62,7 @@ def fitfunc (poltype,parms, x, torprmdict, debug = False):
         for nfold in torprm['prmdict']:
             for clsangle, clscnt in torprm['phasedict'].items():
                 prm = torprm['prmdict'][nfold]
-                if parms is not 'eval':
+                if parms != 'eval':
                     prm = parms[torprm['prmdict'][nfold]]
                 tor_energy += tor_func_term (poltype,
                     prm, x, nfold, clscnt, torgen.rads(poltype,clsangle),
@@ -71,11 +71,11 @@ def fitfunc (poltype,parms, x, torprmdict, debug = False):
                 if debug:
                     pass
 
-        if parms is 'eval' and 'offset' in torprm:
+        if parms == 'eval' and 'offset' in torprm:
             offset = torprm['offset']
 
 
-    if parms is not 'eval':
+    if parms != 'eval':
         offset = parms[-1]
     tor_energy += offset
     return tor_energy
