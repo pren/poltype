@@ -24,7 +24,7 @@ def is_in_polargroup(poltype,mol, smarts, bond, f):
     openbabel.OBSmartsPattern.Init(sp,smarts)
     sp.Match(mol)
     for i in sp.GetUMapList():
-        if ((bond.GetBeginAtomIdx() in i) and \
+        if ((bond.GetBeginAtomIdx() in i) and
              (bond.GetEndAtomIdx() in i)):
             return True
     return False

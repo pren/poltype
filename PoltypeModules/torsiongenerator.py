@@ -517,9 +517,9 @@ def get_torlist(poltype,mol):
                     b = t2.GetIdx()
                     c = t3.GetIdx()
                     d = iaa.GetIdx()
-                    if ((iaa.GetIdx() != t3.GetIdx() and \
-                             iaa2.GetIdx() != t2.GetIdx()) \
-                        and not (iaa.GetIdx() == t1.GetIdx() and \
+                    if ((iaa.GetIdx() != t3.GetIdx() and
+                             iaa2.GetIdx() != t2.GetIdx())
+                        and not (iaa.GetIdx() == t1.GetIdx() and
                              iaa2.GetIdx() == t4.GetIdx())):
                         rotbndlist[rotbndkey].append(get_uniq_rotbnd(poltype,
                             iaa.GetIdx(),t2.GetIdx(),
