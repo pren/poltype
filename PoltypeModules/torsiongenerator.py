@@ -1,16 +1,12 @@
-import symmetry as symm
 import optimization as opt
-import electrostaticpotential as esp
 import valence
 import torsionfit as torfit
 import apicall as call
 import os
-import sys
 import openbabel
 import shutil
 from socket import gethostname
 import re
-import time
 import numpy
 from rdkit.Chem.rdmolfiles import MolFromMol2File
 from rdkit.Chem import rdMolTransforms as rdmt

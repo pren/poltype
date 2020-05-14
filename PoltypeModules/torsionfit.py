@@ -1,18 +1,13 @@
 import torsiongenerator as torgen
-import symmetry as symm
-import optimization as opt
 import electrostaticpotential as esp
 import fragmenter as frag
 import os
-import sys
 import shutil
 import re
 import numpy
 from scipy import optimize
 from scipy.optimize import fmin
-import matplotlib
 import pylab as plt
-import time
 
 def insert_torprmdict_angle(poltype,angle, angledict):
     """

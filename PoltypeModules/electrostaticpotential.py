@@ -1,5 +1,4 @@
 import optimization as opt
-import electrostaticpotential as esp
 import torsiongenerator as torgen
 import apicall as call
 import os

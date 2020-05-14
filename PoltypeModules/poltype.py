@@ -37,7 +37,7 @@ import multipole as mpole
 import fragmenter as frag
 from parmed.tinker import parameterfile
 from rdkit import Chem
-from rdkit.Chem import rdmolfiles,AllChem,rdmolops
+from rdkit.Chem import rdmolfiles,AllChem
 from rdkit.Geometry import Point3D
 class PolarizableTyper():
 

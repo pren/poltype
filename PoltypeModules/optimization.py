@@ -3,7 +3,6 @@ import sys
 from socket import gethostname
 import openbabel
 import re
-import time
 import apicall as call
 
 def CreatePsi4OPTInputFile(poltype,comfilecoords,comfilename,mol):

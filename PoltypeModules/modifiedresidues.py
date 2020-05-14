@@ -8,8 +8,6 @@ from MDAnalysis.analysis.align import alignto
 import re
 import numpy
 import shutil
-import copy
-from rdkit.Chem import rdFMCS
 
 
 def GenIndexToTypeIndexDic(poltype,tinkxyzfile):

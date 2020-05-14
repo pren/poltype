@@ -1,12 +1,10 @@
 import unittest
 import os
 import sys
-import inspect
 import poltype
 import shutil
 from parmed.tinker import parameterfile
 from scipy.optimize import fmin
-import argparse
 import getopt
 
 class TestPoltype(unittest.TestCase):

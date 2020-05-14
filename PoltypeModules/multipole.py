@@ -1,4 +1,3 @@
-import symmetry as symm
 import electrostaticpotential as esp
 import time
 import os

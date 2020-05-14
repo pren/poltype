@@ -1,8 +1,3 @@
-import sys
-import os
-import openbabel
-import rdkit
-from rdkit import Chem
 from rdkit.Chem import rdmolfiles
 
 def CalculateSymmetry(poltype,m):

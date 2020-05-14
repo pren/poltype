@@ -26,8 +26,6 @@
 #
 ##################################################################
 import openbabel
-import math
-import sys
 import os
 radian = 57.29577951308232088
 

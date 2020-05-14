@@ -1,38 +1,25 @@
 import electrostaticpotential as esp
 import torsiongenerator as torgen
-import optimization as opt
-import apicall as call
-from socket import gethostname
 
 import os
-import sys
 import numpy
-import time
 import openbabel
 from rdkit import Chem
-from rdkit.Chem import rdmolfiles,rdMolDescriptors
+from rdkit.Chem import rdmolfiles
 import shutil
 from rdkit.Chem import rdDepictor
 from rdkit.Chem.Draw import rdMolDraw2D
 from rdkit.Chem import AllChem
-from rdkit.Chem import Draw
 import svgutils.transform as sg
 from cairosvg import svg2png
-import copy
-from collections import defaultdict
 from rdkit.Chem import rdDepictor
 import matplotlib.pyplot as plt
 from os.path import dirname, abspath      
 from itertools import combinations
-from rdkit.Chem import rdFMCS
 import json
 from collections import Counter
 from itertools import combinations
-import re
 from rdkit.Geometry import Point3D
-from rdkit.Chem import rdDistGeom
-from scipy.optimize import fsolve
-import math
 
 
 def AssignTotalCharge(poltype,molecule,babelmolecule):
