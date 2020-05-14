@@ -188,33 +188,33 @@ def gen_peditinfile(poltype,mol):
             uniqueneighbtypesofhighestsymneighbnorepeatwithoutatom=list(set([poltype.idxtosymclass[b.GetIdx()] for b in neighbsofneighbwithoutatom]))
 
             sorteduniquetypeneighbsnorepeatofneighbsofneighbwithoutatom=FindUniqueNonRepeatingNeighbors(poltype,neighbsofneighbwithoutatom)
-        if val==1 and CheckIfAllAtomsSameClass(poltype,[neighb for neighb in openbabel.OBAtomAtomIter(atomneighbs[0])])==True and atomneighbs[0].GetValence()==4: # then this is like H in Methane, we want Z-only
+        if val==1 and CheckIfAllAtomsSameClass(poltype,[neighb for neighb in openbabel.OBAtomAtomIter(atomneighbs[0])]) and atomneighbs[0].GetValence()==4: # then this is like H in Methane, we want Z-only
             poltype.localframe1[atomidx-1]=sorteduniquetypeneighbsnorepeat[0]
             poltype.localframe2[atomidx - 1] = 0
             lfzerox[atomidx - 1]=True
             atomtypetospecialtrace[atomidx]=True
             atomindextoremovedipquadcross[atomidx]=True
-        elif CheckIfAllAtomsSameClass(poltype,atomneighbs)==True and AtLeastOneHeavyNeighb(poltype,atom)==False and val==4: # then this is like carbon in Methane, we want Z-only
+        elif CheckIfAllAtomsSameClass(poltype,atomneighbs) and not AtLeastOneHeavyNeighb(poltype,atom) and val==4: # then this is like carbon in Methane, we want Z-only
             idxlist=GrabIndexesFromUniqueTypeNumber(poltype,atomneighbs,uniqueneighbtypes[0])
             poltype.localframe1[atomidx-1]=idxlist[0]
             poltype.localframe2[atomidx - 1] = 0
             lfzerox[atomidx - 1]=True
             atomindextoremovedipquad[atomidx]=True
-        elif atom.GetAtomicNum()==7 and CheckIfAllAtomsSameClass(poltype,atomneighbs)==True and val==3: # then this is like Ammonia and we can use a trisector here which behaves like Z-only
+        elif atom.GetAtomicNum()==7 and CheckIfAllAtomsSameClass(poltype,atomneighbs) and val==3: # then this is like Ammonia and we can use a trisector here which behaves like Z-only
             idxtotrisecbool[atomidx]=True
             trisectidxs=[atm.GetIdx() for atm in atomneighbs]
             idxtotrisectidxs[atomidx]=trisectidxs
             lfzerox[atomidx - 1]=True # need to zero out the x components just like for z-only case
-        elif val==1 and atomneighbs[0].GetValence()==3 and CheckIfAllAtomsSameClass(poltype,[neighb for neighb in openbabel.OBAtomAtomIter(atomneighbs[0])])==True: # then this is like the H on Ammonia and we can use z-then bisector
+        elif val==1 and atomneighbs[0].GetValence()==3 and CheckIfAllAtomsSameClass(poltype,[neighb for neighb in openbabel.OBAtomAtomIter(atomneighbs[0])]): # then this is like the H on Ammonia and we can use z-then bisector
             poltype.localframe1[atomidx-1]=sorteduniquetypeneighbsnorepeat[0]
             idxtobisecthenzbool[atomidx]=True
             bisectidxs=[atm.GetIdx() for atm in neighbsofneighbwithoutatom]
             idxtobisectidxs[atomidx]=bisectidxs
-        elif (val==2 and CheckIfAllAtomsSameClass(poltype,atomneighbs)==True) or (val==4 and len(uniqueneighbtypes)==2) and len(sorteduniquetypeneighbsnorepeat)==0:  # then this is like middle propane carbon or oxygen in water
+        elif (val==2 and CheckIfAllAtomsSameClass(poltype,atomneighbs)) or (val==4 and len(uniqueneighbtypes)==2) and len(sorteduniquetypeneighbsnorepeat)==0:  # then this is like middle propane carbon or oxygen in water
             idxlist=GrabIndexesFromUniqueTypeNumber(poltype,atomneighbs,uniqueneighbtypes[0])
             poltype.localframe1[atomidx-1]=-1*idxlist[0]
             poltype.localframe2[atomidx-1]=-1*idxlist[1]
-        elif len(uniqueneighbtypes)==2 and CheckIfNeighbHasSameType(poltype,atom,atomneighbs)==True: # this handles, ethane,ethene...., z-only
+        elif len(uniqueneighbtypes)==2 and CheckIfNeighbHasSameType(poltype,atom,atomneighbs): # this handles, ethane,ethene...., z-only
             poltype.localframe1[atomidx-1]=sorteduniquetypeneighbsnorepeat[0]
             poltype.localframe2[atomidx - 1] = 0
             lfzerox[atomidx - 1]=True
@@ -255,9 +255,9 @@ def gen_peditinfile(poltype,mol):
     if not os.path.isfile(poltype.peditinfile):
         f = open (poltype.peditinfile, 'w')
         for a in iteratom:
-            if idxtobisecthenzbool[a.GetIdx()]==False and idxtotrisecbool[a.GetIdx()]==False:
+            if not idxtobisecthenzbool[a.GetIdx()] and not idxtotrisecbool[a.GetIdx()]:
                 f.write(str(a.GetIdx()) + " " + str(poltype.localframe1[a.GetIdx() - 1]) + " " + str(poltype.localframe2[a.GetIdx() - 1]) + "\n")
-            elif idxtobisecthenzbool[a.GetIdx()]==True and idxtotrisecbool[a.GetIdx()]==False:
+            elif idxtobisecthenzbool[a.GetIdx()] and not idxtotrisecbool[a.GetIdx()]:
                 bisectidxs=idxtobisectidxs[a.GetIdx()]
                 f.write(str(a.GetIdx()) + " " + str(poltype.localframe1[a.GetIdx() - 1]) + " -" + str(bisectidxs[0])+ " -" + str(bisectidxs[1]) + "\n")
             else:
@@ -292,7 +292,7 @@ def gen_peditinfile(poltype,mol):
                     if (b.GetAtomicNum() == 6 and b.IsAromatic()):
                         lines.append(str(a.GetIdx()) + " " + str(0.696) + "\n")
                         writesection=True
-        if writesection==True:
+        if writesection:
             for line in lines:
                 f.write(line)
             
@@ -609,7 +609,7 @@ def prepend_keyfile(poltype,keyfilename,optmol,dipole=False):
         logname=poltype.logespfname
     else:
         logname=poltype.logespfname.replace('.log','_psi4.log')
-    if dipole==True:
+    if dipole:
         qmdipole=esp.GrabQMDipoles(poltype,optmol,logname)
         tmpfh.write('TARGET-DIPOLE'+' '+str(qmdipole[0])+' '+str(qmdipole[1])+' '+str(qmdipole[2])+'\n')
     
@@ -659,7 +659,7 @@ def gen_gdmain(poltype,gdmainfname,molecprefix,fname,dmamethod):
         densitystring='MP2'
     else:
         densitystring='SCF'
-    if poltype.use_gaus==False or poltype.use_gausoptonly==True:
+    if not poltype.use_gaus or poltype.use_gausoptonly:
         if poltype.dmamethod=='MP2':
             densitystring='CC' # for some reason fchk outputs CC for MP2 density
         tmpfh.write("File " + fnamesym  + " density %s\n"%(densitystring))

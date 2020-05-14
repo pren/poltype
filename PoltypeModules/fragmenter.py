@@ -55,7 +55,7 @@ def AssignTotalCharge(poltype,molecule,babelmolecule):
                 natomicnum=natom.GetAtomicNum()
                 if natomicnum==7 or natomicnum==8 or natomicnum==16:
                     polneighb=True
-            if polneighb==True and val==3:
+            if polneighb and val==3:
                 chg=1
         totchg+=chg
         atom.SetFormalCharge(chg)
@@ -139,14 +139,14 @@ def GrabWBOMatrixGaussian(poltype,outputlog,mol):
         linesplit=line.split()
         if 'Wiberg bond index matrix' in line:
             juststartWBOmatrix=True    
-        elif 'Atom' in line and juststartWBOmatrix==True:
+        elif 'Atom' in line and juststartWBOmatrix:
             matcols=len(linesplit)-1
-        elif 'Wiberg bond index, Totals by atom' in line and juststartWBOmatrix==True:
+        elif 'Wiberg bond index, Totals by atom' in line and juststartWBOmatrix:
             return WBOmatrix
-        elif line=='\n' and juststartWBOmatrix==True:
+        elif line=='\n' and juststartWBOmatrix:
             if 'Wiberg bond index matrix' not in results[lineidx-1]:
                 currentcolnum+=matcols
-        elif juststartWBOmatrix==True and 'Atom' not in line and line!='\n' and '--' not in line:
+        elif juststartWBOmatrix and 'Atom' not in line and line!='\n' and '--' not in line:
             rownum=int(linesplit[0].replace('.',''))
             ele=linesplit[1]
             wborowvalues=linesplit[2:]
@@ -172,11 +172,11 @@ def GrabWBOMatrixPsi4(poltype,outputlog,molecule):
         linesplit=line.split()
         if 'Wiberg Bond Indices' in line:
             juststartWBOmatrix=True    
-        elif 'Atomic Valences:' in line and juststartWBOmatrix==True:
+        elif 'Atomic Valences:' in line and juststartWBOmatrix:
             return WBOmatrix
-        elif AllIntegers(poltype,line.split())==True and juststartWBOmatrix==True and line!='\n':
+        elif AllIntegers(poltype,line.split()) and juststartWBOmatrix and line!='\n':
             colrowindex=lineidx
-        elif juststartWBOmatrix==True and 'Irrep:' not in line and line!='\n' and AllIntegers(poltype,line.split())==False:
+        elif juststartWBOmatrix and 'Irrep:' not in line and line!='\n' and not AllIntegers(poltype,line.split()):
             row=line.split()[1:]
             colindexrow=results[colrowindex].split()
             rowindex=int(line.split()[0])
@@ -673,13 +673,13 @@ def GenerateWBOMatrix(poltype,molecule,structfname):
 
     inputname,outputname=esp.CreatePsi4ESPInputFile(poltype,structfname,poltype.comespfname.replace('.com','_frag.com'),molecule,poltype.maxdisk,poltype.maxmem,poltype.numproc,charge,False)
     finished,error=poltype.CheckNormalTermination(outputname)
-    if finished==False and error==False:
+    if not finished and not error:
         cmdstr='psi4 '+inputname+' '+outputname
         try:
              poltype.call_subsystem(cmdstr,True)
         except:
              error=True
-    if error==False:
+    if not error:
         WBOmatrix=GrabWBOMatrixPsi4(poltype,outputname,molecule)
     poltype.espmethod=curespmethod
     poltype.espbasisset=curspbasisset
@@ -734,7 +734,7 @@ def GenerateFragments(poltype,mol,torlist,parentWBOmatrix):
         WriteOBMolToSDF(poltype,fragmolbabel,filename.replace('.mol','.sdf'))
         structfname=filename.replace('.mol','.sdf')
         fragWBOmatrix,outputname,error=GenerateWBOMatrix(poltype,fragmol,filename.replace('.mol','_xyzformat.xyz'))
-        if error==True:
+        if error:
             os.chdir('..')
             continue
         fragmentWBOvalue=fragWBOmatrix[parentindextofragindex[tor[1]-1],parentindextofragindex[tor[2]-1]] # rdkit is 0 index based so need to subtract 1, babel is 1 indexbased
@@ -986,7 +986,7 @@ def GrowFragmentOut(poltype,mol,parentWBOmatrix,indexes,WBOdifference,tor,fragfo
             os.chdir(foldername)
 
             fragWBOmatrix,outputname,error=GenerateWBOMatrix(poltype,fragmol,structfname)
-            if error==True:
+            if error:
                 os.chdir('..')
                 continue
             reducedparentWBOmatrix=ReduceParentMatrix(poltype,parentindextofragindex,fragWBOmatrix,parentWBOmatrix)
@@ -1127,7 +1127,7 @@ def MapSMILESToParent(poltype,mol,smi,temptorlist):
     sp = openbabel.OBSmartsPattern()
     openbabel.OBSmartsPattern.Init(sp,smi)
     match=sp.Match(mol)
-    if match==False:
+    if not match:
         return None,None
     indexlist=[]
     for indexls in sp.GetMapList():
@@ -1137,9 +1137,9 @@ def MapSMILESToParent(poltype,mol,smi,temptorlist):
         foundall=True
         for index in tor:
             match=CheckIfIndexInMatches(index,indexlist)
-            if match==False:
+            if not match:
                 foundall=False
-        if foundall==True:
+        if foundall:
             return str(tor[1])+'_'+str(tor[2]),natoms
      
     return None,None
@@ -1156,7 +1156,7 @@ def FirstPassAtomIndexes(poltype,tor):
                neighbatomindex=neighbatom.GetIdx()
                if neighbatomindex not in molindexlist:
                    molindexlist.append(neighbatomindex)
-                   if neighbatom.GetIsAromatic()==True:
+                   if neighbatom.GetIsAromatic():
                        aromaticindexes=GrabAromaticAtoms(poltype,neighbatom)
                        newindexes=aromaticindexes
                        for atmidx in newindexes:
@@ -1384,10 +1384,10 @@ def GrabAromaticAtoms(poltype,neighbatom):
     while prevringidxlen!=ringidxlen:
         for atmindex in aromaticindexes:
             atm=poltype.rdkitmol.GetAtomWithIdx(atmindex)
-            if (atm.GetIsAromatic()==True) and atmindex not in aromaticindexes:
+            if atm.GetIsAromatic() and atmindex not in aromaticindexes:
                 aromaticindexes.append(atmindex)
             for natm in atm.GetNeighbors():
-                if (natm.GetIsAromatic()==True) and natm.GetIdx() not in aromaticindexes:
+                if natm.GetIsAromatic() and natm.GetIdx() not in aromaticindexes:
                     aromaticindexes.append(natm.GetIdx())
         prevringidxlen=ringidxlen
         ringidxlen=len(aromaticindexes)

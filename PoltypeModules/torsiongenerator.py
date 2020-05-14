@@ -29,10 +29,10 @@ def ExecuteOptJobs(poltype,listofstructurestorunQM,fullrange,optmol,a,b,c,d,tora
         phaseangle=fullrange[i]
         inputname,outputlog,cmdstr,scratchdir=GenerateTorsionOptInputFile(poltype,torxyzfname,poltype.molecprefix,a,b,c,d,torang,phaseangle,optmol,consttorlist)
         finished,error=poltype.CheckNormalTermination(outputlog)
-        if finished==True and 'opt' in outputlog:
+        if finished and 'opt' in outputlog:
             opt.GrabFinalXYZStructure(poltype,outputlog,outputlog.replace('.log','.xyz'))
 
-        if finished==False:
+        if not finished:
             if os.path.isfile(outputlog):
                 statinfo=os.stat(outputlog)
                 size=statinfo.st_size
@@ -86,7 +86,7 @@ def ExecuteSPJobs(poltype,torxyznames,cartxyznames,optoutputlogs,fullrange,optmo
             inputname,outputname=GenerateTorsionSPInputFileGaus(poltype,torxyzfname,poltype.molecprefix,a,b,c,d,torang,phaseangle,outputlog)
             cmdstr = 'cd '+os.getcwd()+' && '+'GAUSS_SCRDIR='+poltype.scrtmpdir+' '+poltype.gausexe+' '+inputname
         finished,error=poltype.CheckNormalTermination(outputname)
-        if finished==True and error==False:
+        if finished and not error:
             pass
         else:
             if os.path.isfile(outputname):
@@ -141,13 +141,13 @@ def CreateGausTorOPTInputFile(poltype,molecprefix,a,b,c,d,phaseangle,torang,optm
     
 
 def GenerateTorsionOptInputFile(poltype,torxyzfname,molecprefix,a,b,c,d,torang,phaseangle,optmol,consttorlist):
-    if  poltype.use_gaus==False and poltype.use_gausoptonly==False:
+    if not poltype.use_gaus and not poltype.use_gausoptonly:
         inputname,outputname=CreatePsi4TorOPTInputFile(poltype,molecprefix,a,b,c,d,phaseangle,torang,optmol,torxyzfname,consttorlist)
         cmdstr='cd '+os.getcwd()+' && '+'psi4 '+inputname+' '+outputname
     else:
         inputname,outputname=CreateGausTorOPTInputFile(poltype,molecprefix,a,b,c,d,phaseangle,torang,optmol,torxyzfname,consttorlist)
         cmdstr='cd '+os.getcwd()+' && '+'GAUSS_SCRDIR='+poltype.scrtmpdir+' '+poltype.gausexe+' '+inputname
-    if poltype.use_gaus==False and poltype.use_gausoptonly==False:
+    if not poltype.use_gaus and not poltype.use_gausoptonly:
         return inputname,outputname,cmdstr,poltype.scratchdir
     else:
         return inputname,outputname,cmdstr,poltype.scrtmpdir
@@ -201,7 +201,7 @@ def tinker_minimize_analyze_QM_Struct(poltype,molecprefix,a,b,c,d,torang,optmol,
     cartxyz,torxyzfname,newtorxyzfname,keyfname=tinker_minimize(poltype,molecprefix,a,b,c,d,optmol,consttorlist,phaseangle,torsionrestraint,prevstruct,torang,designatexyz,keybase,keybasepath)
     toralzfname = os.path.splitext(torxyzfname)[0] + '.alz'
     term=AnalyzeTerm(poltype,toralzfname)
-    if term==False:
+    if not term:
         tinker_analyze(poltype,newtorxyzfname,keyfname,toralzfname)
     return cartxyz,newtorxyzfname
 
@@ -254,7 +254,7 @@ def tinker_minimize(poltype,molecprefix,a,b,c,d,optmol,consttorlist,phaseangle,t
     tmpkeyfh.close()
     mincmdstr = poltype.minimizeexe+' '+torxyzfname+' -k '+tmpkeyfname+' 0.1'+' '+'>'+torminlogfname
     term,error=poltype.CheckNormalTermination(torminlogfname)
-    if term==True and error==False:
+    if term and not error:
         pass
     else:
         poltype.call_subsystem(mincmdstr,True)
@@ -307,7 +307,7 @@ def gen_torsion(poltype,optmol,torsionrestraint):
         counterclock=[i-360 for i in phaselist[int(len(phaselist)/2) :][::-1]]
         consttorlist = list(poltype.torlist)
         consttorlist.remove(tor)
-        if poltype.use_gaus==False and poltype.use_gausoptonly==False:
+        if not poltype.use_gaus and not poltype.use_gausoptonly:
             prevstrctfname = '%s-opt-%d-%d-%d-%d-%03d-opt.xyz' % (poltype.molecprefix,a,b,c,d,round((torang)%360))
             cmd = 'cp ../%s %s' % (poltype.logoptfname.replace('.log','.xyz'),prevstrctfname)
             poltype.call_subsystem(cmd,True)
@@ -356,12 +356,12 @@ def gen_torsion(poltype,optmol,torsionrestraint):
         finishedjobs,errorjobs=poltype.CallJobsSeriallyLocalHost(fulljobtooutputlog,True)
     for outputlog in fulloutputlogs:
         finished,error=poltype.CheckNormalTermination(outputlog)
-        if finished==True and 'opt' in outputlog:
+        if finished and 'opt' in outputlog:
             opt.GrabFinalXYZStructure(poltype,outputlog,outputlog.replace('.log','.xyz'))
             #newoptmol = load_structfile(poltype,outputlog.replace('.log','.xyz'))
             #CheckBondConnectivity(poltype,newoptmol,optmol)
 
-        if finished==True and error==False and outputlog not in finishedjobs:
+        if finished and not error and outputlog not in finishedjobs:
             finishedjobs.append(outputlog) 
     fulltorxyznames=[]
     fullfinishedoutputlogsSP=[]
@@ -490,7 +490,7 @@ def get_torlist(poltype,mol):
             if [t2.GetIdx(),t3.GetIdx()] in poltype.fitrotbndslist or [t3.GetIdx(),t2.GetIdx()] in poltype.fitrotbndslist or [t2.GetIdx(),t3.GetIdx()] in poltype.onlyrotbndslist or [t3.GetIdx(),t2.GetIdx()] in poltype.onlyrotbndslist:
                 print('skipping')    
                 skiptorsion = False # override previous conditions if in list
-            if poltype.rotalltors==True:
+            if poltype.rotalltors:
                 skiptorsion=False
             rotbndkey = '%d %d' % (t2.GetIdx(), t3.GetIdx())
             rotbndlist[rotbndkey] = []
@@ -675,7 +675,7 @@ def CreatePsi4TorOPTInputFile(poltype,molecprefix,a,b,c,d,phaseangle,torang,optm
     temp.write('  ")'+'\n')
     temp.write('}'+'\n')
 
-    if poltype.toroptpcm==True:
+    if poltype.toroptpcm:
         temp.write('set {'+'\n')
         temp.write(' basis '+poltype.toroptbasisset+'\n')
         temp.write( 'g_convergence GAU_LOOSE'+'\n')
@@ -711,14 +711,14 @@ def CreatePsi4TorOPTInputFile(poltype,molecprefix,a,b,c,d,phaseangle,torang,optm
     temp.write('for _ in range(1):'+'\n')
     temp.write('  try:'+'\n')
     temp.write("    optimize('%s/%s')" % (poltype.toroptmethod.lower(),poltype.toroptbasisset)+'\n')
-    if poltype.freq==True:
+    if poltype.freq:
         temp.write('    scf_e,scf_wfn=freq(%s/%s,return_wfn=True)'%(poltype.toroptmethod.lower(),poltype.toroptbasisset)+'\n')
     temp.write('    break'+'\n')
     temp.write('  except OptimizationConvergenceError:'+'\n')
     temp.write('    try:'+'\n')
     temp.write('      set opt_coordinates cartesian'+'\n')
     temp.write("      optimize('%s/%s')" % (poltype.toroptmethod.lower(),poltype.toroptbasisset)+'\n')
-    if poltype.freq==True:
+    if poltype.freq:
         temp.write('      scf_e,scf_wfn=freq(%s/%s,return_wfn=True)'%(poltype.toroptmethod.lower(),poltype.toroptbasisset)+'\n')
     temp.write('      break'+'\n')
     temp.write('    except OptimizationConvergenceError:'+'\n')
@@ -749,14 +749,14 @@ def gen_torcomfile (poltype,comfname,numproc,maxmem,maxdisk,prevstruct,xyzf):
     optstr=opt.gen_opt_str(poltype,optimizeoptlist)
 
     if ('-opt-' in comfname):
-        if poltype.toroptpcm==True:
+        if poltype.toroptpcm:
             operationstr = "%s %s/%s MaxDisk=%s SCRF=(PCM)\n" % (optstr,poltype.toroptmethod,poltype.toroptbasisset, maxdisk)
         else:
             operationstr = "%s %s/%s MaxDisk=%s\n" % (optstr,poltype.toroptmethod,poltype.toroptbasisset, maxdisk)
         commentstr = poltype.molecprefix + " Rotatable Bond Optimization on " + gethostname()
     else:
 #        operationstr = "#m06L/%s SP SCF=(qc,maxcycle=800) Guess=Indo MaxDisk=%s\n" % (torspbasisset, maxdisk)
-        if poltype.torsppcm==True:
+        if poltype.torsppcm:
             operationstr = "#P %s/%s SP SCF=(qc,maxcycle=800) Guess=Indo MaxDisk=%s SCRF=(PCM) Pop=NBORead\n" % (poltype.torspmethod,poltype.torspbasisset, maxdisk)
         else:       
             operationstr = "#P %s/%s SP SCF=(qc,maxcycle=800) Guess=Indo MaxDisk=%s Pop=NBORead\n" % (poltype.torspmethod,poltype.torspbasisset, maxdisk)
@@ -914,7 +914,7 @@ def CreatePsi4TorESPInputFile(poltype,finalstruct,torxyzfname,optmol,molecprefix
             temp.write('%2s %11.6f %11.6f %11.6f\n' % (etab.GetSymbol(atm.GetAtomicNum()), float(ln.split()[2]),float(ln.split()[3]),float(ln.split()[4])))
         xyzstr.close()
     temp.write('}'+'\n')
-    if poltype.torsppcm==True:
+    if poltype.torsppcm:
         temp.write('set {'+'\n')
         temp.write(' basis '+poltype.espbasisset+'\n')
         temp.write(' e_convergence 10 '+'\n')

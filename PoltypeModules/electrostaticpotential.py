@@ -29,7 +29,7 @@ def gen_esp_grid(poltype,mol):
        "(2) Get QM Potential from a Gaussian Cube File"
        Outputs *.cube_2
     """
-    if poltype.use_gaus==False or poltype.use_gausoptonly==True:
+    if not poltype.use_gaus or poltype.use_gausoptonly:
         Vvals,gridpts=GrabGridData(poltype)
 
         while len(gridpts) != len(Vvals):
@@ -103,7 +103,7 @@ def CreatePsi4ESPInputFile(poltype,comfilecoords,comfilename,mol,maxdisk,maxmem,
     temp.write('set freeze_core True'+'\n')
     temp.write('set PROPERTIES_ORIGIN ["COM"]'+'\n')
     temp.write("E, wfn = properties('%s/%s',properties=['dipole'],return_wfn=True)" % (poltype.espmethod.lower(),poltype.espbasisset)+'\n')
-    if makecube==True:
+    if makecube:
        temp.write('oeprop(wfn,"GRID_ESP","WIBERG_LOWDIN_INDICES","MULLIKEN_CHARGES")'+'\n')
     else:
        temp.write('oeprop(wfn,"WIBERG_LOWDIN_INDICES","MULLIKEN_CHARGES")'+'\n')
@@ -148,9 +148,9 @@ def GrabFinalPsi4Energy(poltype,logname):
         linesplit=line.split()
         if 'Energies <====================' in line:
             foundfinalenergies=True
-        if foundfinalenergies==True and 'Total Energy' in line and 'SCS' not in line:
+        if foundfinalenergies and 'Total Energy' in line and 'SCS' not in line:
             energy=float(linesplit[3])
-        if foundfinalenergies==True and 'SCS Total Energy' in line:
+        if foundfinalenergies and 'SCS Total Energy' in line:
             energy=float(linesplit[4])
     return energy
             
@@ -163,7 +163,7 @@ def CheckRMSPD(poltype):
                 RMSPD=line.split(':')[1].strip()
                 rmspdexists=True
         temp.close()
-        if rmspdexists==True:
+        if rmspdexists:
             if float(RMSPD)>poltype.maxRMSPD:
                 poltype.WriteToLog('Warning: RMSPD of QM and MM optimized structures is high, RMSPD = '+ RMSPD+' Tolerance is '+str(poltype.maxRMSPD)+' kcal/mol ')
             
@@ -233,7 +233,7 @@ def ElectrostaticPotentialFitting(poltype):
 
 def ElectrostaticPotentialComparison(poltype):
     rmspdexists=CheckRMSPD(poltype)
-    if rmspdexists==False:
+    if not rmspdexists:
         poltype.WriteToLog("")
         poltype.WriteToLog("=========================================================")
         poltype.WriteToLog("Electrostatic Potential Comparison\n")
@@ -242,7 +242,7 @@ def ElectrostaticPotentialComparison(poltype):
     rmspdexists=CheckRMSPD(poltype)
 
 def SPForDMA(poltype,optmol,mol):
-    if poltype.use_gaus==False or poltype.use_gausoptonly==True:
+    if not poltype.use_gaus or poltype.use_gausoptonly:
         if os.path.isfile(poltype.chkdmafname):
             os.remove(poltype.chkdmafname)
 
@@ -250,7 +250,7 @@ def SPForDMA(poltype,optmol,mol):
         poltype.WriteToLog("Calling: " + "Psi4 Gradient for DMA")
         term,error=poltype.CheckNormalTermination(poltype.logdmafname)
         inputname=CreatePsi4DMAInputFile(poltype,poltype.logoptfname.replace('.log','.xyz'),poltype.comdmafname,mol)
-        if term==False:
+        if not term:
             cmdstr='cd '+os.getcwd()+' && '+'psi4 '+inputname+' '+poltype.logdmafname
             jobtooutputlog={cmdstr:os.getcwd()+r'/'+poltype.logdmafname}
             jobtolog={cmdstr:os.getcwd()+r'/'+poltype.logfname}
@@ -305,11 +305,11 @@ def SPForESP(poltype,optmol,mol):
     if not os.path.isfile(poltype.espgrdfname):
         gengridcmd = poltype.potentialexe + " 1 " + poltype.xyzfname+' -k '+poltype.keyfname
         poltype.call_subsystem(gengridcmd,True)
-    if poltype.use_gaus==False or poltype.use_gausoptonly==True:
+    if not poltype.use_gaus or poltype.use_gausoptonly:
         shutil.copy(poltype.espgrdfname, 'grid.dat') 
         inputname,outputname=CreatePsi4ESPInputFile(poltype,poltype.logoptfname.replace('.log','.xyz'),poltype.comespfname,mol,poltype.maxdisk,poltype.maxmem,poltype.numproc,poltype.totalcharge,True)
         term,error=poltype.CheckNormalTermination(outputname)
-        if term==False:
+        if not term:
             poltype.WriteToLog("Calling: " + "Psi4 Gradient for ESP")
             cmdstr='cd '+os.getcwd()+' && '+'psi4 '+inputname+' '+outputname
             jobtooutputlog={cmdstr:os.getcwd()+r'/'+outputname}
@@ -366,7 +366,7 @@ def GrabQMDipoles(poltype,optmol,logname):
     poltype.WriteToLog("")
     poltype.WriteToLog("=========================================================")
     poltype.WriteToLog("QM Dipole moment\n")
-    if poltype.use_gaus==False or poltype.use_gausoptonly==True:
+    if not poltype.use_gaus or poltype.use_gausoptonly:
         temp=open(logname,'r')
         results=temp.readlines()
         temp.close()
@@ -421,7 +421,7 @@ def CheckDipoleMoments(poltype,optmol):
             poltype.WriteToLog('MM Dipole moment = '+str(mmdipole))
             diff=qmdipole-mmdipole
             ratio=np.abs(diff/qmdipole)
-            if ratio>poltype.dipoletol and poltype.suppressdipoleerr==False:
+            if ratio>poltype.dipoletol and not poltype.suppressdipoleerr:
                 raise ValueError('Relative error of '+str(ratio)+' for QMDipole '+str(qmdipole)+' and '+str(mmdipole)+' for MMDipole '+'is bigger than '+str(poltype.dipoletol)+' '+os.getcwd()) 
 
 def ConvertDipoleToCOMFrame(poltype,dipole,optmol):

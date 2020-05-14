@@ -357,7 +357,7 @@ def GrabPrmClassToBoundryClassForPrmFile(poltype,listofvalterms,proidxtoligidx,l
                     valtype.append(protype)
                     prmclasses.append(protype)
                     boundclasses.append(protype)
-        if skip==True:
+        if skip:
             continue
         if tuple(prmclasses) in prmclassestoboundclasses.keys() and tuple(prmclasses[::-1]) not in prmclassestoboundclasses.keys(): # then we need to make a list
             boundclassesprev=prmclassestoboundclasses[tuple(prmclasses)]
@@ -397,16 +397,16 @@ def GrabParametersFromKeyFile(poltype,key,torsionligtypestoboundtypesforkey,ligb
             elif tuple(torsiontypelist[::-1]) in torsionligtypestoboundtypesforkey.keys():
                 torsiontup=tuple(torsiontypelist[::-1])
                 foundtorsion=True
-            if foundtorsion==True:
+            if foundtorsion:
                 allgreaterthanpoltypenums=True
                 boundtypes=torsionligtypestoboundtypesforkey[torsiontup]
                 allgreaterthanpoltypenums=True # if all numbers are >=401 then will already be in poltype key file, no need to add again
                 for tortype in boundtypes:
                     if tortype<mincorenumber or tortype>maxcorenumber:
                         allgreaterthanpoltypenums=False
-                if allgreaterthanpoltypenums==True:
+                if allgreaterthanpoltypenums:
                     foundtorsion=False
-            if foundtorsion==True:
+            if foundtorsion:
                              
                 if linesplitall[0]=='': # sometimes when torsion is added back to the key file, it has a space in front of it
                     linesplitall[4]=str(boundtypes[0])    
@@ -456,7 +456,7 @@ def GrabParametersFromKeyFile(poltype,key,torsionligtypestoboundtypesforkey,ligb
     return torsionprms,polarizeprms,mpoleprms
 
 def GrabParametersFromPrmFile(poltype,bondprmclassestoboundclasses,angleprmclassestoboundclasses,torsionprmclassestoboundclasses,ligboundaryatomtypes,poltypetoprmtype,proteintypestoframedefforprmfile,check):
-    if check==False:
+    if not check:
         temp=open(poltype.amoebabioprmpath,'r')
     else:
         temp=open(poltype.ModifiedResiduePrmPath,'r')
@@ -483,7 +483,7 @@ def GrabParametersFromPrmFile(poltype,bondprmclassestoboundclasses,angleprmclass
             elif tuple(bondclasslist[::-1]) in bondprmclassestoboundclasses.keys():
                 bondtup=tuple(bondclasslist[::-1])
                 foundbond=True
-            if foundbond==True:
+            if foundbond:
                 boundclasses=bondprmclassestoboundclasses[bondtup]
                 for boundcls in boundclasses:
                     linesplitall[2]=str(boundcls[0])    
@@ -499,7 +499,7 @@ def GrabParametersFromPrmFile(poltype,bondprmclassestoboundclasses,angleprmclass
             elif tuple(angleclasslist[::-1]) in angleprmclassestoboundclasses.keys():
                 angletup=tuple(angleclasslist[::-1])
                 foundangle=True
-            if foundangle==True:
+            if foundangle:
                 boundclasses=angleprmclassestoboundclasses[angletup]
                 for boundcls in boundclasses:
                     linesplitall[2]=str(boundcls[0])    
@@ -517,7 +517,7 @@ def GrabParametersFromPrmFile(poltype,bondprmclassestoboundclasses,angleprmclass
             elif tuple(torsionclasslist[::-1]) in torsionprmclassestoboundclasses.keys():
                 torsiontup=tuple(torsionclasslist[::-1])
                 foundtorsion=True
-            if foundtorsion==True:   
+            if foundtorsion:   
                 boundclasses=torsionprmclassestoboundclasses[torsiontup]
                 for boundcls in boundclasses:
                     if linesplitall[0]=='': # sometimes when torsion is added back to the key file, it has a space in front of it
@@ -543,7 +543,7 @@ def GrabParametersFromPrmFile(poltype,bondprmclassestoboundclasses,angleprmclass
             elif tuple(angleclasslist[::-1]) in angleprmclassestoboundclasses.keys():
                 angletup=tuple(angleclasslist[::-1])
                 foundstrbnd=True
-            if foundstrbnd==True:
+            if foundstrbnd:
                 boundclasses=angleprmclassestoboundclasses[angletup]
                 for boundcls in boundclasses:
                     linesplitall[2]=str(boundcls[0])    
@@ -562,7 +562,7 @@ def GrabParametersFromPrmFile(poltype,bondprmclassestoboundclasses,angleprmclass
             elif tuple(bondclasslist[::-1]) in bondprmclassestoboundclasses.keys():
                 bondtup=tuple(bondclasslist[::-1])
                 foundpitors=True
-            if foundpitors==True:
+            if foundpitors:
                 boundclasses=bondprmclassestoboundclasses[bondtup]
                 for boundcls in boundclasses:
                     linesplitall[2]=str(boundcls[0])    
@@ -582,10 +582,10 @@ def GrabParametersFromPrmFile(poltype,bondprmclassestoboundclasses,angleprmclass
                 foundopbend=True
                 reversedopbend=True # need to be careful because for example 3 409 0 0 will be different than 409 3 0 0, so need to swap the boundindexes if the bondtypelist is reversed
 
-            if foundopbend==True:
+            if foundopbend:
                 boundclasses=bondprmclassestoboundclasses[bondtup]
                 for boundcls in boundclasses:
-                    if reversedopbend==True:
+                    if reversedopbend:
                         linesplitall[4]=str(boundcls[0])    
                         linesplitall[2]=str(boundcls[1]) 
                     else:
@@ -604,7 +604,7 @@ def GrabParametersFromPrmFile(poltype,bondprmclassestoboundclasses,angleprmclass
             elif tuple(frames[::-1]) in proteintypestoframedefforprmfile.keys():
                 theframe=tuple(frames[::-1])
                 grabit=True
-            if grabit==True:
+            if grabit:
                 chgpartofline=linesplitall[-2:] # include space
                 phrasepartofline=linesplitall[:2] # include space
                 spacetoadd='   '
@@ -747,100 +747,100 @@ def WriteNewKeyFile(poltype,atomdefs,bondprms,angleprms,torsionprms,strbndprms,p
     for lineidx in range(len(results)):
         line=results[lineidx]
         prewhitespacelinesplit=re.split(r'(\s+)', line)
-        if 'atom' in line and firstpassatomdef==False:
+        if 'atom' in line and not firstpassatomdef:
             firstpassatomdef=True
             if line not in linelist:
                 linelist.append(line)
-        elif 'atom' not in line and firstpassatomdef==True and passedatomdefblock==False:
+        elif 'atom' not in line and firstpassatomdef and not passedatomdefblock:
             passedatomdefblock=True
             for atomdefline in atomdefs:
                 linelist.append(atomdefline)
             if line not in linelist:
                 linelist.append(line)
-        elif 'bond' in line and firstpassbond==False:
+        elif 'bond' in line and not firstpassbond:
             firstpassbond=True
             if line not in linelist:
                 linelist.append(line)
-        elif 'bond' not in line and firstpassbond==True and passedbondblock==False:
+        elif 'bond' not in line and firstpassbond and not passedbondblock:
             passedbondblock=True
             for bondline in bondprms:
                 linelist.append(bondline)
             if line not in linelist:
                 linelist.append(line)
-        elif 'angle' in line and firstpassangle==False:
+        elif 'angle' in line and not firstpassangle:
             firstpassangle=True
             if line not in linelist:
                 linelist.append(line)
-        elif 'angle' not in line and firstpassangle==True and passedangleblock==False:
+        elif 'angle' not in line and firstpassangle and not passedangleblock:
             passedangleblock=True
             for angleline in angleprms:
                 linelist.append(angleline)
             if line not in linelist:
                 linelist.append(line)
-        elif 'torsion' in line and firstpasstorsion==False:
+        elif 'torsion' in line and not firstpasstorsion:
             firstpasstorsion=True
             if line not in linelist:
                 linelist.append(line)
-        elif 'torsion' not in line and firstpasstorsion==True and passedtorsionblock==False:
+        elif 'torsion' not in line and firstpasstorsion and not passedtorsionblock:
             passedtorsionblock=True
             for torsionline in torsionprms:
                 linelist.append(torsionline) 
             if line not in linelist:
                 linelist.append(line)           
-        elif 'strbnd' in line and firstpassstrbnd==False:
+        elif 'strbnd' in line and not firstpassstrbnd:
             firstpassstrbnd=True
             if line not in linelist:
                 linelist.append(line)
-        elif 'strbnd' not in line and firstpassstrbnd==True and passedstrbndblock==False:
+        elif 'strbnd' not in line and firstpassstrbnd and not passedstrbndblock:
             passedstrbndblock=True
             for strbndline in strbndprms:
                 linelist.append(strbndline)
             if line not in linelist:
                 linelist.append(line)
-        elif 'polarize' in line and firstpasspolarize==False:
+        elif 'polarize' in line and not firstpasspolarize:
             firstpasspolarize=True
             if line not in linelist:
                 linelist.append(line)
-        elif 'polarize' not in line and firstpasspolarize==True and passedpolarizeblock==False:
+        elif 'polarize' not in line and firstpasspolarize and not passedpolarizeblock:
             passedpolarizeblock=True
             for polarizeline in polarizeprms:
                 linelist.append(polarizeline)
             if line not in linelist:
                 linelist.append(line)
-        elif 'pitors' in line and firstpasspitors==False:
+        elif 'pitors' in line and not firstpasspitors:
             firstpasspitors=True
             if line not in linelist:
                 linelist.append(line)
-        elif 'pitors' not in line and firstpasspitors==True and passedpitorsblock==False:
+        elif 'pitors' not in line and firstpasspitors and not passedpitorsblock:
             passedpitorsblock=True
             for pitorsline in pitorprms:
                 linelist.append(pitorsline)
             if line not in linelist:
                 linelist.append(line)
-        elif 'opbend' in line and firstpassopbend==False:
+        elif 'opbend' in line and not firstpassopbend:
             firstpassopbend=True
             if line not in linelist:
                 linelist.append(line)
-        elif 'opbend' not in line and firstpassopbend==True and passedopbendblock==False:
+        elif 'opbend' not in line and firstpassopbend and not passedopbendblock:
             passedopbendblock=True
             for opbendline in opbendprms:
                 linelist.append(opbendline)
             if line not in linelist:
                 linelist.append(line)
-        elif 'vdw' in line and firstpassvdw==False:
+        elif 'vdw' in line and not firstpassvdw:
             firstpassvdw=True
             if line not in linelist:
                 linelist.append(line)
-        elif 'vdw' not in line and firstpassvdw==True and passedvdwblock==False:
+        elif 'vdw' not in line and firstpassvdw and not passedvdwblock:
             passedvdwblock=True
             for vdwline in vdwprms:
                 linelist.append(vdwline)
             if line not in linelist:
                 linelist.append(line)
-        elif 'multipole' in line and firstpassmpole==False:
+        elif 'multipole' in line and not firstpassmpole:
             firstpassmpole=True
             linelist.append(line)
-        elif 'multipole' not in line and firstpassmpole==True and passedmpoleblock==False and line=='\n':
+        elif 'multipole' not in line and firstpassmpole and not passedmpoleblock and line=='\n':
             passedmpoleblock=True
             for mpoleline in mpoleprms:
                 linelist.append(mpoleline)
@@ -893,13 +893,13 @@ def WriteToPrmFile(poltype,atomdefs,bondprms,angleprms,torsionprms,strbndprms,pi
         line=results[lineidx]
         if 'type' not in line and 'cubic' not in line and 'quartic' not in line and 'pentic' not in line and 'sextic' not in line and 'unit' not in line and 'scale' not in line:
             prewhitespacelinesplit=re.split(r'(\s+)', line)
-            if 'atom' in line and firstpassatomdef==False:
+            if 'atom' in line and not firstpassatomdef:
                 firstpassatomdef=True
                 temp.write(line)
                 temp.flush()
                 os.fsync(temp.fileno())
                 sys.stdout.flush()
-            elif 'atom' not in line and firstpassatomdef==True and passedatomdefblock==False:
+            elif 'atom' not in line and firstpassatomdef and not passedatomdefblock:
                 passedatomdefblock=True
                 temp.write(line)
                 temp.flush()
@@ -908,13 +908,13 @@ def WriteToPrmFile(poltype,atomdefs,bondprms,angleprms,torsionprms,strbndprms,pi
                 for atomdef in atomdefs:
                     temp.write(atomdef)
                 temp.write(line)
-            elif 'vdw' in line and firstpassvdw==False:
+            elif 'vdw' in line and not firstpassvdw:
                 firstpassvdw=True
                 temp.write(line)
                 temp.flush()
                 os.fsync(temp.fileno())
                 sys.stdout.flush()
-            elif 'vdw' not in line and firstpassvdw==True and passedvdwblock==False:
+            elif 'vdw' not in line and firstpassvdw and not passedvdwblock:
                 passedvdwblock=True
                 for vdwline in vdwprms:
                     temp.write(vdwline)
@@ -922,13 +922,13 @@ def WriteToPrmFile(poltype,atomdefs,bondprms,angleprms,torsionprms,strbndprms,pi
                 temp.flush()
                 os.fsync(temp.fileno())
                 sys.stdout.flush()
-            elif 'bond' in line and firstpassbond==False:
+            elif 'bond' in line and not firstpassbond:
                 firstpassbond=True
                 temp.write(line)
                 temp.flush()
                 os.fsync(temp.fileno())
                 sys.stdout.flush()
-            elif 'bond' not in line and firstpassbond==True and passedbondblock==False:
+            elif 'bond' not in line and firstpassbond and not passedbondblock:
                 passedbondblock=True
                 for bondline in bondprms:
                     temp.write(bondline)
@@ -936,13 +936,13 @@ def WriteToPrmFile(poltype,atomdefs,bondprms,angleprms,torsionprms,strbndprms,pi
                 temp.flush()
                 os.fsync(temp.fileno())
                 sys.stdout.flush()
-            elif 'angle' in line and firstpassangle==False:
+            elif 'angle' in line and not firstpassangle:
                 firstpassangle=True
                 temp.write(line)
                 temp.flush()
                 os.fsync(temp.fileno())
                 sys.stdout.flush()
-            elif 'angle' not in line and firstpassangle==True and passedangleblock==False:
+            elif 'angle' not in line and firstpassangle and not passedangleblock:
                 passedangleblock=True
                 for angleline in angleprms:
                     temp.write(angleline)
@@ -950,13 +950,13 @@ def WriteToPrmFile(poltype,atomdefs,bondprms,angleprms,torsionprms,strbndprms,pi
                 temp.flush()
                 os.fsync(temp.fileno())
                 sys.stdout.flush()
-            elif 'torsion' in line and firstpasstorsion==False:
+            elif 'torsion' in line and not firstpasstorsion:
                 firstpasstorsion=True
                 temp.write(line)
                 temp.flush()
                 os.fsync(temp.fileno())
                 sys.stdout.flush()
-            elif 'torsion' not in line and firstpasstorsion==True and passedtorsionblock==False:
+            elif 'torsion' not in line and firstpasstorsion and not passedtorsionblock:
                 passedtorsionblock=True
                 for torsionline in torsionprms:
                     temp.write(torsionline)
@@ -964,13 +964,13 @@ def WriteToPrmFile(poltype,atomdefs,bondprms,angleprms,torsionprms,strbndprms,pi
                 temp.flush()
                 os.fsync(temp.fileno())
                 sys.stdout.flush()
-            elif 'strbnd' in line and firstpassstrbnd==False:
+            elif 'strbnd' in line and not firstpassstrbnd:
                 firstpassstrbnd=True
                 temp.write(line)
                 temp.flush()
                 os.fsync(temp.fileno())
                 sys.stdout.flush()
-            elif 'strbnd' not in line and firstpassstrbnd==True and passedstrbndblock==False:
+            elif 'strbnd' not in line and firstpassstrbnd and not passedstrbndblock:
                 passedstrbndblock=True
                 for strbndline in strbndprms:
                     temp.write(strbndline)
@@ -978,13 +978,13 @@ def WriteToPrmFile(poltype,atomdefs,bondprms,angleprms,torsionprms,strbndprms,pi
                 temp.flush()
                 os.fsync(temp.fileno())
                 sys.stdout.flush()
-            elif 'polarize' in line and firstpasspolarize==False:
+            elif 'polarize' in line and not firstpasspolarize:
                 firstpasspolarize=True
                 temp.write(line)
                 temp.flush()
                 os.fsync(temp.fileno())
                 sys.stdout.flush()
-            elif 'polarize' not in line and firstpasspolarize==True and passedpolarizeblock==False:
+            elif 'polarize' not in line and firstpasspolarize and not passedpolarizeblock:
                 passedpolarizeblock=True
                 for polarizeline in polarizeprms:
                     temp.write(polarizeline)
@@ -992,13 +992,13 @@ def WriteToPrmFile(poltype,atomdefs,bondprms,angleprms,torsionprms,strbndprms,pi
                 temp.flush()
                 os.fsync(temp.fileno())
                 sys.stdout.flush()
-            elif 'pitors' in line and firstpasspitors==False:
+            elif 'pitors' in line and not firstpasspitors:
                 firstpasspitors=True
                 temp.write(line)
                 temp.flush()
                 os.fsync(temp.fileno())
                 sys.stdout.flush()
-            elif 'pitors' not in line and firstpasspitors==True and passedpitorsblock==False:
+            elif 'pitors' not in line and firstpasspitors and not passedpitorsblock:
                 passedpitorsblock=True
                 for pitorsline in pitorprms:
                     temp.write(pitorsline)
@@ -1006,10 +1006,10 @@ def WriteToPrmFile(poltype,atomdefs,bondprms,angleprms,torsionprms,strbndprms,pi
                 temp.flush()
                 os.fsync(temp.fileno())
                 sys.stdout.flush()
-            elif 'opbend' in line and firstpassopbend==False:
+            elif 'opbend' in line and not firstpassopbend:
                 firstpassopbend=True
                 temp.write(line)
-            elif 'opbend' not in line and firstpassopbend==True and passedopbendblock==False:
+            elif 'opbend' not in line and firstpassopbend and not passedopbendblock:
                 passedopbendblock=True
                 for opbendline in opbendprms:
                     temp.write(opbendline)
@@ -1017,13 +1017,13 @@ def WriteToPrmFile(poltype,atomdefs,bondprms,angleprms,torsionprms,strbndprms,pi
                 temp.flush()
                 os.fsync(temp.fileno())
                 sys.stdout.flush()
-            elif 'multipole' in line and firstpassmpole==False:
+            elif 'multipole' in line and not firstpassmpole:
                 firstpassmpole=True
                 temp.write(line)
                 temp.flush()
                 os.fsync(temp.fileno())
                 sys.stdout.flush()
-            elif 'multipole' not in line and firstpassmpole==True and passedmpoleblock==False and line=='\n':
+            elif 'multipole' not in line and firstpassmpole and not passedmpoleblock and line=='\n':
                 passedmpoleblock=True
                 for mpoleline in mpoleprms:
                     temp.write(mpoleline)
@@ -1155,7 +1155,7 @@ def FindBoundaryAtomIdxs(poltype,proOBmol,modproidxs):
             neighbs=[natom for natom in openbabel.OBAtomAtomIter(proatom)]
             neighbidxs=[i.GetIdx() for i in neighbs]
             foundbound=IsItABoundaryAtom(poltype,neighbidxs,modproidxs,proOBmol)
-            if foundbound==True:
+            if foundbound:
                 proboundaryatomidxs.append(atomidx)
     return proboundaryatomidxs
 
@@ -1406,9 +1406,9 @@ def FindCorrectReferenceIndexes(poltype,allindexes,pdbindexes):
         for index in match:
             if index not in pdbindexes:
                 foundmatch=False
-        if foundmatch==True:
+        if foundmatch:
             return match
-    if foundmatch==False:
+    if not foundmatch:
         return None
 
 def GrabModifiedResidueLines(poltype,pdbname,resid):
@@ -1424,7 +1424,7 @@ def GrabModifiedResidueLines(poltype,pdbname,resid):
             resnumber=int(line[23:26+1])
             reslabel=line[17:20]
             chainid=line[21]
-            if resid==resnumber and passedfirstres==False and reslabel==poltype.modifiedresiduepdbcode:
+            if resid==resnumber and not passedfirstres and reslabel==poltype.modifiedresiduepdbcode:
                 lines.append(line)
             elif resnumber==1:
                 passedfirstres=True
@@ -1470,14 +1470,14 @@ def MoveModifiedLines(poltype,lines,resid,pdbname,firstresnumber):
             reslabel=line[17:20]
             if resnumber==firstresnumber:
                 passedfirstres=True
-            if resnumber==resid+1 and wrotelines==False:
+            if resnumber==resid+1 and not wrotelines:
                 wrotelines=True
                 for l in lines:
                     temp.write(l)
-            if resnumber==resid and passedfirstres==True:
+            if resnumber==resid and passedfirstres:
                 newline=line[:17]+poltype.modifiedresiduepdbcode+line[20:]
                 temp.write(newline)
-            if passedfirstres==True and resnumber!=resid:
+            if passedfirstres and resnumber!=resid:
                 temp.write(line)
         elif 'ATOM' in line and 'UNL' in line:
             pass    
@@ -1672,7 +1672,7 @@ def GeneratePDBTopologyFile(poltype,filename):
     # first need to reindex the atoms then need to delete all bonds, then use our library residue_connections.txt to rebuild bond topology 
     lines=LibAddition(poltype,'MutatedSideChain.pdb',poltype.modifiedresiduepdbcode) 
     check=IsStringInFile(poltype,poltype.modifiedresiduepdbcode,poltype.topologylibpath)
-    if check==False:
+    if not check:
         AppendLinesToFile(poltype,lines,poltype.topologylibpath)
     finalmol=GeneratePDBTopologyObject(poltype,finalmol,filename)
     finalname=filename.replace('.pdb','_Final.pdb')
@@ -1701,7 +1701,7 @@ def BuildPDBTopology(poltype,finalmol,smartstoatomorder,smartstobondtopo,filenam
         openbabel.OBSmartsPattern.Init(sp,smarts)
         diditmatchOB=sp.Match(tempmol)
 
-        if diditmatchOB==True:
+        if diditmatchOB:
             listofmatchlists=sp.GetMapList()
             residtomatch={}
             for match in listofmatchlists: # dont want to rebuild bonds more than once for same residue
@@ -1765,7 +1765,7 @@ def ParseTopologyLib(poltype):
         line=results[lineidx]
         linesplit=line.split()
         if len(linesplit)==0:
-            if passedconnect==True:
+            if passedconnect:
                 passedconnect=False
             continue
         if line[0]=='#' and 'CONNECT' not in line: # then this is comment with label
@@ -1777,7 +1777,7 @@ def ParseTopologyLib(poltype):
              
         elif line[0]=='#' and 'CONNECT' in line:
             passedconnect=True
-        if len(linesplit)==3 and 'CHG' not in line and passedconnect==True:
+        if len(linesplit)==3 and 'CHG' not in line and passedconnect:
             if smarts not in smartstobondtopo.keys():
                 smartstobondtopo[smarts]=[]
             bondline=[int(i) for i in linesplit]
@@ -1913,10 +1913,10 @@ def LibAddition(poltype,filename,label):
     smarts=ChiralFilter(poltype,smarts)
     diditmatchOB=MatchSMARTSOB(poltype,smarts,filename)
     diditmatchrdkit=MatchSMARTSrdkit(poltype,smarts,filename)
-    if diditmatchrdkit==False:
+    if not diditmatchrdkit:
         raise ValueError('rdkit SMARTS DOES NOT MATCH ',smarts)
 
-    #if diditmatchOB==False:
+    #if not diditmatchOB:
     #     raise ValueError('OB SMARTS DOES NOT MATCH ',smarts)
         
     m=mol_with_atom_index(poltype,mol)
@@ -2052,7 +2052,7 @@ def GrabAtomIndexesToDelete(poltype,pdbfilename,positions,molecule):
             position=tuple([float(linesplit[6]),float(linesplit[7]),float(linesplit[8])])
             check=IsAtomConnectedToBackboneAtom(poltype,position,backboneidxs,molecule)
   
-            if check==False and position in newpositions and position not in positions:
+            if not check and position in newpositions and position not in positions:
                 idxstodelete.append(atomindex)
     return idxstodelete
 
@@ -2233,7 +2233,7 @@ def AppendPoltypeTypeNumbers(poltype,prmtypetoprmdeflines,prmtypetopoltype):
 
 def GrabClassNumbersForProtein(poltype,proidxtoprotype,check):
     prmtypetoprmclass={}
-    if check==False:
+    if not check:
         temp=open(poltype.amoebabioprmpath,'r')
     else:
         temp=open(poltype.ModifiedResiduePrmPath,'r')
@@ -2276,7 +2276,7 @@ def GrabProBoundIdxToProType(poltype,proboundidxs,proOBmol,modproidxs,proidxtoty
                 allnotmodandtermres=False
             if babelidx in modproidxs:
                 allnotmodandtermres=False
-        if allnotmodandtermres==True: # then just use these to get type numbers, need to make sure you do not match C or N terminal!! only middle
+        if allnotmodandtermres: # then just use these to get type numbers, need to make sure you do not match C or N terminal!! only middle
             firstmatch=match
     pdbmatchidxtofragmolmatchidx=dict(zip(firstmatch, firstmatchmol))
     firstmatchfragmol=[pdbmatchidxtofragmolmatchidx[i] for i in firstmatch]
@@ -2364,7 +2364,7 @@ def GenerateModifiedProteinXYZAndKey(poltype,knownresiduesymbs,modproidxs,probou
     ligandindexes=set(range(1,ligOBmol.NumAtoms()))
 
     
-    if check==False:
+    if not check:
         ligidxtotypeidx=GenIndexToTypeIndexDic(poltype,poltype.tmpxyzfile)
     else:
         ligidxtotypeidx=ReadSMARTSToTypeLib(poltype,smarts,modmol)
@@ -2391,7 +2391,7 @@ def GenerateModifiedProteinXYZAndKey(poltype,knownresiduesymbs,modproidxs,probou
     # now convert protein index numbers to ligand index, then we will convert ligand index to type numbers to grab parameters. We also need dictionaries that map each type in ligand type numbers to what will be represented in final key file (so for a torsion across a boundary we want the ligand type numbers to grab parmeters but we want to have protein type numbers for part of torsion on the protein side in our key file)
 
     # these parameters will be taken from the key file so need to no what to convert the indexes to once they are taken from the key file
-    if check==False:
+    if not check:
         maxcorenumber=GrabMaxTypeNumber(poltype,poltype.key5fname)
         mincorenumber=GrabMinTypeNumber(poltype,poltype.key5fname)
         key=poltype.key5fname
@@ -2435,7 +2435,7 @@ def GenerateModifiedProteinXYZAndKey(poltype,knownresiduesymbs,modproidxs,probou
     stitchatomdefs=[]
     stitchvdwprms=[]
     WriteNewKeyFile(poltype,stitchatomdefs,stitchbondprms,stitchangleprms,stitchtorsionprms,stitchstrbndprms,stitchpitorprms,stitchopbendprms,stitchpolarizeprms,stitchvdwprms,stitchmpoleprms,writekey,poltype.amoebabioprmpath)
-    if check==False:
+    if not check:
         coreatomdefs,corebondprms,coreangleprms,coretorsionprms,corestrbndprms,corepitorprms,coreopbendprms,corepolarizeprms,corevdwprms,corempoleprms=GrabCoreParameters(poltype,poltype.key5fname)
         oldtypetonewtype=ShiftPoltypeNumbers(poltype)
         # now I need to convert all arrays
@@ -2457,7 +2457,7 @@ def GenerateModifiedProteinXYZAndKey(poltype,knownresiduesymbs,modproidxs,probou
         cmdstr=CallAnalyze(poltype,protinkxyz,writekey)
         poltype.call_subsystem(cmdstr,True)
         error=ReadAnalyzeOutput(poltype)
-        if error==False:
+        if not error:
             GenerateLibFileToAdd(poltype,modresiduedic,modresiduelabel)
             GenerateSMARTSToTypeFileToAdd(poltype,modmol,ligidxtotypeidx,smarts)
         else:
@@ -2639,7 +2639,7 @@ def MatchSMARTSToOBMol(poltype,smarts,modmol):
     listofmatchlists=sp.GetMapList()
     for matchlist in listofmatchlists:
         grabmatch=matchlist
-    if diditmatch==True:
+    if diditmatch:
         return grabmatch
     else:
         print('Houston, we have a problem')
@@ -2658,7 +2658,7 @@ def MatchSMARTSToPDB(poltype,smarts,modmol):
         if atomresnum==int(poltype.mutatedresiduenumber):
             grabmatch=matchlist
             break
-    if diditmatch==True:
+    if diditmatch:
         return grabmatch
     else:
         print('Houston, we have a problem')
@@ -2674,7 +2674,7 @@ def MatchSMARTSToOBMolGrabAllMatches(poltype,smarts,modmol):
     for matchlist in listofmatchlists:
         grabmatch=matchlist
         matches.append(grabmatch)
-    if diditmatch==True:
+    if diditmatch:
         return matches
     else:
         print('Houston, we have a problem')

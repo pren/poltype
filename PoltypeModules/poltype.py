@@ -172,7 +172,7 @@ class PolarizableTyper():
                 self.usage()
                 sys.exit(2)
                             
-        if self.poltypeini==True:
+        if self.poltypeini:
             temp=open(os.getcwd()+r'/'+'poltype.ini','r')
             results=temp.readlines()
             temp.close()
@@ -382,7 +382,7 @@ class PolarizableTyper():
         self.torspmethod=self.SanitizeQMMethod(self.torspmethod,False)                    
         self.dmamethod=self.SanitizeQMMethod(self.dmamethod,False)                      
         self.espmethod=self.SanitizeQMMethod(self.espmethod,False)                  
-        if self.readinionly==True:
+        if self.readinionly:
             return
         self.SanitizeMMExecutables()
         self.copyright()
@@ -407,15 +407,15 @@ class PolarizableTyper():
     def SanitizeQMMethod(self,method,optmethodbool):
         if method[-1]=='D': # assume DFT, gaussian likes D, PSI4 likes -D
             if method[-2]=='-':
-                if self.use_gaus or self.use_gausoptonly and optmethodbool==True:
+                if self.use_gaus or self.use_gausoptonly and optmethodbool:
                     method=method.replace('-D','D')
-                if self.use_gaus and optmethodbool==False:
+                if self.use_gaus and not optmethodbool:
                     method=method.replace('-D','D')
 
             else:
-                if not self.use_gaus and not self.use_gausoptonly and optmethodbool==True:
+                if not self.use_gaus and not self.use_gausoptonly and optmethodbool:
                     method=method.replace('D','-D')
-                if not (self.use_gaus) and optmethodbool==False:
+                if not self.use_gaus and not optmethodbool:
                     method=method.replace('D','-D')
 
         return method
@@ -637,7 +637,7 @@ class PolarizableTyper():
             if zcoord!=0:
                 is2d=False
         newmol=mol 
-        if is2d==True: 
+        if is2d: 
             molprefix=self.molstructfname.split('.')[0]
             newname=molprefix+'_3D'+'.mol'
             poltype.molstructfname=newname
@@ -685,16 +685,16 @@ class PolarizableTyper():
                     if size==0:
                         continue
                 finished,error,errormessages=self.CheckNormalTermination(outputlog,errormessages)
-                if finished==True and error==False: # then check if SP has been submitted or not
+                if finished and not error: # then check if SP has been submitted or not
                     if outputlog not in finishedjobs:
                         self.NormalTerm(outputlog)
                         finishedjobs.append(outputlog)
-                elif finished==False and error==True:
+                elif not finished and error:
                     if outputlog not in finishedjobs:
                         self.ErrorTerm(outputlog)
                         finishedjobs.append(outputlog)
                         errorjobs.append(outputlog)
-                elif finished==False and error==False:
+                elif not finished and not error:
                     if not os.path.isfile(outputlog):
                         self.WriteToLog('Waiting on '+outputlog+' '+'to begin')
                     else:
@@ -752,13 +752,13 @@ class PolarizableTyper():
                             term=True
                             error=False
 
-            if error==True:
+            if error:
                 message='Error '+line+ 'logpath='+logfname
    
-            if error==False and term==False and htime>=updatetime:
+            if not error and not term and htime>=updatetime:
                 error=True
                 message='Error '+'Job died and has not been updated in '+str(updatetime)+' hours'+' last update time = '+str(htime)+' hours'+' logname='+logfname
-            if error==True and term==False:
+            if error and not term:
                 if errormessages is not None:
                     if message not in errormessages:
                         self.WriteToLog(message) 
@@ -783,13 +783,13 @@ class PolarizableTyper():
 
 
     def call_subsystem(self,cmdstr,wait=False,skiperrors=False):
-        if self.printoutput==True:
+        if self.printoutput:
             print("Calling: " + cmdstr+' '+'path'+' = '+os.getcwd())
         self.WriteToLog(" Calling: " + cmdstr+' '+'path'+' = '+os.getcwd())
         p = subprocess.Popen(cmdstr, shell=True,stdout=self.logfh, stderr=self.logfh)
-        if wait==True:
+        if wait:
             p.wait()
-            if p.returncode != 0 and skiperrors==False:
+            if p.returncode != 0 and not skiperrors:
                 self.WriteToLog("ERROR: " + cmdstr+' '+'path'+' = '+os.getcwd())
                 raise ValueError("ERROR: " + cmdstr+' '+'path'+' = '+os.getcwd())
 
@@ -802,7 +802,7 @@ class PolarizableTyper():
         foundatomblock=False
         for i in range(len(results)):
             line=results[i]
-            if 'atom' in line and foundatomblock==False:
+            if 'atom' in line and not foundatomblock:
                 foundatomblock=True
                 temp.write('#############################'+'\n')
                 temp.write('##                         ##'+'\n')
@@ -841,7 +841,7 @@ class PolarizableTyper():
             self.molecprefix =  os.path.splitext(self.molstructfname)[0]
 
         if self.amoebabioprmpath is not None and (self.modifiedproteinpdbname is not None or self.unmodifiedproteinpdbname is not None): # if already have core parameters in modified prm database then dont regenerate parameters
-            if check==False:
+            if not check:
                 self.GenerateParameters()
         else:
            params= self.GenerateParameters()
@@ -1009,7 +1009,7 @@ class PolarizableTyper():
             v.appendtofile(self.key4fname, optmol, dorot,self.rotbndlist)
             if self.totalcharge!=0:
                 torgen.PrependStringToKeyfile(self,self.key4fname,'solvate GK')
-        if self.isfragjob==False and not os.path.isfile(self.key5fname) and self.dontfrag==False:
+        if not self.isfragjob and not os.path.isfile(self.key5fname) and not self.dontfrag:
 
             self.rdkitmol=rdmolfiles.MolFromMolFile(self.molstructfnamemol,sanitize=True,removeHs=False)
 
@@ -1022,7 +1022,7 @@ class PolarizableTyper():
             rotbndindextoparentindextofragindex,rotbndindextofragment,rotbndindextofragmentfilepath,equivalentfragmentsarray,equivalentrotbndindexarrays=frag.GenerateFragments(self,self.mol,torlist,WBOmatrix) # returns list of bond indexes that need parent molecule to do torsion scan for (fragment generated was same as the parent0
             frag.SpawnPoltypeJobsForFragments(self,rotbndindextoparentindextofragindex,rotbndindextofragment,rotbndindextofragmentfilepath,torlist,equivalentfragmentsarray,equivalentrotbndindexarrays)
 
-        if self.dontfrag==False and self.isfragjob==False and not os.path.isfile(self.key5fname):
+        if not self.dontfrag and not self.isfragjob and not os.path.isfile(self.key5fname):
             frag.GrabTorsionParametersFromFragments(self,torlist,rotbndindextofragmentfilepath) # just dump to key_5 since does not exist for parent molecule
             return
 
@@ -1031,14 +1031,14 @@ class PolarizableTyper():
         # Torsion scanning then fitting. *.key_5 will contain updated torsions
         if os.path.isfile(self.key5fname):
             self.parmtors=False
-        if self.dontdotor==True:
+        if self.dontdotor:
             sys.exit()
         if (self.parmtors):
             # torsion scanning
             torgen.gen_torsion(self,optmol,self.torsionrestraint)
         if (self.parmtors):
             # torsion fitting
-            if self.dontdotorfit==True:
+            if self.dontdotorfit:
                 sys.exit()
             torfit.process_rot_bond_tors(self,optmol)
         else:

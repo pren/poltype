@@ -200,8 +200,8 @@ class TestPoltype(unittest.TestCase):
         for root, dirs, files in os.walk(".", topdown=False):
             for name in dirs:
                path=os.path.join(root, name)
-               if self.DoesFolderExistInDirectory(path,foldername)==True:
-                   if self.ReadTorsionsFile(parentrotbnd)==True:
+               if self.DoesFolderExistInDirectory(path,foldername):
+                   if self.ReadTorsionsFile(parentrotbnd):
                        return path
         return path
 

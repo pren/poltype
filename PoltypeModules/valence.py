@@ -65,7 +65,7 @@ class Valence():
             for ib in iteratomatom:
                 opbkey = '%d %d 0 0' % (ib.GetIdx(), ia[1])
                 if ib.GetIdx() == ia[0]:
-                    if ((opbkey not in opbhash) or (opbhash[opbkey][1] == False)):
+                    if opbkey not in opbhash or not opbhash[opbkey][1]:
                         opbhash[opbkey] = [opbval, True,smarts]
                 else:
                     if opbkey not in opbhash:
@@ -1572,7 +1572,7 @@ class Valence():
                     b = mol.GetAtom(ia[1])
                     c = mol.GetAtom(ia[2])
                     angle = mol.GetAngle(a,b,c)
-                    if b.GetHyb()==2 and shoulduseanglep==True: # only for SP2 hyb middle atoms use angp
+                    if b.GetHyb()==2 and shoulduseanglep: # only for SP2 hyb middle atoms use angp
                         if b.IsInRing() and b.IsAromatic() and b.GetValence()==3:
                             key2 = 'anglep%8d%6d%6d%11.4f%10.4f' % (key1[0], key1[1], key1[2], v[skey][0], angle)
                         else:
@@ -2607,7 +2607,7 @@ class Valence():
                     check=self.CheckIfNeighborsExistInSMARTMatch(neighborindexes,ia)
                     rot=bond.IsRotor()
                    
-                    if (check==False and self.dontfrag==False and self.isfragjob==False) and rot==True:
+                    if not check and not self.dontfrag and not self.isfragjob and rot:
                         zeroed=True
                     if(dorot):
                         for r in rotbnds:
@@ -2778,11 +2778,11 @@ class Valence():
         for line in results:
             if 'atom' in line:
                 atomline=True
-                if foundatomblock==False:
+                if not foundatomblock:
                     foundatomblock=True
             else:
                 atomline=False
-            if foundatomblock==True and atomline==False and wroteout==False:
+            if foundatomblock and not atomline and not wroteout:
                 wroteout=True
                 f.write('\n')
                 for x in self.vdwguess(mol):
