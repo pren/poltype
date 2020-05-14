@@ -133,7 +133,7 @@ def compute_qm_tor_energy(poltype,a,b,c,d,startangle,phase_list = None):
             tor_energy = None
             if not poltype.use_gaus:
                 mengi=esp.GrabFinalPsi4Energy(poltype,minstrctfname)
-                if mengi==None:
+                if mengi is None:
                     tor_energy=None
                 else:
                     tor_energy = float(mengi) * poltype.Hartree2kcal_mol

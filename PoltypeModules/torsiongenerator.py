@@ -348,7 +348,7 @@ def gen_torsion(poltype,optmol,torsionrestraint):
         fulljobtooutputlog.update(jobtooutputlog)
 
     jobtologlistfilenameprefix=os.getcwd()+r'/'+'QMOptJobToLog'+'_'+poltype.molecprefix
-    if poltype.externalapi!=None:
+    if poltype.externalapi is not None:
         if len(fulllistofjobs)!=0:
             call.CallExternalAPI(poltype,fulljobtolog,jobtologlistfilenameprefix,scratchdir)
         finishedjobs,errorjobs=poltype.WaitForTermination(fulljobtooutputlog)
@@ -421,7 +421,7 @@ def gen_torsion(poltype,optmol,torsionrestraint):
             phaseangle=outputlogtophaseangle[outputlog]
             poltype.optoutputtotorsioninfo[outputlog]= [a,b,c,d,torang,optmol,consttorlist,phaseangle,cartxyzname,bondtopology]
     jobtologlistfilenameprefix=os.getcwd()+r'/'+'QMSPJobToLog'+'_'+poltype.molecprefix
-    if poltype.externalapi!=None:
+    if poltype.externalapi is not None:
         if len(fulllistofjobs)!=0:
             call.CallExternalAPI(poltype,fulljobtolog,jobtologlistfilenameprefix,scratchdir)
         finshedjobs,errorjobs=poltype.WaitForTermination(fulljobtooutputlog)
@@ -552,7 +552,7 @@ def DetermineAngleIncrementForEachTorsion(poltype,mol,rotbndlist):
             if tpdkey not in torsionlist:
                 torsionlist.append(tpdkey)
         
-        if poltype.tordatapointsnum==None:
+        if poltype.tordatapointsnum is None:
             prmnum=len(poltype.nfoldlist)*(len(torsionlist))+1
             ang=round(360/(prmnum)) # offset parameter is the +1
             if ang> 30:

@@ -1945,7 +1945,7 @@ def GrabFirstResidueNumber(poltype,pdbname):
 
 def GenerateModifiedProteinPoltypeInput(poltype):
 
-    if poltype.unmodifiedproteinpdbname!=None:
+    if poltype.unmodifiedproteinpdbname is not None:
         poltype.modifiedproteinpdbname,charge,connectedatomidx,backboneindexesreference=GenerateModifiedProteinPDB(poltype)
     knownresiduesymbs=GrabKnownResidueSymbs(poltype)
 

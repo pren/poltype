@@ -120,7 +120,7 @@ class TestPoltype(unittest.TestCase):
         if not self.dontremovetestcase:
             shutil.rmtree(tail)
         exampleparentfolder='Examples/'
-        if self.examplepath==None:
+        if self.examplepath is None:
             raise ValueError('examplepath not defined')
         head,examplefoldername=os.path.split(self.examplepath)
         examplefoldername='Fragmenter/'+examplefoldername+r'/'
@@ -188,7 +188,7 @@ class TestPoltype(unittest.TestCase):
         for f in fragfolders:
             os.chdir(f)
             fragpath=self.RecursiveFolderSearch('qm-torsion',parentrotbnd)
-            if fragpath!=None:
+            if fragpath is not None:
                 os.chdir(curdir)
                 return fragpath
             os.chdir('..')
@@ -251,7 +251,7 @@ class TestPoltype(unittest.TestCase):
             print('torsion',torsion)
             parentrotbnd=str(torsion[1])+' '+str(torsion[2])
             filepath=self.FindFragmentJobPath(parentrotbnd,testcasepath)
-            if filepath==None: # kept changing nature of fragmenter and torsion so not every torsion in example exists in fragmenter for this original example
+            if filepath is None: # kept changing nature of fragmenter and torsion so not every torsion in example exists in fragmenter for this original example
                 continue
             listoffragtorsions,listoffragqmminusmmtxtfiles=self.GrabTorsions(filepath)
             parentindextofragindex=self.ReadDictionaryFromFile(filepath)

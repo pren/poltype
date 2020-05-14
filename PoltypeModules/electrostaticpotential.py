@@ -260,7 +260,7 @@ def SPForDMA(poltype,optmol,mol):
                 os.remove(poltype.logdmafname) # if chk point exists just remove logfile, there could be error in it and we dont want WaitForTermination to catch error before job is resubmitted by daemon 
 
 
-            if poltype.externalapi!=None:
+            if poltype.externalapi is not None:
                 if len(jobtooutputlog.keys())!=0:
                     call.CallExternalAPI(poltype,jobtolog,jobtologlistfilenameprefix,scratchdir)
                 finishedjobs,errorjobs=poltype.WaitForTermination(jobtooutputlog)
@@ -286,7 +286,7 @@ def SPForDMA(poltype,optmol,mol):
             jobtologlistfilenameprefix=os.getcwd()+r'/'+'dma_jobtolog_'+poltype.molecprefix
             if os.path.isfile(poltype.logdmafname):
                 os.remove(poltype.logdmafname)
-            if poltype.externalapi!=None:
+            if poltype.externalapi is not None:
                 if len(jobtooutputlog.keys())!=0:
                     call.CallExternalAPI(poltype,jobtolog,jobtologlistfilenameprefix,scratchdir)
                 finishedjobs,errorjobs=poltype.WaitForTermination(jobtooutputlog)
@@ -319,7 +319,7 @@ def SPForESP(poltype,optmol,mol):
             if os.path.isfile(outputname):
                 os.remove(outputname)
 
-            if poltype.externalapi!=None:
+            if poltype.externalapi is not None:
                 if len(jobtooutputlog.keys())!=0:
                     call.CallExternalAPI(poltype,jobtolog,jobtologlistfilenameprefix,scratchdir)
                 finishedjobs,errorjobs=poltype.WaitForTermination(jobtooutputlog)
@@ -345,7 +345,7 @@ def SPForESP(poltype,optmol,mol):
             if os.path.isfile(poltype.logespfname):
                 os.remove(poltype.logespfname)
 
-            if poltype.externalapi!=None:
+            if poltype.externalapi is not None:
                 if len(jobtooutputlog.keys())!=0:
                     call.CallExternalAPI(poltype,jobtolog,jobtologlistfilenameprefix,scratchdir)
                 finishedjobs,errorjobs=poltype.WaitForTermination(jobtooutputlog)

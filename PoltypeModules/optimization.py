@@ -300,7 +300,7 @@ def GeometryOptimization(poltype,mol):
             jobtologlistfilepathprefix=os.getcwd()+r'/'+'optimization_jobtolog_'+poltype.molecprefix 
             if os.path.isfile(poltype.chkoptfname):
                 os.remove(poltype.logoptfname) # if chk point exists just remove logfile, there could be error in it and we dont want WaitForTermination to catch error before job is resubmitted by daemon 
-            if poltype.externalapi==None:
+            if poltype.externalapi is None:
                 finishedjobs,errorjobs=poltype.CallJobsSeriallyLocalHost(jobtooutputlog,True) # have to skip errors because setting optmaxcycle to low number in gaussian causes it to crash
             else:
                 if len(jobtooutputlog.keys())!=0:
@@ -328,7 +328,7 @@ def GeometryOptimization(poltype,mol):
             jobtologlistfilepathprefix=os.getcwd()+r'/'+'optimization_jobtolog_'+poltype.molecprefix
             if os.path.isfile(poltype.logoptfname):
                 os.remove(poltype.logoptfname)
-            if poltype.externalapi==None:
+            if poltype.externalapi is None:
                 finishedjobs,errorjobs=poltype.CallJobsSeriallyLocalHost(jobtooutputlog,False)
             else:
                 if len(jobtooutputlog.keys())!=0:

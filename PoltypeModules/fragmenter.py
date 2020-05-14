@@ -258,7 +258,7 @@ def FragmentJobSetup(poltype,strfragrotbndindexes,tail,listofjobs,jobtooutputlog
     return listofjobs,jobtooutputlog,logpath
 
 def SubmitFragmentJobs(poltype,listofjobs,jobtooutputlog):
-    if poltype.externalapi!=None:
+    if poltype.externalapi is not None:
         finishedjobs,errorjobs=poltype.CallJobsLocalHost(jobtooutputlog,True)
     else:
         finishedjobs,errorjobs=poltype.CallJobsSeriallyLocalHost(jobtooutputlog,False)
@@ -1329,7 +1329,7 @@ def Draw2DMoleculeWithWBO(poltype,WBOmatrix,basename,mol,bondindexlist=None,smir
     rdDepictor.Compute2DCoords(mol)
     drawer=rdMolDraw2D.MolDraw2DSVG(500,500)
     bondlist=[]
-    if bondindexlist!=None:
+    if bondindexlist is not None:
         for bondindexes in bondindexlist:
             bond=mol.GetBondBetweenAtoms(bondindexes[0],bondindexes[1])
             bondidx=bond.GetIdx()
@@ -1369,7 +1369,7 @@ def Draw2DMoleculeWithWBO(poltype,WBOmatrix,basename,mol,bondindexlist=None,smir
                 sign=1
             label.rotate(sign*angle,bondcoords[0],bondcoords[1])
             fig.append(label)
-    if smirks!=None:
+    if smirks is not None:
         label = sg.TextElement(25,490, smirks, size=12, weight="bold")
         fig.append(label)
     fig.save(basename+'.svg')

@@ -93,15 +93,15 @@ class PolarizableTyper():
         self.nfoldlist =  list(range(1,self.foldnum+1))
         self.foldoffsetlist = foldoffsetlist
         self.parentdir=os.getcwd()
-        if torlist==None:
+        if torlist is None:
             self.torlist = []
         else:
             self.torlist=torlist
-        if rotbndlist==None:
+        if rotbndlist is None:
             self.rotbndlist = []
         else:
             self.rotbndlist=rotbndlist
-        if fitrotbndslist==None:
+        if fitrotbndslist is None:
             self.fitrotbndslist=[]
         else:
            
@@ -122,7 +122,7 @@ class PolarizableTyper():
         self.gentorsion=gentorsion
         self.gaustorerror=gaustorerror
         self.torsionrestraint=torsionrestraint
-        if onlyrotbndslist==None:
+        if onlyrotbndslist is None:
             self.onlyrotbndslist=[]
         else:
            
@@ -430,7 +430,7 @@ class PolarizableTyper():
         
     def SanitizeMMExecutables(self):
         path=self.which(self.peditexe)
-        if path==None:
+        if path is None:
             self.peditexe='poledit.x'
             self.potentialexe='potential.x'
             self.minimizeexe='minimize.x'
@@ -759,7 +759,7 @@ class PolarizableTyper():
                 error=True
                 message='Error '+'Job died and has not been updated in '+str(updatetime)+' hours'+' last update time = '+str(htime)+' hours'+' logname='+logfname
             if error==True and term==False:
-                if errormessages!=None:
+                if errormessages is not None:
                     if message not in errormessages:
                         self.WriteToLog(message) 
                         errormessages.append(message)
@@ -767,7 +767,7 @@ class PolarizableTyper():
                     self.WriteToLog(message) 
 
 
-        if errormessages!=None:
+        if errormessages is not None:
             return term,error,errormessages
         else:
             return term,error
@@ -834,13 +834,13 @@ class PolarizableTyper():
     #POLTYPE BEGINS HERE
     def main(self):
     
-        if self.amoebabioprmpath!=None and (self.modifiedproteinpdbname!=None or self.unmodifiedproteinpdbname!=None):
+        if self.amoebabioprmpath is not None and (self.modifiedproteinpdbname is not None or self.unmodifiedproteinpdbname is not None):
             knownresiduesymbs,modproidxs,proboundidxs,boundaryatomidxs,proOBmol,molname,modresiduelabel,proidxtoligidx,ligidxtoproidx,modmol,smarts,check,connectedatomidx,backboneindexesreference=modres.GenerateModifiedProteinPoltypeInput(self)
             self.molstructfname=molname
             head, self.molstructfname = os.path.split(self.molstructfname)
             self.molecprefix =  os.path.splitext(self.molstructfname)[0]
 
-        if self.amoebabioprmpath!=None and (self.modifiedproteinpdbname!=None or self.unmodifiedproteinpdbname!=None): # if already have core parameters in modified prm database then dont regenerate parameters
+        if self.amoebabioprmpath is not None and (self.modifiedproteinpdbname is not None or self.unmodifiedproteinpdbname is not None): # if already have core parameters in modified prm database then dont regenerate parameters
             if check==False:
                 self.GenerateParameters()
         else:
@@ -848,7 +848,7 @@ class PolarizableTyper():
            return params
 
     
-        if self.amoebabioprmpath!=None and (self.modifiedproteinpdbname!=None or self.unmodifiedproteinpdbname!=None):
+        if self.amoebabioprmpath is not None and (self.modifiedproteinpdbname is not None or self.unmodifiedproteinpdbname is not None):
             modres.GenerateModifiedProteinXYZAndKey(self,knownresiduesymbs,modproidxs,proboundidxs,boundaryatomidxs,proOBmol,molname,modresiduelabel,proidxtoligidx,ligidxtoproidx,modmol,smarts,check,connectedatomidx,backboneindexesreference)
     
     
