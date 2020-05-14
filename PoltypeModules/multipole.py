@@ -5,6 +5,7 @@ import sys
 import openbabel
 import shutil
 import re
+from collections import deque
 
 def is_in_polargroup(poltype,mol, smarts, bond, f):
     """
@@ -648,9 +649,9 @@ def gen_gdmain(poltype,gdmainfname,molecprefix,fname,dmamethod):
 
     try:
         tmpfh = open(gdmainfname, "w")
-    except(IOError, (errno, strerror)):
-        print("I/O error({0}): {1}".format(errno, strerror))
-        sys.exit(errno)
+    except IOError as e:
+        print("I/O error({0}): {1}".format(e.errno, e.strerror))
+        sys.exit(e.errno)
 
     tmpfh.write("Title " + molecprefix + " gdmain\n")
     tmpfh.write("\n")

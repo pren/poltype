@@ -6,6 +6,8 @@ import shutil
 from parmed.tinker import parameterfile
 from scipy.optimize import fmin
 import getopt
+import json
+import numpy
 
 class TestPoltype(unittest.TestCase):
 
