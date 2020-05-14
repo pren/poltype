@@ -12,13 +12,11 @@ from rdkit.Chem.Draw import rdMolDraw2D
 from rdkit.Chem import AllChem
 import svgutils.transform as sg
 from cairosvg import svg2png
-from rdkit.Chem import rdDepictor
 import matplotlib.pyplot as plt
 from os.path import dirname, abspath      
 from itertools import combinations
 import json
 from collections import Counter
-from itertools import combinations
 from rdkit.Geometry import Point3D
 
 
