@@ -1,2 +1,5 @@
 
 theme: jekyll-theme-slate
+
+github:
+  repository_url: https://github.com/pren/poltype/tree/poltype2
