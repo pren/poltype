@@ -1,3 +1,0 @@
-/home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion/MOLECULE0-sp-23-22-21-20-006_psi4.log
-/home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion/MOLECULE0-sp-23-22-21-20-306_psi4.log
-/home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion/MOLECULE0-sp-23-22-21-20-276_psi4.log

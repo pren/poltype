@@ -1,7 +1,0 @@
-Mon Mar 30 10:31:22 2020 Calling: ssh node72 "cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion;source /home/bdw2292/.poltype.bashrc;cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-2-3-7-8-335_psi4.dat MOLECULE0-sp-2-3-7-8-335_psi4.log"
-Mon Mar 30 10:34:42 2020 cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-2-3-7-8-335_psi4.dat MOLECULE0-sp-2-3-7-8-335_psi4.log has not terminated on node node72
-Mon Mar 30 10:38:00 2020 cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-2-3-7-8-335_psi4.dat MOLECULE0-sp-2-3-7-8-335_psi4.log has not terminated on node node72
-Mon Mar 30 10:41:13 2020 cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-2-3-7-8-335_psi4.dat MOLECULE0-sp-2-3-7-8-335_psi4.log has not terminated on node node72
-Mon Mar 30 10:44:43 2020 cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-2-3-7-8-335_psi4.dat MOLECULE0-sp-2-3-7-8-335_psi4.log has not terminated on node node72
-Mon Mar 30 10:48:13 2020 cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-2-3-7-8-335_psi4.dat MOLECULE0-sp-2-3-7-8-335_psi4.log has not terminated on node node72
-Mon Mar 30 10:52:09 2020 cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-2-3-7-8-335_psi4.dat MOLECULE0-sp-2-3-7-8-335_psi4.log has terminated on node node72

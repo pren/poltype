@@ -1,8 +1,0 @@
- Dipole moment (field-independent basis, Debye):
-    X=             -5.8418    Y=              0.5453    Z=             -0.0110  Tot=              5.8672
- Quadrupole moment (field-independent basis, Debye-Ang):
-   XX=            -62.2740   YY=            -62.5617   ZZ=            -63.1574
-   XY=             -1.9996   XZ=              0.0421   YZ=             -0.0102
- Traceless Quadrupole moment (field-independent basis, Debye-Ang):
-   XX=              0.3903   YY=              0.1027   ZZ=             -0.4930
-   XY=             -1.9996   XZ=              0.0421   YZ=             -0.0102

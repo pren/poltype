@@ -1,1 +1,0 @@
-cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-23-22-21-20-276_psi4.dat MOLECULE0-sp-23-22-21-20-276_psi4.log /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion/MOLECULE0-poltype.log

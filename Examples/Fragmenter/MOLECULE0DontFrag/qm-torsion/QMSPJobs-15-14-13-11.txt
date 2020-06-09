@@ -1,3 +1,0 @@
-source /home/bdw2292/.poltype.bashrc
-cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-15-14-13-11-027_psi4.dat MOLECULE0-sp-15-14-13-11-027_psi4.log
-cd /home/bdw2292/PoltypeJobs/MOLECULE0DontFrag/qm-torsion && psi4 MOLECULE0-sp-15-14-13-11-331_psi4.dat MOLECULE0-sp-15-14-13-11-331_psi4.log
