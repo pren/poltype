@@ -31,6 +31,7 @@ Make sure to download the ZIP folder from the poltype2 branch, NOT the master br
 ```shell
 git clone git@github.com:pren/poltype.git --branch poltype2
 ```
+* Make sure you are on a node with an updated OS (as much as possible)
 
 * Install anaconda 
 
