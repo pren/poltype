@@ -1,3 +1,4 @@
+* [ ] Add other FF's like Hippo
 * [ ] Auto traceback of NONE variables
 * [ ] Only update poltype.log if child poltype logs are updated
 * [ ] If fragment is same as parent, skip fragmenter and just do normal poltype

@@ -14,6 +14,8 @@
 
 * By default the number of missing torsions x the number of cosine terms (default is three) determine how many quantum points to sample along the dihedral surface , if the number is greater than 12, else 12 is the default. 
 
+* Equal weights are used for torsion fitting along QM-MM energy surface
+
 ![Torsion Protocol](Images/TorsionProtocol.PNG)
 
 * Below is more detailed flow of how files are generated
