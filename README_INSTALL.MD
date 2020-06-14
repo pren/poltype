@@ -72,6 +72,7 @@ pip install git+git://github.com/ParmEd/ParmEd.git
 * Note do not keep multiple sources for different purposes (unless necessary) in the same .bashrc source file, this can cause internal conflicts to arise
 
 ```shell      
+#Set whichever conda you are using in next line
 export PATH="/opt/software/anaconda/bin:$PATH"
 conda activate poltype
 export g09root=/opt/g09gh/gaussian
