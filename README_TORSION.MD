@@ -14,7 +14,7 @@
 
 * By default the number of missing torsions x the number of cosine terms (default is three) determine how many quantum points to sample along the dihedral surface , if the number is greater than 12, else 12 is the default. 
 
-* Equal weights are used for torsion fitting along QM-MM energy surface
+* Equal weights are used for torsion fitting along QM-MM1 energy surface, where MM1 is initial guess torsion parameters. If the RMSD(QM,MM2) fails to pass a threshold tolerance, than fitting is redone where the target QM-MM1 is modified with boltsman like weights based on the QM energy surface to favor minima.
 
 ![Torsion Protocol](Images/TorsionProtocol.PNG)
 
