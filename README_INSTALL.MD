@@ -1,4 +1,9 @@
 ## Installation
+### Required software
+* Tinker
+* Gaussian &GDMA or PSI4
+* Openbabel
+* rdkit
 
 ### Required Programs
 * Tinker, version >=8.7
