@@ -1,5 +1,21 @@
 ## Installation
 
+### Required Programs
+* Tinker, version >=8.7
+* GDMA, version 2.2
+* PSI4
+* scipy
+* matplotlib
+* openbabel, version 2.4
+* rdkit
+* svgutils
+* cairosvg
+* ParmEd
+
+### Optional Programs
+* Gaussian 09
+ Gaussian 16
+
 ### Tinker CPU Installation
 ```
 git clone git@github.com:TinkerTools/Tinker.git tinker
