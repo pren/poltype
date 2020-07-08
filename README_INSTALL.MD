@@ -1,4 +1,9 @@
 ## Installation
+### Required software
+* Tinker
+* Gaussian &GDMA or PSI4
+* Openbabel
+* rdkit
 
 ### Tinker CPU Installation
 ```
