@@ -3,7 +3,7 @@
 
 ### Required Programs
 * Tinker, version >=8.7
-* GDMA, version 2.2
+* GDMA, version 2.2.11
 * PSI4 (or Gaussian 09/16 & GDMA)
 * scipy
 * matplotlib
@@ -34,7 +34,7 @@ make -j 8
 make install
 
 
-* Download GDMA-2.2
+* Download GDMA-2.2.11
 
 * Download POLTYPE
 Make sure to download the ZIP folder from the poltype2 branch, NOT the master branch
@@ -92,7 +92,7 @@ conda activate poltype
 export g09root=/opt/g09gh/gaussian
 source $g09root/g09/bsd/g09.profile
 export GAUSS_SCRDIR=/scratch/your_username/
-export GDMADIR=/opt/gdma-2.2/bin/
+export GDMADIR=/users/zj2244/Public/Software/gdma-2.2.11/bin/gdma
 export PATH=/opt/gdma-2.2/bin/gdma:$PATH
 export PSI_SCRATCH=/scratch/your_username/ 
 export PATH=/home/liuchw/Softwares/tinkers/Tinker-latest/source/:$PATH
