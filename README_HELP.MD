@@ -28,6 +28,10 @@ python /path_to_poltype/poltype.py
 ```shell
 python /path_to_poltype/poltype.py --help
 ```
+
+### Recommended Protocol
+* PSI4 for all QM steps if molecule is neutral and not Zwitterion (total charge is still 0).
+* use gaussian for opt only (use_gausoptonly) and PSi4 for charged molecules or Zwitterions
  
 ### Unittesting
 ```shell
