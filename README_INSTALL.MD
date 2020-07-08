@@ -1,14 +1,10 @@
 ## Installation
-### Required software
-* Tinker
-* Gaussian &GDMA or PSI4
-* Openbabel
-* rdkit
+
 
 ### Required Programs
 * Tinker, version >=8.7
 * GDMA, version 2.2
-* PSI4
+* PSI4 (or Gaussian 09/16 & GDMA)
 * scipy
 * matplotlib
 * openbabel, version 2.4
@@ -17,9 +13,6 @@
 * cairosvg
 * ParmEd
 
-### Optional Programs
-* Gaussian 09
- Gaussian 16
 
 ### Tinker CPU Installation
 ```
