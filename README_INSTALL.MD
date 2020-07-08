@@ -93,7 +93,7 @@ export g09root=/opt/g09gh/gaussian
 source $g09root/g09/bsd/g09.profile
 export GAUSS_SCRDIR=/scratch/your_username/
 export GDMADIR=/users/zj2244/Public/Software/gdma-2.2.11/bin/gdma
-export PATH=/opt/gdma-2.2/bin/gdma:$PATH
+export PATH=/users/zj2244/Public/Software/gdma-2.2.11/bin/gdma:$PATH
 export PSI_SCRATCH=/scratch/your_username/ 
 export PATH=/home/liuchw/Softwares/tinkers/Tinker-latest/source/:$PATH
 ```
