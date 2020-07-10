@@ -1,3 +1,4 @@
+* [ ] dontdotor and dontfrag both needed to skip torsion?
 * [ ] If hydrogen torsion is removed from fitting because paramters are too close to zero, report in poltype log, then in fragmenter report to whole molecule log
 * [ ] If gaussian is detected in source, and input is charged make use_gausoptonly=True the default setting, PCM slower for psi4 in very large molecule
 * [ ] Add other FF's like Hippo
