@@ -35,7 +35,7 @@ def CreatePsi4OPTInputFile(poltype,comfilecoords,comfilename,mol):
         temp.write('    SolverType = IEFPCM'+'\n')
         temp.write('    Solvent = Water'+'\n')
         temp.write('  }'+'\n')
-        temp.write('    Cavity {'+'\n')
+        temp.write('  Cavity {'+'\n')
         temp.write('    RadiiSet = UFF'+'\n')
         temp.write('    Type = GePol'+'\n')
         temp.write('    Scaling = False'+'\n')

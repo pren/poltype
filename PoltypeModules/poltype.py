@@ -560,11 +560,13 @@ class PolarizableTyper():
                 self.scratchdir = os.environ["GAUSS_SCRDIR"]
                 if not os.path.isdir(self.scratchdir):
                     os.mkdir(self.scratchdir)
-    
-    
-    
-    
-    
+        else:
+            if ("PSI_SCRATCH" in os.environ):
+                self.scratchdir = os.environ["PSI_SCRATCH"]
+                if not os.path.isdir(self.scratchdir):
+                    os.mkdir(self.scratchdir)
+
+
     def init_filenames (self):
         """
         Intent: Initialize file names
