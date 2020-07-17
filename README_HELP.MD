@@ -107,7 +107,7 @@ freq              specifies to do a frequency calculation during geometry optimi
 optpcm            specifies to use PCM for geometry optimization. 
                   Default=True if there is a net charge.
 optmaxcycle       specifies the number of max cycles or iterations allowed during optimization.
-                  Default=400
+                  Default=5
 optmethod         specifies quantum method for geometry optimziation. 
                   Default=wB97XD
 ```
