@@ -18,7 +18,7 @@
 * Navigate to directory containing poltype.ini and .sdf file, and run:
 
 ```shell
-python /path_to_poltype/poltype.py
+nohup python /path_to_poltype/poltype.py &
 ```
 
 ```ttt.xyz``` and ```ttt.key``` are the resulting structure and parameter files you will need.
