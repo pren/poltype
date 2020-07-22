@@ -32,14 +32,13 @@ M1 M2 M3      q
 
 * typically Dy, Qxy, Qyz components are zero, unless it is chiral such as C_alpha in protein
 
-----------------------------------------------------------------
+
 ## A Special example of Nitrate
 
 Note NO3- is fairly flat and rigid so we are able to use Z-then-X for both N and O. For N, all dipole components have to be 0 and the Qxx and Qzz are equal (x and Z are in the plane, y is normal to the plane). For O, the "2 1 2" also works because the direction of "X" or "Y" is not affecting the (sign) of Qxx or Qyy.
 
-#########################################
- AMOEBA Parameters for Nitrate Ion 
-#########################################
+--------AMOEBA Parameters for Nitrate Ion-----
+
 
 atom 1 1 N "Nitrate N" 7 14.007 3
 
