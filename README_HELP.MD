@@ -30,8 +30,10 @@ python /path_to_poltype/poltype.py --help
 ```
 
 ### Recommended Protocol
-* PSI4 for all QM steps if molecule is neutral and not Zwitterion (total charge is still 0).
-* use gaussian for opt only (use_gausoptonly) and PSi4 for charged molecules or Zwitterions
+* For molecules that are neutral and not Zwitterion (total charge is still 0), PSI4 for all QM steps.
+* For charged molecules or Zwitterions, use gaussian for opt only (use_gausoptonly) and PSi4. PCM is needed for opt and torsion SP (optpcm=True, toroptpcm=True, torsppcm=True)  
+* if the net charge of molecule is not 0, the above PCM options are automatically on. For zwitterions, users need to set in poltype.ini.
+
  
 ### Unittesting
 ```shell
