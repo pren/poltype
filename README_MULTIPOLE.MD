@@ -36,7 +36,7 @@ M1 M2 M3      q
 ## A Special example of Nitrate
 
 Note NO3- is fairly flat and rigid so we are able to use Z-then-X for both N and O. For N, all dipole components have to be 0 and the Qxx and Qzz are equal (x and Z are in the plane, y is normal to the plane). For O, the "2 1 2" also works because the direction of "X" or "Y" is not affecting the (sign) of Qxx or Qyy.
-
+```
 --------AMOEBA Parameters for Nitrate Ion-----
 
 
@@ -79,3 +79,4 @@ multipole 2 1 2 -0.69121
 polarize 1 1.0730 0.3900 2
 
 polarize 2 0.8370 0.3900 1
+```
