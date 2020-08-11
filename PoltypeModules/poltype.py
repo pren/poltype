@@ -402,14 +402,22 @@ class PolarizableTyper():
                         self.usage()
                         print('Unrecognized '+line)
                         sys.exit()
-        self.optmethod=self.SanitizeQMMethod(self.optmethod,True)                 
-        self.toroptmethod=self.SanitizeQMMethod(self.toroptmethod,True)                  
-        self.torspmethod=self.SanitizeQMMethod(self.torspmethod,False)                    
-        self.dmamethod=self.SanitizeQMMethod(self.dmamethod,False)                      
-        self.espmethod=self.SanitizeQMMethod(self.espmethod,False)                  
+
+        self.optmethod=self.SanitizeQMMethod(self.optmethod,True)
+        self.toroptmethod=self.SanitizeQMMethod(self.toroptmethod,True)
+        self.torspmethod=self.SanitizeQMMethod(self.torspmethod,False)
+        self.dmamethod=self.SanitizeQMMethod(self.dmamethod,False)
+        self.espmethod=self.SanitizeQMMethod(self.espmethod,False)
+
+        self.peditexe=self.SanitizeMMExecutable(self.peditexe)
+        self.potentialexe=self.SanitizeMMExecutable(self.potentialexe)
+        self.minimizeexe=self.SanitizeMMExecutable(self.minimizeexe)
+        self.analyzeexe=self.SanitizeMMExecutable(self.analyzeexe)
+        self.superposeexe=self.SanitizeMMExecutable(self.superposeexe)
+
         if self.readinionly==True:
             return
-        self.SanitizeMMExecutables()
+
         self.copyright()
         self.initialize()
         self.init_filenames()
@@ -444,23 +452,24 @@ class PolarizableTyper():
                     method=method.replace('D','-D')
 
         return method
- 
+
+    def SanitizeMMExecutable(self, executable):
+        # Try to find Tinker executable with/without suffix
+        if self.tinkerdir is None:
+            self.tinkerdir = os.getenv("TINKERDIR", default="")
+        exe = os.path.join(self.tinkerdir, executable)
+        if self.which(exe) is None:
+            exe = exe[:-2] if exe.endswith('.x') else exe + '.x'
+            if self.which(exe) is None:
+                print("ERROR: Cannot find Tinker {} executable".format(executable))
+                sys.exit(2)
+        return exe
 
     def WriteToLog(self,string):
         now = time.strftime("%c",time.localtime())
         self.logfh.write(now+' '+string+'\n')
         self.logfh.flush()
         os.fsync(self.logfh.fileno())
-
-        
-    def SanitizeMMExecutables(self):
-        path=self.which(self.peditexe)
-        if path is None:
-            self.peditexe='poledit'
-            self.potentialexe='potential'
-            self.minimizeexe='minimize'
-            self.analyzeexe='analyze'
-            self.superposeexe='superpose'
 
     def which(self,program):
         def is_exe(fpath):
@@ -531,34 +540,17 @@ class PolarizableTyper():
         if(not latestversion):
             if forcefield.upper() != "AMOEBA+":  #allow old version for AMOEBA+
                 raise ValueError("Notice: Not latest working version of tinker (8.7)"+' '+os.getcwd())
-      
-        if ("TINKERDIR" in os.environ):
-            self.tinkerdir = os.environ["TINKERDIR"]
-            self.peditexe = os.path.join(self.tinkerdir,self.peditexe)
-            self.potentialexe = os.path.join(self.tinkerdir,self.potentialexe)
-            self.minimizeexe = os.path.join(self.tinkerdir,self.minimizeexe)
-            self.analyzeexe = os.path.join(self.tinkerdir,self.analyzeexe)
-            self.superposeexe = os.path.join(self.tinkerdir,self.superposeexe)
-    
-        if (not self.which(self.analyzeexe)):
-            print("ERROR: Cannot find TINKER analyze executable")
-            sys.exit(2)
-            
-            
-            
-        if ("GDMADIR" in os.environ):
-            self.gdmadir = os.environ["GDMADIR"]
-            self.gdmaexe = os.path.join(self.gdmadir,self.gdmaexe)
-    
-        if (not self.which(self.gdmaexe)):
+
+        if self.gdmadir is None:
+            self.gdmadir = os.getenv("GDMADIR", default="")
+        self.gdmaexe = os.path.join(self.gdmadir, self.gdmaexe)
+        if self.which(self.gdmaexe) is None:
             print("ERROR: Cannot find GDMA executable")
             sys.exit(2)
 
-
-        if (not self.which('psi4')):
+        if self.which('psi4') is None:
             print("ERROR: Cannot find PSI4 executable")
             sys.exit(2)
-         
 
         if self.use_gaus or self.use_gausoptonly:
             if ("GAUSS_SCRDIR" in os.environ):
