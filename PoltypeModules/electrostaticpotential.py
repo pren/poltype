@@ -9,7 +9,7 @@ import re
 import shutil
 import time
 import numpy as np
-import openbabel
+from openbabel import openbabel
 import shlex
 
 def gen_esp_grid(poltype,mol):
@@ -275,9 +275,8 @@ def gen_comfile(poltype,comfname,numproc,maxmem,maxdisk,chkname,tailfname,mol):
 
     iteratombab = openbabel.OBMolAtomIter(mol)
     tmpfh = open(comfname, "a")
-    etab = openbabel.OBElementTable()
     for atm in iteratombab:
-        tmpfh.write('%2s %11.6f %11.6f %11.6f\n' % (etab.GetSymbol(atm.GetAtomicNum()), atm.x(), atm.y(), atm.z()))
+        tmpfh.write('%2s %11.6f %11.6f %11.6f\n' % (openbabel.GetSymbol(atm.GetAtomicNum()), atm.x(), atm.y(), atm.z()))
 
 
     tmpfh.write('\n')

@@ -1,6 +1,7 @@
 import sys
 import os
-import openbabel
+from packaging import version
+from openbabel import openbabel
 
 
 def CalculateSymmetry(poltype,pmol, frag_atoms, symmetry_classes):
@@ -34,7 +35,7 @@ def CalculateSymmetry(poltype,pmol, frag_atoms, symmetry_classes):
     iteratom = openbabel.OBMolAtomIter(pmol)
     for atom in iteratom:
         idx = atom.GetIdx()
-        if(frag_atoms.BitIsOn(idx)):
+        if(frag_atoms.BitIsSet(idx)):
             symmetry_classes.append([atom, vgi[idx-1]])
     nclasses = ExtendInvariants(poltype,pmol, symmetry_classes,frag_atoms,nfragatoms,natoms)
     return nclasses
@@ -152,7 +153,7 @@ def CreateNewClassVector(poltype,pmol,symmetry_classes, tmp_classes, frag_atoms,
                     nbridx = b.GetBeginAtomIdx()
                 elif(atom.GetIdx() == b.GetBeginAtomIdx()):
                     nbridx = b.GetEndAtomIdx()
-                if(frag_atoms.BitIsOn(nbridx)):
+                if(frag_atoms.BitIsSet(nbridx)):
                     vtmp.append(symmetry_classes[idx2index[nbridx]][1])
         vtmp.sort()
         m = 100
@@ -191,10 +192,10 @@ def gen_canonicallabels(poltype,mol):
     # Collapse terminal atoms of same element to one type
     for a in openbabel.OBMolAtomIter(mol):
         for b in openbabel.OBAtomAtomIter(a):
-            if b.GetValence() == 1:
+            if b.GetExplicitDegree() == 1:
                 for c in openbabel.OBAtomAtomIter(a):
                     if ((b is not c) and
-                        (c.GetValence() == 1) and
+                        (c.GetExplicitDegree() == 1) and
                         (b.GetAtomicNum() == c.GetAtomicNum()) and
                         (symmetryclass[b.GetIdx()-1] !=
                             symmetryclass[c.GetIdx()-1])):

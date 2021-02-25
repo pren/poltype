@@ -4,7 +4,7 @@ import os
 from packaging import version
 import rdkit
 from rdkit.Chem import rdFMCS
-import openbabel
+from openbabel import openbabel
 from rdkit.Chem import rdmolfiles
 import itertools
 import re
@@ -580,23 +580,20 @@ def GrabAtomsForParameters(poltype,mol):
     for atom in openbabel.OBMolAtomIter(mol):
         atomidx=atom.GetIdx()-1
         listofatomsforprm.append([atomidx])
-        neighbs=[natom for natom in openbabel.OBAtomAtomIter(atom)]
-        for natom in neighbs:
+        for natom in openbabel.OBAtomAtomIter(atom):
             nidx=natom.GetIdx()-1
             bondset=[nidx,atomidx]
             if bondset not in listofbondsforprm and bondset[::-1] not in listofbondsforprm:
                 listofbondsforprm.append(bondset)
-            nextneighbs=[nextatom for nextatom in openbabel.OBAtomAtomIter(natom)]
-            for nextneighb in nextneighbs:
+            for nextneighb in openbabel.OBAtomAtomIter(natom):
                 nextneighbidx=nextneighb.GetIdx()-1
                 if nextneighbidx!=atomidx:
                     angleset=[nextneighbidx,nidx,atomidx]
                     if angleset not in listofanglesforprm and angleset[::-1] not in listofanglesforprm:
                         listofanglesforprm.append(angleset)
-                    nextnextneighbs=[nextnextatom for nextnextatom in openbabel.OBAtomAtomIter(nextneighb)]
-                    for nextnextatom in nextnextneighbs:
+                    for nextnextatom in openbabel.OBAtomAtomIter(nextneighb):
                         nextnextatomidx=nextnextatom.GetIdx()-1
-                        if nextnextatomidx!=nidx and nextnextatomidx!=atomidx:                
+                        if nextnextatomidx!=nidx and nextnextatomidx!=atomidx:
                             torsionset=[nextnextatomidx,nextneighbidx,nidx,atomidx]
                             if torsionset not in listoftorsionsforprm and torsionset[::-1] not in listoftorsionsforprm:
                                 listoftorsionsforprm.append(torsionset)
@@ -994,7 +991,7 @@ def RemoveHydrogens(poltype,mol):
     for atom in mol.GetAtoms():
         atomicnum=atom.GetAtomicNum()
         atomidx=atom.GetIdx()
-        if atomicnum==1:
+        if atomicnum==openbabel.H:
             indexestoremove.append(atomidx)
     indexestoremove.sort(reverse=True)
     for idx in indexestoremove:
@@ -1283,14 +1280,12 @@ def CheckIfAllTorsionsAreHydrogen(poltype,babelindices,mol):
     aidx,bidx,cidx,didx=babelindices[:]
     aatomicnum=a.GetAtomicNum()
     datomicnum=d.GetAtomicNum()
-    if aatomicnum!=1 or datomicnum!=1:
+    if aatomicnum != openbabel.H or datomicnum != openbabel.H :
         allhydrogentor=False
     else:
         torlist=[]
-        iteratomatom = openbabel.OBAtomAtomIter(b)
-        for iaa in iteratomatom:
-            iteratomatom2 = openbabel.OBAtomAtomIter(c)
-            for iaa2 in iteratomatom2:
+        for iaa in openbabel.OBAtomAtomIter(b):
+            for iaa2 in openbabel.OBAtomAtomIter(c):
                 ta = iaa.GetIdx()
                 tb = bidx
                 tc = cidx
@@ -1301,7 +1296,7 @@ def CheckIfAllTorsionsAreHydrogen(poltype,babelindices,mol):
             atoms=[mol.GetAtom(i) for i in tor]
             aatomnum=atoms[0].GetAtomicNum()
             datomnum=atoms[3].GetAtomicNum()
-            if aatomnum!=1 or datomnum!=1:
+            if aatomnum != openbabel.H  or datomnum != openbabel.H :
                 allhydrogentor=False
     return allhydrogentor    
 
@@ -1326,7 +1321,6 @@ def FindMissingTorsions(poltype,torsionindicestoparametersmartsenv,rdkitmol,mol,
             continue 
         
         babelatoms=[mol.GetAtom(i) for i in babelindices]
-        atomvals=[a.GetValence() for a in babelatoms]
         atomnums=[a.GetAtomicNum() for a in babelatoms]
         batomnum=atomnums[1]
         catomnum=atomnums[2]
@@ -1370,7 +1364,7 @@ def FindMissingTorsions(poltype,torsionindicestoparametersmartsenv,rdkitmol,mol,
         atomicnumatoma=atoma.GetAtomicNum()
         atomicnumatomd=atomd.GetAtomicNum()
         if poltype.transferanyhydrogentor==True and allaro==False: 
-            if atomicnumatoma==1 and atomicnumatomd==1:
+            if atomicnumatoma == openbabel.H and atomicnumatomd == openbabel.H:
                 if allhydrogentor==True:
                     if torsionindices not in torsionsmissing:
                         torsionsmissing.append(torsionindices)
@@ -1778,11 +1772,11 @@ def DefaultOPBendParameters(poltype,missingopbendprmindices,mol,opbendbondindice
             neighbs=list(openbabel.OBAtomAtomIter(atom))
             if len(neighbs)==3:
                 atomnum=atom.GetAtomicNum()
-                if atomnum==6:
+                if atomnum==openbabel.C:
                     match=False
                     for natom in neighbs:
                         natomicnum=natom.GetAtomicNum()
-                        if natomicnum==8:
+                        if natomicnum==openbabel.O:
                             bnd=mol.GetBond(atom,natom)
                             BO=bnd.GetBondOrder()
                             if BO==2:
@@ -1791,11 +1785,11 @@ def DefaultOPBendParameters(poltype,missingopbendprmindices,mol,opbendbondindice
                         opbendvalue=round(1*71.94,2)
                     else:
                         opbendvalue=round(.2*71.94,2)
-                elif atomnum==7:
+                elif atomnum==openbabel.N:
                     count=0
                     for natom in neighbs:
                         natomicnum=natom.GetAtomicNum()
-                        if natomicnum==8:
+                        if natomicnum==openbabel.O:
                            count+=1
                     if count==2:
                         opbendvalue=round(1.5*71.94,2)

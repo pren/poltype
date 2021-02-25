@@ -1,6 +1,6 @@
 import os
 import sys
-import openbabel
+from openbabel import openbabel
 import time
 from rdkit import Chem
 from MDAnalysis import Universe, Merge
@@ -179,12 +179,10 @@ def GenerateXYZFile(poltype,molstruct, structfname,idxtoatomlabel): # dont use i
     tmpfh = open(structfname, "w")
     iteratom = openbabel.OBMolAtomIter(molstruct)
     tmpfh.write('%6d\n' % (molstruct.NumAtoms()))
-    etab = openbabel.OBElementTable()
     for ia in iteratom:
-        linestring='%6d %2s %13.6f %11.6f %11.6f %5s' % (ia.GetIdx(), etab.GetSymbol(ia.GetAtomicNum()), ia.x(), ia.y(), ia.z(), '0')
-        iteratomatom = openbabel.OBAtomAtomIter(ia)
+        linestring='%6d %2s %13.6f %11.6f %11.6f %5s' % (ia.GetIdx(), openbabel.GetSymbol(ia.GetAtomicNum()), ia.x(), ia.y(), ia.z(), '0')
         neighbors = []
-        for iaa in iteratomatom:
+        for iaa in openbabel.OBAtomAtomIter(ia):
             neighbors.append(iaa.GetIdx())
         neighbors = sorted(neighbors)
         neighbstring=''
@@ -769,15 +767,13 @@ def NeighboringModResidueAtomIndexes(poltype,modresnumber,modifiedproteinpdbname
             proatomidx=int(linesplit[1])
             if proatomidx in proboundidxs:
                 proatom=proOBmol.GetAtom(proatomidx)
-                atomatomiter=openbabel.OBAtomAtomIter(proatom)
-                for natom in atomatomiter:
+                for natom in openbabel.OBAtomAtomIter(proatom):
                     natomidx=natom.GetIdx()
                     if natomidx not in modproidxs and natomidx not in neighbidxs:
                         neighbidxs.append(natomidx)
-                    newatomatomiter=openbabel.OBAtomAtomIter(natom)
-                    for nnatom in newatomatomiter:
+                    for nnatom in openbabel.OBAtomAtomIter(natom):
                         nnatomidx=nnatom.GetIdx()
-                        if nnatomidx not in modproidxs and nnatomidx not in neighbidxs and nnatom.GetAtomicNum()==8: #dont chop the carbonyl oxygen
+                        if nnatomidx not in modproidxs and nnatomidx not in neighbidxs and nnatom.GetAtomicNum() == openbabel.O: #dont chop the carbonyl oxygen
                             neighbidxs.append(nnatomidx)
 
     return neighbidxs           
@@ -789,8 +785,7 @@ def FindBoundaryAtomIdxs(poltype,proOBmol,modproidxs):
         atomidx=atom.GetIdx()
         if atomidx in modproidxs:
             proatom=proOBmol.GetAtom(atomidx)
-            neighbs=[natom for natom in openbabel.OBAtomAtomIter(proatom)]
-            neighbidxs=[i.GetIdx() for i in neighbs]
+            neighbidxs=[i.GetIdx() for i in openbabel.OBAtomAtomIter(proatom)]
             foundbound=IsItABoundaryAtom(poltype,neighbidxs,modproidxs,proOBmol)
             if foundbound==True:
                 proboundaryatomidxs.append(atomidx)
@@ -822,8 +817,7 @@ def GrabAtomsForValenceTermsAcrossBoundary(poltype,ligOBmol,proOBmol,ligidxtopro
         if atomidx in ligidxtoproidx.keys():
             proidx=ligidxtoproidx[atomidx]
             proatom=proOBmol.GetAtom(proidx)
-            neighbs=[natom for natom in openbabel.OBAtomAtomIter(proatom)]
-            for natom in neighbs:
+            for natom in openbabel.OBAtomAtomIter(proatom):
                 nidx=natom.GetIdx()
                 bondset=[nidx,proidx]
                 numberofmodatoms=CountNumberOfAtomsInModifiedResidue(poltype,bondset,modproidxs) # redundant for bond
@@ -831,8 +825,7 @@ def GrabAtomsForValenceTermsAcrossBoundary(poltype,ligOBmol,proOBmol,ligidxtopro
                 if numberofmodatoms==1 and numberofboundatoms==1: 
                     if bondset not in listofbondsforprm and bondset[::-1] not in listofbondsforprm:
                         listofbondsforprm.append(bondset)
-                nextneighbs=[nextatom for nextatom in openbabel.OBAtomAtomIter(natom)]
-                for nextneighb in nextneighbs:
+                for nextneighb in openbabel.OBAtomAtomIter(natom):
                     nextneighbidx=nextneighb.GetIdx()
                     if nextneighbidx!=proidx:
                         angleset=[nextneighbidx,nidx,proidx]
@@ -840,10 +833,9 @@ def GrabAtomsForValenceTermsAcrossBoundary(poltype,ligOBmol,proOBmol,ligidxtopro
                         numberofmodatoms=CountNumberOfAtomsInModifiedResidue(poltype,angleset,modproidxs)
                         if numberofboundatoms==1 and angleset not in listofanglesforprm and angleset[::-1] not in listofanglesforprm:
                             listofanglesforprm.append(angleset)
-                        nextnextneighbs=[nextnextatom for nextnextatom in openbabel.OBAtomAtomIter(nextneighb)]
-                        for nextnextatom in nextnextneighbs:
+                        for nextnextatom in openbabel.OBAtomAtomIter(nextneighb):
                             nextnextatomidx=nextnextatom.GetIdx()
-                            if nextnextatomidx!=nidx:                
+                            if nextnextatomidx!=nidx:
                                 torsionset=[nextnextatomidx,nextneighbidx,nidx,proidx]
                                 numberofboundatoms=CountNumberOfAtomsInBoundryList(poltype,torsionset,proboundidxs)
                                 numberofmodatoms=CountNumberOfAtomsInModifiedResidue(poltype,torsionset,modproidxs)
@@ -867,8 +859,7 @@ def GrabPolarizeBoundaryLigTypeToProType(poltype,ligOBmol,proOBmol,modproidxs,bo
         if atomidx in boundaryatomidxs or atomidx in prosideboundligidx:
             proidx=ligidxtoproidx[atomidx]
             proatom=proOBmol.GetAtom(proidx)
-            proneighbs=[natom for natom in openbabel.OBAtomAtomIter(proatom)]
-            proneighbidxs=[i.GetIdx() for i in proneighbs]
+            proneighbidxs=[i.GetIdx() for i in openbabel.OBAtomAtomIter(proatom)]
             ligtypenum=ligidxtotypeidx[atomidx]
             protypenum=proidxtoprotype[proidx]
             if proidx not in modproidxs:
@@ -900,20 +891,17 @@ def MatchCorrectProteinAtomsToCorrespondingHydrogen(poltype,proboundidxs,proOBmo
     atomiter=openbabel.OBMolAtomIter(proOBmol)
     for atom in atomiter:
         atomidx=atom.GetIdx()
-        atomatomiter=openbabel.OBAtomAtomIter(atom)
-        for natom in atomatomiter:
+        for natom in openbabel.OBAtomAtomIter(atom):
             natomidx=natom.GetIdx()
     addedproatoms=[]
     for proidx in proboundidxs:
         proatom=proOBmol.GetAtom(proidx)
-        atomatomiter=openbabel.OBAtomAtomIter(proatom)
-        for proneighbatom in atomatomiter:
+        for proneighbatom in openbabel.OBAtomAtomIter(proatom):
             proneighbatomidx=proneighbatom.GetIdx()
             if proneighbatomidx not in proidxtoligidx.keys(): # then this must be the atom corresponding to one of the Hydrogens
                 ligidx=proidxtoligidx[proidx]
                 ligatom=polOBmol.GetAtom(ligidx)
-                atomatomiterlig=openbabel.OBAtomAtomIter(ligatom)
-                for ligneighb in atomatomiterlig:
+                for ligneighb in openbabel.OBAtomAtomIter(ligatom):
                     ligneighbidx=ligneighb.GetIdx()
                     if ligneighbidx not in proidxtoligidx.values(): # then this is the corresponding added hydrogen
                         proidxtoligidx[proneighbatomidx]=ligneighbidx
@@ -1128,9 +1116,8 @@ def DeleteHydrogensAttachedToBackbone(poltype,molobj,indexlist):
     dellist=[]
     for index in indexlist:
         atom=molobj.GetAtom(index)
-        atomatomiter=openbabel.OBAtomAtomIter(atom)
-        for natom in atomatomiter:
-            if natom.GetAtomicNum()==1:
+        for natom in openbabel.OBAtomAtomIter(atom):
+            if natom.GetAtomicNum() == openbabel.H:
                 dellist.append(natom.GetIdx())
     dellist.sort(reverse=True)
     for index in dellist:
@@ -1731,8 +1718,7 @@ def IsAtomConnectedToBackboneAtom(poltype,position,backboneidxs,molecule):
     for atom in atomiter:
         atomidx=atom.GetIdx()
         if atomidx in backboneidxs:
-            niter=openbabel.OBAtomAtomIter(atom)
-            for natom in niter:
+            for natom in openbabel.OBAtomAtomIter(atom):
                 pos=tuple([round(natom.GetX(),3),round(natom.GetY(),3),round(natom.GetZ(),3)])
                 if pos==position:
                     check=True
@@ -1766,7 +1752,6 @@ def GrabLibraryInfo(poltype,proidxtoprotype,modresiduelabel,proOBmol):
     temp=open(poltype.modifiedproteinpdbname,'r')
     results=temp.readlines()
     temp.close()
-    etab = openbabel.OBElementTable()
     for line in results:
         if 'ATOM' in line:
             atomlabel=line[12:16].rstrip().lstrip()
@@ -1776,7 +1761,7 @@ def GrabLibraryInfo(poltype,proidxtoprotype,modresiduelabel,proOBmol):
             atomclass=atomtype # poltype assigns same class and type numbers
             proatom=proOBmol.GetAtom(atomindex)
             atomicnum=proatom.GetAtomicNum()
-            atomicmass=etab.GetMass(atomicnum)
+            atomicmass=openbabel.GetMass(atomicnum)
             if residuelabel==modresiduelabel:
                if modresiduelabel not in modresiduedic.keys():
                    modresiduedic[modresiduelabel]={}
@@ -1841,8 +1826,7 @@ def GrabProSideBoundIdxs(poltype,proOBmol,boundaryatomidxs,ligidxtoproidx,modpro
     for index in boundaryatomidxs:
         proindex=ligidxtoproidx[index]
         proatom=proOBmol.GetAtom(proindex)
-        proneighbs=[natom for natom in openbabel.OBAtomAtomIter(proatom)]
-        proneighbidxs=[i.GetIdx() for i in proneighbs]
+        proneighbidxs=[i.GetIdx() for i in openbabel.OBAtomAtomIter(proatom)]
         for proneighbidx in proneighbidxs:
             if proneighbidx not in modproidxs: # this means that you are boundary atom on the protein side, now convert back to ligand index
                 ligidx=proidxtoligidx[proneighbidx]
@@ -2104,9 +2088,8 @@ def AddHydrogensAndBackBoneOnConnectedAtomIdxToGetRightClass(poltype,connectedat
     hydidxs=[]
     for atomidx in transferableidxsformatching:
         atom=proOBmol.GetAtom(atomidx)
-        atomatomiter=openbabel.OBAtomAtomIter(atom)
-        for atom in atomatomiter:
-            if atom.GetAtomicNum()==1:
+        for atom in openbabel.OBAtomAtomIter(atom):
+            if atom.GetAtomicNum() == openbabel.H:
                 atomidx=atom.GetIdx()
                 if atomidx not in hydidxs:
                     hydidxs.append(atomidx)

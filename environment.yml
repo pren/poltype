@@ -3,14 +3,14 @@ channels:
   - conda-forge
   - psi4
 dependencies:
-  - python=3.6
+  - python
   - git
   - matplotlib
   - pip
   - scipy
   - cairosvg
   - mdanalysis
-  - openbabel=2.4.1
+  - openbabel>=3.0.0
   - svgutils
   - psi4
   - rdkit

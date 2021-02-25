@@ -10,7 +10,7 @@ mpl.use('Agg')
 import matplotlib.pyplot as plt
 from sklearn import *
 import optimization as opt
-import openbabel
+from openbabel import openbabel
 import itertools
 import symmetry as symm
 from socket import gethostname
@@ -570,10 +570,9 @@ def WriteOutCartesianXYZ(poltype,mol,filename):
     atomcounter=0
     coordarray=[]
     atomiter=openbabel.OBMolAtomIter(mol)
-    etab = openbabel.OBElementTable()
     for atom in atomiter:
         atomcounter+=1
-        atomsymb=etab.GetSymbol(atom.GetAtomicNum())
+        atomsymb=openbabel.GetSymbol(atom.GetAtomicNum())
         x=str(atom.GetX())
         y=str(atom.GetY())
         z=str(atom.GetZ())
@@ -734,12 +733,10 @@ def GenerateReferenceAngles(poltype,p2,atoms2,p1,atoms1,mol,probemol):
     acceptoratom=mol.GetAtom(p1+1)
     donoratom=probemol.GetAtom(p2+1)
     probeneighbs=[]
-    atomatomiter=openbabel.OBAtomAtomIter(donoratom)
-    for atom in atomatomiter:
+    for atom in openbabel.OBAtomAtomIter(donoratom):
         probeneighbs.append(atom.GetIdx())
     acceptorneighbs=[]
-    atomatomiter=openbabel.OBAtomAtomIter(acceptoratom)
-    for atom in atomatomiter:
+    for atom in openbabel.OBAtomAtomIter(acceptoratom):
         acceptorneighbs.append(atom.GetIdx())
 
     probeneighbsymclasses=[probeidxtosymclass[i] for i in probeneighbs] 
@@ -766,11 +763,7 @@ def GenerateReferenceAngles(poltype,p2,atoms2,p1,atoms1,mol,probemol):
             indicestoreferenceanglemoleculeneighb[angleindices]=angle
     elif len(acceptorneighbs)==1:
         neighb=acceptorneighbatoms[0]
-        atomatomiter=openbabel.OBAtomAtomIter(neighb)
-        neighbofneighbsatoms=[]
-        for atom in atomatomiter:
-            neighbofneighbsatoms.append(atom)
-        for atom in neighbofneighbsatoms:
+        for atom in openbabel.OBAtomAtomIter(neighb):
             atomidx=atom.GetIdx()
             angleatoms=[atom,neighb,acceptoratom] 
             angle=mol.GetAngle(angleatoms[0],angleatoms[1],angleatoms[2])

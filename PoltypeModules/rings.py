@@ -2,7 +2,7 @@ from itertools import combinations
 import torsiongenerator as torgen
 import optimization as opt
 import os
-import openbabel
+from openbabel import openbabel
 import numpy
 from itertools import product
 
@@ -12,8 +12,8 @@ def NonAromaticRingAtomicIndices(poltype,mol):
     atomindices=[]
     for ring in sssr:
         ringatomindices=GrabRingAtomIndices(poltype,mol,ring)
-        if ring.IsAromatic()==False:
-            atomindices.append(ringatomindices)        
+        if not ring.IsAromatic():
+            atomindices.append(ringatomindices)
 
     return atomindices
 
@@ -22,7 +22,7 @@ def GrabRingAtomIndices(poltype,mol,ring):
     atomiter=openbabel.OBMolAtomIter(mol)
     for atom in atomiter:
         atomidx=atom.GetIdx()
-        if ring.IsInRing(atomidx)==True:
+        if ring.IsInRing(atomidx):
             ringatomindices.append(atomidx)
     return ringatomindices
 
@@ -33,8 +33,7 @@ def NonAromaticRingTorsions(poltype,torsions,atomindices):
     for ring in atomindices:
         ringtors=[]
         for torsion in torsions:
-            nonaro=isTorsionInNonAromaticRing(poltype,torsion,ring)
-            if nonaro==True:
+            if isTorsionInNonAromaticRing(poltype,torsion,ring):
                 ringtors.append(torsion)
                 nonarotorsionsflat.append(torsion)
         nonarotorsions.append(ringtors)
@@ -65,8 +64,8 @@ def AllPossiblePuckeringLocationsForRing(poltype,ringtors,tortoneighbtors,mol):
         for i in range(len(comb)):
             tor=comb[i]
             a,b,c,d=tor[:]
-            bond=mol.GetBond(b,c)      
-            bo=bond.GetBO()
+            bond=mol.GetBond(b,c)
+            bo=bond.GetBondOrder()
             if bo>1:
                 goodcomb=False
             else:      
@@ -94,9 +93,8 @@ def NeighboringTorsion(poltype,ringtors,mol):
 
 def IterativeOverNeighborsOfEndTorsionAtoms(poltype,atomidx,ringtors,mol):
     finaltors=[]
-    atom=mol.GetAtom(atomidx)        
-    atomatomiter=openbabel.OBAtomAtomIter(atom)
-    for natom in atomatomiter:
+    atom=mol.GetAtom(atomidx)
+    for natom in openbabel.OBAtomAtomIter(atom):
         natomidx=natom.GetIdx()
         ntors=CheckForNeighboringTorsions(poltype,natomidx,ringtors)
         finaltors.extend(ntors)

@@ -1,7 +1,7 @@
 import os
 import sys
 from socket import gethostname
-import openbabel
+from openbabel import openbabel
 import re
 import time
 import apicall as call
@@ -230,9 +230,8 @@ def gen_optcomfile(poltype,comfname,numproc,maxmem,maxdisk,chkname,molecule,modr
 
     iteratombab = openbabel.OBMolAtomIter(molecule)
     tmpfh = open(comfname, "a")
-    etab = openbabel.OBElementTable()
     for atm in iteratombab:
-        tmpfh.write('%2s %11.6f %11.6f %11.6f\n' % (etab.GetSymbol(atm.GetAtomicNum()), atm.x(), atm.y(), atm.z()))
+        tmpfh.write('%2s %11.6f %11.6f %11.6f\n' % (openbabel.GetSymbol(atm.GetAtomicNum()), atm.x(), atm.y(), atm.z()))
     tmpfh.write('\n')
     
     if ('I ' in spacedformulastr):
@@ -464,11 +463,11 @@ def rebuild_bonds(poltype,newmol, refmol):
         end = b.GetEndAtomIdx()
 
         if not newmol.GetBond(beg,end):
-            newmol.AddBond(beg,end, b.GetBO(), b.GetFlags())
+            newmol.AddBond(beg,end, b.GetBondOrder(), b.GetFlags())
         else:
             newb=newmol.GetBond(beg,end)
             bondorder=newb.GetBondOrder()
-            newb.SetBondOrder(b.GetBO())
+            newb.SetBondOrder(b.GetBondOrder())
 
     return newmol
 

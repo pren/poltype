@@ -3,7 +3,7 @@ import torsiongenerator as torgen
 import torsionfit
 import os
 import numpy
-import openbabel
+from openbabel import openbabel
 from rdkit import Chem
 from rdkit.Chem import rdmolfiles
 import shutil
@@ -32,16 +32,13 @@ def AssignTotalCharge(poltype,molecule,babelmolecule):
         atomnum=atom.GetAtomicNum()
         val=atom.GetExplicitValence()
         valtochg=atomicnumtoformalchg[atomnum]
-        if val not in valtochg.keys(): # then assume chg=0
-            chg=0
-        else:
-            chg=valtochg[val]
+        chg = valtochg.get(val, 0) # assume 0 if not in dict
 
         polneighb=False
-        if atomnum==6:
+        if atomnum == openbabel.C:
             for natom in atom.GetNeighbors():
                 natomicnum=natom.GetAtomicNum()
-                if natomicnum==7 or natomicnum==8 or natomicnum==16:
+                if natomicnum in [openbabel.N, openbabel.O, openbabel.S]:
                     polneighb=True
             if polneighb and val==3:
                 chg=1
@@ -895,8 +892,7 @@ def GenerateFrag(poltype,molindexlist,mol):
     hydindexestokeep=[]
     for hydratedidx in atomswithcutbonds:
         atom=nem.GetAtom(hydratedidx)
-        atomatomiter=openbabel.OBAtomAtomIter(atom)
-        for natom in atomatomiter:
+        for natom in openbabel.OBAtomAtomIter(atom):
             natomidx=natom.GetIdx()
             if natomidx in hydindexes and natomidx not in hydindexestokeep: # then this one needs to be keeped
                 hydindexestokeep.append(natomidx)
@@ -1419,7 +1415,7 @@ def GrowPossibleFragmentAtomIndexes(poltype,rdkitmol,indexes):
         bondorder=bond.GetBondTypeAsDouble()
         if bondorder>1:
             continue
-        if aatomicnum==1 or batomicnum==1:
+        if aatomicnum==openbabel.H or batomicnum==openbabel.H:
             continue
         if (aidx in indexes and bidx not in indexes): # then this means the bond is not already in the fragment but this is one of the bonds just outside of the fragment
             idx=bidx
@@ -1448,7 +1444,7 @@ def GrowPossibleFragmentAtomIndexes(poltype,rdkitmol,indexes):
            for neighbneighbatom in neighbatom.GetNeighbors():
                atomicnum=neighbneighbatom.GetAtomicNum()
                neighbneighbatomidx=neighbneighbatom.GetIdx()
-               if atomicnum==1 and neighbneighbatomidx not in indexlist:
+               if atomicnum==openbabel.H and neighbneighbatomidx not in indexlist:
                    temp.append(neighbneighbatomidx)
                bond=poltype.rdkitmol.GetBondBetweenAtoms(neighbneighbatomidx,idx)
                bondorder=bond.GetBondTypeAsDouble()
@@ -1519,7 +1515,7 @@ def FirstPassAtomIndexes(poltype,tor,onlyinputindices):
        for neighbneighbatom in atom.GetNeighbors():
            atomicnum=neighbneighbatom.GetAtomicNum()
            neighbneighbatomidx=neighbneighbatom.GetIdx()
-           if atomicnum==1 and neighbneighbatomidx not in molindexlist:
+           if atomicnum==openbabel.H and neighbneighbatomidx not in molindexlist:
                temp.append(neighbneighbatomidx)
            bond=poltype.rdkitmol.GetBondBetweenAtoms(neighbneighbatomidx,index)
            bondorder=bond.GetBondTypeAsDouble()

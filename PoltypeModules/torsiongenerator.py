@@ -6,7 +6,7 @@ import torsionfit as torfit
 import apicall as call
 import os
 import sys
-import openbabel
+from openbabel import openbabel
 import shutil
 from socket import gethostname
 import re
@@ -151,7 +151,7 @@ def CreateGausTorOPTInputFile(poltype,torset,phaseangles,optmol,torxyzfname,vari
         datom=mol.GetAtom(d)
         aatomicnum=aatom.GetAtomicNum()
         datomicnum=datom.GetAtomicNum()
-        if (aatomicnum==1 and datomicnum==1) and allhydtors==False:
+        if (aatomicnum == openbabel.H and datomicnum == openbabel.H) and allhydtors==False:
             continue
 
         babelindices=[b,c]
@@ -166,7 +166,7 @@ def CreateGausTorOPTInputFile(poltype,torset,phaseangles,optmol,torxyzfname,vari
                 datom=mol.GetAtom(rtd)
                 rtaatomicnum=aatom.GetAtomicNum()
                 rtdatomicnum=datom.GetAtomicNum()
-                if (rtaatomicnum==1 and rtdatomicnum==1) and allhydtors==False:
+                if (rtaatomicnum == openbabel.H and rtdatomicnum == openbabel.H) and allhydtors==False:
                     continue
 
                 rtang = optmol.GetTorsion(rta,rtb,rtc,rtd)
@@ -306,7 +306,7 @@ def tinker_minimize(poltype,torset,optmol,variabletorlist,phaseanglelist,torsion
         datom=optmol.GetAtom(d)
         aatomicnum=aatom.GetAtomicNum()
         datomicnum=datom.GetAtomicNum()
-        if (aatomicnum==1 and datomicnum==1) and allhydtors==False:
+        if (aatomicnum == openbabel.H and datomicnum == openbabel.H) and allhydtors==False:
             continue
 
 
@@ -321,7 +321,7 @@ def tinker_minimize(poltype,torset,optmol,variabletorlist,phaseanglelist,torsion
                 datom=optmol.GetAtom(resd)
                 aatomicnum=aatom.GetAtomicNum()
                 datomicnum=datom.GetAtomicNum()
-                if (aatomicnum==1 and datomicnum==1) and allhydtors==False:
+                if (aatomicnum == openbabel.H and datomicnum == openbabel.H) and allhydtors==False:
                     continue
 
 
@@ -898,8 +898,8 @@ def get_torlist(poltype,mol,missed_torsions):
         t2idx=t2.GetIdx()
         t3idx=t3.GetIdx()
         bnd=[t2idx,t3idx]
-        t2val=t2.GetValence()
-        t3val=t3.GetValence()
+        t2deg=t2.GetExplicitDegree()
+        t3deg=t3.GetExplicitDegree()
         ringbond=False
         if t2.IsInRing()==True and t3.IsInRing()==True:
             ringbond=True
@@ -912,7 +912,7 @@ def get_torlist(poltype,mol,missed_torsions):
         anyarot3=CheckForAnyAromaticsInRing(poltype,t3idx)
         if anyarot2==True and anyarot3==True and ringbond==True:
             continue
-        if t2val<2 or t3val<2:
+        if t2deg<2 or t3deg<2:
             continue 
         t1,t4 = find_tor_restraint_idx(poltype,mol,t2,t3)
         sortedtor=torfit.sorttorsion(poltype,[poltype.idxtosymclass[t1.GetIdx()],poltype.idxtosymclass[t2.GetIdx()],poltype.idxtosymclass[t3.GetIdx()],poltype.idxtosymclass[t4.GetIdx()]])
@@ -933,7 +933,7 @@ def get_torlist(poltype,mol,missed_torsions):
         t1atomicnum=t1.GetAtomicNum()
         t4atomicnum=t4.GetAtomicNum()
         allhydtors=databaseparser.CheckIfAllTorsionsAreHydrogen(poltype,babelindices,mol)
-        if (t1atomicnum==1 and t4atomicnum==1) and allhydtors==False and poltype.rotalltors==False:
+        if (t1atomicnum == openbabel.H and t4atomicnum == openbabel.H) and allhydtors==False and poltype.rotalltors==False:
             skiptorsion=True
             hydtorsionlist.append(sortedtor)       
 
@@ -951,10 +951,8 @@ def get_torlist(poltype,mol,missed_torsions):
         rotbndlist[rotbndkey].append(unq)
         # write out rotatable bond to log
         #Find other possible torsions about this rotatable bond
-        iteratomatom = openbabel.OBAtomAtomIter(bond.GetBeginAtom())
-        for iaa in iteratomatom:
-            iteratomatom2 = openbabel.OBAtomAtomIter(bond.GetEndAtom())
-            for iaa2 in iteratomatom2:
+        for iaa in openbabel.OBAtomAtomIter(bond.GetBeginAtom()):
+            for iaa2 in openbabel.OBAtomAtomIter(bond.GetEndAtom()):
                 a = iaa.GetIdx()
                 b = t2.GetIdx()
                 c = t3.GetIdx()
@@ -971,27 +969,16 @@ def get_all_torsions(poltype,mol):
     for bond in iterbond:
         t2 = bond.GetBeginAtom()
         t3 = bond.GetEndAtom()
-        t2idx=t2.GetIdx()
-        t3idx=t3.GetIdx()
-        t2val=t2.GetValence()
-        t3val=t3.GetValence()
-        if (t2val>=2 and t3val>=2):
+        t2deg=t2.GetExplicitDegree()
+        t2deg=t3.GetExplicitDegree()
+        if (t2deg>=2 and t2deg>=2):
             t1,t4 = find_tor_restraint_idx(poltype,mol,t2,t3)
             unq=get_uniq_rotbnd(poltype,t1.GetIdx(),t2.GetIdx(),t3.GetIdx(),t4.GetIdx())
             poltype.alltorsionslist.append(unq)
-            iteratomatom = openbabel.OBAtomAtomIter(bond.GetBeginAtom())
-            for iaa in iteratomatom:
-                iteratomatom2 = openbabel.OBAtomAtomIter(bond.GetEndAtom())
-                for iaa2 in iteratomatom2:
-                    a = iaa.GetIdx()
-                    b = t2.GetIdx()
-                    c = t3.GetIdx()
-                    d = iaa2.GetIdx()
+            for iaa in openbabel.OBAtomAtomIter(bond.GetBeginAtom()):
+                for iaa2 in openbabel.OBAtomAtomIter(bond.GetEndAtom()):
                     if ((iaa.GetIdx() != t3.GetIdx() and iaa2.GetIdx() != t2.GetIdx()) and not (iaa.GetIdx() == t1.GetIdx() and iaa2.GetIdx() == t4.GetIdx())):
                         poltype.alltorsionslist.append(get_uniq_rotbnd(poltype,iaa.GetIdx(),t2.GetIdx(),t3.GetIdx(),iaa2.GetIdx()))
-
-
-            
     return
 
 
@@ -1024,7 +1011,7 @@ def DetermineAngleIncrementAndPointsNeededForEachTorsionSet(poltype,mol,rotbndli
             datomicnum=obad.GetAtomicNum()
             babelindices=[a2,b2,c2,d2]
             allhydtor=databaseparser.CheckIfAllTorsionsAreHydrogen(poltype,babelindices,mol)
-            if allhydtor==False and (aatomicnum==1 and datomicnum==1):
+            if allhydtor==False and (aatomicnum == openbabel.H and datomicnum == openbabel.H):
                 continue
             if tpdkey not in torsionlist:
                 torsionlist.append(tpdkey)
@@ -1076,7 +1063,7 @@ def GrabFirstHeavyAtomIdx(poltype,indices,mol):
     for i in range(len(indices)):
         idx=indices[i]
         atomnum=atomicnums[i]
-        if atomnum!=1:
+        if atomnum != openbabel.H:
             heavyidx=idx
     return heavyidx
 
@@ -1114,7 +1101,6 @@ def CreatePsi4TorOPTInputFile(poltype,torset,phaseangles,optmol,torxyzfname,vari
     temp.write('molecule { '+'\n')
     temp.write('%d %d\n' % (mol.GetTotalCharge(),1))
     iteratom = openbabel.OBMolAtomIter(optmol)
-    etab = openbabel.OBElementTable()
     if os.path.isfile(torxyzfname):
         xyzstr = open(torxyzfname,'r')
         xyzstrl = xyzstr.readlines()
@@ -1122,7 +1108,7 @@ def CreatePsi4TorOPTInputFile(poltype,torset,phaseangles,optmol,torxyzfname,vari
         for atm in iteratom:
             i = i + 1
             ln = xyzstrl[i]
-            temp.write('%2s %11.6f %11.6f %11.6f\n' % (etab.GetSymbol(atm.GetAtomicNum()), float(ln.split()[2]),float(ln.split()[3]),float(ln.split()[4])))
+            temp.write('%2s %11.6f %11.6f %11.6f\n' % (openbabel.GetSymbol(atm.GetAtomicNum()), float(ln.split()[2]),float(ln.split()[3]),float(ln.split()[4])))
         xyzstr.close()
     temp.write('}'+'\n')
 
@@ -1144,13 +1130,13 @@ def CreatePsi4TorOPTInputFile(poltype,torset,phaseangles,optmol,torxyzfname,vari
                 datom=mol.GetAtom(rtd)
                 rtaatomicnum=aatom.GetAtomicNum()
                 rtdatomicnum=datom.GetAtomicNum()
-                if (rtaatomicnum==1 and rtdatomicnum==1) and allhydtors==False:
+                if (rtaatomicnum == openbabel.H and rtdatomicnum == openbabel.H) and allhydtors==False:
                     continue
 
                 if resttors not in variabletorlist:
                     rtang = optmol.GetTorsion(rta,rtb,rtc,rtd)
-                    if (optmol.GetAtom(rta).GetAtomicNum() != 1) and \
-                       (optmol.GetAtom(rtd).GetAtomicNum() != 1):
+                    if (optmol.GetAtom(rta).GetAtomicNum() != openbabel.H) and \
+                       (optmol.GetAtom(rtd).GetAtomicNum() != openbabel.H):
                         restlist.append(resttors)
                         if not firsttor:
                             temp.write(', %d %d %d %d\n' % (rta,rtb,rtc,rtd))
@@ -1168,7 +1154,7 @@ def CreatePsi4TorOPTInputFile(poltype,torset,phaseangles,optmol,torxyzfname,vari
             datom=mol.GetAtom(rtd)
             rtaatomicnum=aatom.GetAtomicNum()
             rtdatomicnum=datom.GetAtomicNum()
-            if (rtaatomicnum==1 and rtdatomicnum==1) and allhydtors==False:
+            if (rtaatomicnum == openbabel.H and rtdatomicnum == openbabel.H) and allhydtors==False:
                 continue
 
             rtang = optmol.GetTorsion(rta,rtb,rtc,rtd)
@@ -1308,7 +1294,6 @@ def gen_torcomfile (poltype,comfname,numproc,maxmem,maxdisk,prevstruct,xyzf,mol)
     tmpfh.write('\n%s\n\n' % commentstr)
     tmpfh.write('%d %d\n' % (mol.GetTotalCharge(), mol.GetTotalSpinMultiplicity()))
     iteratom = openbabel.OBMolAtomIter(prevstruct)
-    etab = openbabel.OBElementTable()
     if xyzf!=None:
         if os.path.isfile(xyzf):
             xyzstr = open(xyzf,'r')
@@ -1317,12 +1302,12 @@ def gen_torcomfile (poltype,comfname,numproc,maxmem,maxdisk,prevstruct,xyzf,mol)
             for atm in iteratom:
                 i = i + 1
                 ln = xyzstrl[i]
-                tmpfh.write('%2s %11.6f %11.6f %11.6f\n' % (etab.GetSymbol(atm.GetAtomicNum()), float(ln.split()[2]),float(ln.split()[3]),float(ln.split()[4])))
+                tmpfh.write('%2s %11.6f %11.6f %11.6f\n' % (openbabel.GetSymbol(atm.GetAtomicNum()), float(ln.split()[2]),float(ln.split()[3]),float(ln.split()[4])))
             tmpfh.write('\n')
             xyzstr.close()
     else:
         for atm in iteratom:
-            tmpfh.write('%2s %11.6f %11.6f %11.6f\n' % (etab.GetSymbol(atm.GetAtomicNum()), atm.x(),atm.y(),atm.z()))
+            tmpfh.write('%2s %11.6f %11.6f %11.6f\n' % (openbabel.GetSymbol(atm.GetAtomicNum()), atm.x(),atm.y(),atm.z()))
         tmpfh.write('\n')
 
     if ('I ' in poltype.mol.GetSpacedFormula()):
@@ -1390,13 +1375,11 @@ def save_structfile(poltype,molstruct, structfname):
     if strctext in '.xyz':
         tmpfh = open(structfname, "w")
         iteratom = openbabel.OBMolAtomIter(molstruct)
-        etab = openbabel.OBElementTable()
         tmpfh.write('%6d   %s\n' % (molstruct.NumAtoms(), molstruct.GetTitle()))
         for ia in iteratom:
-            tmpfh.write( '%6d %2s %13.6f %11.6f %11.6f %5d' % (ia.GetIdx(), etab.GetSymbol(ia.GetAtomicNum()), ia.x(), ia.y(), ia.z(), poltype.idxtosymclass[ia.GetIdx()]))
-            iteratomatom = openbabel.OBAtomAtomIter(ia)
+            tmpfh.write( '%6d %2s %13.6f %11.6f %11.6f %5d' % (ia.GetIdx(), openbabel.GetSymbol(ia.GetAtomicNum()), ia.x(), ia.y(), ia.z(), poltype.idxtosymclass[ia.GetIdx()]))
             neighbors = []
-            for iaa in iteratomatom:
+            for iaa in openbabel.OBAtomAtomIter(ia):
                 neighbors.append(iaa.GetIdx())
             neighbors = sorted(neighbors)
             for iaa in neighbors:
@@ -1489,9 +1472,8 @@ def CreatePsi4TorESPInputFile(poltype,prevstrctfname,optmol,torset,phaseangles,m
     temp.write('molecule { '+'\n')
     temp.write('%d %d\n' % (mol.GetTotalCharge(), 1))
     iteratom = openbabel.OBMolAtomIter(finalstruct)
-    etab = openbabel.OBElementTable()
     for atm in iteratom:
-        temp.write('%2s %11.6f %11.6f %11.6f\n' % (etab.GetSymbol(atm.GetAtomicNum()),atm.GetX(),atm.GetY(),atm.GetZ()))
+        temp.write('%2s %11.6f %11.6f %11.6f\n' % (openbabel.GetSymbol(atm.GetAtomicNum()),atm.GetX(),atm.GetY(),atm.GetZ()))
     temp.write('}'+'\n')
     if poltype.torsppcm==True:
         temp.write('set {'+'\n')

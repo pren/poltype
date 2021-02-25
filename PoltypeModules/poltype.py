@@ -21,7 +21,7 @@ import os
 import sys
 from socket import gethostname
 import subprocess
-import openbabel
+from openbabel import openbabel
 import shutil
 import time
 import copy
