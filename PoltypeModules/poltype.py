@@ -95,7 +95,7 @@ class PolarizableTyper():
         self.suppressdipoleerr=suppressdipoleerr
         self.use_gaus=use_gaus
         self.use_gausoptonly=use_gausoptonly
-        self.topologylibpath=os.path.abspath(os.path.join(poltypepath, os.pardir))+r'/'+topologylib
+        self.topologylibpath=os.path.abspath(os.path.join(poltypepath, os.pardir))+r'/ModifiedResidueLibraries/'+topologylib
         self.WBOtol=WBOtol
         self.isfragjob=isfragjob
         self.dontfrag=dontfrag
