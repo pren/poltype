@@ -9,9 +9,8 @@ Additionally, torsion rotations are categorized by symmetry, based on the atoms 
 
 To proceed with the fitting, first QM and MM energies are **normalized**, and the QM value is then subtracted from the MM one. If a second try for the fitting procedure is required, the Boltzmann weight defined as
 
-```math
- e^{-E_{QM}/8}.
-```
+![ e^{-E_{QM}/8}.](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle++e%5E%7B-E_%7BQM%7D%2F8%7D.)
+
 
 From all the QM - MM energies differences a min/max criterion is used to set the boundaries to evaluate the fitting quality. Those boundaries are identified by the amplitude between the max and min. The parameters for fitting are then initialized, for each fold of the torsion potential energy term. In addition to the min/max boundaries, also boundaries for the phase angle (0-2$\pi$) for fitting phase angle and also an additional criterion is defined for non-aromatic ring puckering torsion parameters.
 

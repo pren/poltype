@@ -1,9 +1,9 @@
 ## Torsion README
 
-```math
-\mathcal{E}_{\rm{torsion}} = \sum_{n} K_{n\phi} [1 + cos(n\phi \pm \delta)]
-```
-​
+![\mathcal{E}_{\rm{torsion}} = \sum_{n} K_{n\phi} [1 + cos(n\phi \pm \delta)]
+
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cmathcal%7BE%7D_%7B%5Crm%7Btorsion%7D%7D+%3D+%5Csum_%7Bn%7D+K_%7Bn%5Cphi%7D+%5B1+%2B+cos%28n%5Cphi+%5Cpm+%5Cdelta%29%5D%0A%0A)
+
 
 First the torsion angles are identified in the actual molecular structure through the **torsiongenerator.py** program; a QM relaxed scan with constraints, is then performed for each of the dihedrals identified (or a selected subset of the molecular dihedrals), in order to derive the force field dihedral parameter, fitting the classical torsion energy functional (which is a parametric functional) as defined in the AMOEBA force field to those QM data. This crucial part of the procedure is executed by a second program, namely **torsionfit.py**.
 
