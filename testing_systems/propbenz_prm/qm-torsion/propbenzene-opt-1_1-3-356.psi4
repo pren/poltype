@@ -1,0 +1,55 @@
+molecule { 
+0 1
+ C   -1.333311   -0.830336    0.034203
+ C   -2.478067    0.206049    0.239326
+ C    0.111713   -0.282433   -0.045451
+ C   -3.880558   -0.432815    0.302610
+ C    0.410718    1.103982   -0.017898
+ C    1.186123   -1.193905   -0.204743
+ C    1.740770    1.557687   -0.122454
+ C    2.514517   -0.739022   -0.308668
+ C    2.793247    0.637483   -0.265772
+ H   -1.532270   -1.399928   -0.883810
+ H   -1.374166   -1.564907    0.849969
+ H   -2.291374    0.771181    1.162306
+ H   -2.451934    0.939369   -0.577708
+ H   -3.955027   -1.142405    1.133588
+ H   -4.649109    0.333363    0.449861
+ H   -4.115375   -0.966408   -0.624605
+ H   -0.375746    1.848158    0.086300
+ H    0.991442   -2.265060   -0.246672
+ H    1.954013    2.624834   -0.092705
+ H    3.326896   -1.454360   -0.423285
+ H    3.819728    0.989951   -0.346107
+}
+set optking { 
+  frozen_dihedral = ("
+    2 1 3 5
+    2 1 3 6
+    4 2 1 3
+    1 2 4 14
+  ")
+}
+set {
+  geom_maxiter 400
+  g_convergence GAU_LOOSE
+  dynamic_level 1
+}
+memory 700MB
+set_num_threads(8)
+psi4_io.set_default_path("/home/daniele/PSI4_sctatch/Psi4-propbenzene")
+for _ in range(1):
+  try:
+    set opt_coordinates both
+    optimize('wb97x-d/6-311G')
+    break
+  except OptimizationConvergenceError:
+    break
+  else:
+    try:
+      set opt_coordinates cartesian
+      optimize('wb97x-d/6-311G')
+      break
+    except OptimizationConvergenceError:
+      pass
+clean()

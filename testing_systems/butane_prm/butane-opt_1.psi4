@@ -1,0 +1,40 @@
+molecule { 
+0 1
+ C   -0.405900   -0.631200    0.331100
+ C    0.392700    0.516300   -0.295100
+ C   -1.870300   -0.336400   -0.025800
+ C    1.874200    0.331600   -0.005200
+ H   -0.354400   -0.625400    1.420700
+ H   -0.160400   -1.589700   -0.122500
+ H    0.102100    1.487200    0.145100
+ H    0.184400    0.562800   -1.364100
+ H   -1.872700   -0.219000   -1.136400
+ H   -2.087900    0.646300    0.469700
+ H   -2.540800   -1.138200    0.303200
+ H    2.367800   -0.351900   -0.697800
+ H    1.980700    0.021600    1.065200
+ H    2.390500    1.325800   -0.088000
+}
+set {
+  geom_maxiter 400
+  g_convergence GAU_LOOSE
+  dynamic_level 1
+}
+memory 700MB
+set_num_threads(8)
+psi4_io.set_default_path("/home/daniele/PSI4_sctatch/Psi4-butane")
+for _ in range(1):
+  try:
+    set opt_coordinates both
+    optimize('mp2/6-31G*')
+    break
+  except OptimizationConvergenceError:
+    break
+  else:
+    try:
+      set opt_coordinates cartesian
+      optimize('mp2/6-31G*')
+      break
+    except OptimizationConvergenceError:
+      pass
+clean()

@@ -1,0 +1,40 @@
+molecule { 
+0 1
+ N    2.308200    0.303200    0.073100
+ C    0.889600    0.138600    0.030400
+ C    0.330600   -1.093700   -0.240700
+ C    0.018000    1.184500    0.254000
+ C   -1.032300   -1.299100   -0.292000
+ C   -1.345100    0.977200    0.202300
+ C   -1.904300   -0.254300   -0.068600
+ H    1.016100   -1.921800   -0.417700
+ H    0.453200    2.153400    0.467200
+ H   -1.418400   -2.294000   -0.510600
+ H   -2.024900    1.803500    0.379000
+ H   -2.988400   -0.392100   -0.103900
+ H    2.846300    0.885100   -0.588400
+ H    2.851400   -0.190500    0.815900
+}
+set {
+  geom_maxiter 400
+  g_convergence GAU_LOOSE
+  dynamic_level 1
+}
+memory 700MB
+set_num_threads(8)
+psi4_io.set_default_path("/home/daniele/PSI4_sctatch/Psi4-aniline")
+for _ in range(1):
+  try:
+    set opt_coordinates both
+    optimize('mp2/6-31G*')
+    break
+  except OptimizationConvergenceError:
+    break
+  else:
+    try:
+      set opt_coordinates cartesian
+      optimize('mp2/6-31G*')
+      break
+    except OptimizationConvergenceError:
+      pass
+clean()

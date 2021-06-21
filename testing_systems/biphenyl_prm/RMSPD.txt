@@ -1,0 +1,137 @@
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                       Version 8.9.1  February 2021                       ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2021               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+      402   402     C     biphenyl                     6     12.011     3
+      401   401     C     biphenyl                     6     12.011     3
+      403   403     C     biphenyl                     6     12.011     3
+      404   404     C     biphenyl                     6     12.011     3
+      407   407     H     biphenyl                     1      1.008     1
+      406   406     H     biphenyl                     1      1.008     1
+      405   405     H     biphenyl                     1      1.008     1
+
+ Electrostatic Potential Grid Points :                 12443
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+      402   402     C     biphenyl                     6     12.011     3
+      401   401     C     biphenyl                     6     12.011     3
+      403   403     C     biphenyl                     6     12.011     3
+      404   404     C     biphenyl                     6     12.011     3
+      407   407     H     biphenyl                     1      1.008     1
+      406   406     H     biphenyl                     1      1.008     1
+      405   405     H     biphenyl                     1      1.008     1
+
+ Additional Atomic Multipole Parameters :
+
+     Atom Type     Coordinate Frame Definition         Multipole Moments
+
+         402      401    401      0   Bisector    -0.01542
+                                                   0.00000  0.00000 -0.11744
+                                                   0.02219
+                                                   0.00000 -0.24028
+                                                   0.00000  0.00000  0.21809
+
+         401      402    403      0   Z-then-X    -0.01309
+                                                   0.00619  0.00000  0.05176
+                                                   0.07622
+                                                   0.00000 -0.24316
+                                                   0.04973  0.00000  0.16694
+
+         403      401    404      0   Z-then-X     0.01867
+                                                   0.04187  0.00000  0.03237
+                                                   0.13785
+                                                   0.00000 -0.22428
+                                                   0.08690  0.00000  0.08643
+
+         404      403    403      0   Bisector    -0.01635
+                                                   0.00000  0.00000 -0.03110
+                                                   0.19041
+                                                   0.00000 -0.23614
+                                                   0.00000  0.00000  0.04573
+
+         407      401    402      0   Z-then-X     0.00617
+                                                  -0.01202  0.00000 -0.15685
+                                                   0.07357
+                                                   0.00000  0.00432
+                                                  -0.00469  0.00000 -0.07789
+
+         406      403    401      0   Z-then-X     0.00329
+                                                   0.00189  0.00000 -0.16370
+                                                   0.09698
+                                                   0.00000 -0.00615
+                                                  -0.00162  0.00000 -0.09083
+
+         405      404    403      0   Z-then-X     0.00169
+                                                  -0.00010  0.00000 -0.16834
+                                                   0.07235
+                                                   0.00000  0.00830
+                                                   0.00010  0.00000 -0.08065
+
+ Additional Atomic Dipole Polarizability Parameters :
+
+     Atom Type           Alpha       Thole     Group Atom Types
+
+         402             1.750       0.390         401
+         401             1.750       0.390         402  403  407
+         403             1.750       0.390         401  404  406
+         404             1.750       0.390         403  405
+         407             0.696       0.390         401
+         406             0.696       0.390         403
+         405             0.696       0.390         404
+
+ Average Electrostatic Potential over Atoms :
+      (Kcal/mole per unit charge)
+
+   Structure   Atom      Points      Potential        Target        RMS Diff
+
+        1        1          95        -7.4387        -7.3657         0.1252
+        1        2          94        -7.4282        -7.3541         0.1258
+        1        3         367        -4.5184        -4.4815         0.0995
+        1        4         364        -4.5606        -4.5200         0.1048
+        1        5         373        -4.4509        -4.4155         0.0947
+        1        6         367        -4.5460        -4.5087         0.1004
+        1        7         528        -3.5629        -3.5240         0.0973
+        1        8         535        -3.5001        -3.4620         0.0958
+        1        9         536        -3.5176        -3.4796         0.0972
+        1       10         537        -3.5008        -3.4619         0.0950
+        1       11         536        -3.5394        -3.4904         0.1042
+        1       12         544        -3.5454        -3.4955         0.1069
+        1       13         563         0.7394         0.7748         0.0647
+        1       14         567         0.7659         0.7969         0.0592
+        1       15         574         0.7405         0.7712         0.0627
+        1       16         568         0.7832         0.8205         0.0668
+        1       17         882         1.9657         2.0182         0.0717
+        1       18         881         1.9708         2.0245         0.0726
+        1       19         883         1.9649         2.0166         0.0711
+        1       20         885         1.9672         2.0218         0.0739
+        1       21         885         2.0067         2.0622         0.0758
+        1       22         879         2.0219         2.0749         0.0738
+
+ Electrostatic Potential over all Grid Points :
+
+ Average Potential Value for Model :                 -0.5768
+ Average Potential Magnitude for Model :              2.8013
+ Average Potential Value for Target :                -0.5315
+ Average Potential Magnitude for Target :             2.8174
+
+ Average Signed Potential Difference :               -0.0454
+ Average Unsigned Potential Difference :              0.0558
+ Root Mean Square Potential Difference :              0.0836

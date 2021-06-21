@@ -1,0 +1,1719 @@
+Tue Jun  1 23:49:46 2021 Running on host: daniele-Precision-5750
+Tue Jun  1 23:49:46 2021 NEED QM Density Matrix: Executing Gaussian Opt and SP
+Tue Jun  1 23:49:46 2021 Calling: Psi4 Optimization
+Tue Jun  1 23:49:46 2021  Calling: psi4 propbenzene-opt_1.psi4 propbenzene-opt_1.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Tue Jun  1 23:50:19 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/propbenzene-opt_1.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz
+Tue Jun  1 23:50:49 2021 All jobs have terminated 
+Tue Jun  1 23:50:49 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/propbenzene-opt_1.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz
+Tue Jun  1 23:51:19 2021 All jobs have terminated 
+Tue Jun  1 23:51:27 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle 405 404 405 74.630713 120.0056
+ QM value = 118.44288316029335, parameters are transferred from ['[c]', '[c]', '[c]']. Will use QM value.
+Tue Jun  1 23:51:27 2021 # matching SMARTS from molecule  [['[#6](-[#6](-[#6](-[H])-[H])(-[H])-[H])(:[#6]):[#6]', [1, 2]]] to SMARTS from parameter file [['[#7]1(:[#6]2:[#6](:[#6](-[#6](-[#6](-[H])(-[H])-[H])(-[H])-[H]):[#6]:1-[H]):[#6](:[#6](:[#6](:[#6]:2-[H])-[H])-[H])-[H])-[H]', [4, 5]]] with tinker type descriptions [[('C', '"3-Ethylindole C3"'), ('C', '"3-Ethylindole CH2"')]]
+# WARNING DEFAULT MM3 OPBEND VALUES USED 
+
+
+Tue Jun  1 23:51:27 2021 # matching SMARTS from molecule  [['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [7, 2]], ['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [6, 5]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 6]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 2]]] to SMARTS from parameter file [['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [7, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [3, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [6, 7]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [4, 3]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 9]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 11]]] with tinker type descriptions [[('C', '"Ethylbenzene C2"'), ('C', '"Ethylbenzene C1-CH2"')], [('C', '"Ethylbenzene C3"'), ('C', '"Ethylbenzene C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C4"')]]
+# WARNING DEFAULT MM3 OPBEND VALUES USED 
+
+
+Tue Jun  1 23:51:27 2021 # matching SMARTS from molecule  [['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [7, 2]], ['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [6, 5]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 6]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 2]]] to SMARTS from parameter file [['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [7, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [3, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [6, 7]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [4, 3]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 9]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 11]]] with tinker type descriptions [[('C', '"Ethylbenzene C2"'), ('C', '"Ethylbenzene C1-CH2"')], [('C', '"Ethylbenzene C3"'), ('C', '"Ethylbenzene C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C4"')]]
+# WARNING DEFAULT MM3 OPBEND VALUES USED 
+
+
+Tue Jun  1 23:51:27 2021 # matching SMARTS from molecule  [['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [7, 2]], ['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [6, 5]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 6]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 2]]] to SMARTS from parameter file [['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [7, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [3, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [6, 7]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [4, 3]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 9]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 11]]] with tinker type descriptions [[('C', '"Ethylbenzene C2"'), ('C', '"Ethylbenzene C1-CH2"')], [('C', '"Ethylbenzene C3"'), ('C', '"Ethylbenzene C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C4"')]]
+# WARNING DEFAULT MM3 OPBEND VALUES USED 
+
+
+Tue Jun  1 23:51:27 2021 # matching SMARTS from molecule  [['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [7, 2]], ['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [6, 5]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 6]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 2]]] to SMARTS from parameter file [['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [7, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [3, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [6, 7]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [4, 3]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 9]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 11]]] with tinker type descriptions [[('C', '"Ethylbenzene C2"'), ('C', '"Ethylbenzene C1-CH2"')], [('C', '"Ethylbenzene C3"'), ('C', '"Ethylbenzene C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C4"')]]
+# WARNING DEFAULT MM3 OPBEND VALUES USED 
+
+
+Tue Jun  1 23:51:27 2021 # matching SMARTS from molecule  [['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [7, 2]], ['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [6, 5]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 6]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 2]]] to SMARTS from parameter file [['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [7, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [3, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [6, 7]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [4, 3]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 9]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 11]]] with tinker type descriptions [[('C', '"Ethylbenzene C2"'), ('C', '"Ethylbenzene C1-CH2"')], [('C', '"Ethylbenzene C3"'), ('C', '"Ethylbenzene C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C4"')]]
+# WARNING DEFAULT MM3 OPBEND VALUES USED 
+
+
+Tue Jun  1 23:51:27 2021 # matching SMARTS from molecule  [['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [7, 2]], ['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [6, 5]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 6]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 2]]] to SMARTS from parameter file [['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [7, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [3, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [6, 7]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [4, 3]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 9]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 11]]] with tinker type descriptions [[('C', '"Ethylbenzene C2"'), ('C', '"Ethylbenzene C1-CH2"')], [('C', '"Ethylbenzene C3"'), ('C', '"Ethylbenzene C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C4"')]]
+# WARNING DEFAULT MM3 OPBEND VALUES USED 
+
+
+Tue Jun  1 23:51:27 2021 # matching SMARTS from molecule  [['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [7, 2]], ['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [6, 5]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 6]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 2]]] to SMARTS from parameter file [['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [7, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [3, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [6, 7]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [4, 3]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 9]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 11]]] with tinker type descriptions [[('C', '"Ethylbenzene C2"'), ('C', '"Ethylbenzene C1-CH2"')], [('C', '"Ethylbenzene C3"'), ('C', '"Ethylbenzene C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C4"')]]
+# WARNING DEFAULT MM3 OPBEND VALUES USED 
+
+
+Tue Jun  1 23:51:27 2021 # matching SMARTS from molecule  [['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [7, 2]], ['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [6, 5]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 6]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 2]]] to SMARTS from parameter file [['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [7, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [3, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [6, 7]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [4, 3]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 9]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 11]]] with tinker type descriptions [[('C', '"Ethylbenzene C2"'), ('C', '"Ethylbenzene C1-CH2"')], [('C', '"Ethylbenzene C3"'), ('C', '"Ethylbenzene C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C4"')]]
+# WARNING DEFAULT MM3 OPBEND VALUES USED 
+
+
+Tue Jun  1 23:51:27 2021 # matching SMARTS from molecule  [['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [7, 2]], ['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [6, 5]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 6]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 2]]] to SMARTS from parameter file [['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [7, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [3, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [6, 7]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [4, 3]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 9]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 11]]] with tinker type descriptions [[('C', '"Ethylbenzene C2"'), ('C', '"Ethylbenzene C1-CH2"')], [('C', '"Ethylbenzene C3"'), ('C', '"Ethylbenzene C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C4"')]]
+# WARNING DEFAULT MM3 OPBEND VALUES USED 
+
+
+Tue Jun  1 23:51:27 2021 # matching SMARTS from molecule  [['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [7, 2]], ['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [6, 5]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 6]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 2]]] to SMARTS from parameter file [['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [7, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [3, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [6, 7]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [4, 3]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 9]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 11]]] with tinker type descriptions [[('C', '"Ethylbenzene C2"'), ('C', '"Ethylbenzene C1-CH2"')], [('C', '"Ethylbenzene C3"'), ('C', '"Ethylbenzene C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C4"')]]
+# WARNING DEFAULT MM3 OPBEND VALUES USED 
+
+
+Tue Jun  1 23:51:27 2021 # matching SMARTS from molecule  [['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [7, 2]], ['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [6, 5]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 6]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 2]]] to SMARTS from parameter file [['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [7, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [3, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [6, 7]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [4, 3]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 9]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 11]]] with tinker type descriptions [[('C', '"Ethylbenzene C2"'), ('C', '"Ethylbenzene C1-CH2"')], [('C', '"Ethylbenzene C3"'), ('C', '"Ethylbenzene C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C4"')]]
+# WARNING DEFAULT MM3 OPBEND VALUES USED 
+
+
+Tue Jun  1 23:51:27 2021 # matching SMARTS from molecule  [['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [7, 2]], ['[#6]1(:[#6](-[#6](-[#6])(-[H])-[H]):[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [6, 5]], ['[#6]1(:[#6](:[#6](-[#6]):[#6]:[#6]:[#6]:1-[H])-[H])-[H]', [1, 2]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 6]], ['[#6]1(:[#6](:[#6](:[#6]:[#6]:[#6]:1-[H])-[H])-[H])-[H]', [1, 2]]] to SMARTS from parameter file [['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [7, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [3, 2]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [6, 7]], ['[#6](-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H])(-[#6](-[H])(-[H])-[H])(-[H])-[H]', [4, 3]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 9]], ['[H]-[#7](-[H])[#6](-[#7](-[H])-[H])-[#6]1:[#6](:[#6](:[#6](:[#6](:[#6]:1-[H])-[H])-[H])-[H])-[H]', [10, 11]]] with tinker type descriptions [[('C', '"Ethylbenzene C2"'), ('C', '"Ethylbenzene C1-CH2"')], [('C', '"Ethylbenzene C3"'), ('C', '"Ethylbenzene C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C2"')], [('C', '"Benzamidine C3"'), ('C', '"Benzamidine C4"')]]
+# WARNING DEFAULT MM3 OPBEND VALUES USED 
+
+
+Tue Jun  1 23:51:27 2021 # matching SMARTS from molecule  [['[#6]-[#6](-[#6](-[#6])(-[H])-[H])(-[H])-[H]', [4, 3, 2]]] to SMARTS from parameter file [['[#6](-[H])(-[H])(-[H])-[#6](-[H])(-[H])-[#6](-[H])(-[H])-[#6](-[H])(-[H])-[#6](-[H])(-[H])-[#6](-[H])(-[H])(-[H])', [11, 8, 5]]] with tinker type descriptions [[('C', '"Alkane -CH2-"'), ('C', '"Alkane -CH2-"'), ('C', '"Alkane -CH2-"')]]
+# Missing angle parameters, assigning default parameters
+
+Tue Jun  1 23:51:27 2021 # matching SMARTS from molecule  [['[#6]-[#6](-[#6](-[#6])(-[H])-[H])(-[H])-[H]', [4, 3, 2]]] to SMARTS from parameter file [['[#6](-[H])(-[H])(-[H])-[#6](-[H])(-[H])-[#6](-[H])(-[H])-[#6](-[H])(-[H])-[#6](-[H])(-[H])-[#6](-[H])(-[H])(-[H])', [11, 8, 5]]] with tinker type descriptions [[('C', '"Alkane -CH2-"'), ('C', '"Alkane -CH2-"'), ('C', '"Alkane -CH2-"')]]
+# Missing strbnd parameters, zeroing out parameters
+
+Tue Jun  1 23:51:27 2021 Calling: Psi4 Gradient for DMA
+Tue Jun  1 23:51:27 2021  Calling: psi4 propbenzene-dma.psi4 propbenzene-dma.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz
+Tue Jun  1 23:51:47 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/propbenzene-dma.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz
+Tue Jun  1 23:52:17 2021 All jobs have terminated 
+Tue Jun  1 23:52:17 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/propbenzene-dma.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz
+Tue Jun  1 23:52:47 2021 All jobs have terminated 
+Tue Jun  1 23:52:47 2021 NEED DMA: Executing GDMA
+Tue Jun  1 23:52:47 2021  Calling: /home/daniele/gdma/bin/gdma < propbenzene.gdmain > propbenzene.gdmaout path = /home/daniele/Downloads/poltype/Examples/test_propbenz
+Tue Jun  1 23:52:47 2021  Calling: poledit.x 1 propbenzene.gdmaout /home/daniele/Downloads/poltype/ParameterFiles/amoebabio18_header.prm < propbenzene-peditin.txt path = /home/daniele/Downloads/poltype/Examples/test_propbenz
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                       Version 8.9.1  February 2021                       ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2021               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Global Frame Cartesian Multipole Moments :
+
+ Site:       1         Name:   C         Atomic Number:       6
+
+ Coordinates:           -1.302096      -0.673334       0.636819
+
+ Charge:                 -0.00651
+ Dipole:                  0.12662        0.21808       -0.25615
+ Quadrupole:              0.41013
+                          0.04578       -0.29345
+                          0.09085       -0.35451       -0.11668
+
+ Site:       2         Name:   C         Atomic Number:       6
+
+ Coordinates:           -2.343461      -0.049481      -0.296270
+
+ Charge:                 -0.09058
+ Dipole:                 -0.05947       -0.15643        0.18567
+ Quadrupole:              0.25080
+                         -0.01663       -0.19112
+                          0.11591       -0.25945       -0.05969
+
+ Site:       3         Name:   C         Atomic Number:       6
+
+ Coordinates:            0.095342      -0.229680       0.299640
+
+ Charge:                 -0.08983
+ Dipole:                 -0.10897       -0.01911        0.01233
+ Quadrupole:              0.08877
+                          0.11774        0.01533
+                         -0.16379        0.12845       -0.10411
+
+ Site:       4         Name:   C         Atomic Number:       6
+
+ Coordinates:           -3.764895      -0.491421       0.034838
+
+ Charge:                 -0.11508
+ Dipole:                  0.19394        0.06400       -0.05125
+ Quadrupole:              0.28873
+                          0.15799       -0.12656
+                         -0.13036       -0.00852       -0.16217
+
+ Site:       5         Name:   C         Atomic Number:       6
+
+ Coordinates:            0.613965       0.957473       0.828934
+
+ Charge:                  0.00664
+ Dipole:                  0.01243       -0.07468       -0.02117
+ Quadrupole:              0.00050
+                          0.05471        0.10984
+                         -0.17264        0.18968       -0.11034
+
+ Site:       6         Name:   C         Atomic Number:       6
+
+ Coordinates:            0.880358      -0.955922      -0.602779
+
+ Charge:                  0.04141
+ Dipole:                  0.03841        0.12083        0.09757
+ Quadrupole:             -0.10407
+                          0.22659        0.20223
+                         -0.04249        0.28615       -0.09816
+
+ Site:       7         Name:   C         Atomic Number:       6
+
+ Coordinates:            1.886381       1.403820       0.474724
+
+ Charge:                 -0.00715
+ Dipole:                  0.00752        0.02486        0.01330
+ Quadrupole:              0.05464
+                          0.01279       -0.02836
+                         -0.11961        0.08479       -0.02628
+
+ Site:       8         Name:   C         Atomic Number:       6
+
+ Coordinates:            2.153723      -0.514778      -0.960956
+
+ Charge:                 -0.00731
+ Dipole:                  0.01175       -0.01851       -0.01915
+ Quadrupole:              0.03163
+                          0.10186        0.05578
+                         -0.04308        0.07695       -0.08740
+
+ Site:       9         Name:   C         Atomic Number:       6
+
+ Coordinates:            2.659744       0.668802      -0.423961
+
+ Charge:                 -0.02376
+ Dipole:                  0.02581        0.00532       -0.00166
+ Quadrupole:             -0.00138
+                          0.04712        0.06884
+                         -0.10123        0.18881       -0.06746
+
+ Site:      10         Name:   H         Atomic Number:       1
+
+ Coordinates:           -1.368834      -1.766641       0.573400
+
+ Charge:                  0.04948
+ Dipole:                 -0.00297       -0.10915       -0.01063
+ Quadrupole:             -0.00490
+                          0.00230        0.02333
+                          0.00379       -0.00584       -0.01843
+
+ Site:      11         Name:   H         Atomic Number:       1
+
+ Coordinates:           -1.537828      -0.403340       1.674171
+
+ Charge:                  0.05009
+ Dipole:                 -0.02007        0.03168        0.10343
+ Quadrupole:             -0.00261
+                         -0.00197       -0.01968
+                         -0.00392        0.00268        0.02228
+
+ Site:      12         Name:   H         Atomic Number:       1
+
+ Coordinates:           -2.263161       1.042354      -0.235229
+
+ Charge:                  0.04735
+ Dipole:                  0.00779        0.10551        0.01285
+ Quadrupole:              0.00180
+                          0.00060        0.01845
+                          0.00332       -0.00780       -0.02025
+
+ Site:      13         Name:   H         Atomic Number:       1
+
+ Coordinates:           -2.096657      -0.320488      -1.330279
+
+ Charge:                  0.04725
+ Dipole:                  0.02417       -0.03336       -0.09819
+ Quadrupole:              0.00213
+                          0.00016       -0.02221
+                         -0.00255        0.00037        0.02007
+
+ Site:      14         Name:   H         Atomic Number:       1
+
+ Coordinates:           -4.034229      -0.201319       1.055808
+
+ Charge:                  0.03560
+ Dipole:                 -0.02715        0.03622        0.11349
+ Quadrupole:             -0.00256
+                          0.00660       -0.00906
+                         -0.01770        0.00563        0.01162
+
+ Site:      15         Name:   H         Atomic Number:       1
+
+ Coordinates:           -4.491995      -0.038128      -0.646406
+
+ Charge:                  0.04538
+ Dipole:                 -0.07648        0.05375       -0.07929
+ Quadrupole:              0.01819
+                         -0.00376       -0.01245
+                          0.01066       -0.01010       -0.00574
+
+ Site:      16         Name:   H         Atomic Number:       1
+
+ Coordinates:           -3.863678      -1.578655      -0.042767
+
+ Charge:                  0.03583
+ Dipole:                 -0.00794       -0.12140       -0.01185
+ Quadrupole:             -0.00455
+                          0.01270        0.01736
+                         -0.00931        0.00101       -0.01281
+
+ Site:      17         Name:   H         Atomic Number:       1
+
+ Coordinates:            0.016632       1.532181       1.535391
+
+ Charge:                 -0.01000
+ Dipole:                 -0.10667        0.11055        0.13367
+ Quadrupole:              0.00694
+                          0.02043        0.00391
+                          0.01507       -0.01621       -0.01085
+
+ Site:      18         Name:   H         Atomic Number:       1
+
+ Coordinates:            0.491648      -1.883135      -1.021041
+
+ Charge:                 -0.00990
+ Dipole:                 -0.06757       -0.17478       -0.07967
+ Quadrupole:              0.01626
+                         -0.01286       -0.02452
+                         -0.01336       -0.01413        0.00825
+
+ Site:      19         Name:   H         Atomic Number:       1
+
+ Coordinates:            2.275805       2.324659       0.901944
+
+ Charge:                  0.00071
+ Dipole:                  0.07058        0.16883        0.07837
+ Quadrupole:              0.01464
+                         -0.01327       -0.02083
+                         -0.01216       -0.01268        0.00619
+
+ Site:      20         Name:   H         Atomic Number:       1
+
+ Coordinates:            2.752241      -1.095903      -1.658321
+
+ Charge:                  0.00081
+ Dipole:                  0.10891       -0.10668       -0.12796
+ Quadrupole:              0.00514
+                          0.01924        0.00346
+                          0.01483       -0.01344       -0.00860
+
+ Site:      21         Name:   H         Atomic Number:       1
+
+ Coordinates:            3.653227       1.013416      -0.699374
+
+ Charge:                 -0.00044
+ Dipole:                  0.18319        0.06341       -0.05064
+ Quadrupole:             -0.02585
+                         -0.01324        0.01438
+                          0.00840        0.01072        0.01147
+
+ Local Frame Definition for Multipole Sites :
+
+     Atom     Name      Axis Type     Z Axis  X Axis  Y Axis
+
+       1      C         Z-then-X         3       2       0
+       2      C         Z-then-X         1       4       0
+       3      C         Bisector         5       6       0
+       4      C         Z-then-X         2       1       0
+       5      C         Z-then-X         3       7       0
+       6      C         Z-then-X         3       8       0
+       7      C         Z-then-X         5       9       0
+       8      C         Z-then-X         6       9       0
+       9      C         Bisector         7       8       0
+      10      H         Z-then-X         1       3       0
+      11      H         Z-then-X         1       3       0
+      12      H         Z-then-X         2       1       0
+      13      H         Z-then-X         2       1       0
+      14      H         Z-then-X         4       2       0
+      15      H         Z-then-X         4       2       0
+      16      H         Z-then-X         4       2       0
+      17      H         Z-then-X         5       3       0
+      18      H         Z-then-X         6       3       0
+      19      H         Z-then-X         7       5       0
+      20      H         Z-then-X         8       6       0
+      21      H         Z-then-X         9       7       0
+
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Choose Either the AMOEBA or HIPPO Polarization Model [A] :  
+ Polarizability Parameters for Multipole Sites :
+
+     Atom     Name       Polarize          Thole
+
+       1      C            1.3340         0.3900
+       2      C            1.3340         0.3900
+       3      C            1.7500         0.3900
+       4      C            1.3340         0.3900
+       5      C            1.7500         0.3900
+       6      C            1.7500         0.3900
+       7      C            1.7500         0.3900
+       8      C            1.7500         0.3900
+       9      C            1.7500         0.3900
+      10      H            0.4960         0.3900
+      11      H            0.4960         0.3900
+      12      H            0.4960         0.3900
+      13      H            0.4960         0.3900
+      14      H            0.4960         0.3900
+      15      H            0.4960         0.3900
+      16      H            0.4960         0.3900
+      17      H            0.6960         0.3900
+      18      H            0.6960         0.3900
+      19      H            0.6960         0.3900
+      20      H            0.6960         0.3900
+      21      H            0.6960         0.3900
+
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Atomic Polarizabilities for Multipole Sites :
+
+     Atom     Name       Polarize          Thole
+
+       1      C            1.3340         0.3900
+       2      C            1.3340         0.3900
+       3      C            1.7500         0.3900
+       4      C            1.3340         0.3900
+       5      C            1.7500         0.3900
+       6      C            1.7500         0.3900
+       7      C            1.7500         0.3900
+       8      C            1.7500         0.3900
+       9      C            1.7500         0.3900
+      10      H            0.4960         0.3900
+      11      H            0.4960         0.3900
+      12      H            0.4960         0.3900
+      13      H            0.4960         0.3900
+      14      H            0.4960         0.3900
+      15      H            0.4960         0.3900
+      16      H            0.4960         0.3900
+      17      H            0.6960         0.3900
+      18      H            0.6960         0.3900
+      19      H            0.6960         0.3900
+      20      H            0.6960         0.3900
+      21      H            0.6960         0.3900
+
+ Choose Method for Division into Polarization Groups :
+
+    (1) Put All Atoms in One Polarization Group
+    (2) Separate into Groups at Rotatable Bonds
+    (3) Manual Entry of Bonds Separating Groups
+
+ Enter the Number of the Desired Choice [1] :  
+ Polarization Groups for Multipole Sites :
+
+     Atom     Name       Polarization Group Definition
+
+       1      C              10    11
+       2      C              12    13
+       3      C               5     6
+       4      C              14    15    16
+       5      C               3     7    17
+       6      C               3     8    18
+       7      C               5     9    19
+       8      C               6     9    20
+       9      C               7     8    21
+      10      H               1
+      11      H               1
+      12      H               2
+      13      H               2
+      14      H               4
+      15      H               4
+      16      H               4
+      17      H               5
+      18      H               6
+      19      H               7
+      20      H               8
+      21      H               9
+
+ Electrostatic and Polarization Scale Factors :
+
+                    1-2         1-3         1-4         1-5
+
+ M-Scale:         0.0000      0.0000      0.4000      0.8000
+ P-Inter:         0.0000      0.0000      1.0000      1.0000
+ P-Intra:         0.0000      0.0000      0.5000      1.0000
+ W-Scale:         1.0000      1.0000      1.0000      1.0000
+
+                    1-1         1-2         1-3         1-4
+
+ D-Scale:         0.0000      1.0000      1.0000      1.0000
+ U-Scale:         1.0000      1.0000      1.0000      1.0000
+
+ Use Thole Damping:           True
+ Charge Penetration:          False
+ Set D Equal to P:            False
+
+ Determination of Intergroup Induced Dipoles :
+
+    Iter        RMS Change (Debye)
+
+       1           0.0142750908
+       2           0.0054308416
+       3           0.0012172056
+       4           0.0004652156
+       5           0.0002115863
+       6           0.0000538026
+       7           0.0000193185
+       8           0.0000057269
+       9           0.0000006200
+
+ Local Frame Intergroup Induced Dipole Moments (Debye) :
+
+    Atom              X           Y           Z         Total
+
+       1           0.2033     -0.0097      0.2092      0.2918
+       2           0.3095      0.0014     -0.0259      0.3106
+       3           0.0009     -0.0906     -0.0569      0.1070
+       4          -0.0713      0.0008      0.1393      0.1565
+       5           0.0587      0.0039     -0.1286      0.1414
+       6           0.0588     -0.0033     -0.1279      0.1409
+       7           0.0079     -0.0033     -0.0229      0.0244
+       8           0.0080      0.0030     -0.0234      0.0249
+       9          -0.0001     -0.0007     -0.0291      0.0291
+      10           0.0053     -0.0299      0.0008      0.0304
+      11           0.0024      0.0307     -0.0028      0.0309
+      12          -0.0005     -0.0439     -0.0624      0.0763
+      13           0.0012      0.0439     -0.0641      0.0777
+      14          -0.0210     -0.0016     -0.0109      0.0237
+      15          -0.0097     -0.0002     -0.0056      0.0112
+      16          -0.0208      0.0017     -0.0110      0.0236
+      17          -0.0006     -0.0003     -0.0128      0.0128
+      18          -0.0019     -0.0006     -0.0125      0.0127
+      19          -0.0102     -0.0008     -0.0217      0.0240
+      20          -0.0102      0.0008     -0.0217      0.0240
+      21           0.0000     -0.0005     -0.0149      0.0149
+
+ Condense Symmetric Atoms to Equivalent Types [Y] :  
+ Remove Multipole Components Zeroed by Symmetry [Y] :  
+ Final Atomic Multipole Moments after Regularization :
+
+ Atom:       1         Name:   C         Atomic Number:       6
+
+ Local Frame:            Z-then-X             3       2       0
+
+ Charge:                 -0.00651
+ Dipole:                  0.18818        0.00000        0.15704
+ Quadrupole:              0.22233
+                          0.00000       -0.57893
+                         -0.11857        0.00000        0.35660
+
+ Atom:       2         Name:   C         Atomic Number:       6
+
+ Local Frame:            Z-then-X             1       4       0
+
+ Charge:                 -0.09058
+ Dipole:                  0.08768        0.00000        0.14664
+ Quadrupole:              0.10211
+                          0.00000       -0.39838
+                         -0.06369        0.00000        0.29627
+
+ Atom:       3         Name:   C         Atomic Number:       6
+
+ Local Frame:            Bisector             5       6       0
+
+ Charge:                 -0.08983
+ Dipole:                  0.00000        0.00000       -0.08617
+ Quadrupole:              0.09646
+                          0.00000       -0.28967
+                          0.00000        0.00000        0.19321
+
+ Atom:       4         Name:   C         Atomic Number:       6
+
+ Local Frame:            Z-then-X             2       1       0
+
+ Charge:                 -0.11507
+ Dipole:                  0.02142        0.00000        0.15565
+ Quadrupole:             -0.21904
+                          0.00000       -0.15275
+                         -0.00984        0.00000        0.37179
+
+ Atom:       5         Name:   C         Atomic Number:       6
+
+ Local Frame:            Z-then-X             3       7       0
+
+ Charge:                  0.00664
+ Dipole:                  0.00849        0.00000        0.11733
+ Quadrupole:              0.13842
+                          0.00000       -0.30947
+                          0.06954        0.00000        0.17105
+
+ Atom:       6         Name:   C         Atomic Number:       6
+
+ Local Frame:            Z-then-X             3       8       0
+
+ Charge:                  0.04141
+ Dipole:                  0.09541        0.00000        0.15442
+ Quadrupole:              0.29015
+                          0.00000       -0.36140
+                          0.22805        0.00000        0.07125
+
+ Atom:       7         Name:   C         Atomic Number:       6
+
+ Local Frame:            Z-then-X             5       9       0
+
+ Charge:                 -0.00715
+ Dipole:                 -0.02994        0.00000       -0.00243
+ Quadrupole:              0.06763
+                          0.00000       -0.15769
+                         -0.06952        0.00000        0.09006
+
+ Atom:       8         Name:   C         Atomic Number:       6
+
+ Local Frame:            Z-then-X             6       9       0
+
+ Charge:                 -0.00731
+ Dipole:                 -0.03056        0.00000       -0.00060
+ Quadrupole:              0.06572
+                          0.00000       -0.15847
+                         -0.06902        0.00000        0.09275
+
+ Atom:       9         Name:   C         Atomic Number:       6
+
+ Local Frame:            Bisector             7       8       0
+
+ Charge:                 -0.02376
+ Dipole:                  0.00000        0.00000       -0.01423
+ Quadrupole:              0.20362
+                          0.00000       -0.24896
+                          0.00000        0.00000        0.04534
+
+ Atom:      10         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             1       3       0
+
+ Charge:                  0.04948
+ Dipole:                  0.00260        0.00000       -0.10986
+ Quadrupole:             -0.00797
+                          0.00000       -0.01475
+                          0.00284        0.00000        0.02272
+
+ Atom:      11         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             1       3       0
+
+ Charge:                  0.05009
+ Dipole:                  0.00409        0.00000       -0.10876
+ Quadrupole:             -0.00705
+                          0.00000       -0.01459
+                          0.00176        0.00000        0.02164
+
+ Atom:      12         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             2       1       0
+
+ Charge:                  0.04735
+ Dipole:                  0.00482        0.00000       -0.08180
+ Quadrupole:             -0.00361
+                          0.00000       -0.01388
+                          0.00671        0.00000        0.01749
+
+ Atom:      13         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             2       1       0
+
+ Charge:                  0.04725
+ Dipole:                  0.00403        0.00000       -0.08100
+ Quadrupole:             -0.00398
+                          0.00000       -0.01385
+                          0.00675        0.00000        0.01783
+
+ Atom:      14         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             4       2       0
+
+ Charge:                  0.03560
+ Dipole:                  0.01242        0.00000       -0.11780
+ Quadrupole:             -0.00189
+                          0.00000       -0.01747
+                          0.01023        0.00000        0.01936
+
+ Atom:      15         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             4       2       0
+
+ Charge:                  0.04538
+ Dipole:                  0.01032        0.00000       -0.12019
+ Quadrupole:              0.00029
+                          0.00000       -0.02005
+                          0.00965        0.00000        0.01976
+
+ Atom:      16         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             4       2       0
+
+ Charge:                  0.03583
+ Dipole:                  0.01197        0.00000       -0.11781
+ Quadrupole:             -0.00200
+                          0.00000       -0.01733
+                          0.01004        0.00000        0.01933
+
+ Atom:      17         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             5       3       0
+
+ Charge:                 -0.01000
+ Dipole:                 -0.00563        0.00000       -0.19852
+ Quadrupole:              0.02574
+                          0.00000        0.00929
+                         -0.00268        0.00000       -0.03503
+
+ Atom:      18         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             6       3       0
+
+ Charge:                 -0.00990
+ Dipole:                 -0.00449        0.00000       -0.19863
+ Quadrupole:              0.02612
+                          0.00000        0.00909
+                         -0.00210        0.00000       -0.03521
+
+ Atom:      19         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             7       5       0
+
+ Charge:                  0.00071
+ Dipole:                  0.00472        0.00000       -0.19051
+ Quadrupole:              0.02365
+                          0.00000        0.00837
+                          0.00066        0.00000       -0.03202
+
+ Atom:      20         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             8       6       0
+
+ Charge:                  0.00081
+ Dipole:                  0.00470        0.00000       -0.19048
+ Quadrupole:              0.02364
+                          0.00000        0.00836
+                          0.00067        0.00000       -0.03200
+
+ Atom:      21         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             9       7       0
+
+ Charge:                 -0.00044
+ Dipole:                 -0.00003        0.00000       -0.19450
+ Quadrupole:              0.02423
+                          0.00000        0.00846
+                         -0.00002        0.00000       -0.03269
+Tue Jun  1 23:52:47 2021  Calling: potential.x 1 propbenzene.xyz -k propbenzene.key path = /home/daniele/Downloads/poltype/Examples/test_propbenz
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                       Version 8.9.1  February 2021                       ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2021               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+        1     1     C     propbenzene                  6     12.011     4
+        2     2     C     propbenzene                  6     12.011     4
+        3     3     C     propbenzene                  6     12.011     3
+        4     4     C     propbenzene                  6     12.011     4
+        5     5     C     propbenzene                  6     12.011     3
+        6     6     C     propbenzene                  6     12.011     3
+        7     7     C     propbenzene                  6     12.011     3
+        8     8     C     propbenzene                  6     12.011     3
+        9     9     C     propbenzene                  6     12.011     3
+       10    10     H     propbenzene                  1      1.008     1
+       11    11     H     propbenzene                  1      1.008     1
+       12    12     H     propbenzene                  1      1.008     1
+       13    13     H     propbenzene                  1      1.008     1
+       14    14     H     propbenzene                  1      1.008     1
+       15    15     H     propbenzene                  1      1.008     1
+       16    16     H     propbenzene                  1      1.008     1
+       17    17     H     propbenzene                  1      1.008     1
+       18    18     H     propbenzene                  1      1.008     1
+       19    19     H     propbenzene                  1      1.008     1
+       20    20     H     propbenzene                  1      1.008     1
+       21    21     H     propbenzene                  1      1.008     1
+
+ Electrostatic Potential Grid Points :                 11520
+
+ Gaussian CUBEGEN Input Written To :   propbenzene.grid
+
+ Next, run the Gaussian CUBEGEN program; for example:
+ cubegen 0 potential=MP2 xxx.fchk xxx.cube -5 h < xxx.grid
+
+ See the Gaussian documentation for additional details;
+ After CUBEGEN, rerun Tinker POTENTIAL using Option 2
+Tue Jun  1 23:52:47 2021 Calling: Psi4 Gradient for ESP
+Tue Jun  1 23:52:47 2021  Calling: psi4 propbenzene-esp.psi4 propbenzene-esp.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz
+Wed Jun  2 00:12:29 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/propbenzene-esp.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz
+Wed Jun  2 00:12:59 2021 All jobs have terminated 
+Wed Jun  2 00:12:59 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/propbenzene-esp.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz
+Wed Jun  2 00:13:29 2021 All jobs have terminated 
+Wed Jun  2 00:13:29 2021 Calling: Generating CUBE File from PSI4
+Wed Jun  2 00:13:29 2021  Calling: potential.x 2 propbenzene_fortinker.cube path = /home/daniele/Downloads/poltype/Examples/test_propbenz
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                       Version 8.9.1  February 2021                       ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2021               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Electrostatic Potential Written To :  propbenzene_fortinker.pot
+Wed Jun  2 00:13:29 2021  Calling: /home/daniele/Downloads/poltype/PoltypeModules/avgmpoles.pl propbenzene.key propbenzene.xyz propbenzene-groups.txt propbenzene.key_2 propbenzene.xyz_2 401 path = /home/daniele/Downloads/poltype/Examples/test_propbenz
+About to zero the x dipole and xz quadrupoleAbout to zero the x dipole and xz quadrupoleWed Jun  2 00:13:29 2021  Calling: potential.x 6 propbenzene.xyz_2 -k propbenzene.key_2 propbenzene_fortinker.pot N 0.1 path = /home/daniele/Downloads/poltype/Examples/test_propbenz
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                       Version 8.9.1  February 2021                       ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2021               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+      402   402     C     propbenzene                  6     12.011     4
+      401   401     C     propbenzene                  6     12.011     4
+      404   404     C     propbenzene                  6     12.011     3
+      403   403     C     propbenzene                  6     12.011     4
+      405   405     C     propbenzene                  6     12.011     3
+      406   406     C     propbenzene                  6     12.011     3
+      407   407     C     propbenzene                  6     12.011     3
+      408   408     H     propbenzene                  1      1.008     1
+      410   410     H     propbenzene                  1      1.008     1
+      409   409     H     propbenzene                  1      1.008     1
+      411   411     H     propbenzene                  1      1.008     1
+      412   412     H     propbenzene                  1      1.008     1
+      413   413     H     propbenzene                  1      1.008     1
+
+ Electrostatic Potential Grid Points :                 11520
+
+ Electrostatic Parameter Restraint Value :            1.0000
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+      402   402     C     propbenzene                  6     12.011     4
+      401   401     C     propbenzene                  6     12.011     4
+      404   404     C     propbenzene                  6     12.011     3
+      403   403     C     propbenzene                  6     12.011     4
+      405   405     C     propbenzene                  6     12.011     3
+      406   406     C     propbenzene                  6     12.011     3
+      407   407     C     propbenzene                  6     12.011     3
+      408   408     H     propbenzene                  1      1.008     1
+      410   410     H     propbenzene                  1      1.008     1
+      409   409     H     propbenzene                  1      1.008     1
+      411   411     H     propbenzene                  1      1.008     1
+      412   412     H     propbenzene                  1      1.008     1
+      413   413     H     propbenzene                  1      1.008     1
+
+ Additional Atomic Multipole Parameters :
+
+     Atom Type     Coordinate Frame Definition         Multipole Moments
+
+         402      404    401      0   Z-then-X    -0.00651
+                                                   0.18818  0.00000  0.15704
+                                                   0.22233
+                                                   0.00000 -0.57893
+                                                  -0.11857  0.00000  0.35660
+
+         401      402    403      0   Z-then-X    -0.09058
+                                                   0.08768  0.00000  0.14664
+                                                   0.10211
+                                                   0.00000 -0.39838
+                                                  -0.06369  0.00000  0.29627
+
+         404      405    405      0   Bisector    -0.08983
+                                                   0.00000  0.00000 -0.08617
+                                                   0.09646
+                                                   0.00000 -0.28967
+                                                   0.00000  0.00000  0.19321
+
+         403      401    402      0   Z-then-X    -0.11507
+                                                   0.02142  0.00000  0.15565
+                                                  -0.21904
+                                                   0.00000 -0.15275
+                                                  -0.00984  0.00000  0.37179
+
+         405      404    406      0   Z-then-X     0.02403
+                                                   0.05195  0.00000  0.13587
+                                                   0.21429
+                                                   0.00000 -0.33543
+                                                   0.14880  0.00000  0.12115
+
+         406      405    407      0   Z-then-X    -0.00723
+                                                  -0.03025  0.00000 -0.00152
+                                                   0.06667
+                                                   0.00000 -0.15808
+                                                  -0.06927  0.00000  0.09141
+
+         407      406    406      0   Bisector    -0.02376
+                                                   0.00000  0.00000 -0.01423
+                                                   0.20362
+                                                   0.00000 -0.24896
+                                                   0.00000  0.00000  0.04534
+
+         408      402    404      0   Z-then-X     0.04979
+                                                   0.00334  0.00000 -0.10931
+                                                  -0.00751
+                                                   0.00000 -0.01467
+                                                   0.00230  0.00000  0.02218
+
+         410      401    402      0   Z-then-X     0.04730
+                                                   0.00443  0.00000 -0.08140
+                                                  -0.00380
+                                                   0.00000 -0.01387
+                                                   0.00673  0.00000  0.01766
+
+         409      403    401      0   Z-then-X     0.03894
+                                                   0.01157  0.00000 -0.11860
+                                                  -0.00120
+                                                   0.00000 -0.01828
+                                                   0.00997  0.00000  0.01948
+
+         411      405    404      0   Z-then-X    -0.00995
+                                                  -0.00506  0.00000 -0.19858
+                                                   0.02593
+                                                   0.00000  0.00919
+                                                  -0.00239  0.00000 -0.03512
+
+         412      406    405      0   Z-then-X     0.00076
+                                                   0.00471  0.00000 -0.19049
+                                                   0.02364
+                                                   0.00000  0.00836
+                                                   0.00067  0.00000 -0.03201
+
+         413      407    406      0   Z-then-X    -0.00044
+                                                  -0.00003  0.00000 -0.19450
+                                                   0.02423
+                                                   0.00000  0.00846
+                                                  -0.00002  0.00000 -0.03269
+
+ Additional Atomic Dipole Polarizability Parameters :
+
+     Atom Type           Alpha       Thole     Group Atom Types
+
+         402             1.334       0.390         408
+         401             1.334       0.390         410
+         404             1.750       0.390         405
+         403             1.334       0.390         409
+         405             1.750       0.390         404  406  411
+         406             1.750       0.390         405  407  412
+         407             1.750       0.390         406  413
+         408             0.496       0.390         402
+         410             0.496       0.390         401
+         409             0.496       0.390         403
+         411             0.696       0.390         405
+         412             0.696       0.390         406
+         413             0.696       0.390         407
+
+ Average Electrostatic Potential over Atoms :
+      (Kcal/mole per unit charge)
+
+   Structure   Atom      Points      Potential        Target        RMS Diff
+
+        1        1         108        -1.8218        -1.6823         0.3100
+        1        2          87        -2.4356        -1.8801         0.7545
+        1        3         111        -7.0923        -6.4794         0.6681
+        1        4         454        -0.8543         0.2001         1.1689
+        1        5         352        -4.8804        -4.4610         0.5238
+        1        6         355        -4.9557        -4.5403         0.5189
+        1        7         534        -4.9345        -4.6137         0.4409
+        1        8         541        -4.8946        -4.5821         0.4340
+        1        9         541        -5.0820        -4.7567         0.4574
+        1       10         498         1.5403         1.2297         0.4369
+        1       11         509         1.3279         1.0559         0.3954
+        1       12         550        -0.6212        -0.2726         0.5601
+        1       13         574        -0.8123        -0.4456         0.5810
+        1       14         753         1.1609         1.3787         0.4736
+        1       15         896         0.0037         0.7309         0.7775
+        1       16         743         1.1497         1.3729         0.4796
+        1       17         629         2.3596         2.0762         0.3751
+        1       18         647         2.3219         2.0130         0.4183
+        1       19         882         1.5586         1.1435         0.4832
+        1       20         876         1.5635         1.1396         0.4893
+        1       21         880         1.3919         0.9503         0.4970
+
+ Electrostatic Potential over all Grid Points :
+
+ Average Potential Value for Model :                 -0.3273
+ Average Potential Magnitude for Model :              2.2989
+ Average Potential Value for Target :                -0.2398
+ Average Potential Magnitude for Target :             2.1203
+
+ Average Signed Potential Difference :               -0.0875
+ Average Unsigned Potential Difference :              0.4347
+ Root Mean Square Potential Difference :              0.5510
+
+ Potential Fitting of Electrostatic Parameters :
+
+ Parameter      Atom Type         Category            Value         Fixed
+
+    --            402             Monopole          -0.00651          X
+     1            402             X-Dipole           0.18818
+    --            402             Y-Dipole           0.00000          X
+     2            402             Z-Dipole           0.15704
+     3            402             XX-Quad            0.22233
+    --            402             XY-Quad            0.00000          X
+     4            402             XZ-Quad           -0.11857
+     5            402             YY-Quad           -0.57893
+    --            402             YZ-Quad            0.00000          X
+    --            402             ZZ-Quad            0.35660
+    --            401             Monopole          -0.09058          X
+     6            401             X-Dipole           0.08768
+    --            401             Y-Dipole           0.00000          X
+     7            401             Z-Dipole           0.14664
+     8            401             XX-Quad            0.10211
+    --            401             XY-Quad            0.00000          X
+     9            401             XZ-Quad           -0.06369
+    10            401             YY-Quad           -0.39838
+    --            401             YZ-Quad            0.00000          X
+    --            401             ZZ-Quad            0.29627
+    --            404             Monopole          -0.08983          X
+    --            404             X-Dipole           0.00000          X
+    --            404             Y-Dipole           0.00000          X
+    11            404             Z-Dipole          -0.08617
+    12            404             XX-Quad            0.09646
+    --            404             XY-Quad            0.00000          X
+    --            404             XZ-Quad            0.00000          X
+    13            404             YY-Quad           -0.28967
+    --            404             YZ-Quad            0.00000          X
+    --            404             ZZ-Quad            0.19321
+    --            403             Monopole          -0.11507          X
+    14            403             X-Dipole           0.02142
+    --            403             Y-Dipole           0.00000          X
+    15            403             Z-Dipole           0.15565
+    16            403             XX-Quad           -0.21904
+    --            403             XY-Quad            0.00000          X
+    17            403             XZ-Quad           -0.00984
+    18            403             YY-Quad           -0.15275
+    --            403             YZ-Quad            0.00000          X
+    --            403             ZZ-Quad            0.37179
+    --            405             Monopole           0.02403          X
+    19            405             X-Dipole           0.05195
+    --            405             Y-Dipole           0.00000          X
+    20            405             Z-Dipole           0.13587
+    21            405             XX-Quad            0.21429
+    --            405             XY-Quad            0.00000          X
+    22            405             XZ-Quad            0.14880
+    23            405             YY-Quad           -0.33544
+    --            405             YZ-Quad            0.00000          X
+    --            405             ZZ-Quad            0.12115
+    --            406             Monopole          -0.00723          X
+    24            406             X-Dipole          -0.03025
+    --            406             Y-Dipole           0.00000          X
+    25            406             Z-Dipole          -0.00152
+    26            406             XX-Quad            0.06667
+    --            406             XY-Quad            0.00000          X
+    27            406             XZ-Quad           -0.06927
+    28            406             YY-Quad           -0.15808
+    --            406             YZ-Quad            0.00000          X
+    --            406             ZZ-Quad            0.09141
+    --            407             Monopole          -0.02376          X
+    --            407             X-Dipole           0.00000          X
+    --            407             Y-Dipole           0.00000          X
+    29            407             Z-Dipole          -0.01423
+    30            407             XX-Quad            0.20362
+    --            407             XY-Quad            0.00000          X
+    --            407             XZ-Quad            0.00000          X
+    31            407             YY-Quad           -0.24896
+    --            407             YZ-Quad            0.00000          X
+    --            407             ZZ-Quad            0.04534
+    --            408             Monopole           0.04979          X
+    32            408             X-Dipole           0.00334
+    --            408             Y-Dipole           0.00000          X
+    33            408             Z-Dipole          -0.10931
+    34            408             XX-Quad           -0.00751
+    --            408             XY-Quad            0.00000          X
+    35            408             XZ-Quad            0.00230
+    36            408             YY-Quad           -0.01467
+    --            408             YZ-Quad            0.00000          X
+    --            408             ZZ-Quad            0.02218
+    --            410             Monopole           0.04730          X
+    37            410             X-Dipole           0.00443
+    --            410             Y-Dipole           0.00000          X
+    38            410             Z-Dipole          -0.08140
+    39            410             XX-Quad           -0.00380
+    --            410             XY-Quad            0.00000          X
+    40            410             XZ-Quad            0.00673
+    41            410             YY-Quad           -0.01387
+    --            410             YZ-Quad            0.00000          X
+    --            410             ZZ-Quad            0.01767
+    --            409             Monopole           0.03893          X
+    42            409             X-Dipole           0.01157
+    --            409             Y-Dipole           0.00000          X
+    43            409             Z-Dipole          -0.11860
+    44            409             XX-Quad           -0.00120
+    --            409             XY-Quad            0.00000          X
+    45            409             XZ-Quad            0.00997
+    46            409             YY-Quad           -0.01828
+    --            409             YZ-Quad            0.00000          X
+    --            409             ZZ-Quad            0.01948
+    --            411             Monopole          -0.00995          X
+    47            411             X-Dipole          -0.00506
+    --            411             Y-Dipole           0.00000          X
+    48            411             Z-Dipole          -0.19858
+    49            411             XX-Quad            0.02593
+    --            411             XY-Quad            0.00000          X
+    50            411             XZ-Quad           -0.00239
+    51            411             YY-Quad            0.00919
+    --            411             YZ-Quad            0.00000          X
+    --            411             ZZ-Quad           -0.03512
+    --            412             Monopole           0.00076          X
+    52            412             X-Dipole           0.00471
+    --            412             Y-Dipole           0.00000          X
+    53            412             Z-Dipole          -0.19049
+    54            412             XX-Quad            0.02364
+    --            412             XY-Quad            0.00000          X
+    55            412             XZ-Quad            0.00067
+    56            412             YY-Quad            0.00836
+    --            412             YZ-Quad            0.00000          X
+    --            412             ZZ-Quad           -0.03200
+    --            413             Monopole          -0.00044          X
+    57            413             X-Dipole          -0.00003
+    --            413             Y-Dipole           0.00000          X
+    58            413             Z-Dipole          -0.19450
+    59            413             XX-Quad            0.02423
+    --            413             XY-Quad            0.00000          X
+    60            413             XZ-Quad           -0.00002
+    61            413             YY-Quad            0.00846
+    --            413             YZ-Quad            0.00000          X
+    --            413             ZZ-Quad           -0.03269
+
+ Levenberg-Marquardt Nonlinear Least Squares :
+
+ LS Iter     F Value      Total G     Active G    N Active   F Calls
+
+     0     1748.8987    1108.0202    1108.0202        61        62
+     1      309.8451     192.5771     192.5771        61       124
+     2       95.5181      25.7696      25.7696        61       186
+     3       51.5681       3.0357       3.0357        61       248
+     4       42.8191       1.0272       1.0272        61       310
+     5       40.3806       0.0010       0.0010        61       372
+
+ SQUARE  --  Normal Termination of Least Squares
+
+ Potential Fitting of Electrostatic Parameters :
+
+ Parameter      Atom Type         Category            Value         Fixed
+
+    --            402             Monopole          -0.00651          X
+     1            402             X-Dipole           0.23846
+    --            402             Y-Dipole           0.00000          X
+     2            402             Z-Dipole           0.11148
+     3            402             XX-Quad            0.21115
+    --            402             XY-Quad            0.00000          X
+     4            402             XZ-Quad           -0.13900
+     5            402             YY-Quad           -0.55771
+    --            402             YZ-Quad            0.00000          X
+    --            402             ZZ-Quad            0.34656
+    --            401             Monopole          -0.09058          X
+     6            401             X-Dipole           0.22306
+    --            401             Y-Dipole           0.00000          X
+     7            401             Z-Dipole           0.08879
+     8            401             XX-Quad            0.09781
+    --            401             XY-Quad            0.00000          X
+     9            401             XZ-Quad           -0.10966
+    10            401             YY-Quad           -0.34915
+    --            401             YZ-Quad            0.00000          X
+    --            401             ZZ-Quad            0.25134
+    --            404             Monopole          -0.08983          X
+    --            404             X-Dipole           0.00000          X
+    --            404             Y-Dipole           0.00000          X
+    11            404             Z-Dipole          -0.11383
+    12            404             XX-Quad            0.08194
+    --            404             XY-Quad            0.00000          X
+    --            404             XZ-Quad            0.00000          X
+    13            404             YY-Quad           -0.32012
+    --            404             YZ-Quad            0.00000          X
+    --            404             ZZ-Quad            0.23818
+    --            403             Monopole          -0.11507          X
+    14            403             X-Dipole          -0.00571
+    --            403             Y-Dipole           0.00000          X
+    15            403             Z-Dipole           0.13374
+    16            403             XX-Quad           -0.18712
+    --            403             XY-Quad            0.00000          X
+    17            403             XZ-Quad           -0.01683
+    18            403             YY-Quad           -0.16463
+    --            403             YZ-Quad            0.00000          X
+    --            403             ZZ-Quad            0.35175
+    --            405             Monopole           0.02403          X
+    19            405             X-Dipole           0.04505
+    --            405             Y-Dipole           0.00000          X
+    20            405             Z-Dipole           0.12512
+    21            405             XX-Quad            0.20714
+    --            405             XY-Quad            0.00000          X
+    22            405             XZ-Quad            0.15224
+    23            405             YY-Quad           -0.37369
+    --            405             YZ-Quad            0.00000          X
+    --            405             ZZ-Quad            0.16655
+    --            406             Monopole          -0.00723          X
+    24            406             X-Dipole          -0.00671
+    --            406             Y-Dipole           0.00000          X
+    25            406             Z-Dipole           0.01832
+    26            406             XX-Quad            0.06879
+    --            406             XY-Quad            0.00000          X
+    27            406             XZ-Quad           -0.07130
+    28            406             YY-Quad           -0.20420
+    --            406             YZ-Quad            0.00000          X
+    --            406             ZZ-Quad            0.13541
+    --            407             Monopole          -0.02376          X
+    --            407             X-Dipole           0.00000          X
+    --            407             Y-Dipole           0.00000          X
+    29            407             Z-Dipole          -0.00255
+    30            407             XX-Quad            0.20236
+    --            407             XY-Quad            0.00000          X
+    --            407             XZ-Quad            0.00000          X
+    31            407             YY-Quad           -0.26389
+    --            407             YZ-Quad            0.00000          X
+    --            407             ZZ-Quad            0.06153
+    --            408             Monopole           0.04979          X
+    32            408             X-Dipole           0.01753
+    --            408             Y-Dipole           0.00000          X
+    33            408             Z-Dipole          -0.06650
+    34            408             XX-Quad            0.02488
+    --            408             XY-Quad            0.00000          X
+    35            408             XZ-Quad           -0.00290
+    36            408             YY-Quad           -0.01525
+    --            408             YZ-Quad            0.00000          X
+    --            408             ZZ-Quad           -0.00963
+    --            410             Monopole           0.04730          X
+    37            410             X-Dipole           0.03427
+    --            410             Y-Dipole           0.00000          X
+    38            410             Z-Dipole          -0.04439
+    39            410             XX-Quad            0.00863
+    --            410             XY-Quad            0.00000          X
+    40            410             XZ-Quad            0.01278
+    41            410             YY-Quad            0.01959
+    --            410             YZ-Quad            0.00000          X
+    --            410             ZZ-Quad           -0.02822
+    --            409             Monopole           0.03893          X
+    42            409             X-Dipole           0.03224
+    --            409             Y-Dipole           0.00000          X
+    43            409             Z-Dipole          -0.04884
+    44            409             XX-Quad            0.02092
+    --            409             XY-Quad            0.00000          X
+    45            409             XZ-Quad            0.01474
+    46            409             YY-Quad           -0.02797
+    --            409             YZ-Quad            0.00000          X
+    --            409             ZZ-Quad            0.00705
+    --            411             Monopole          -0.00995          X
+    47            411             X-Dipole          -0.01186
+    --            411             Y-Dipole           0.00000          X
+    48            411             Z-Dipole          -0.15490
+    49            411             XX-Quad            0.09552
+    --            411             XY-Quad            0.00000          X
+    50            411             XZ-Quad           -0.03385
+    51            411             YY-Quad           -0.00981
+    --            411             YZ-Quad            0.00000          X
+    --            411             ZZ-Quad           -0.08571
+    --            412             Monopole           0.00076          X
+    52            412             X-Dipole           0.00105
+    --            412             Y-Dipole           0.00000          X
+    53            412             Z-Dipole          -0.15569
+    54            412             XX-Quad            0.09382
+    --            412             XY-Quad            0.00000          X
+    55            412             XZ-Quad           -0.00092
+    56            412             YY-Quad           -0.01521
+    --            412             YZ-Quad            0.00000          X
+    --            412             ZZ-Quad           -0.07861
+    --            413             Monopole          -0.00044          X
+    57            413             X-Dipole           0.00061
+    --            413             Y-Dipole           0.00000          X
+    58            413             Z-Dipole          -0.15585
+    59            413             XX-Quad            0.07974
+    --            413             XY-Quad            0.00000          X
+    60            413             XZ-Quad            0.00271
+    61            413             YY-Quad           -0.00689
+    --            413             YZ-Quad            0.00000          X
+    --            413             ZZ-Quad           -0.07285
+
+ Average Electrostatic Potential over Atoms :
+      (Kcal/mole per unit charge)
+
+   Structure   Atom      Points      Potential        Target        RMS Diff
+
+        1        1         108        -1.7482        -1.6823         0.1110
+        1        2          87        -1.9207        -1.8801         0.0952
+        1        3         111        -6.4817        -6.4794         0.1201
+        1        4         454         0.1436         0.2001         0.0844
+        1        5         352        -4.5026        -4.4610         0.1129
+        1        6         355        -4.5712        -4.5403         0.1051
+        1        7         534        -4.6405        -4.6137         0.0906
+        1        8         541        -4.6134        -4.5821         0.0937
+        1        9         541        -4.7962        -4.7567         0.1023
+        1       10         498         1.2029         1.2297         0.0596
+        1       11         509         1.0131         1.0559         0.0720
+        1       12         550        -0.3063        -0.2726         0.0738
+        1       13         574        -0.4645        -0.4456         0.0677
+        1       14         753         1.3450         1.3787         0.0547
+        1       15         896         0.6835         0.7309         0.0724
+        1       16         743         1.3337         1.3729         0.0610
+        1       17         629         2.0374         2.0762         0.0603
+        1       18         647         1.9884         2.0130         0.0523
+        1       19         882         1.1033         1.1435         0.0610
+        1       20         876         1.0936         1.1396         0.0666
+        1       21         880         0.9066         0.9503         0.0637
+
+ Electrostatic Potential over all Grid Points :
+
+ Average Potential Value for Model :                 -0.2772
+ Average Potential Magnitude for Model :              2.1044
+ Average Potential Value for Target :                -0.2398
+ Average Potential Magnitude for Target :             2.1203
+
+ Average Signed Potential Difference :               -0.0374
+ Average Unsigned Potential Difference :              0.0488
+ Root Mean Square Potential Difference :              0.0749
+Wed Jun  2 00:13:32 2021 
+Wed Jun  2 00:13:32 2021 =========================================================
+Wed Jun  2 00:13:32 2021 Electrostatic Potential Comparison
+
+Wed Jun  2 00:13:32 2021  Calling: potential.x 5 propbenzene.xyz_2 -k propbenzene.key_3 propbenzene_fortinker.pot N > RMSPD.txt path = /home/daniele/Downloads/poltype/Examples/test_propbenz
+Wed Jun  2 00:13:33 2021  Calling: minimize.x propbenzene-opt-2-1-180_preQMOPTprefit.xyz -k tmp-2-1-180_preQMOPTprefit.key 0.1 >propbenzene-opt-2-1-180_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:33 2021  Calling: analyze.x -k tmp-2-1-180_preQMOPTprefit.key propbenzene-opt-2-1-180_preQMOPTprefit.xyz_2 ed > propbenzene-opt-2-1-180_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:33 2021  Calling: minimize.x propbenzene-opt-2-1-210_preQMOPTprefit.xyz -k tmp-2-1-210_preQMOPTprefit.key 0.1 >propbenzene-opt-2-1-210_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:34 2021  Calling: analyze.x -k tmp-2-1-210_preQMOPTprefit.key propbenzene-opt-2-1-210_preQMOPTprefit.xyz_2 ed > propbenzene-opt-2-1-210_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:34 2021  Calling: minimize.x propbenzene-opt-2-1-240_preQMOPTprefit.xyz -k tmp-2-1-240_preQMOPTprefit.key 0.1 >propbenzene-opt-2-1-240_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:34 2021  Calling: analyze.x -k tmp-2-1-240_preQMOPTprefit.key propbenzene-opt-2-1-240_preQMOPTprefit.xyz_2 ed > propbenzene-opt-2-1-240_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:35 2021  Calling: minimize.x propbenzene-opt-2-1-270_preQMOPTprefit.xyz -k tmp-2-1-270_preQMOPTprefit.key 0.1 >propbenzene-opt-2-1-270_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:35 2021  Calling: analyze.x -k tmp-2-1-270_preQMOPTprefit.key propbenzene-opt-2-1-270_preQMOPTprefit.xyz_2 ed > propbenzene-opt-2-1-270_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:36 2021  Calling: minimize.x propbenzene-opt-2-1-300_preQMOPTprefit.xyz -k tmp-2-1-300_preQMOPTprefit.key 0.1 >propbenzene-opt-2-1-300_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:36 2021  Calling: analyze.x -k tmp-2-1-300_preQMOPTprefit.key propbenzene-opt-2-1-300_preQMOPTprefit.xyz_2 ed > propbenzene-opt-2-1-300_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:36 2021  Calling: minimize.x propbenzene-opt-2-1-330_preQMOPTprefit.xyz -k tmp-2-1-330_preQMOPTprefit.key 0.1 >propbenzene-opt-2-1-330_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:37 2021  Calling: analyze.x -k tmp-2-1-330_preQMOPTprefit.key propbenzene-opt-2-1-330_preQMOPTprefit.xyz_2 ed > propbenzene-opt-2-1-330_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:37 2021  Calling: minimize.x propbenzene-opt-2-1-360_preQMOPTprefit.xyz -k tmp-2-1-360_preQMOPTprefit.key 0.1 >propbenzene-opt-2-1-360_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:37 2021  Calling: analyze.x -k tmp-2-1-360_preQMOPTprefit.key propbenzene-opt-2-1-360_preQMOPTprefit.xyz_2 ed > propbenzene-opt-2-1-360_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:38 2021  Calling: minimize.x propbenzene-opt-2-1-150_preQMOPTprefit.xyz -k tmp-2-1-150_preQMOPTprefit.key 0.1 >propbenzene-opt-2-1-150_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:38 2021  Calling: analyze.x -k tmp-2-1-150_preQMOPTprefit.key propbenzene-opt-2-1-150_preQMOPTprefit.xyz_2 ed > propbenzene-opt-2-1-150_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:39 2021  Calling: minimize.x propbenzene-opt-2-1-120_preQMOPTprefit.xyz -k tmp-2-1-120_preQMOPTprefit.key 0.1 >propbenzene-opt-2-1-120_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:39 2021  Calling: analyze.x -k tmp-2-1-120_preQMOPTprefit.key propbenzene-opt-2-1-120_preQMOPTprefit.xyz_2 ed > propbenzene-opt-2-1-120_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:39 2021  Calling: minimize.x propbenzene-opt-2-1-090_preQMOPTprefit.xyz -k tmp-2-1-090_preQMOPTprefit.key 0.1 >propbenzene-opt-2-1-090_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:40 2021  Calling: analyze.x -k tmp-2-1-090_preQMOPTprefit.key propbenzene-opt-2-1-090_preQMOPTprefit.xyz_2 ed > propbenzene-opt-2-1-090_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:40 2021  Calling: minimize.x propbenzene-opt-2-1-060_preQMOPTprefit.xyz -k tmp-2-1-060_preQMOPTprefit.key 0.1 >propbenzene-opt-2-1-060_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:40 2021  Calling: analyze.x -k tmp-2-1-060_preQMOPTprefit.key propbenzene-opt-2-1-060_preQMOPTprefit.xyz_2 ed > propbenzene-opt-2-1-060_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:41 2021  Calling: minimize.x propbenzene-opt-2-1-030_preQMOPTprefit.xyz -k tmp-2-1-030_preQMOPTprefit.key 0.1 >propbenzene-opt-2-1-030_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:41 2021  Calling: analyze.x -k tmp-2-1-030_preQMOPTprefit.key propbenzene-opt-2-1-030_preQMOPTprefit.xyz_2 ed > propbenzene-opt-2-1-030_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:42 2021  Calling: minimize.x propbenzene-opt-1-3-086_preQMOPTprefit.xyz -k tmp-1-3-086_preQMOPTprefit.key 0.1 >propbenzene-opt-1-3-086_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:42 2021  Calling: analyze.x -k tmp-1-3-086_preQMOPTprefit.key propbenzene-opt-1-3-086_preQMOPTprefit.xyz_2 ed > propbenzene-opt-1-3-086_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:42 2021  Calling: minimize.x propbenzene-opt-1-3-116_preQMOPTprefit.xyz -k tmp-1-3-116_preQMOPTprefit.key 0.1 >propbenzene-opt-1-3-116_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:43 2021  Calling: analyze.x -k tmp-1-3-116_preQMOPTprefit.key propbenzene-opt-1-3-116_preQMOPTprefit.xyz_2 ed > propbenzene-opt-1-3-116_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:43 2021  Calling: minimize.x propbenzene-opt-1-3-146_preQMOPTprefit.xyz -k tmp-1-3-146_preQMOPTprefit.key 0.1 >propbenzene-opt-1-3-146_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:43 2021  Calling: analyze.x -k tmp-1-3-146_preQMOPTprefit.key propbenzene-opt-1-3-146_preQMOPTprefit.xyz_2 ed > propbenzene-opt-1-3-146_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:44 2021  Calling: minimize.x propbenzene-opt-1-3-176_preQMOPTprefit.xyz -k tmp-1-3-176_preQMOPTprefit.key 0.1 >propbenzene-opt-1-3-176_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:44 2021  Calling: analyze.x -k tmp-1-3-176_preQMOPTprefit.key propbenzene-opt-1-3-176_preQMOPTprefit.xyz_2 ed > propbenzene-opt-1-3-176_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:45 2021  Calling: minimize.x propbenzene-opt-1-3-206_preQMOPTprefit.xyz -k tmp-1-3-206_preQMOPTprefit.key 0.1 >propbenzene-opt-1-3-206_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:45 2021  Calling: analyze.x -k tmp-1-3-206_preQMOPTprefit.key propbenzene-opt-1-3-206_preQMOPTprefit.xyz_2 ed > propbenzene-opt-1-3-206_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:45 2021  Calling: minimize.x propbenzene-opt-1-3-236_preQMOPTprefit.xyz -k tmp-1-3-236_preQMOPTprefit.key 0.1 >propbenzene-opt-1-3-236_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:46 2021  Calling: analyze.x -k tmp-1-3-236_preQMOPTprefit.key propbenzene-opt-1-3-236_preQMOPTprefit.xyz_2 ed > propbenzene-opt-1-3-236_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:46 2021  Calling: minimize.x propbenzene-opt-1-3-266_preQMOPTprefit.xyz -k tmp-1-3-266_preQMOPTprefit.key 0.1 >propbenzene-opt-1-3-266_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:46 2021  Calling: analyze.x -k tmp-1-3-266_preQMOPTprefit.key propbenzene-opt-1-3-266_preQMOPTprefit.xyz_2 ed > propbenzene-opt-1-3-266_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:47 2021  Calling: minimize.x propbenzene-opt-1-3-056_preQMOPTprefit.xyz -k tmp-1-3-056_preQMOPTprefit.key 0.1 >propbenzene-opt-1-3-056_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:47 2021  Calling: analyze.x -k tmp-1-3-056_preQMOPTprefit.key propbenzene-opt-1-3-056_preQMOPTprefit.xyz_2 ed > propbenzene-opt-1-3-056_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:48 2021  Calling: minimize.x propbenzene-opt-1-3-026_preQMOPTprefit.xyz -k tmp-1-3-026_preQMOPTprefit.key 0.1 >propbenzene-opt-1-3-026_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:48 2021  Calling: analyze.x -k tmp-1-3-026_preQMOPTprefit.key propbenzene-opt-1-3-026_preQMOPTprefit.xyz_2 ed > propbenzene-opt-1-3-026_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:48 2021  Calling: minimize.x propbenzene-opt-1-3-356_preQMOPTprefit.xyz -k tmp-1-3-356_preQMOPTprefit.key 0.1 >propbenzene-opt-1-3-356_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:49 2021  Calling: analyze.x -k tmp-1-3-356_preQMOPTprefit.key propbenzene-opt-1-3-356_preQMOPTprefit.xyz_2 ed > propbenzene-opt-1-3-356_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:49 2021  Calling: minimize.x propbenzene-opt-1-3-326_preQMOPTprefit.xyz -k tmp-1-3-326_preQMOPTprefit.key 0.1 >propbenzene-opt-1-3-326_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:49 2021  Calling: analyze.x -k tmp-1-3-326_preQMOPTprefit.key propbenzene-opt-1-3-326_preQMOPTprefit.xyz_2 ed > propbenzene-opt-1-3-326_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:50 2021  Calling: minimize.x propbenzene-opt-1-3-296_preQMOPTprefit.xyz -k tmp-1-3-296_preQMOPTprefit.key 0.1 >propbenzene-opt-1-3-296_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:50 2021  Calling: analyze.x -k tmp-1-3-296_preQMOPTprefit.key propbenzene-opt-1-3-296_preQMOPTprefit.xyz_2 ed > propbenzene-opt-1-3-296_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:13:50 2021  Calling: psi4 propbenzene-opt-1_2-1-180.psi4 propbenzene-opt-1_2-1-180.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:14:33 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-180.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:15:03 2021 All jobs have terminated 
+Wed Jun  2 00:15:03 2021  Calling: psi4 propbenzene-opt-1_2-1-210.psi4 propbenzene-opt-1_2-1-210.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:15:45 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-210.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:16:15 2021 All jobs have terminated 
+Wed Jun  2 00:16:15 2021  Calling: psi4 propbenzene-opt-1_2-1-240.psi4 propbenzene-opt-1_2-1-240.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:16:58 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-240.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:17:28 2021 All jobs have terminated 
+Wed Jun  2 00:17:28 2021  Calling: psi4 propbenzene-opt-1_2-1-270.psi4 propbenzene-opt-1_2-1-270.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:18:12 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-270.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:18:42 2021 All jobs have terminated 
+Wed Jun  2 00:18:42 2021  Calling: psi4 propbenzene-opt-1_2-1-300.psi4 propbenzene-opt-1_2-1-300.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:19:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-300.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:19:58 2021 All jobs have terminated 
+Wed Jun  2 00:19:58 2021  Calling: psi4 propbenzene-opt-1_2-1-330.psi4 propbenzene-opt-1_2-1-330.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:20:41 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-330.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:21:11 2021 All jobs have terminated 
+Wed Jun  2 00:21:11 2021  Calling: psi4 propbenzene-opt-1_2-1-360.psi4 propbenzene-opt-1_2-1-360.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:22:06 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-360.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:22:36 2021 All jobs have terminated 
+Wed Jun  2 00:22:36 2021  Calling: psi4 propbenzene-opt-1_2-1-150.psi4 propbenzene-opt-1_2-1-150.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:23:19 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-150.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:23:49 2021 All jobs have terminated 
+Wed Jun  2 00:23:49 2021  Calling: psi4 propbenzene-opt-1_2-1-120.psi4 propbenzene-opt-1_2-1-120.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:24:31 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-120.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:25:01 2021 All jobs have terminated 
+Wed Jun  2 00:25:01 2021  Calling: psi4 propbenzene-opt-1_2-1-090.psi4 propbenzene-opt-1_2-1-090.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:25:44 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-090.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:26:14 2021 All jobs have terminated 
+Wed Jun  2 00:26:14 2021  Calling: psi4 propbenzene-opt-1_2-1-060.psi4 propbenzene-opt-1_2-1-060.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:26:58 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-060.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:27:28 2021 All jobs have terminated 
+Wed Jun  2 00:27:28 2021  Calling: psi4 propbenzene-opt-1_2-1-030.psi4 propbenzene-opt-1_2-1-030.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:28:23 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-030.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:28:53 2021 All jobs have terminated 
+Wed Jun  2 00:28:53 2021  Calling: psi4 propbenzene-opt-1_1-3-086.psi4 propbenzene-opt-1_1-3-086.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:29:35 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-086.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:30:05 2021 All jobs have terminated 
+Wed Jun  2 00:30:05 2021  Calling: psi4 propbenzene-opt-1_1-3-116.psi4 propbenzene-opt-1_1-3-116.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:30:48 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-116.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:31:19 2021 All jobs have terminated 
+Wed Jun  2 00:31:19 2021  Calling: psi4 propbenzene-opt-1_1-3-146.psi4 propbenzene-opt-1_1-3-146.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:32:01 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-146.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:32:31 2021 All jobs have terminated 
+Wed Jun  2 00:32:31 2021  Calling: psi4 propbenzene-opt-1_1-3-176.psi4 propbenzene-opt-1_1-3-176.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:33:14 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-176.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:33:44 2021 All jobs have terminated 
+Wed Jun  2 00:33:44 2021  Calling: psi4 propbenzene-opt-1_1-3-206.psi4 propbenzene-opt-1_1-3-206.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:34:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-206.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:34:57 2021 All jobs have terminated 
+Wed Jun  2 00:34:57 2021  Calling: psi4 propbenzene-opt-1_1-3-236.psi4 propbenzene-opt-1_1-3-236.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:35:40 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-236.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:36:10 2021 All jobs have terminated 
+Wed Jun  2 00:36:10 2021  Calling: psi4 propbenzene-opt-1_1-3-266.psi4 propbenzene-opt-1_1-3-266.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:36:53 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-266.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:37:23 2021 All jobs have terminated 
+Wed Jun  2 00:37:23 2021  Calling: psi4 propbenzene-opt-1_1-3-056.psi4 propbenzene-opt-1_1-3-056.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:38:05 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-056.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:38:35 2021 All jobs have terminated 
+Wed Jun  2 00:38:35 2021  Calling: psi4 propbenzene-opt-1_1-3-026.psi4 propbenzene-opt-1_1-3-026.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:39:19 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-026.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:39:49 2021 All jobs have terminated 
+Wed Jun  2 00:39:49 2021  Calling: psi4 propbenzene-opt-1_1-3-356.psi4 propbenzene-opt-1_1-3-356.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:40:32 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-356.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:41:02 2021 All jobs have terminated 
+Wed Jun  2 00:41:02 2021  Calling: psi4 propbenzene-opt-1_1-3-326.psi4 propbenzene-opt-1_1-3-326.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:41:45 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-326.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:42:15 2021 All jobs have terminated 
+Wed Jun  2 00:42:15 2021  Calling: psi4 propbenzene-opt-1_1-3-296.psi4 propbenzene-opt-1_1-3-296.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Wed Jun  2 00:42:57 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-296.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 All jobs have terminated 
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-180.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-210.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-240.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-270.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-300.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-330.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-360.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-150.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-120.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-090.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-060.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_2-1-030.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-086.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-116.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-146.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-176.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-206.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-236.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-266.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-056.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-026.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-356.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-326.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-opt-1_1-3-296.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:43:57 2021 All jobs have terminated 
+Wed Jun  2 00:43:57 2021  Calling: psi4 propbenzene-sp-2-1-180.psi4 propbenzene-sp-2-1-180.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:44:18 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-180.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:44:48 2021 All jobs have terminated 
+Wed Jun  2 00:44:48 2021  Calling: psi4 propbenzene-sp-2-1-210.psi4 propbenzene-sp-2-1-210.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:45:09 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-210.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:45:39 2021 All jobs have terminated 
+Wed Jun  2 00:45:39 2021  Calling: psi4 propbenzene-sp-2-1-240.psi4 propbenzene-sp-2-1-240.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:46:01 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-240.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:46:31 2021 All jobs have terminated 
+Wed Jun  2 00:46:31 2021  Calling: psi4 propbenzene-sp-2-1-270.psi4 propbenzene-sp-2-1-270.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:46:53 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-270.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:47:23 2021 All jobs have terminated 
+Wed Jun  2 00:47:23 2021  Calling: psi4 propbenzene-sp-2-1-300.psi4 propbenzene-sp-2-1-300.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:47:45 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-300.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:48:15 2021 All jobs have terminated 
+Wed Jun  2 00:48:15 2021  Calling: psi4 propbenzene-sp-2-1-330.psi4 propbenzene-sp-2-1-330.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:48:37 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-330.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:49:07 2021 All jobs have terminated 
+Wed Jun  2 00:49:07 2021  Calling: psi4 propbenzene-sp-2-1-360.psi4 propbenzene-sp-2-1-360.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:49:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-360.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:49:58 2021 All jobs have terminated 
+Wed Jun  2 00:49:58 2021  Calling: psi4 propbenzene-sp-2-1-150.psi4 propbenzene-sp-2-1-150.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:50:19 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-150.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:50:49 2021 All jobs have terminated 
+Wed Jun  2 00:50:49 2021  Calling: psi4 propbenzene-sp-2-1-120.psi4 propbenzene-sp-2-1-120.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:51:10 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-120.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:51:40 2021 All jobs have terminated 
+Wed Jun  2 00:51:40 2021  Calling: psi4 propbenzene-sp-2-1-090.psi4 propbenzene-sp-2-1-090.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:52:01 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-090.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:52:31 2021 All jobs have terminated 
+Wed Jun  2 00:52:31 2021  Calling: psi4 propbenzene-sp-2-1-060.psi4 propbenzene-sp-2-1-060.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:52:53 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-060.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:53:23 2021 All jobs have terminated 
+Wed Jun  2 00:53:23 2021  Calling: psi4 propbenzene-sp-2-1-030.psi4 propbenzene-sp-2-1-030.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:53:45 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-030.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:54:15 2021 All jobs have terminated 
+Wed Jun  2 00:54:15 2021  Calling: psi4 propbenzene-sp-1-3-086.psi4 propbenzene-sp-1-3-086.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:54:36 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-086.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:55:06 2021 All jobs have terminated 
+Wed Jun  2 00:55:06 2021  Calling: psi4 propbenzene-sp-1-3-116.psi4 propbenzene-sp-1-3-116.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:55:27 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-116.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:55:57 2021 All jobs have terminated 
+Wed Jun  2 00:55:57 2021  Calling: psi4 propbenzene-sp-1-3-146.psi4 propbenzene-sp-1-3-146.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:56:19 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-146.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:56:49 2021 All jobs have terminated 
+Wed Jun  2 00:56:49 2021  Calling: psi4 propbenzene-sp-1-3-176.psi4 propbenzene-sp-1-3-176.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:57:10 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-176.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:57:40 2021 All jobs have terminated 
+Wed Jun  2 00:57:40 2021  Calling: psi4 propbenzene-sp-1-3-206.psi4 propbenzene-sp-1-3-206.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:58:01 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-206.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:58:31 2021 All jobs have terminated 
+Wed Jun  2 00:58:31 2021  Calling: psi4 propbenzene-sp-1-3-236.psi4 propbenzene-sp-1-3-236.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:58:52 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-236.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:59:22 2021 All jobs have terminated 
+Wed Jun  2 00:59:22 2021  Calling: psi4 propbenzene-sp-1-3-266.psi4 propbenzene-sp-1-3-266.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 00:59:43 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-266.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:00:13 2021 All jobs have terminated 
+Wed Jun  2 01:00:13 2021  Calling: psi4 propbenzene-sp-1-3-056.psi4 propbenzene-sp-1-3-056.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:00:35 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-056.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:01:05 2021 All jobs have terminated 
+Wed Jun  2 01:01:05 2021  Calling: psi4 propbenzene-sp-1-3-026.psi4 propbenzene-sp-1-3-026.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:01:26 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-026.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:01:56 2021 All jobs have terminated 
+Wed Jun  2 01:01:56 2021  Calling: psi4 propbenzene-sp-1-3-356.psi4 propbenzene-sp-1-3-356.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:02:17 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-356.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:02:47 2021 All jobs have terminated 
+Wed Jun  2 01:02:47 2021  Calling: psi4 propbenzene-sp-1-3-326.psi4 propbenzene-sp-1-3-326.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:03:07 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-326.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:03:37 2021 All jobs have terminated 
+Wed Jun  2 01:03:37 2021  Calling: psi4 propbenzene-sp-1-3-296.psi4 propbenzene-sp-1-3-296.log path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:03:58 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-296.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 All jobs have terminated 
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-180.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-210.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-240.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-270.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-300.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-330.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-360.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-150.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-120.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-090.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-060.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-2-1-030.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-086.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-116.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-146.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-176.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-206.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-236.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-266.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-056.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-026.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-356.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-326.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion/propbenzene-sp-1-3-296.log path=/home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:58 2021 All jobs have terminated 
+Wed Jun  2 01:04:58 2021 Torsions being fit 403 401 402 404 RMSD(QM-MM1)0.050216663298500906
+Wed Jun  2 01:04:59 2021 Torsions being fit 401 402 404 405 RMSD(QM-MM1)0.0532507888485646
+Wed Jun  2 01:04:59 2021  Calling: minimize.x propbenzene-opt-2-1-180_postQMOPTpostfit.xyz -k tmp-2-1-180_postQMOPTpostfit.key 0.1 >propbenzene-opt-2-1-180_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:59 2021  Calling: analyze.x -k tmp-2-1-180_postQMOPTpostfit.key propbenzene-opt-2-1-180_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-2-1-180_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:04:59 2021  Calling: minimize.x propbenzene-opt-2-1-210_postQMOPTpostfit.xyz -k tmp-2-1-210_postQMOPTpostfit.key 0.1 >propbenzene-opt-2-1-210_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:00 2021  Calling: analyze.x -k tmp-2-1-210_postQMOPTpostfit.key propbenzene-opt-2-1-210_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-2-1-210_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:00 2021  Calling: minimize.x propbenzene-opt-2-1-240_postQMOPTpostfit.xyz -k tmp-2-1-240_postQMOPTpostfit.key 0.1 >propbenzene-opt-2-1-240_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:01 2021  Calling: analyze.x -k tmp-2-1-240_postQMOPTpostfit.key propbenzene-opt-2-1-240_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-2-1-240_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:01 2021  Calling: minimize.x propbenzene-opt-2-1-270_postQMOPTpostfit.xyz -k tmp-2-1-270_postQMOPTpostfit.key 0.1 >propbenzene-opt-2-1-270_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:01 2021  Calling: analyze.x -k tmp-2-1-270_postQMOPTpostfit.key propbenzene-opt-2-1-270_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-2-1-270_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:02 2021  Calling: minimize.x propbenzene-opt-2-1-300_postQMOPTpostfit.xyz -k tmp-2-1-300_postQMOPTpostfit.key 0.1 >propbenzene-opt-2-1-300_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:02 2021  Calling: analyze.x -k tmp-2-1-300_postQMOPTpostfit.key propbenzene-opt-2-1-300_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-2-1-300_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:02 2021  Calling: minimize.x propbenzene-opt-2-1-330_postQMOPTpostfit.xyz -k tmp-2-1-330_postQMOPTpostfit.key 0.1 >propbenzene-opt-2-1-330_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:03 2021  Calling: analyze.x -k tmp-2-1-330_postQMOPTpostfit.key propbenzene-opt-2-1-330_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-2-1-330_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:03 2021  Calling: minimize.x propbenzene-opt-2-1-360_postQMOPTpostfit.xyz -k tmp-2-1-360_postQMOPTpostfit.key 0.1 >propbenzene-opt-2-1-360_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:03 2021  Calling: analyze.x -k tmp-2-1-360_postQMOPTpostfit.key propbenzene-opt-2-1-360_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-2-1-360_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:04 2021  Calling: minimize.x propbenzene-opt-2-1-150_postQMOPTpostfit.xyz -k tmp-2-1-150_postQMOPTpostfit.key 0.1 >propbenzene-opt-2-1-150_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:04 2021  Calling: analyze.x -k tmp-2-1-150_postQMOPTpostfit.key propbenzene-opt-2-1-150_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-2-1-150_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:05 2021  Calling: minimize.x propbenzene-opt-2-1-120_postQMOPTpostfit.xyz -k tmp-2-1-120_postQMOPTpostfit.key 0.1 >propbenzene-opt-2-1-120_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:05 2021  Calling: analyze.x -k tmp-2-1-120_postQMOPTpostfit.key propbenzene-opt-2-1-120_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-2-1-120_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:05 2021  Calling: minimize.x propbenzene-opt-2-1-090_postQMOPTpostfit.xyz -k tmp-2-1-090_postQMOPTpostfit.key 0.1 >propbenzene-opt-2-1-090_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:06 2021  Calling: analyze.x -k tmp-2-1-090_postQMOPTpostfit.key propbenzene-opt-2-1-090_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-2-1-090_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:06 2021  Calling: minimize.x propbenzene-opt-2-1-060_postQMOPTpostfit.xyz -k tmp-2-1-060_postQMOPTpostfit.key 0.1 >propbenzene-opt-2-1-060_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:06 2021  Calling: analyze.x -k tmp-2-1-060_postQMOPTpostfit.key propbenzene-opt-2-1-060_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-2-1-060_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:07 2021  Calling: minimize.x propbenzene-opt-2-1-030_postQMOPTpostfit.xyz -k tmp-2-1-030_postQMOPTpostfit.key 0.1 >propbenzene-opt-2-1-030_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:07 2021  Calling: analyze.x -k tmp-2-1-030_postQMOPTpostfit.key propbenzene-opt-2-1-030_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-2-1-030_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:08 2021  Calling: minimize.x propbenzene-opt-1-3-086_postQMOPTpostfit.xyz -k tmp-1-3-086_postQMOPTpostfit.key 0.1 >propbenzene-opt-1-3-086_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:08 2021  Calling: analyze.x -k tmp-1-3-086_postQMOPTpostfit.key propbenzene-opt-1-3-086_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-1-3-086_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:08 2021  Calling: minimize.x propbenzene-opt-1-3-116_postQMOPTpostfit.xyz -k tmp-1-3-116_postQMOPTpostfit.key 0.1 >propbenzene-opt-1-3-116_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:09 2021  Calling: analyze.x -k tmp-1-3-116_postQMOPTpostfit.key propbenzene-opt-1-3-116_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-1-3-116_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:09 2021  Calling: minimize.x propbenzene-opt-1-3-146_postQMOPTpostfit.xyz -k tmp-1-3-146_postQMOPTpostfit.key 0.1 >propbenzene-opt-1-3-146_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:09 2021  Calling: analyze.x -k tmp-1-3-146_postQMOPTpostfit.key propbenzene-opt-1-3-146_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-1-3-146_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:10 2021  Calling: minimize.x propbenzene-opt-1-3-176_postQMOPTpostfit.xyz -k tmp-1-3-176_postQMOPTpostfit.key 0.1 >propbenzene-opt-1-3-176_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:10 2021  Calling: analyze.x -k tmp-1-3-176_postQMOPTpostfit.key propbenzene-opt-1-3-176_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-1-3-176_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:11 2021  Calling: minimize.x propbenzene-opt-1-3-206_postQMOPTpostfit.xyz -k tmp-1-3-206_postQMOPTpostfit.key 0.1 >propbenzene-opt-1-3-206_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:11 2021  Calling: analyze.x -k tmp-1-3-206_postQMOPTpostfit.key propbenzene-opt-1-3-206_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-1-3-206_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:11 2021  Calling: minimize.x propbenzene-opt-1-3-236_postQMOPTpostfit.xyz -k tmp-1-3-236_postQMOPTpostfit.key 0.1 >propbenzene-opt-1-3-236_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:12 2021  Calling: analyze.x -k tmp-1-3-236_postQMOPTpostfit.key propbenzene-opt-1-3-236_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-1-3-236_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:12 2021  Calling: minimize.x propbenzene-opt-1-3-266_postQMOPTpostfit.xyz -k tmp-1-3-266_postQMOPTpostfit.key 0.1 >propbenzene-opt-1-3-266_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:13 2021  Calling: analyze.x -k tmp-1-3-266_postQMOPTpostfit.key propbenzene-opt-1-3-266_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-1-3-266_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:13 2021  Calling: minimize.x propbenzene-opt-1-3-056_postQMOPTpostfit.xyz -k tmp-1-3-056_postQMOPTpostfit.key 0.1 >propbenzene-opt-1-3-056_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:13 2021  Calling: analyze.x -k tmp-1-3-056_postQMOPTpostfit.key propbenzene-opt-1-3-056_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-1-3-056_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:14 2021  Calling: minimize.x propbenzene-opt-1-3-026_postQMOPTpostfit.xyz -k tmp-1-3-026_postQMOPTpostfit.key 0.1 >propbenzene-opt-1-3-026_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:14 2021  Calling: analyze.x -k tmp-1-3-026_postQMOPTpostfit.key propbenzene-opt-1-3-026_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-1-3-026_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:14 2021  Calling: minimize.x propbenzene-opt-1-3-356_postQMOPTpostfit.xyz -k tmp-1-3-356_postQMOPTpostfit.key 0.1 >propbenzene-opt-1-3-356_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:15 2021  Calling: analyze.x -k tmp-1-3-356_postQMOPTpostfit.key propbenzene-opt-1-3-356_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-1-3-356_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:15 2021  Calling: minimize.x propbenzene-opt-1-3-326_postQMOPTpostfit.xyz -k tmp-1-3-326_postQMOPTpostfit.key 0.1 >propbenzene-opt-1-3-326_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:16 2021  Calling: analyze.x -k tmp-1-3-326_postQMOPTpostfit.key propbenzene-opt-1-3-326_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-1-3-326_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:16 2021  Calling: minimize.x propbenzene-opt-1-3-296_postQMOPTpostfit.xyz -k tmp-1-3-296_postQMOPTpostfit.key 0.1 >propbenzene-opt-1-3-296_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:16 2021  Calling: analyze.x -k tmp-1-3-296_postQMOPTpostfit.key propbenzene-opt-1-3-296_postQMOPTpostfit.xyz_2 ed > propbenzene-opt-1-3-296_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_propbenz/qm-torsion
+Wed Jun  2 01:05:17 2021 Torset((4, 2, 1, 3),) RMSD(MM2,QM) 0.050875794245317456
+Wed Jun  2 01:05:17 2021 Torset((2, 1, 3, 5),) RMSD(MM2,QM) 0.05452965665418831
+Wed Jun  2 01:05:17 2021 
+Wed Jun  2 01:05:17 2021 =========================================================
+Wed Jun  2 01:05:17 2021 Minimizing structure
+
+Wed Jun  2 01:05:17 2021  Calling: minimize.x -k final.key final.xyz 0.1 > Minimized_final.out path = /home/daniele/Downloads/poltype/Examples/test_propbenz
+Wed Jun  2 01:05:18 2021 
+
+Wed Jun  2 01:05:18 2021 =========================================================
+
+Wed Jun  2 01:05:18 2021 Structure RMSD Comparison
+
+
+Wed Jun  2 01:05:18 2021  Calling: superpose.x propbenzene.xyz_2 final.xyz_2 1 N M N 0  > propbenzene-superin.txt path = /home/daniele/Downloads/poltype/Examples/test_propbenz
+Wed Jun  2 01:05:18 2021 
+Wed Jun  2 01:05:18 2021 =========================================================
+Wed Jun  2 01:05:18 2021 QM Dipole moment
+
+Wed Jun  2 01:05:18 2021 QM Dipole moment = 0.42
+Wed Jun  2 01:05:18 2021 
+Wed Jun  2 01:05:18 2021 =========================================================
+Wed Jun  2 01:05:18 2021 MM Dipole moment
+
+Wed Jun  2 01:05:18 2021  Calling: analyze.x propbenzene.xyz_2 -k final.key em | grep -A11 Charge>MMDipole.txt path = /home/daniele/Downloads/poltype/Examples/test_propbenz
+Wed Jun  2 01:05:19 2021 MM Dipole moment = 0.398
+Wed Jun  2 01:05:19 2021 Poltype Job Finished
+
+Wed Jun  2 01:05:19 2021 Poltype has completed successfully, but this software is still under active development. It is your responsibility to check your own final parameters, while we are still in development phase.

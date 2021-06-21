@@ -1,0 +1,47 @@
+molecule { 
+0 1
+ C   -0.462221   -0.573272    0.240581
+ C    0.462294    0.573163   -0.240810
+ C   -1.953812   -0.360487   -0.039291
+ C    1.953764    0.360274    0.038990
+ H   -0.322533   -0.717574    1.336752
+ H   -0.141759   -1.525780   -0.241090
+ H    0.141866    1.525721    0.240838
+ H    0.322480    0.717436   -1.337000
+ H   -2.148218   -0.254397   -1.130405
+ H   -2.331363    0.556373    0.467064
+ H   -2.553094   -1.222591    0.330557
+ H    2.330323   -0.560791   -0.460377
+ H    2.148384    0.262414    1.130845
+ H    2.553765    1.219785   -0.336046
+}
+set optking { 
+  frozen_dihedral = ("
+    3 1 2 4
+    2 1 3 9
+    1 2 4 12
+  ")
+}
+set {
+  geom_maxiter 5
+  g_convergence GAU_LOOSE
+  dynamic_level 1
+}
+memory 700MB
+set_num_threads(8)
+psi4_io.set_default_path("/home/daniele/PSI4_sctatch/Psi4-butane")
+for _ in range(1):
+  try:
+    set opt_coordinates both
+    optimize('wb97x-d/6-31G*')
+    break
+  except OptimizationConvergenceError:
+    break
+  else:
+    try:
+      set opt_coordinates cartesian
+      optimize('wb97x-d/6-31G*')
+      break
+    except OptimizationConvergenceError:
+      pass
+clean()

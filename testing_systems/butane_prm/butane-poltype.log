@@ -1,0 +1,1002 @@
+Mon May 24 19:43:05 2021 Running on host: daniele-Precision-5750
+Mon May 24 19:43:05 2021 NEED QM Density Matrix: Executing Gaussian Opt and SP
+Mon May 24 19:43:05 2021 Calling: Psi4 Optimization
+Mon May 24 19:43:05 2021  Calling: psi4 butane-opt_1.psi4 butane-opt_1.log path = /home/daniele/Downloads/poltype/Examples/test_butane
+Too many bad steps.
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 2: Red. Int., RFO, backsteps, smaller trust.
+At level 2: Red. Int., RFO, backsteps, smaller trust.
+At level 2: Red. Int., RFO, backsteps, smaller trust.
+Mon May 24 19:43:26 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/butane-opt_1.log path=/home/daniele/Downloads/poltype/Examples/test_butane
+Mon May 24 19:43:56 2021 All jobs have terminated 
+Mon May 24 19:43:56 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/butane-opt_1.log path=/home/daniele/Downloads/poltype/Examples/test_butane
+Mon May 24 19:44:26 2021 All jobs have terminated 
+Mon May 24 19:44:29 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle        402   401   401      48.20     109.50     110.20     111.00
+ QM value = 112.86760143846534, parameters are transferred from [('C', '"NMePyrrolidine CH2-N"'), ('C', '"NMePyrrolidine CH2<"'), ('C', '"NMePyrrolidine CH2<"')]. Will use QM value.
+Mon May 24 19:44:29 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle        403   401   401      42.44     109.80     109.31     110.70
+ QM value = 109.09049706408521, parameters are transferred from [('H', '"NMePyrrolidine H2C<"'), ('C', '"NMePyrrolidine CH2<"'), ('C', '"NMePyrrolidine CH2<"')]. Will use QM value.
+Mon May 24 19:44:29 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle        403   401   401      42.44     109.80     109.31     110.70
+ QM value = 109.10025640410653, parameters are transferred from [('H', '"NMePyrrolidine H2C<"'), ('C', '"NMePyrrolidine CH2<"'), ('C', '"NMePyrrolidine CH2<"')]. Will use QM value.
+Mon May 24 19:44:29 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle        402   401   401      48.20     109.50     110.20     111.00
+ QM value = 112.87114225430851, parameters are transferred from [('C', '"NMePyrrolidine CH2-N"'), ('C', '"NMePyrrolidine CH2<"'), ('C', '"NMePyrrolidine CH2<"')]. Will use QM value.
+Mon May 24 19:44:29 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle        403   401   401      42.44     109.80     109.31     110.70
+ QM value = 109.09435772697735, parameters are transferred from [('H', '"NMePyrrolidine H2C<"'), ('C', '"NMePyrrolidine CH2<"'), ('C', '"NMePyrrolidine CH2<"')]. Will use QM value.
+Mon May 24 19:44:29 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle        403   401   401      42.44     109.80     109.31     110.70
+ QM value = 109.0910428802573, parameters are transferred from [('H', '"NMePyrrolidine H2C<"'), ('C', '"NMePyrrolidine CH2<"'), ('C', '"NMePyrrolidine CH2<"')]. Will use QM value.
+Mon May 24 19:44:29 2021 Calling: Psi4 Gradient for DMA
+Mon May 24 19:44:29 2021  Calling: psi4 butane-dma.psi4 butane-dma.log path = /home/daniele/Downloads/poltype/Examples/test_butane
+Mon May 24 19:44:37 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/butane-dma.log path=/home/daniele/Downloads/poltype/Examples/test_butane
+Mon May 24 19:45:07 2021 All jobs have terminated 
+Mon May 24 19:45:07 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/butane-dma.log path=/home/daniele/Downloads/poltype/Examples/test_butane
+Mon May 24 19:45:37 2021 All jobs have terminated 
+Mon May 24 19:45:37 2021 NEED DMA: Executing GDMA
+Mon May 24 19:45:37 2021  Calling: /home/daniele/gdma/bin/gdma < butane.gdmain > butane.gdmaout path = /home/daniele/Downloads/poltype/Examples/test_butane
+Mon May 24 19:45:37 2021  Calling: poledit.x 1 butane.gdmaout /home/daniele/Downloads/poltype/ParameterFiles/amoebabio18_header.prm < butane-peditin.txt path = /home/daniele/Downloads/poltype/Examples/test_butane
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                       Version 8.9.1  February 2021                       ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2021               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Global Frame Cartesian Multipole Moments :
+
+ Site:       1         Name:   C         Atomic Number:       6
+
+ Coordinates:           -0.437568      -0.574870       0.243881
+
+ Charge:                 -0.07662
+ Dipole:                 -0.07378        0.21255       -0.10726
+ Quadrupole:              0.27279
+                          0.15759        0.04128
+                          0.00933       -0.19619       -0.31407
+
+ Site:       2         Name:   C         Atomic Number:       6
+
+ Coordinates:            0.437679       0.574512      -0.244679
+
+ Charge:                 -0.06428
+ Dipole:                  0.06356       -0.22589        0.11314
+ Quadrupole:              0.26947
+                          0.17353        0.05160
+                          0.00271       -0.20545       -0.32107
+
+ Site:       3         Name:   C         Atomic Number:       6
+
+ Coordinates:           -1.919243      -0.352884      -0.038585
+
+ Charge:                 -0.11285
+ Dipole:                  0.20605       -0.03469        0.04131
+ Quadrupole:              0.34125
+                         -0.08783       -0.18980
+                          0.10228        0.00525       -0.15144
+
+ Site:       4         Name:   C         Atomic Number:       6
+
+ Coordinates:            1.919144       0.353216       0.039327
+
+ Charge:                 -0.11285
+ Dipole:                 -0.20605        0.03463       -0.04141
+ Quadrupole:              0.34119
+                         -0.08772       -0.19013
+                          0.10257        0.00508       -0.15106
+
+ Site:       5         Name:   H         Atomic Number:       1
+
+ Coordinates:           -0.283737      -0.710066       1.321551
+
+ Charge:                  0.03525
+ Dipole:                  0.00688       -0.00569        0.10348
+ Quadrupole:             -0.00857
+                          0.00046       -0.01083
+                          0.00640       -0.01489        0.01940
+
+ Site:       6         Name:   H         Atomic Number:       1
+
+ Coordinates:           -0.106485      -1.505676      -0.232850
+
+ Charge:                  0.03527
+ Dipole:                  0.02475       -0.08578       -0.05309
+ Quadrupole:             -0.00594
+                         -0.00933        0.02192
+                         -0.00345        0.00796       -0.01598
+
+ Site:       7         Name:   H         Atomic Number:       1
+
+ Coordinates:            0.105973       1.505489       0.231344
+
+ Charge:                  0.03524
+ Dipole:                 -0.02478        0.08581        0.05300
+ Quadrupole:             -0.00585
+                         -0.00930        0.02189
+                         -0.00347        0.00795       -0.01604
+
+ Site:       8         Name:   H         Atomic Number:       1
+
+ Coordinates:            0.284683       0.709132      -1.322560
+
+ Charge:                  0.03527
+ Dipole:                 -0.00680        0.00561       -0.10352
+ Quadrupole:             -0.00865
+                          0.00041       -0.01079
+                          0.00641       -0.01488        0.01944
+
+ Site:       9         Name:   H         Atomic Number:       1
+
+ Coordinates:           -2.099259      -0.246681      -1.112496
+
+ Charge:                  0.03495
+ Dipole:                 -0.01616        0.00924       -0.12007
+ Quadrupole:             -0.00072
+                         -0.01055       -0.01518
+                          0.01249       -0.00246        0.01590
+
+ Site:      10         Name:   H         Atomic Number:       1
+
+ Coordinates:           -2.276792       0.558004       0.450724
+
+ Charge:                  0.03494
+ Dipole:                 -0.03634        0.10069        0.05747
+ Quadrupole:              0.00211
+                         -0.01902        0.00440
+                          0.00142        0.01085       -0.00651
+
+ Site:      11         Name:   H         Atomic Number:       1
+
+ Coordinates:           -2.526277      -1.187817       0.322252
+
+ Charge:                  0.04290
+ Dipole:                 -0.06220       -0.09563        0.04219
+ Quadrupole:              0.01458
+                          0.01281        0.00107
+                         -0.00261       -0.00950       -0.01565
+
+ Site:      12         Name:   H         Atomic Number:       1
+
+ Coordinates:            2.278265      -0.555565      -0.452725
+
+ Charge:                  0.03495
+ Dipole:                  0.03649       -0.10042       -0.05784
+ Quadrupole:              0.00212
+                         -0.01907        0.00434
+                          0.00143        0.01086       -0.00645
+
+ Site:      13         Name:   H         Atomic Number:       1
+
+ Coordinates:            2.097646       0.243376       1.113155
+
+ Charge:                  0.03494
+ Dipole:                  0.01600       -0.00971        0.12006
+ Quadrupole:             -0.00071
+                         -0.01051       -0.01518
+                          0.01248       -0.00252        0.01590
+
+ Site:      14         Name:   H         Atomic Number:       1
+
+ Coordinates:            2.525846       1.190107      -0.317729
+
+ Charge:                  0.04289
+ Dipole:                  0.06216        0.09588       -0.04174
+ Quadrupole:              0.01458
+                          0.01282        0.00114
+                         -0.00255       -0.00943       -0.01571
+
+ Local Frame Definition for Multipole Sites :
+
+     Atom     Name      Axis Type     Z Axis  X Axis  Y Axis
+
+       1      C         Z-then-X         2       3       0
+       2      C         Z-then-X         1       4       0
+       3      C         Z-then-X         1       2       0
+       4      C         Z-then-X         2       1       0
+       5      H         Z-then-X         1       2       0
+       6      H         Z-then-X         1       2       0
+       7      H         Z-then-X         2       1       0
+       8      H         Z-then-X         2       1       0
+       9      H         Z-then-X         3       1       0
+      10      H         Z-then-X         3       1       0
+      11      H         Z-then-X         3       1       0
+      12      H         Z-then-X         4       2       0
+      13      H         Z-then-X         4       2       0
+      14      H         Z-then-X         4       2       0
+
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Choose Either the AMOEBA or HIPPO Polarization Model [A] :  
+ Polarizability Parameters for Multipole Sites :
+
+     Atom     Name       Polarize          Thole
+
+       1      C            1.3340         0.3900
+       2      C            1.3340         0.3900
+       3      C            1.3340         0.3900
+       4      C            1.3340         0.3900
+       5      H            0.4960         0.3900
+       6      H            0.4960         0.3900
+       7      H            0.4960         0.3900
+       8      H            0.4960         0.3900
+       9      H            0.4960         0.3900
+      10      H            0.4960         0.3900
+      11      H            0.4960         0.3900
+      12      H            0.4960         0.3900
+      13      H            0.4960         0.3900
+      14      H            0.4960         0.3900
+
+ Enter Atom Number, Polarizability & Thole Values :  
+ Choose Method for Division into Polarization Groups :
+
+    (1) Put All Atoms in One Polarization Group
+    (2) Separate into Groups at Rotatable Bonds
+    (3) Manual Entry of Bonds Separating Groups
+
+ Enter the Number of the Desired Choice [1] :  
+ Polarization Groups for Multipole Sites :
+
+     Atom     Name       Polarization Group Definition
+
+       1      C               5     6
+       2      C               7     8
+       3      C               9    10    11
+       4      C              12    13    14
+       5      H               1
+       6      H               1
+       7      H               2
+       8      H               2
+       9      H               3
+      10      H               3
+      11      H               3
+      12      H               4
+      13      H               4
+      14      H               4
+
+ Electrostatic and Polarization Scale Factors :
+
+                    1-2         1-3         1-4         1-5
+
+ M-Scale:         0.0000      0.0000      0.4000      0.8000
+ P-Inter:         0.0000      0.0000      1.0000      1.0000
+ P-Intra:         0.0000      0.0000      0.5000      1.0000
+ W-Scale:         1.0000      1.0000      1.0000      1.0000
+
+                    1-1         1-2         1-3         1-4
+
+ D-Scale:         0.0000      1.0000      1.0000      1.0000
+ U-Scale:         1.0000      1.0000      1.0000      1.0000
+
+ Use Thole Damping:           True
+ Charge Penetration:          False
+ Set D Equal to P:            False
+
+ Determination of Intergroup Induced Dipoles :
+
+    Iter        RMS Change (Debye)
+
+       1           0.0109189048
+       2           0.0031290869
+       3           0.0005030922
+       4           0.0001312391
+       5           0.0000146691
+       6           0.0000028080
+       7           0.0000004997
+
+ Local Frame Intergroup Induced Dipole Moments (Debye) :
+
+    Atom              X           Y           Z         Total
+
+       1           0.3074      0.0082      0.0471      0.3112
+       2           0.3066     -0.0084      0.0670      0.3140
+       3          -0.0599     -0.0011      0.1470      0.1587
+       4          -0.0603      0.0011      0.1422      0.1545
+       5          -0.0046      0.0300     -0.0446      0.0540
+       6          -0.0085     -0.0308     -0.0460      0.0560
+       7          -0.0059      0.0305     -0.0376      0.0488
+       8          -0.0019     -0.0298     -0.0363      0.0470
+       9          -0.0168      0.0015     -0.0113      0.0203
+      10          -0.0175     -0.0014     -0.0116      0.0210
+      11          -0.0116     -0.0004     -0.0035      0.0121
+      12          -0.0168      0.0013     -0.0113      0.0203
+      13          -0.0163     -0.0014     -0.0111      0.0197
+      14          -0.0112      0.0004     -0.0032      0.0117
+
+ Condense Symmetric Atoms to Equivalent Types [Y] :  
+ Remove Multipole Components Zeroed by Symmetry [Y] :  
+ Final Atomic Multipole Moments after Regularization :
+
+ Atom:       1         Name:   C         Atomic Number:       6
+
+ Local Frame:            Z-then-X             2       3       0
+
+ Charge:                 -0.07662
+ Dipole:                  0.07622        0.00000        0.13366
+ Quadrupole:              0.09999
+                          0.00000       -0.40868
+                         -0.11947        0.00000        0.30869
+
+ Atom:       2         Name:   C         Atomic Number:       6
+
+ Local Frame:            Z-then-X             1       4       0
+
+ Charge:                 -0.06428
+ Dipole:                  0.07656        0.00000        0.14366
+ Quadrupole:              0.08636
+                          0.00000       -0.41980
+                         -0.11710        0.00000        0.33344
+
+ Atom:       3         Name:   C         Atomic Number:       6
+
+ Local Frame:            Z-then-X             1       2       0
+
+ Charge:                 -0.11285
+ Dipole:                  0.01936        0.00000        0.15513
+ Quadrupole:             -0.21414
+                          0.00000       -0.16034
+                         -0.00259        0.00000        0.37448
+
+ Atom:       4         Name:   C         Atomic Number:       6
+
+ Local Frame:            Z-then-X             2       1       0
+
+ Charge:                 -0.11285
+ Dipole:                  0.01951        0.00000        0.15699
+ Quadrupole:             -0.21421
+                          0.00000       -0.16030
+                         -0.00261        0.00000        0.37451
+
+ Atom:       5         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             1       2       0
+
+ Charge:                  0.03525
+ Dipole:                  0.00212        0.00000       -0.08577
+ Quadrupole:             -0.00942
+                          0.00000       -0.01433
+                          0.00666        0.00000        0.02375
+
+ Atom:       6         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             1       2       0
+
+ Charge:                  0.03527
+ Dipole:                  0.00373        0.00000       -0.08523
+ Quadrupole:             -0.00948
+                          0.00000       -0.01429
+                          0.00669        0.00000        0.02377
+
+ Atom:       7         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             2       1       0
+
+ Charge:                  0.03524
+ Dipole:                  0.00267        0.00000       -0.08852
+ Quadrupole:             -0.00942
+                          0.00000       -0.01433
+                          0.00667        0.00000        0.02375
+
+ Atom:       8         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             2       1       0
+
+ Charge:                  0.03527
+ Dipole:                  0.00110        0.00000       -0.08908
+ Quadrupole:             -0.00948
+                          0.00000       -0.01429
+                          0.00666        0.00000        0.02377
+
+ Atom:       9         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             3       1       0
+
+ Charge:                  0.03495
+ Dipole:                  0.01081        0.00000       -0.11697
+ Quadrupole:             -0.00235
+                          0.00000       -0.01765
+                          0.01004        0.00000        0.02000
+
+ Atom:      10         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             3       1       0
+
+ Charge:                  0.03494
+ Dipole:                  0.01103        0.00000       -0.11685
+ Quadrupole:             -0.00237
+                          0.00000       -0.01762
+                          0.01008        0.00000        0.01999
+
+ Atom:      11         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             3       1       0
+
+ Charge:                  0.04290
+ Dipole:                  0.01091        0.00000       -0.12010
+ Quadrupole:              0.00023
+                          0.00000       -0.02025
+                          0.00924        0.00000        0.02002
+
+ Atom:      12         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             4       2       0
+
+ Charge:                  0.03495
+ Dipole:                  0.01081        0.00000       -0.11694
+ Quadrupole:             -0.00235
+                          0.00000       -0.01765
+                          0.01007        0.00000        0.02000
+
+ Atom:      13         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             4       2       0
+
+ Charge:                  0.03494
+ Dipole:                  0.01057        0.00000       -0.11706
+ Quadrupole:             -0.00236
+                          0.00000       -0.01762
+                          0.01008        0.00000        0.01998
+
+ Atom:      14         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             4       2       0
+
+ Charge:                  0.04289
+ Dipole:                  0.01076        0.00000       -0.12024
+ Quadrupole:              0.00023
+                          0.00000       -0.02023
+                          0.00924        0.00000        0.02000
+Mon May 24 19:45:37 2021  Calling: potential.x 1 butane.xyz -k butane.key path = /home/daniele/Downloads/poltype/Examples/test_butane
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                       Version 8.9.1  February 2021                       ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2021               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+        1     1     C     butane                       6     12.011     4
+        2     2     C     butane                       6     12.011     4
+        3     3     C     butane                       6     12.011     4
+        4     4     C     butane                       6     12.011     4
+        5     5     H     butane                       1      1.008     1
+        6     6     H     butane                       1      1.008     1
+        7     7     H     butane                       1      1.008     1
+        8     8     H     butane                       1      1.008     1
+        9     9     H     butane                       1      1.008     1
+       10    10     H     butane                       1      1.008     1
+       11    11     H     butane                       1      1.008     1
+       12    12     H     butane                       1      1.008     1
+       13    13     H     butane                       1      1.008     1
+       14    14     H     butane                       1      1.008     1
+
+ Electrostatic Potential Grid Points :                  8526
+
+ Gaussian CUBEGEN Input Written To :   butane.grid
+
+ Next, run the Gaussian CUBEGEN program; for example:
+ cubegen 0 potential=MP2 xxx.fchk xxx.cube -5 h < xxx.grid
+
+ See the Gaussian documentation for additional details;
+ After CUBEGEN, rerun Tinker POTENTIAL using Option 2
+Mon May 24 19:45:37 2021 Calling: Psi4 Gradient for ESP
+Mon May 24 19:45:37 2021  Calling: psi4 butane-esp.psi4 butane-esp.log path = /home/daniele/Downloads/poltype/Examples/test_butane
+Mon May 24 19:50:15 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/butane-esp.log path=/home/daniele/Downloads/poltype/Examples/test_butane
+Mon May 24 19:50:45 2021 All jobs have terminated 
+Mon May 24 19:50:45 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/butane-esp.log path=/home/daniele/Downloads/poltype/Examples/test_butane
+Mon May 24 19:51:16 2021 All jobs have terminated 
+Mon May 24 19:51:16 2021 Calling: Generating CUBE File from PSI4
+Mon May 24 19:51:16 2021  Calling: potential.x 2 butane_fortinker.cube path = /home/daniele/Downloads/poltype/Examples/test_butane
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                       Version 8.9.1  February 2021                       ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2021               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Electrostatic Potential Written To :  butane_fortinker.pot
+Mon May 24 19:51:16 2021  Calling: /home/daniele/Downloads/poltype/PoltypeModules/avgmpoles.pl butane.key butane.xyz butane-groups.txt butane.key_2 butane.xyz_2 401 path = /home/daniele/Downloads/poltype/Examples/test_butane
+Mon May 24 19:51:16 2021  Calling: potential.x 6 butane.xyz_2 -k butane.key_2 butane_fortinker.pot N 0.1 path = /home/daniele/Downloads/poltype/Examples/test_butane
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                       Version 8.9.1  February 2021                       ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2021               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+      401   401     C     butane                       6     12.011     4
+      402   402     C     butane                       6     12.011     4
+      403   403     H     butane                       1      1.008     1
+      404   404     H     butane                       1      1.008     1
+
+ Electrostatic Potential Grid Points :                  8526
+
+ Electrostatic Parameter Restraint Value :            1.0000
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+      401   401     C     butane                       6     12.011     4
+      402   402     C     butane                       6     12.011     4
+      403   403     H     butane                       1      1.008     1
+      404   404     H     butane                       1      1.008     1
+
+ Additional Atomic Multipole Parameters :
+
+     Atom Type     Coordinate Frame Definition         Multipole Moments
+
+         401      401    402      0   Z-then-X    -0.07045
+                                                   0.07639  0.00000  0.13866
+                                                   0.09317
+                                                   0.00000 -0.41424
+                                                  -0.11829  0.00000  0.32106
+
+         402      401    401      0   Z-then-X    -0.11285
+                                                   0.01944  0.00000  0.15606
+                                                  -0.21418
+                                                   0.00000 -0.16032
+                                                  -0.00260  0.00000  0.37450
+
+         403      401    401      0   Z-then-X     0.03526
+                                                   0.00241  0.00000 -0.08715
+                                                  -0.00945
+                                                   0.00000 -0.01431
+                                                   0.00667  0.00000  0.02376
+
+         404      402    401      0   Z-then-X     0.03760
+                                                   0.01081  0.00000 -0.11803
+                                                  -0.00150
+                                                   0.00000 -0.01850
+                                                   0.00979  0.00000  0.02000
+
+ Additional Atomic Dipole Polarizability Parameters :
+
+     Atom Type           Alpha       Thole     Group Atom Types
+
+         401             1.334       0.390         403
+         402             1.334       0.390         404
+         403             0.496       0.390         401
+         404             0.496       0.390         402
+
+ Average Electrostatic Potential over Atoms :
+      (Kcal/mole per unit charge)
+
+   Structure   Atom      Points      Potential        Target        RMS Diff
+
+        1        1          87        -0.7138        -0.6408         0.5905
+        1        2          87        -0.7234        -0.6999         0.5298
+        1        3         460        -1.4565        -0.9186         0.7137
+        1        4         462        -1.4468        -0.9087         0.7112
+        1        5         667         0.3591         0.3498         0.5623
+        1        6         658         0.3576         0.3555         0.5747
+        1        7         653         0.3694         0.3595         0.5597
+        1        8         657         0.3601         0.3556         0.5621
+        1        9         752         0.2177         0.0829         0.4442
+        1       10         755         0.2083         0.0827         0.4529
+        1       11         887        -0.2195         0.0210         0.3430
+        1       12         755         0.2082         0.0819         0.4511
+        1       13         758         0.2107         0.0797         0.4435
+        1       14         888        -0.2189         0.0202         0.3399
+
+ Electrostatic Potential over all Grid Points :
+
+ Average Potential Value for Model :                 -0.0307
+ Average Potential Magnitude for Model :              0.7060
+ Average Potential Value for Target :                 0.0305
+ Average Potential Magnitude for Target :             0.5612
+
+ Average Signed Potential Difference :               -0.0613
+ Average Unsigned Potential Difference :              0.3907
+ Root Mean Square Potential Difference :              0.5052
+
+ Potential Fitting of Electrostatic Parameters :
+
+ Parameter      Atom Type         Category            Value         Fixed
+
+    --            401             Monopole          -0.07045          X
+     1            401             X-Dipole           0.07639
+    --            401             Y-Dipole           0.00000          X
+     2            401             Z-Dipole           0.13866
+     3            401             XX-Quad            0.09317
+    --            401             XY-Quad            0.00000          X
+     4            401             XZ-Quad           -0.11829
+     5            401             YY-Quad           -0.41423
+    --            401             YZ-Quad            0.00000          X
+    --            401             ZZ-Quad            0.32106
+    --            402             Monopole          -0.11285          X
+     6            402             X-Dipole           0.01944
+    --            402             Y-Dipole           0.00000          X
+     7            402             Z-Dipole           0.15606
+     8            402             XX-Quad           -0.21418
+    --            402             XY-Quad            0.00000          X
+     9            402             XZ-Quad           -0.00260
+    10            402             YY-Quad           -0.16032
+    --            402             YZ-Quad            0.00000          X
+    --            402             ZZ-Quad            0.37450
+    --            403             Monopole           0.03525          X
+    11            403             X-Dipole           0.00241
+    --            403             Y-Dipole           0.00000          X
+    12            403             Z-Dipole          -0.08715
+    13            403             XX-Quad           -0.00945
+    --            403             XY-Quad            0.00000          X
+    14            403             XZ-Quad            0.00667
+    15            403             YY-Quad           -0.01431
+    --            403             YZ-Quad            0.00000          X
+    --            403             ZZ-Quad            0.02376
+    --            404             Monopole           0.03760          X
+    16            404             X-Dipole           0.01081
+    --            404             Y-Dipole           0.00000          X
+    17            404             Z-Dipole          -0.11803
+    18            404             XX-Quad           -0.00150
+    --            404             XY-Quad            0.00000          X
+    19            404             XZ-Quad            0.00979
+    20            404             YY-Quad           -0.01850
+    --            404             YZ-Quad            0.00000          X
+    --            404             ZZ-Quad            0.02000
+
+ Levenberg-Marquardt Nonlinear Least Squares :
+
+ LS Iter     F Value      Total G     Active G    N Active   F Calls
+
+     0     1087.9645     281.9148     281.9148        20        21
+     1      194.1426     103.7047     103.7047        20        42
+     2       87.6583      23.8192      23.8192        20        63
+     3       50.2656       0.0002       0.0002        20        84
+
+ SQUARE  --  Normal Termination of Least Squares
+
+ Potential Fitting of Electrostatic Parameters :
+
+ Parameter      Atom Type         Category            Value         Fixed
+
+    --            401             Monopole          -0.07045          X
+     1            401             X-Dipole           0.17547
+    --            401             Y-Dipole           0.00000          X
+     2            401             Z-Dipole           0.14095
+     3            401             XX-Quad            0.07140
+    --            401             XY-Quad            0.00000          X
+     4            401             XZ-Quad           -0.13947
+     5            401             YY-Quad           -0.38669
+    --            401             YZ-Quad            0.00000          X
+    --            401             ZZ-Quad            0.31529
+    --            402             Monopole          -0.11285          X
+     6            402             X-Dipole          -0.01258
+    --            402             Y-Dipole           0.00000          X
+     7            402             Z-Dipole           0.15284
+     8            402             XX-Quad           -0.21256
+    --            402             XY-Quad            0.00000          X
+     9            402             XZ-Quad           -0.01787
+    10            402             YY-Quad           -0.15431
+    --            402             YZ-Quad            0.00000          X
+    --            402             ZZ-Quad            0.36687
+    --            403             Monopole           0.03525          X
+    11            403             X-Dipole           0.01937
+    --            403             Y-Dipole           0.00000          X
+    12            403             Z-Dipole          -0.03898
+    13            403             XX-Quad            0.00166
+    --            403             XY-Quad            0.00000          X
+    14            403             XZ-Quad            0.02143
+    15            403             YY-Quad           -0.00459
+    --            403             YZ-Quad            0.00000          X
+    --            403             ZZ-Quad            0.00293
+    --            404             Monopole           0.03760          X
+    16            404             X-Dipole           0.02850
+    --            404             Y-Dipole           0.00000          X
+    17            404             Z-Dipole          -0.05911
+    18            404             XX-Quad            0.02803
+    --            404             XY-Quad            0.00000          X
+    19            404             XZ-Quad            0.01804
+    20            404             YY-Quad           -0.01381
+    --            404             YZ-Quad            0.00000          X
+    --            404             ZZ-Quad           -0.01422
+
+ Average Electrostatic Potential over Atoms :
+      (Kcal/mole per unit charge)
+
+   Structure   Atom      Points      Potential        Target        RMS Diff
+
+        1        1          87        -0.6738        -0.6408         0.0767
+        1        2          87        -0.7319        -0.6999         0.0789
+        1        3         460        -0.9663        -0.9186         0.0991
+        1        4         462        -0.9549        -0.9087         0.0980
+        1        5         667         0.3247         0.3498         0.0766
+        1        6         658         0.3287         0.3555         0.0797
+        1        7         653         0.3350         0.3595         0.0766
+        1        8         657         0.3288         0.3556         0.0784
+        1        9         752         0.0598         0.0829         0.0593
+        1       10         755         0.0594         0.0827         0.0602
+        1       11         887        -0.0102         0.0210         0.0670
+        1       12         755         0.0592         0.0819         0.0594
+        1       13         758         0.0565         0.0797         0.0590
+        1       14         888        -0.0102         0.0202         0.0666
+
+ Electrostatic Potential over all Grid Points :
+
+ Average Potential Value for Model :                  0.0022
+ Average Potential Magnitude for Model :              0.5493
+ Average Potential Value for Target :                 0.0305
+ Average Potential Magnitude for Target :             0.5612
+
+ Average Signed Potential Difference :               -0.0283
+ Average Unsigned Potential Difference :              0.0481
+ Root Mean Square Potential Difference :              0.0723
+Mon May 24 19:51:16 2021 
+Mon May 24 19:51:16 2021 =========================================================
+Mon May 24 19:51:16 2021 Electrostatic Potential Comparison
+
+Mon May 24 19:51:16 2021  Calling: potential.x 5 butane.xyz_2 -k butane.key_3 butane_fortinker.pot N > RMSPD.txt path = /home/daniele/Downloads/poltype/Examples/test_butane
+Mon May 24 19:51:17 2021  Calling: minimize.x butane-opt-1-2-180_preQMOPTprefit.xyz -k tmp-1-2-180_preQMOPTprefit.key 0.1 >butane-opt-1-2-180_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:17 2021  Calling: analyze.x -k tmp-1-2-180_preQMOPTprefit.key butane-opt-1-2-180_preQMOPTprefit.xyz_2 ed > butane-opt-1-2-180_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:17 2021  Calling: minimize.x butane-opt-1-2-210_preQMOPTprefit.xyz -k tmp-1-2-210_preQMOPTprefit.key 0.1 >butane-opt-1-2-210_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:18 2021  Calling: analyze.x -k tmp-1-2-210_preQMOPTprefit.key butane-opt-1-2-210_preQMOPTprefit.xyz_2 ed > butane-opt-1-2-210_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:18 2021  Calling: minimize.x butane-opt-1-2-240_preQMOPTprefit.xyz -k tmp-1-2-240_preQMOPTprefit.key 0.1 >butane-opt-1-2-240_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:18 2021  Calling: analyze.x -k tmp-1-2-240_preQMOPTprefit.key butane-opt-1-2-240_preQMOPTprefit.xyz_2 ed > butane-opt-1-2-240_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:19 2021  Calling: minimize.x butane-opt-1-2-270_preQMOPTprefit.xyz -k tmp-1-2-270_preQMOPTprefit.key 0.1 >butane-opt-1-2-270_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:19 2021  Calling: analyze.x -k tmp-1-2-270_preQMOPTprefit.key butane-opt-1-2-270_preQMOPTprefit.xyz_2 ed > butane-opt-1-2-270_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:19 2021  Calling: minimize.x butane-opt-1-2-300_preQMOPTprefit.xyz -k tmp-1-2-300_preQMOPTprefit.key 0.1 >butane-opt-1-2-300_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:20 2021  Calling: analyze.x -k tmp-1-2-300_preQMOPTprefit.key butane-opt-1-2-300_preQMOPTprefit.xyz_2 ed > butane-opt-1-2-300_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:20 2021  Calling: minimize.x butane-opt-1-2-330_preQMOPTprefit.xyz -k tmp-1-2-330_preQMOPTprefit.key 0.1 >butane-opt-1-2-330_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:20 2021  Calling: analyze.x -k tmp-1-2-330_preQMOPTprefit.key butane-opt-1-2-330_preQMOPTprefit.xyz_2 ed > butane-opt-1-2-330_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:21 2021  Calling: minimize.x butane-opt-1-2-360_preQMOPTprefit.xyz -k tmp-1-2-360_preQMOPTprefit.key 0.1 >butane-opt-1-2-360_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:21 2021  Calling: analyze.x -k tmp-1-2-360_preQMOPTprefit.key butane-opt-1-2-360_preQMOPTprefit.xyz_2 ed > butane-opt-1-2-360_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:21 2021  Calling: minimize.x butane-opt-1-2-150_preQMOPTprefit.xyz -k tmp-1-2-150_preQMOPTprefit.key 0.1 >butane-opt-1-2-150_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:22 2021  Calling: analyze.x -k tmp-1-2-150_preQMOPTprefit.key butane-opt-1-2-150_preQMOPTprefit.xyz_2 ed > butane-opt-1-2-150_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:22 2021  Calling: minimize.x butane-opt-1-2-120_preQMOPTprefit.xyz -k tmp-1-2-120_preQMOPTprefit.key 0.1 >butane-opt-1-2-120_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:22 2021  Calling: analyze.x -k tmp-1-2-120_preQMOPTprefit.key butane-opt-1-2-120_preQMOPTprefit.xyz_2 ed > butane-opt-1-2-120_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:22 2021  Calling: minimize.x butane-opt-1-2-090_preQMOPTprefit.xyz -k tmp-1-2-090_preQMOPTprefit.key 0.1 >butane-opt-1-2-090_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:23 2021  Calling: analyze.x -k tmp-1-2-090_preQMOPTprefit.key butane-opt-1-2-090_preQMOPTprefit.xyz_2 ed > butane-opt-1-2-090_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:23 2021  Calling: minimize.x butane-opt-1-2-060_preQMOPTprefit.xyz -k tmp-1-2-060_preQMOPTprefit.key 0.1 >butane-opt-1-2-060_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:23 2021  Calling: analyze.x -k tmp-1-2-060_preQMOPTprefit.key butane-opt-1-2-060_preQMOPTprefit.xyz_2 ed > butane-opt-1-2-060_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:24 2021  Calling: minimize.x butane-opt-1-2-030_preQMOPTprefit.xyz -k tmp-1-2-030_preQMOPTprefit.key 0.1 >butane-opt-1-2-030_preQMOPTprefit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:24 2021  Calling: analyze.x -k tmp-1-2-030_preQMOPTprefit.key butane-opt-1-2-030_preQMOPTprefit.xyz_2 ed > butane-opt-1-2-030_preQMOPTprefit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:51:24 2021  Calling: psi4 butane-opt-1_1-2-180.psi4 butane-opt-1_1-2-180.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Mon May 24 19:51:36 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-180.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:52:06 2021 All jobs have terminated 
+Mon May 24 19:52:06 2021  Calling: psi4 butane-opt-1_1-2-210.psi4 butane-opt-1_1-2-210.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Mon May 24 19:52:18 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-210.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:52:48 2021 All jobs have terminated 
+Mon May 24 19:52:48 2021  Calling: psi4 butane-opt-1_1-2-240.psi4 butane-opt-1_1-2-240.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Mon May 24 19:53:00 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-240.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:53:30 2021 All jobs have terminated 
+Mon May 24 19:53:30 2021  Calling: psi4 butane-opt-1_1-2-270.psi4 butane-opt-1_1-2-270.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Mon May 24 19:53:42 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-270.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:54:12 2021 All jobs have terminated 
+Mon May 24 19:54:12 2021  Calling: psi4 butane-opt-1_1-2-300.psi4 butane-opt-1_1-2-300.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Mon May 24 19:54:24 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-300.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:54:54 2021 All jobs have terminated 
+Mon May 24 19:54:54 2021  Calling: psi4 butane-opt-1_1-2-330.psi4 butane-opt-1_1-2-330.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Mon May 24 19:55:06 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-330.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:55:36 2021 All jobs have terminated 
+Mon May 24 19:55:36 2021  Calling: psi4 butane-opt-1_1-2-360.psi4 butane-opt-1_1-2-360.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Mon May 24 19:55:49 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-360.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:56:19 2021 All jobs have terminated 
+Mon May 24 19:56:19 2021  Calling: psi4 butane-opt-1_1-2-150.psi4 butane-opt-1_1-2-150.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Mon May 24 19:56:30 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-150.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:57:01 2021 All jobs have terminated 
+Mon May 24 19:57:01 2021  Calling: psi4 butane-opt-1_1-2-120.psi4 butane-opt-1_1-2-120.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Mon May 24 19:57:12 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-120.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:57:42 2021 All jobs have terminated 
+Mon May 24 19:57:42 2021  Calling: psi4 butane-opt-1_1-2-090.psi4 butane-opt-1_1-2-090.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Mon May 24 19:57:54 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-090.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:58:24 2021 All jobs have terminated 
+Mon May 24 19:58:24 2021  Calling: psi4 butane-opt-1_1-2-060.psi4 butane-opt-1_1-2-060.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Mon May 24 19:58:36 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-060.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:59:06 2021 All jobs have terminated 
+Mon May 24 19:59:06 2021  Calling: psi4 butane-opt-1_1-2-030.psi4 butane-opt-1_1-2-030.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Mon May 24 19:59:57 2021 All jobs have terminated 
+Mon May 24 19:59:57 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-180.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:59:57 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-210.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:59:57 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-240.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:59:57 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-270.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:59:57 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-300.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:59:57 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-330.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:59:57 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-360.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:59:57 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-150.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:59:57 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-120.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:59:57 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-090.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 19:59:57 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-opt-1_1-2-060.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:00:27 2021 All jobs have terminated 
+Mon May 24 20:00:27 2021 Error PsiException: Could not converge geometry optimization in 5 iterations.
+logpath=butane-opt-1_1-2-030.log
+Mon May 24 20:00:27 2021 Bond lengths changed too much for 2 1 difference is 0.1097334625285622 tolerance is 0.05 current bond length is 1.6497334625285622 initial bond length is 1.6497334625285622 internal table bond length is 1.54. Will try to redo QM opt for butane-opt-1_1-2-030.log
+Mon May 24 20:00:27 2021  Calling: psi4 butane-opt-1_1-2-030.psi4 butane-opt-1_1-2-030.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Mon May 24 20:00:43 2021 Normal termination: logfile=butane-opt-1_1-2-030.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:01:13 2021 All jobs have terminated 
+Mon May 24 20:01:13 2021 Normal termination: logfile=butane-opt-1_1-2-030.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:01:43 2021 All jobs have terminated 
+Mon May 24 20:01:43 2021  Calling: psi4 butane-sp-1-2-180.psi4 butane-sp-1-2-180.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:01:48 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-180.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:02:18 2021 All jobs have terminated 
+Mon May 24 20:02:18 2021  Calling: psi4 butane-sp-1-2-210.psi4 butane-sp-1-2-210.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:02:23 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-210.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:02:53 2021 All jobs have terminated 
+Mon May 24 20:02:53 2021  Calling: psi4 butane-sp-1-2-240.psi4 butane-sp-1-2-240.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:02:58 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-240.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:03:28 2021 All jobs have terminated 
+Mon May 24 20:03:28 2021  Calling: psi4 butane-sp-1-2-270.psi4 butane-sp-1-2-270.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:03:33 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-270.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:04:03 2021 All jobs have terminated 
+Mon May 24 20:04:03 2021  Calling: psi4 butane-sp-1-2-300.psi4 butane-sp-1-2-300.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:04:08 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-300.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:04:38 2021 All jobs have terminated 
+Mon May 24 20:04:38 2021  Calling: psi4 butane-sp-1-2-330.psi4 butane-sp-1-2-330.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:04:43 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-330.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:05:13 2021 All jobs have terminated 
+Mon May 24 20:05:13 2021  Calling: psi4 butane-sp-1-2-360.psi4 butane-sp-1-2-360.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:05:18 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-360.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:05:48 2021 All jobs have terminated 
+Mon May 24 20:05:48 2021  Calling: psi4 butane-sp-1-2-150.psi4 butane-sp-1-2-150.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:05:53 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-150.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:06:23 2021 All jobs have terminated 
+Mon May 24 20:06:23 2021  Calling: psi4 butane-sp-1-2-120.psi4 butane-sp-1-2-120.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:06:28 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-120.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:06:58 2021 All jobs have terminated 
+Mon May 24 20:06:58 2021  Calling: psi4 butane-sp-1-2-090.psi4 butane-sp-1-2-090.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:07:03 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-090.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:07:33 2021 All jobs have terminated 
+Mon May 24 20:07:33 2021  Calling: psi4 butane-sp-1-2-060.psi4 butane-sp-1-2-060.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:07:39 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-060.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:08:09 2021 All jobs have terminated 
+Mon May 24 20:08:09 2021  Calling: psi4 butane-sp-1-2-030.psi4 butane-sp-1-2-030.log path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:08:15 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-030.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:08:45 2021 All jobs have terminated 
+Mon May 24 20:08:45 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-180.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:08:45 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-210.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:08:45 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-240.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:08:45 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-270.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:08:45 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-300.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:08:45 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-330.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:08:45 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-360.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:08:45 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-150.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:08:45 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-120.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:08:45 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-090.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:08:45 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-060.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:08:45 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion/butane-sp-1-2-030.log path=/home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:15 2021 All jobs have terminated 
+Mon May 24 20:09:15 2021 Torsions being fit 402 401 401 402 RMSD(QM-MM1)0.1085167582249219
+Mon May 24 20:09:15 2021  Calling: minimize.x butane-opt-1-2-180_postQMOPTpostfit.xyz -k tmp-1-2-180_postQMOPTpostfit.key 0.1 >butane-opt-1-2-180_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:16 2021  Calling: analyze.x -k tmp-1-2-180_postQMOPTpostfit.key butane-opt-1-2-180_postQMOPTpostfit.xyz_2 ed > butane-opt-1-2-180_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:16 2021  Calling: minimize.x butane-opt-1-2-210_postQMOPTpostfit.xyz -k tmp-1-2-210_postQMOPTpostfit.key 0.1 >butane-opt-1-2-210_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:16 2021  Calling: analyze.x -k tmp-1-2-210_postQMOPTpostfit.key butane-opt-1-2-210_postQMOPTpostfit.xyz_2 ed > butane-opt-1-2-210_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:16 2021  Calling: minimize.x butane-opt-1-2-240_postQMOPTpostfit.xyz -k tmp-1-2-240_postQMOPTpostfit.key 0.1 >butane-opt-1-2-240_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:17 2021  Calling: analyze.x -k tmp-1-2-240_postQMOPTpostfit.key butane-opt-1-2-240_postQMOPTpostfit.xyz_2 ed > butane-opt-1-2-240_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:17 2021  Calling: minimize.x butane-opt-1-2-270_postQMOPTpostfit.xyz -k tmp-1-2-270_postQMOPTpostfit.key 0.1 >butane-opt-1-2-270_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:17 2021  Calling: analyze.x -k tmp-1-2-270_postQMOPTpostfit.key butane-opt-1-2-270_postQMOPTpostfit.xyz_2 ed > butane-opt-1-2-270_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:18 2021  Calling: minimize.x butane-opt-1-2-300_postQMOPTpostfit.xyz -k tmp-1-2-300_postQMOPTpostfit.key 0.1 >butane-opt-1-2-300_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:18 2021  Calling: analyze.x -k tmp-1-2-300_postQMOPTpostfit.key butane-opt-1-2-300_postQMOPTpostfit.xyz_2 ed > butane-opt-1-2-300_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:18 2021  Calling: minimize.x butane-opt-1-2-330_postQMOPTpostfit.xyz -k tmp-1-2-330_postQMOPTpostfit.key 0.1 >butane-opt-1-2-330_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:18 2021  Calling: analyze.x -k tmp-1-2-330_postQMOPTpostfit.key butane-opt-1-2-330_postQMOPTpostfit.xyz_2 ed > butane-opt-1-2-330_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:19 2021  Calling: minimize.x butane-opt-1-2-360_postQMOPTpostfit.xyz -k tmp-1-2-360_postQMOPTpostfit.key 0.1 >butane-opt-1-2-360_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:19 2021  Calling: analyze.x -k tmp-1-2-360_postQMOPTpostfit.key butane-opt-1-2-360_postQMOPTpostfit.xyz_2 ed > butane-opt-1-2-360_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:19 2021  Calling: minimize.x butane-opt-1-2-150_postQMOPTpostfit.xyz -k tmp-1-2-150_postQMOPTpostfit.key 0.1 >butane-opt-1-2-150_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:20 2021  Calling: analyze.x -k tmp-1-2-150_postQMOPTpostfit.key butane-opt-1-2-150_postQMOPTpostfit.xyz_2 ed > butane-opt-1-2-150_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:20 2021  Calling: minimize.x butane-opt-1-2-120_postQMOPTpostfit.xyz -k tmp-1-2-120_postQMOPTpostfit.key 0.1 >butane-opt-1-2-120_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:20 2021  Calling: analyze.x -k tmp-1-2-120_postQMOPTpostfit.key butane-opt-1-2-120_postQMOPTpostfit.xyz_2 ed > butane-opt-1-2-120_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:20 2021  Calling: minimize.x butane-opt-1-2-090_postQMOPTpostfit.xyz -k tmp-1-2-090_postQMOPTpostfit.key 0.1 >butane-opt-1-2-090_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:21 2021  Calling: analyze.x -k tmp-1-2-090_postQMOPTpostfit.key butane-opt-1-2-090_postQMOPTpostfit.xyz_2 ed > butane-opt-1-2-090_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:21 2021  Calling: minimize.x butane-opt-1-2-060_postQMOPTpostfit.xyz -k tmp-1-2-060_postQMOPTpostfit.key 0.1 >butane-opt-1-2-060_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:21 2021  Calling: analyze.x -k tmp-1-2-060_postQMOPTpostfit.key butane-opt-1-2-060_postQMOPTpostfit.xyz_2 ed > butane-opt-1-2-060_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:22 2021  Calling: minimize.x butane-opt-1-2-030_postQMOPTpostfit.xyz -k tmp-1-2-030_postQMOPTpostfit.key 0.1 >butane-opt-1-2-030_postQMOPTpostfit.out path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:22 2021  Calling: analyze.x -k tmp-1-2-030_postQMOPTpostfit.key butane-opt-1-2-030_postQMOPTpostfit.xyz_2 ed > butane-opt-1-2-030_postQMOPTpostfit.alz path = /home/daniele/Downloads/poltype/Examples/test_butane/qm-torsion
+Mon May 24 20:09:22 2021 Torset((3, 1, 2, 4),) RMSD(MM2,QM) 0.10703241285512582
+Mon May 24 20:09:22 2021 
+Mon May 24 20:09:22 2021 =========================================================
+Mon May 24 20:09:22 2021 Minimizing structure
+
+Mon May 24 20:09:22 2021  Calling: minimize.x -k final.key final.xyz 0.1 > Minimized_final.out path = /home/daniele/Downloads/poltype/Examples/test_butane
+Mon May 24 20:09:23 2021 
+
+Mon May 24 20:09:23 2021 =========================================================
+
+Mon May 24 20:09:23 2021 Structure RMSD Comparison
+
+
+Mon May 24 20:09:23 2021  Calling: superpose.x butane.xyz_2 final.xyz_2 1 N M N 0  > butane-superin.txt path = /home/daniele/Downloads/poltype/Examples/test_butane
+Mon May 24 20:09:23 2021 
+Mon May 24 20:09:23 2021 =========================================================
+Mon May 24 20:09:23 2021 QM Dipole moment
+
+Mon May 24 20:09:23 2021 QM Dipole moment = 0.0
+Mon May 24 20:09:23 2021 
+Mon May 24 20:09:23 2021 =========================================================
+Mon May 24 20:09:23 2021 MM Dipole moment
+
+Mon May 24 20:09:23 2021  Calling: analyze.x butane.xyz_2 -k final.key em | grep -A11 Charge>MMDipole.txt path = /home/daniele/Downloads/poltype/Examples/test_butane
+Mon May 24 20:09:24 2021 MM Dipole moment = 0.0
+Mon May 24 20:09:24 2021 Poltype Job Finished
+
+Mon May 24 20:09:24 2021 Poltype has completed successfully, but this software is still under active development. It is your responsibility to check your own final parameters, while we are still in development phase.

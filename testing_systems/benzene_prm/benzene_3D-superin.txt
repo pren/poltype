@@ -1,0 +1,60 @@
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                       Version 8.9.1  February 2021                       ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2021               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+      401   401     C     benzene_3D                   6     12.011     3
+      402   402     H     benzene_3D                   1      1.008     1
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+      401   401     C     benzene_3D                   6     12.011     3
+      402   402     H     benzene_3D                   1      1.008     1
+
+ Structure File 1 :  benzene_3D.xyz_2
+
+ Structure File 2 :  final.xyz_2
+
+ File 1 Frame :     1             File 2 Frame :     1
+
+ Summary of Results from Structural Superposition :
+
+ IMPOSE  --  Input Coordinates                0.012738
+ IMPOSE  --  After Translation                0.012737
+ IMPOSE  --  After Rotation                   0.012737
+
+ Root Mean Square Distance :                  0.012737        1      1
+
+   Atom in the         Atom in the            Distance          Weight
+ First Structure     Second Structure        Separated          in Fit
+
+         1-C                 1-C              0.013579         12.0110
+         2-C                 2-C              0.013191         12.0110
+         3-C                 3-C              0.012556         12.0110
+         4-C                 4-C              0.012514         12.0110
+         5-C                 5-C              0.013280         12.0110
+         6-C                 6-C              0.013515         12.0110
+         7-H                 7-H              0.007240          1.0080
+         8-H                 8-H              0.006707          1.0080
+         9-H                 9-H              0.006430          1.0080
+        10-H                10-H              0.006369          1.0080
+        11-H                11-H              0.006866          1.0080
+        12-H                12-H              0.007239          1.0080
+
+ Root Mean Square Distance :                  0.012737

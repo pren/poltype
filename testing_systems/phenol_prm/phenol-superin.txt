@@ -1,0 +1,75 @@
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                       Version 8.9.1  February 2021                       ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2021               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+      406   406     H     phenol                       1      1.008     1
+      403   403     C     phenol                       6     12.011     3
+      402   402     C     phenol                       6     12.011     3
+      407   407     H     phenol                       1      1.008     1
+      401   401     C     phenol                       6     12.011     3
+      408   408     H     phenol                       1      1.008     1
+      404   404     C     phenol                       6     12.011     3
+      405   405     O     phenol                       8     15.999     2
+      409   409     H     phenol                       1      1.008     1
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+      406   406     H     phenol                       1      1.008     1
+      403   403     C     phenol                       6     12.011     3
+      402   402     C     phenol                       6     12.011     3
+      407   407     H     phenol                       1      1.008     1
+      401   401     C     phenol                       6     12.011     3
+      408   408     H     phenol                       1      1.008     1
+      404   404     C     phenol                       6     12.011     3
+      405   405     O     phenol                       8     15.999     2
+      409   409     H     phenol                       1      1.008     1
+
+ Structure File 1 :  phenol.xyz_2
+
+ Structure File 2 :  final.xyz_2
+
+ File 1 Frame :     1             File 2 Frame :     1
+
+ Summary of Results from Structural Superposition :
+
+ IMPOSE  --  Input Coordinates                0.019449
+ IMPOSE  --  After Translation                0.019250
+ IMPOSE  --  After Rotation                   0.018354
+
+ Root Mean Square Distance :                  0.018354        1      1
+
+   Atom in the         Atom in the            Distance          Weight
+ First Structure     Second Structure        Separated          in Fit
+
+         1-H                 1-H              0.020101          1.0080
+         2-C                 2-C              0.023872         12.0110
+         3-C                 3-C              0.013335         12.0110
+         4-H                 4-H              0.009829          1.0080
+         5-C                 5-C              0.012303         12.0110
+         6-H                 6-H              0.008721          1.0080
+         7-C                 7-C              0.011430         12.0110
+         8-H                 8-H              0.012898          1.0080
+         9-C                 9-C              0.021705         12.0110
+        10-C                10-C              0.016433         12.0110
+        11-H                11-H              0.031352          1.0080
+        12-O                12-O              0.021140         15.9990
+        13-H                13-H              0.039141          1.0080
+
+ Root Mean Square Distance :                  0.018354

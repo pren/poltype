@@ -1,0 +1,45 @@
+molecule { 
+0 1
+ N    2.332495    0.245285    0.109755
+ C    0.929956    0.102770    0.087014
+ C    0.372760   -1.153890   -0.176815
+ C    0.075832    1.202888    0.211613
+ C   -1.005299   -1.311819   -0.256581
+ C   -1.302543    1.046314    0.096495
+ C   -1.851758   -0.212342   -0.125578
+ H    1.038140   -2.000104   -0.322178
+ H    0.498359    2.186463    0.404360
+ H   -1.420993   -2.296840   -0.449964
+ H   -1.949504    1.913742    0.193715
+ H   -2.927804   -0.335689   -0.205905
+ H    2.660434    1.178873   -0.092392
+ H    2.806384   -0.171948    0.898335
+}
+set optking { 
+  frozen_dihedral = ("
+    3 2 1 13
+  ")
+}
+set {
+  geom_maxiter 5
+  g_convergence GAU_LOOSE
+  dynamic_level 1
+}
+memory 700MB
+set_num_threads(8)
+psi4_io.set_default_path("/home/daniele/PSI4_sctatch/Psi4-aniline")
+for _ in range(1):
+  try:
+    set opt_coordinates both
+    optimize('wb97x-d/6-31G*')
+    break
+  except OptimizationConvergenceError:
+    break
+  else:
+    try:
+      set opt_coordinates cartesian
+      optimize('wb97x-d/6-31G*')
+      break
+    except OptimizationConvergenceError:
+      pass
+clean()

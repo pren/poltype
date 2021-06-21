@@ -1,0 +1,48 @@
+molecule { 
+0 1
+ C    0.729200    0.059500   -0.039000
+ C   -0.730700   -0.043400    0.014500
+ C    1.373400    0.973900   -0.847600
+ C   -1.389800   -0.430400    1.164200
+ C    1.531300   -0.765200    0.727400
+ C   -1.525300    0.239700   -1.077400
+ C    2.746300    1.071000   -0.898600
+ C   -2.763400   -0.533900    1.237100
+ C    2.913700   -0.683700    0.690700
+ C   -2.899300    0.138400   -1.011900
+ C    3.538800    0.237500   -0.124600
+ C   -3.551300   -0.248900    0.140900
+ H    0.806100    1.640600   -1.465300
+ H   -0.754100   -0.653100    2.024300
+ H    1.021300   -1.482200    1.361200
+ H   -1.027500    0.547600   -1.998700
+ H    3.268600    1.776500   -1.521700
+ H   -3.263500   -0.843600    2.163800
+ H    3.501900   -1.348900    1.307000
+ H   -3.525900    0.361500   -1.871800
+ H    4.630700    0.315100   -0.165600
+ H   -4.630500   -0.328100    0.191100
+}
+set {
+  geom_maxiter 400
+  g_convergence GAU_LOOSE
+  dynamic_level 1
+}
+memory 700MB
+set_num_threads(3)
+psi4_io.set_default_path("/home/daniele/PSI4_sctatch/Psi4-biphenyl")
+for _ in range(1):
+  try:
+    set opt_coordinates both
+    optimize('mp2/6-31G*')
+    break
+  except OptimizationConvergenceError:
+    break
+  else:
+    try:
+      set opt_coordinates cartesian
+      optimize('mp2/6-31G*')
+      break
+    except OptimizationConvergenceError:
+      pass
+clean()

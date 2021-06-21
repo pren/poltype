@@ -1,0 +1,70 @@
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                       Version 8.9.1  February 2021                       ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2021               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+      402   402     C     biphenyl                     6     12.011     3
+      401   401     C     biphenyl                     6     12.011     3
+      403   403     C     biphenyl                     6     12.011     3
+      404   404     C     biphenyl                     6     12.011     3
+      407   407     H     biphenyl                     1      1.008     1
+      406   406     H     biphenyl                     1      1.008     1
+      405   405     H     biphenyl                     1      1.008     1
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+      402   402     C     biphenyl                     6     12.011     3
+      401   401     C     biphenyl                     6     12.011     3
+      403   403     C     biphenyl                     6     12.011     3
+      404   404     C     biphenyl                     6     12.011     3
+      407   407     H     biphenyl                     1      1.008     1
+      406   406     H     biphenyl                     1      1.008     1
+      405   405     H     biphenyl                     1      1.008     1
+
+ Structure File 1 :  biphenyl.xyz_2
+
+ Structure File 2 :  final.xyz_2
+
+ File 1 Frame :     1             File 2 Frame :     1
+
+ Summary of Results from Structural Superposition :
+
+ IMPOSE  --  Input Coordinates                0.394608
+ IMPOSE  --  After Translation                0.394607
+ IMPOSE  --  After Rotation                   0.394606
+
+ Root Mean Square Distance :                  0.394606        1      1
+
+   Atom in the         Atom in the            Distance          Weight
+ First Structure     Second Structure        Separated          in Fit
+
+         1-C                 1-C              0.006255         12.0110
+         2-C                 2-C              0.006032         12.0110
+         3-C                 3-C              0.480423         12.0110
+         4-C                 4-C              0.484349         12.0110
+         5-C                 5-C              0.484736         12.0110
+         6-C                 6-C              0.480708         12.0110
+         7-C                 7-C              0.485672         12.0110
+         8-C                 8-C              0.481534         12.0110
+         9-C                 9-C              0.481224         12.0110
+        10-C                10-C              0.485350         12.0110
+        11-C                11-C              0.032683         12.0110
+        12-C                12-C              0.032862         12.0110
+
+ Root Mean Square Distance :                  0.394606

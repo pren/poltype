@@ -1,0 +1,1000 @@
+ 1055  vi ../../../poltype/Examples/test_benzene/final.key 
+ 1056  vi ../../../poltype/Examples/test_benzene/AMOEBA 
+ 1057  vi ../../../poltype/Examples/test_benzene/final.key 
+ 1058  vmd ../../../poltype/Examples/test_benzene/final.xyz
+ 1059  cp ../../../poltype/Examples/test_benzene/final.xyz .
+ 1060  vi final.xyz 
+ 1061  vmd final.xyz 
+ 1062  vi ../../../poltype/Examples/test_benzene/final.key 
+ 1063  vi ../../../poltype/Examples/test_benzene/AMOEBA 
+ 1064  exit
+ 1065  0:08
+ 1066  ssh daniele@52.1.201.211
+ 1067  ssh  -p 443 dloco@bifrost.lct.jussieu.fr
+ 1068  cd
+ 1069  cd others/
+ 1070  vi vis.xyz 
+ 1071  vmd vis.xyz 
+ 1072  exit
+ 1073  cd tinker/example/
+ 1074  ls
+ 1075  cd ../
+ 1076  ls
+ 1077  cd test/
+ 1078  ls
+ 1079  cd
+ 1080  cd Downloads/
+ 1081  cd tinker
+ 1082  ls
+ 1083  cd test/
+ 1084  ls
+ 1085  cd NEW_PARAMS/
+ 1086  ls
+ 1087  cd benzene/
+ 1088  ls
+ 1089  scp -r  -P 443 dloco@bifrost.lct.jussieu.fr:~/ele* .
+ 1090  cd ele0.0/
+ 1091  ls
+ 1092  vi benzene_opt_solv.key 
+ 1093  ../../../../source/dynamic.x mpirun -np 10 /home/tpoland/LOUIS/PME/v1.2/bin/dynamic "$input".xyz -k "$input".key 1000000 0.1 0.5 2 300 > $outputfile
+ 1094  ../../../../source/dynamic.x  benzene_opt_solv.xyz -k benzene_opt_solv.key 1000000 0.1 0.5 2 300 > out
+ 1095  exit
+ 1096  vi ~/tinker/params/amoeba09.prm
+ 1097  ls
+ 1098  ssh  -p 443 dloco@bifrost.lct.jussieu.fr
+ 1099  ssh daniele@52.1.201.211
+ 1100  cd
+ 1101  cd projects/atlas-parametrization/
+ 1102  ls
+ 1103  cd poltype/Examples/
+ 1104  ls
+ 1105  cd
+ 1106  cd Downloads/poltype/Examples/test_aniline/
+ 1107  ls
+ 1108  cd ../
+ 1109  cp -r test_aniline/ ~/Dropbox/Poltype2_Qubit/
+ 1110  exit
+ 1111  ls
+ 1112  vi out 
+ 1113  exit
+ 1114  vi docker-files/Dockerfile 
+ 1115  exit
+ 1116  ssh  -p 443 dloco@bifrost.lct.jussieu.fr
+ 1117  ls
+ 1118  cd projects/
+ 1119  cd atlas-parametrization/
+ 1120  git status
+ 1121  ssh  -p 443 dloco@bifrost.lct.jussieu.fr
+ 1122  ls
+ 1123  vi test_suite/new_params/benzene_prm/poltype.ini 
+ 1124  exit
+ 1125  cd
+ 1126  ls
+ 1127  cd projects/
+ 1128  cd atlas-parametrization/
+ 1129  ls
+ 1130  cd poltype/
+ 1131  ls
+ 1132  cd ../
+ 1133  ls
+ 1134  sudo docker build -t poltype -f docker-files/Dockerfile .
+ 1135  ls
+ 1136  sudo docker run --rm  -it poltype
+ 1137  exit
+ 1138  ssh  -p 443 dloco@bifrost.lct.jussieu.fr
+ 1139  cd 
+ 1140  cd poltype
+ 1141  cd
+ 1142  cd projects/atlas-parametrization/
+ 1143  ls
+ 1144  cd poltype/
+ 1145  ls
+ 1146  cd te
+ 1147  cd Examples/
+ 1148  cd
+ 1149  cd Downloads/
+ 1150  cd poltype/
+ 1151  ls
+ 1152  cd Examples/
+ 1153  ls
+ 1154  cd test_aniline/
+ 1155  ls
+ 1156  mkdir input
+ 1157  cp aniline.sdf poltype.ini input/
+ 1158  ls
+ 1159  rm *
+ 1160  cp input/* .
+ 1161  ls
+ 1162  conda activate poltype
+ 1163  python ../../PoltypeModules/poltype.py &
+ 1164  ll
+ 1165  top
+ 1166  ls
+ 1167  ll
+ 1168  ls
+ 1169  source ~/.bash
+ 1170  source ~/.bashrc 
+ 1171  git pull
+ 1172  git bransh
+ 1173  git branch
+ 1174  git pull poltype2
+ 1175  git checkout poltype2
+ 1176  git pull
+ 1177  ls
+ 1178  rm *
+ 1179  cp input/* .
+ 1180  ls
+ 1181  conda activate poltype
+ 1182  python ../../PoltypeModules/poltype.py &
+ 1183  ls
+ 1184  ll
+ 1185  vi poltype.ini 
+ 1186  ll
+ 1187  vi aniline-poltype.log 
+ 1188  ls
+ 1189  ll
+ 1190  rm *
+ 1191  ls
+ 1192  cp input/* .
+ 1193  vi poltype.ini 
+ 1194  python ../../PoltypeModules/poltype.py &
+ 1195  ll
+ 1196  ll 
+ 1197  vi ~/.bashrc 
+ 1198  ls
+ 1199  rm *.*
+ 1200  ls
+ 1201  cd ../
+ 1202  mkdir test_aniline2
+ 1203  cp -r test_aniline/input/ test_aniline2/
+ 1204  rm -r test_aniline
+ 1205  cd test_aniline2/
+ 1206  rm -rf ~/PSI4_sctatch/*
+ 1207  ls
+ 1208  cp input/* .
+ 1209  vi aniline.sdf 
+ 1210  ls
+ 1211  exit
+ 1212  cd
+ 1213  cd Downloads/poltype/
+ 1214  ls
+ 1215  git pull
+ 1216  ls
+ 1217  cp README* ~/projects/atlas-parametrization/poltype/
+ 1218  vimdiff PoltypeModules/torsiongenerator.py ~/projects/atlas-parametrization/poltype/PoltypeModules/torsiongenerator.py 
+ 1219  ls
+ 1220  cp -r VersionFiles VdwProbes ModifiedResidueLibraries ParameterFiles PoltypeModules Images BasisSets ~/projects/atlas-parametrization/poltype/
+ 1221  vimdiff PoltypeModules/torsiongenerator.py ~/projects/atlas-parametrization/poltype/PoltypeModules/torsiongenerator.py 
+ 1222  exit
+ 1223  ssh  -p 443 dloco@bifrost.lct.jussieu.fr
+ 1224  cd
+ 1225  cd projects/atlas-parametrization/
+ 1226  sudo docker run --rm  -it poltype
+ 1227  ls
+ 1228  vi docker-files/Dockerfile 
+ 1229  cp ~/Downloads/poltype/Examples/test_aniline2/ poltype/Examples/
+ 1230  cp -r ~/Downloads/poltype/Examples/test_aniline2/ poltype/Examples/
+ 1231  ls
+ 1232  sudo docker build -t poltype -f docker-files/Dockerfile .
+ 1233  sudo docker run --rm  -it poltype
+ 1234  ls
+ 1235  cd poltype/
+ 1236  ls
+ 1237  sudo docker build -t poltype -f docker-files/Dockerfile .
+ 1238  ls
+ 1239  cd ../
+ 1240  sudo docker build -t poltype -f docker-files/Dockerfile .
+ 1241  sudo docker run --rm  -it poltype
+ 1242  ls
+ 1243  conda activate poltype
+ 1244  ld
+ 1245  ls
+ 1246  python ../../PoltypeModules/poltype.py &
+ 1247  vi poltype.ini 
+ 1248  ll
+ 1249  ls
+ 1250  ll
+ 1251  vi aniline.gdmaout
+ 1252  ls
+ 1253  ll
+ 1254  vi aniline-dma.fchk
+ 1255  vi aniline-esp.psi4
+ 1256  ls
+ 1257  ll
+ 1258  top
+ 1259  ll
+ 1260  vi RMSPD.txt 
+ 1261  ll
+ 1262  vi aniline.sdf 
+ 1263  cd ../test_basic_water2/
+ 1264  ls
+ 1265  rm -rf *
+ 1266  ls
+ 1267  cp ../SymmetryWater/water.sdf .
+ 1268  cp ../SymmetryWater/poltype.ini .
+ 1269  python ../../PoltypeModules/poltype.py &
+ 1270  ll
+ 1271  vi poltype.ini 
+ 1272  ll
+ 1273  vi final.key 
+ 1274  cd ../test_aniline2/
+ 1275  ls
+ 1276  vimdiff aniline-opt_1.log ~/Downloads/test_aniline/aniline-opt_1.log 
+ 1277  vimdiff aniline.sdf ~/Downloads/test_aniline/aniline.sdf 
+ 1278  vimdiff poltype.ini ~/Downloads/test_aniline/poltype.ini 
+ 1279  vimdiff aniline-dma.log ~/Downloads/test_aniline/aniline-dma.log 
+ 1280  vimdiff aniline-dma.log ~/Downloads/test_aniline/aniline-dma.log
+ 1281  vimdiff aniline-esp.log ~/Downloads/test_aniline/aniline-esp.log 
+ 1282  ll
+ 1283  vi aniline.gdmaout ~/Downloads/test_aniline/aniline.gdmaout 
+ 1284  vimdiff aniline.gdmaout ~/Downloads/test_aniline/aniline.gdmaout 
+ 1285  vi aniline-opt_1.log 
+ 1286  vi ~/Downloads/test_aniline/aniline-opt_1.log 
+ 1287  ls
+ 1288  vimdiff aniline_fortinker.pot ~/Downloads/test_aniline/aniline_fortinker.pot 
+ 1289  ll
+ 1290  vimdiff aniline-dma.log ~/Downloads/test_aniline/aniline-dma.log 
+ 1291  cat aniline.sdf 
+ 1292  vi ~/Downloads/test_aniline/aniline.xyz
+ 1293  ls
+ 1294  mv aniline.sdf input/test
+ 1295  rm *
+ 1296  ls
+ 1297  cp input/test aniline.sdf
+ 1298  cp input/poltype.ini .
+ 1299  ls
+ 1300  python ../../PoltypeModules/poltype.py &
+ 1301  ll
+ 1302  vi aniline-opt_1.default.46203.intco
+ 1303  ll
+ 1304  vi aniline-opt_1.log 
+ 1305  ll
+ 1306  vi aniline-opt_1.log 
+ 1307  top
+ 1308  ls
+ 1309  ll
+ 1310  vi aniline-poltype.log
+ 1311  vi aniline-opt_1.psi4
+ 1312  ll
+ 1313  vi aniline-opt_1.log
+ 1314  vi aniline.mol 
+ 1315  ls
+ 1316  vi aniline-opt_1.log 
+ 1317  ls
+ 1318  ll
+ 1319  vi input/aniline.sdf 
+ 1320  vi ~/Downloads/test_aniline/aniline-opt_1.log 
+ 1321  ll
+ 1322  top
+ 1323  ls
+ 1324  ll
+ 1325  vi ~/Downloads/test_aniline/aniline-poltype.log 
+ 1326  vi ~/.bashrc 
+ 1327  analyze.x 
+ 1328  ~/Downloads/tinker/source/analyze.x 
+ 1329  ~/tinker/source/analyze.x 
+ 1330  ls
+ 1331  vi aniline.gdmain 
+ 1332  vi aniline.gdmaout 
+ 1333  ls
+ 1334  vi ~/Downloads/test_aniline/aniline.xyz_2 
+ 1335  ~/Downloads/tinker_bin/analyze 
+ 1336  source ~/.bashrc 
+ 1337  vi ~/.bashrc
+ 1338  ls
+ 1339  cd
+ 1340  cd -
+ 1341  cd ../test_basic_water2/
+ 1342  ls
+ 1343  cat final.key 
+ 1344  :q
+ 1345  ls
+ 1346  cd ../test_benzene/
+ 1347  cat final.key 
+ 1348  cd ../test_phenol/
+ 1349  cat final.key 
+ 1350  ~/Downloads/tinker/source/analyze.x final.xyz P
+ 1351  cd ../test_benzene/
+ 1352  ls
+ 1353  ~/Downloads/tinker/source/analyze.x final.xyz P
+ 1354  cd ../test_aniline2/
+ 1355  ls
+ 1356  vi aniline-poltype.log 
+ 1357  vimdiff aniline-poltype.log ~/Downloads/test_aniline/aniline-poltype.log 
+ 1358  vimdiff ESP.cube 
+ 1359  vimdiff ESP.cube  ~/Downloads/test_aniline/ESP.cube 
+ 1360  vi ~/Downloads/test_aniline/aniline-poltype.log 
+ 1361  ls
+ 1362  vi ~/Downloads/test_aniline/aniline-poltype.log 
+ 1363  cat aniline-poltype.log 
+ 1364  :q
+ 1365  poledit.x 1 aniline.gdmaout /home/daniele/Downloads/poltype/ParameterFiles/amoebabio18_header.prm < aniline-peditin.txt path
+ 1366  cd
+ 1367  cd projects/atlas-platform/
+ 1368  ls
+ 1369  cd ../atlas-parametrization/
+ 1370  ls
+ 1371  cd poltype/
+ 1372  ls
+ 1373  cd ../test_suite/
+ 1374  ls
+ 1375  vi README.md 
+ 1376  cd dynamics/
+ 1377  ls
+ 1378  cd benzene/
+ 1379  ls
+ 1380  cd water-solution/
+ 1381  ls
+ 1382  cd initial_solv_opt/
+ 1383  ls
+ 1384  vi conf_init/
+ 1385  cd ../
+ 1386  vi HOW_TO 
+ 1387  ls
+ 1388  cd initial_solv_opt/
+ 1389  ls
+ 1390  cd conf_init/
+ 1391  ls
+ 1392  cp ../../../gas-phase/benzene.xyz_2 .
+ 1393  ls
+ 1394  vi benzene_opt_solv.xyz 
+ 1395  cat ../../HOW_TO 
+ 1396  rm benzene.xyz_2 
+ 1397  ~/Downloads/tinker/source/xyzedit.x ../../../gas-phase/Check_OPT/benzene.xyz_2 
+ 1398  ls
+ 1399  ~/Downloads/tinker/source/xyzedit.x ../../../gas-phase/Check_OPT/benzene.xyz_2  benzene.prm 
+ 1400  ~/Downloads/tinker/source/xyzedit.x ../../../gas-phase/Check_OPT/benzene.xyz_2  benzene.prm  12 22
+ 1401  ls
+ 1402  cd ../
+ 1403  ls
+ 1404  cd ../
+ 1405  ls
+ 1406  cd initial_solv_opt/
+ 1407  ls
+ 1408  cd conf_init/
+ 1409  ~/Downloads/tinker/source/xyzedit.x ../../../gas-phase/Check_OPT/benzene.xyz_2  benzene.prm  12 22 ../../solvated/wat-box/waterbox.xyz 
+ 1410  ls
+ 1411  rm ../../../gas-phase/Check_OPT/benzene.xyz_3
+ 1412  cd ../
+ 1413  ls
+ 1414  vi min.sh 
+ 1415  ls
+ 1416  cd ../
+ 1417  vi HOW_TO 
+ 1418  ls
+ 1419  cd solvated/
+ 1420  ls
+ 1421  cd ../
+ 1422  vi HOW_TO 
+ 1423  cd initial_solv_opt/
+ 1424  ls
+ 1425  cd conf_init/
+ 1426  cd ../
+ 1427  ls
+ 1428  cd ../
+ 1429  vi HOW_TO 
+ 1430  ls
+ 1431  cd initial_solv_opt/
+ 1432  ls
+ 1433  cd ../
+ 1434  ls
+ 1435  cd ../
+ 1436  ls
+ 1437  scp -r benzene/ daniele@52.1.201.211:
+ 1438  ls
+ 1439  cd benzene/
+ 1440  ls
+ 1441  cd water-solution/
+ 1442  ls
+ 1443  vi HOW_TO 
+ 1444  cd 
+ 1445  cd projects/atlas-parametrization/poltype/Examples/
+ 1446  mkdir test1
+ 1447  cd test1/
+ 1448  cp ../SymmetryWater/water.sdf .
+ 1449  cp ../SymmetryWater/poltype.ini .
+ 1450  conda activate poltype
+ 1451  python ../../PoltypeModules/poltype.py &
+ 1452  ls
+ 1453  ll
+ 1454  vi final.key 
+ 1455  ls
+ 1456  cd ../
+ 1457  rm -rf test1/
+ 1458  ls
+ 1459  cd test_aniline2/
+ 1460  ls
+ 1461  rm *
+ 1462  cp input/* .
+ 1463  ls
+ 1464  python ../../PoltypeModules/poltype.py &
+ 1465  ll
+ 1466  vi aniline-opt_1.log
+ 1467  tail -f aniline-opt_1.log
+ 1468  ls
+ 1469  ll
+ 1470  vi ~/.bashrc 
+ 1471  ll
+ 1472  vi aniline-poltype.log 
+ 1473  vimdiff aniline-poltype.log ~/Downloads/test_aniline/aniline-poltype.log 
+ 1474  vimdiff aniline-esp.log ~/Downloads/test_aniline/aniline-poltype.lo
+ 1475  vimdiff aniline-esp.log ~/Downloads/test_aniline/aniline-esp.log
+ 1476  vimdiff grid_esp.dat ~/Downloads/test_aniline/grid_esp.dat
+ 1477  vimdiff grid_esp.dat 
+ 1478  ll
+ 1479  vimdiff grid_esp.dat ~/Downloads/test_aniline/grid_esp.dat
+ 1480  ll
+ 1481  vimdiff grid_esp.dat ~/Downloads/test_aniline/grid_esp.dat
+ 1482  ll
+ 1483  vi grid.dat 
+ 1484  ll
+ 1485  vi aniline-poltype.log
+ 1486  ll
+ 1487  vi aniline-poltype.log
+ 1488  ll
+ 1489  ssh daniele@52.1.201.211
+ 1490  cat out 
+ 1491  tail -f out 
+ 1492  ls
+ 1493  vi out 
+ 1494  grep "Total Energy" out 
+ 1495  ls
+ 1496  cd ../
+ 1497  ls
+ 1498  vi prep_dyns.sh
+ 1499  ls
+ 1500  chmod 777 prep_dyns.sh 
+ 1501  ls
+ 1502  vi prep_dyns.sh 
+ 1503  ls
+ 1504  vi ele0.0/benzene_opt_solv.key 
+ 1505  vi prep_dyns.sh 
+ 1506  cp ele0.0/benzene.prm .
+ 1507  vi prep_dyns.sh 
+ 1508  ls
+ 1509  cp ele0.0/benzene_opt_solv.key benzene_opt_solv_base.key 
+ 1510  vi prep_dyns.sh 
+ 1511  cp ele0.0/benzene_opt_solv.xyz .
+ 1512  vi prep_dyns.sh 
+ 1513  vi benzene_opt_solv_base.key 
+ 1514  ls
+ 1515  ./prep_dyns.sh 
+ 1516  ls
+ 1517  cd ele-1.00-0.00/
+ 1518  ls
+ 1519  vi benzene_opt_solv.key 
+ 1520  cd ../
+ 1521  rm -r ele-1.00-0.00
+ 1522  mv ele0.0 ele-1.00-0.00
+ 1523  ls
+ 1524  cd ele-1.00-0.10/
+ 1525  ls
+ 1526  vi ../ele-1.00-0.00/sub_tinker.sh 
+ 1527  ../../../../source/dynamic.x benzene_opt_solv.xyz -k benzene_opt_solv.key 1000000 0.1 0.5 2 300 > out
+ 1528  cd ../ele-1.00-0.20/
+ 1529  ../../../../source/dynamic.x benzene_opt_solv.xyz -k benzene_opt_solv.key 1000000 0.1 0.5 2 300 > out
+ 1530  cd ../ele-1.00-0.30/
+ 1531  ../../../../source/dynamic.x benzene_opt_solv.xyz -k benzene_opt_solv.key 1000000 0.1 0.5 2 300 > out
+ 1532  cd ../ele-1.00-0.40/
+ 1533  ../../../../source/dynamic.x benzene_opt_solv.xyz -k benzene_opt_solv.key 1000000 0.1 0.5 2 300 > out
+ 1534  vi out 
+ 1535  ../../../../source/analyze.x benzene_opt_solv.xyz -k benzene_opt_solv.key P
+ 1536  cd -
+ 1537  ../../../../source/analyze.x benzene_opt_solv.xyz -k benzene_opt_solv.key P
+ 1538  ../../../../source/analyze.x benzene_opt_solv.xyz -k benzene_opt_solv.key E
+ 1539  cd -
+ 1540  ../../../../source/analyze.x benzene_opt_solv.xyz -k benzene_opt_solv.key E
+ 1541  cd ../ele-1.00-0.50/
+ 1542  ../../../../source/dynamic.x benzene_opt_solv.xyz -k benzene_opt_solv.key 1000000 0.1 0.5 2 300 > out
+ 1543  cd ../ele-1.00-0.60/
+ 1544  ls
+ 1545  ../../../../source/dynamic.x benzene_opt_solv.xyz -k benzene_opt_solv.key 1000000 0.1 0.5 2 300 > out
+ 1546  cd ../ele-1.00-0.70/
+ 1547  ls
+ 1548  ../../../../source/dynamic.x benzene_opt_solv.xyz -k benzene_opt_solv.key 1000000 0.1 0.5 2 300 > out
+ 1549  cd ../ele-1.00-0.80/
+ 1550  ls
+ 1551  ../../../../source/dynamic.x benzene_opt_solv.xyz -k benzene_opt_solv.key 1000000 0.1 0.5 2 300 > out
+ 1552  cd ../ele-1.00-0.90/
+ 1553  ls
+ 1554  ../../../../source/dynamic.x benzene_opt_solv.xyz -k benzene_opt_solv.key 1000000 0.1 0.5 2 300 > out
+ 1555  cd ../ele-1.00-1.00/
+ 1556  ../../../../source/dynamic.x benzene_opt_solv.xyz -k benzene_opt_solv.key 1000000 0.1 0.5 2 300 > out
+ 1557  cd ../
+ 1558  ls
+ 1559  cp -r ele-1.00-* ~/projects/atlas-parametrization/test_suite/dynamics/benzene/gas-phase/
+ 1560  cd ~/projects/atlas-parametrization/test_suite/dynamics/benzene/gas-phase/
+ 1561  ls
+ 1562  mkdir FSE
+ 1563  mv ele-1.00-* FSE/
+ 1564  git status
+ 1565  git add .
+ 1566  git status
+ 1567  git add ../../../README.md
+ 1568  git add ../water-solution/HOW_TO
+ 1569  ls
+ 1570  git commit -m "lamda-dynamics for benzene in gas phase added, info text file slightly updates"
+ 1571  git branch
+ 1572  git push poltype_myfork poltype_updates
+ 1573  git status
+ 1574  git add .
+ 1575  git status
+ 1576  git add ../../../../poltype/
+ 1577  git status
+ 1578  vi ../../../../poltype/PoltypeModules/__pycache__/torsiongenerator.cpython-36.pyc
+ 1579  git commit -m "latest poltype version added"
+ 1580  git push poltype_myfork poltype_updates
+ 1581  ls
+ 1582  ssh daniele@52.1.201.211
+ 1583  ssh daniele@52.1.201.211
+ 1584  glxinfo | grep "OpenGL version"
+ 1585  exit
+ 1586  python
+ 1587  3*100/512
+ 1588  python
+ 1589  python3
+ 1590  ssh daniele@52.1.201.211
+ 1591  ls
+ 1592  ssh daniele@52.1.201.211
+ 1593  cd
+ 1594  cd others/
+ 1595  scp -r daniele@52.1.201.211:/fsx/users/daniele/benchmarks_poltype/benzene/FSE/water-solution/initial_solv_opt .
+ 1596  ls
+ 1597  cd initial_solv_opt/
+ 1598  ls
+ 1599  cd box_2/
+ 1600  ls
+ 1601  vmd 
+ 1602  vi benzene_opt_solv.xyz
+ 1603  vmd 
+ 1604  vi benzene_opt_solv.xyz_2 
+ 1605  vmd 
+ 1606  ssh daniele@52.1.201.211
+ 1607  cd
+ 1608  cd tinker/
+ 1609  source/bar.x 
+ 1610  ls
+ 1611  exit
+ 1612  ls
+ 1613  ll
+ 1614  vi 1.bar 
+ 1615  top
+ 1616  exit
+ 1617  top
+ 1618  exit
+ 1619  top
+ 1620  exit
+ 1621  vi tinker/source/getprm.f 
+ 1622  exit
+ 1623  ../../../../source/bar.x 
+ 1624  exit
+ 1625  ssh daniele@52.1.201.211
+ 1626  cd
+ 1627  cd poltype
+ 1628  ls
+ 1629  cd 
+ 1630  cd projects/atlas-parametrization/test_suite/
+ 1631  ls
+ 1632  cd dynamics/
+ 1633  ls
+ 1634  cd water/
+ 1635  ls
+ 1636  cd gas-phase/
+ 1637  ls
+ 1638  vi HOW_TO 
+ 1639  vi RMSdist.dat 
+ 1640  cd ../
+ 1641  ls
+ 1642  scp -r gas-phase daniele@52.1.201.211:/fsx/users/daniele/benchmarks_poltype/water/FSE/
+ 1643  ls
+ 1644  cd
+ 1645  cd -
+ 1646  cd ../benzene/
+ 1647  ls
+ 1648  cd water-solution/
+ 1649  ls
+ 1650  cd ../
+ 1651  ls
+ 1652  scp -r daniele@52.1.201.211:/fsx/users/daniele/benchmarks_poltype/benzene/FSE/ .
+ 1653  ls
+ 1654  cd FSE/
+ 1655  ls
+ 1656  vi gas-phase/HOW_TO 
+ 1657  vimdiff gas-phase/HOW_TO ../gas-phase/HOW_TO 
+ 1658  ls
+ 1659  vimdiff water-solution/HOW_TO ../water-solution/HOW_TO 
+ 1660  ls
+ 1661  cd ..
+ 1662  ls
+ 1663  cd water-solution/
+ 1664  ls
+ 1665  cd ../
+ 1666  rm -r gas-phase/ water-solution/
+ 1667  ls
+ 1668  git status
+ 1669  git add FSE/ ../water/water-solution/
+ 1670  git rm ../../../poltype/Examples/test_aniline2/
+ 1671  git rm -r ../../../poltype/Examples/test_aniline2/
+ 1672  git rm -r water-solution/ 
+ 1673  git status
+ 1674  git rm -r gas-phase/
+ 1675  git status
+ 1676  git rm -r ../../../poltype/Examples/test_aniline2/
+ 1677  git rm -rf ../../../poltype/Examples/test_aniline2/
+ 1678  git status
+ 1679  git rm -r ./../../poltype/PoltypeModules/__pycache__/
+ 1680  git rm -r ../../../poltype/PoltypeModules/__pycache__/
+ 1681  git rm -rf ../../../poltype/PoltypeModules/__pycache__/
+ 1682  git status
+ 1683  ls
+ 1684  cd FSE/
+ 1685  ls
+ 1686  cd FSE_calc/
+ 1687  ls
+ 1688  cd ../
+ 1689  ls
+ 1690  cd ../
+ 1691  ls
+ 1692  git commit -m "first complete set for FSE, with the benzene molecule, added!"
+ 1693  git push poltype_myfork poltype_updates
+ 1694  git status
+ 1695  git fetch origin
+ 1696  git merge origin/master
+ 1697  git status
+ 1698  git rm water/water-solution/water_opt_solv.xyz
+ 1699  git add .
+ 1700  git status
+ 1701  git commit -m "modified test"
+ 1702  git push poltype_myfork poltype_updates
+ 1703  git repack
+ 1704  git push
+ 1705  git push poltype_myfork poltype_updates
+ 1706  exit
+ 1707  ssh  -p 443 dloco@bifrost.lct.jussieu.fr
+ 1708  cd
+ 1709  cd projects/atlas-parametrization/
+ 1710  cd test_suite/
+ 1711  ls
+ 1712  vi dynamics/benzene/FSE/water-solution/equilib.slurm.sh 
+ 1713  vi dynamics/benzene/FSE/water-solution/equilibration/equilib.slurm.sh 
+ 1714  exit
+ 1715  cd
+ 1716  cd others/
+ 1717  vi vis.xyz 
+ 1718  vmd vis.xyz 
+ 1719  vi vis.xyz 
+ 1720  vmd vis.xyz 
+ 1721  vi vis.xyz 
+ 1722  vmd vis.xyz 
+ 1723  vi vis.xyz 
+ 1724  vmd vis.xyz 
+ 1725  vi vis.xyz 
+ 1726  vmd vis.xyz 
+ 1727  vi vis.xyz 
+ 1728  vmd vis.xyz 
+ 1729  vi vis.xyz 
+ 1730  vmd vis.xyz 
+ 1731  ssh  -p 443 dloco@bifrost.lct.jussieu.fr
+ 1732  apt-get okular
+ 1733  apt-get install okular
+ 1734  atp-get install okular
+ 1735  apt get install okular
+ 1736  sudo atp-get install okular
+ 1737  sudo atp get install okular
+ 1738  sudo apt get install okular
+ 1739  sudo apt-get install okular
+ 1740  okular qm-torsion/butane-energy-1-2.png 
+ 1741  okular qm-torsion/butane-fit-1-2.png 
+ 1742  okular qm-torsion/butane-energy-1-2.png 
+ 1743  okular qm-torsion/butane-fit-1-2.png 
+ 1744  okular qm-torsion/butane-energy-1-2.png 
+ 1745  ls
+ 1746  cd ../
+ 1747  mkdir test_aniline
+ 1748  cd test_aniline/
+ 1749  mv ~/Downloads/Conformer3D_CID_6115.sdf aniline.sdf
+ 1750  cp ../test_butane/poltype.ini .
+ 1751  vi aniline.sdf 
+ 1752  vi poltype.ini 
+ 1753  exit
+ 1754  top
+ 1755  exit
+ 1756  top
+ 1757  exit
+ 1758  cd
+ 1759  cd others/
+ 1760  vi vis.xyz 
+ 1761  vmd  vis.xyz 
+ 1762  exit
+ 1763  cd
+ 1764  cd poltype
+ 1765  cd
+ 1766  cd projects/atlas-parametrization/
+ 1767  git fetch origin
+ 1768  ls
+ 1769  git merge origin/master
+ 1770  ls
+ 1771  ll
+ 1772  git pull
+ 1773  ls
+ 1774  git pull poltype_myfork poltype_updates
+ 1775  ls
+ 1776  vi .gitlab-ci.yml 
+ 1777  git status
+ 1778  git add .
+ 1779  git status
+ 1780  cd test_suite/dynamics/water/
+ 1781  ls
+ 1782  cd FSE/
+ 1783  ls
+ 1784  cd gas-phase/
+ 1785  ls
+ 1786  vi RMSdist.dat 
+ 1787  vi water_MP2opt.xyz
+ 1788  vi water_MP2opt.xyz*
+ 1789  ls
+ 1790  vi check.sh 
+ 1791  cd
+ 1792  cd projects/atlas-parametrization/
+ 1793  git commit -m "First CI with Hello World!"
+ 1794  git push poltype_myfork poltype_updates
+ 1795  vi docker-files/Dockerfile 
+ 1796  exit
+ 1797  ssh  -p 443 dloco@bifrost.lct.jussieu.fr
+ 1798  cd
+ 1799  cd Dropbox/DrugDiscovery/SAPT/small_mol/S66x8/
+ 1800  ls
+ 1801  vmd 2827_17UracilUracilBP090.xyz 
+ 1802  vi 2827_17UracilUracilBP090.xyz 
+ 1803  vmd 2827_17UracilUracilBP090.xyz 
+ 1804  exit
+ 1805  cd
+ 1806  cd -
+ 1807  cd ../../
+ 1808  ls
+ 1809  git status
+ 1810  git pull
+ 1811  cd Examples/
+ 1812  mkdir test_butane2
+ 1813  cp test_butane/butane.sdf test_butane2/
+ 1814  cp test_butane/poltype.ini test_butane2/
+ 1815  exit
+ 1816  cd 
+ 1817  ssh  -p 443 dloco@bifrost.lct.jussieu.fr
+ 1818  cd
+ 1819  cd Downloads/
+ 1820  vmd  4109.xyz 
+ 1821  vmd 216.xyz 
+ 1822  vi vis.xyz 
+ 1823  vmd vis.xyz 
+ 1824  vi vis.xyz 
+ 1825  vmd  vis.xyz 
+ 1826  vi vis.xyz 
+ 1827  vmd vis.xyz 
+ 1828  cd /home/daniele/Dropbox/DrugDiscovery/SAPT/small_mol/S66x8
+ 1829  vmd 2828_17UracilUracilBP095.xyz 
+ 1830  ll *17*
+ 1831  ll *_17*
+ 1832  scp  daniele@52.1.201.211:_17/fsx/users/daniele/benchmarks_poltype/benzene/FSE/ .
+ 1833  scp  d*_17* -P 443 dloco@bifrost.lct.jussieu.fr:/home_lct/dloco/psi4/SAPT/small_bench/test_subset/uracile2B2BP
+ 1834  history | grep "scp -P"
+ 1835  history | grep "scp "
+ 1836  scp -P 443 *_17* dloco@bifrost.lct.jussieu.fr:/home_lct/dloco/psi4/SAPT/small_bench/test_subset/uracile2B
+ 1837  scp -P 443 *_17* dloco@bifrost.lct.jussieu.fr:/home_lct/dloco/psi4/SAPT/small_bench/test_subset/uracile2BP
+ 1838  vi 2827_17UracilUracilBP090.xyz
+ 1839  vmd 2827_17UracilUracilBP090.xyz
+ 1840  cd
+ 1841  cd Downloads/tinker/test/NEW_PARAMS/
+ 1842  ls
+ 1843  cd benzene/
+ 1844  ls
+ 1845  vi ele-1.00-0.00/benzene_opt_solv.key
+ 1846  ll
+ 1847  vi prep_dyns.sh 
+ 1848  ms
+ 1849  ls
+ 1850  vi prep_dyns.sh 
+ 1851  vi bar_run.sh 
+ 1852  ls
+ 1853  pwd
+ 1854  ls
+ 1855  cd ../
+ 1856  mkdir water
+ 1857  ls
+ 1858  cd water/
+ 1859  ls
+ 1860  cd ../benzene/
+ 1861  ls
+ 1862  cd ../water/
+ 1863  ls
+ 1864  vi ../benzene/benzene_opt_solv.xyz
+ 1865  ls
+ 1866  cp ~/projects/atlas-parametrization/test_suite/dynamics/water/FSE/gas-phase/water.xyz_2 .
+ 1867  ls
+ 1868  vi ../benzene/*.sh .
+ 1869  cp ../benzene/*.sh .
+ 1870  cp ../benzene/*.key .
+ 1871  ls
+ 1872  ll
+ 1873  mv benzene_opt_solv_base.key water_gas_base.key 
+ 1874  vi water_gas_base.key
+ 1875  ls
+ 1876  vi benzene_opt_solv.key
+ 1877  vi ../benzene/ele-1.00-1.00/benzene_opt_solv.key 
+ 1878  ls
+ 1879  rm benzene_opt_solv.key 
+ 1880  ls
+ 1881  vi prep_dyns.sh 
+ 1882  cp prep_dyns.sh 01equilib_dyn.sh 
+ 1883  vi 01equilib_dyn.sh 
+ 1884  mkdir && cd nnn
+ 1885  mkdir & cd nnn
+ 1886  ls
+ 1887  vi 01equilib_dyn.sh 
+ 1888  ls
+ 1889  vi 01equilib_dyn.sh 
+ 1890  ls
+ 1891  vp water_gas_base.key water_gas.key
+ 1892  cp water_gas_base.key water_gas.key
+ 1893  vi water_gas.key
+ 1894  vi 01equilib_dyn.sh 
+ 1895  ls
+ 1896  vi water_gas.key
+ 1897  rm water.xyz_2
+ 1898  ./01equilib_dyn.sh 
+ 1899  rm -rf nvt-equilib/
+ 1900  vi 01equilib_dyn.sh 
+ 1901  ./01equilib_dyn.sh 
+ 1902  top
+ 1903  exit
+ 1904  top
+ 1905  exit
+ 1906  top
+ 1907  exit
+ 1908  ls
+ 1909  vi lambda_dyns/ele-1.00-0.00/ele-1.00-0.00.log 
+ 1910  cd ../benzene/
+ 1911  ls
+ 1912  vi bar_run.sh 
+ 1913  cp bar_run.sh calc_FEgas.R ../water/
+ 1914  exit
+ 1915  top
+ 1916  exit
+ 1917  cd
+ 1918  docker pull registry.gitlab.com/dloco/atlas-parametrization:latest
+ 1919  sudo docker pull registry.gitlab.com/dloco/atlas-parametrization:latest
+ 1920  cd projects/atlas-parametrization/
+ 1921  ls
+ 1922  sudo docker pull registry.gitlab.com/dloco/atlas-parametrization:latest
+ 1923  sudo adduser $USER docker
+ 1924  newgrp docker
+ 1925  groups
+ 1926  docker pull registry.gitlab.com/dloco/atlas-parametrization:latest
+ 1927  docker login -u @dloco
+ 1928  docker pull registry.gitlab.com/dloco/atlas-parametrization:latest
+ 1929  docker login -u dloco
+ 1930  docker login -u dloco -p Lqm4yVwRErT7BTxczk5m
+ 1931  docker logout
+ 1932  docker login -u dloco registry.gitlab.com
+ 1933  docker pull registry.gitlab.com/dloco/atlas-parametrization:latest
+ 1934  docker image
+ 1935  docker images
+ 1936  docker info
+ 1937  docker system prune
+ 1938  docker images
+ 1939  docker run --rm -it registry.gitlab.com/dloco/atlas-parametrization bash
+ 1940  history | tail -10
+ 1941  history | tail -20
+ 1942  history | tail -20 >> ../RUN_DOCKER 
+ 1943  vi ../RUN_DOCKER
+ 1944  mv ../RUN_DOCKER ../DOCKER_NEEDED_COMMANDS
+ 1945  docker run --rm -it registry.gitlab.com/dloco/atlas-parametrization bash
+ 1946  vi test.bash
+ 1947  bash test.bash 
+ 1948  docker run --rm -t registry.gitlab.com/dloco/atlas-parametrization bash
+ 1949  top
+ 1950  cat ../DOCKER_NEEDED_COMMANDS 
+ 1951  docker run --rm -it registry.gitlab.com/dloco/atlas-parametrization bash
+ 1952  docker login -u dloco registry.gitlab.com
+ 1953  docker login -u dloco -p Lqm4yVwRErT7BTxczk5m
+ 1954  docker login -u dloco registry.gitlab.com
+ 1955  docker login registry.gitlab.com
+ 1956  groups
+ 1957  su -s ${daniele}
+ 1958  su -s ${dloco}
+ 1959  sudo groupadd docker
+ 1960  sudo usermod -aG docker ${daniele}
+ 1961  sudo usermod -aG docker ${dloco}
+ 1962  docker run hello-world
+ 1963  sudo usermod -aG docker ${USER}
+ 1964  su -s ${USER}
+ 1965  hitory
+ 1966  history
+ 1967  history > hist
+ 1968  vi hist 
+ 1969  docker run --rm -it registry.gitlab.com/dloco/atlas-parametrization bash
+ 1970  docker login -u dloco registry.gitlab.com
+ 1971  vi hist 
+ 1972  sudo docker run --rm  -it poltype
+ 1973  ls
+ 1974  rm hist 
+ 1975  vi test1/
+ 1976  rm -rf test1/
+ 1977  ls
+ 1978  ocker run -it --rm -v /path/to/script.sh:/script.sh:ro bash:4.4 bash /script.sh
+ 1979  docker run -it --rm -v /test.bash:ro -t poltype bash /test.sh
+ 1980  docker run -it --rm -t poltype
+ 1981  sudo docker run --rm  -it poltype
+ 1982  sudo docker run -it --rm -v /test.bash:ro -t poltype bash /test.sh
+ 1983  ls
+ 1984  sudo docker run -it --rm -v .:/test.bash:ro -t poltype bash /test.sh
+ 1985  sudo docker run -it --rm -v /test.bash:ro -t poltype bash /test.sh
+ 1986  pwd
+ 1987  sudo docker run -it --rm -v /home/daniele/projects/atlas-parametrization:/test.bash:ro -t poltype bash /test.sh
+ 1988  ls
+ 1989  sudo docker run -it --rm -v $PWD/home/daniele/projects/atlas-parametrization:/test.bash:ro -t poltype bash /test.bash
+ 1990  ls
+ 1991  echo $PWD
+ 1992  ls
+ 1993  docker exec -t poltype ./test.bash
+ 1994  sudo docker exec -t poltype ./test.bash
+ 1995  docker run --rm -w $PWD -t poltype
+ 1996  sudo docker run --rm -w $PWD -t poltype
+ 1997  cd ../
+ 1998  ls
+ 1999  cp -r test_butane/ ~/Dropbox/Poltype2_Qubit/
+ 2000  exit
+ 2001  docker images
+ 2002  sudo docker images
+ 2003  sudo docker run -it poltype bash < test.bash 
+ 2004  sudo docker run -it poltype bash 
+ 2005  sudo docker images
+ 2006  sudo docker exec -it poltype mkdir test1 && cd test1
+ 2007  docker container ls
+ 2008  sudo docker container ls
+ 2009  sudo docker exec -it relaxed_chatterjee mkdir test1 && cd test1
+ 2010  sudo docker exec -it relaxed_chatterjee ls
+ 2011  sudo docker exec -it relaxed_chatterjee cd test1
+ 2012  sudo docker exec -it relaxed_chatterjee ls
+ 2013  docker container ls
+ 2014  sudo docker container ls
+ 2015  sudo docker container 
+ 2016  sudo docker container kill
+ 2017  sudo docker container kill 31f43cd21ab3
+ 2018  sudo docker container ls
+ 2019  cat ../DOCKER_NEEDED_COMMANDS 
+ 2020  docker images
+ 2021  sudo docker images
+ 2022  docker run --rm -it registry.gitlab.com/dloco/atlas-parametrization bash
+ 2023  sudo docker run --rm -it registry.gitlab.com/dloco/atlas-parametrization bash
+ 2024  sudo docker container ls
+ 2025  ls
+ 2026  vi docker-files/Dockerfile 
+ 2027  sudo docker run --rm -d registry.gitlab.com/dloco/atlas-parametrization bash
+ 2028  echo gdma
+ 2029  echo GDMA
+ 2030  top
+ 2031  ls
+ 2032  docker images ls
+ 2033  docker images 
+ 2034  sudo docker images 
+ 2035  docker container ls
+ 2036  sudo docker container ls
+ 2037  sudo docker attach
+ 2038  sudo docker attach 89ba3697bc3f2f9fd078df3265a7d53a1e55a0be797823a8e43634e979dbe3c0
+ 2039  sudo docker attach -it poltype
+ 2040  sudo docker attach --help
+ 2041  sudo docker attach 16a2d6a7d0c0
+ 2042  sudo docker attach 652507cf8b24
+ 2043  ls
+ 2044  docker container
+ 2045  docker container attach
+ 2046  cd ~/Downloads/poltype/Examples/test_butane
+ 2047  sudo docker ps -a
+ 2048  which gdma
+ 2049  sudo docker run --rm -d registry.gitlab.com/dloco/atlas-parametrization bash
+ 2050  sudo docker ps -a
+ 2051  sudo docker images
+ 2052  sudo docker rm 43f6ccaa8e06
+ 2053  sudo docker ps -a
+ 2054  history > hhhh

@@ -1,0 +1,709 @@
+Sun May 16 21:39:22 2021 Running on host: daniele-Precision-5750
+Sun May 16 21:39:22 2021 NEED QM Density Matrix: Executing Gaussian Opt and SP
+Sun May 16 21:39:22 2021 Calling: Psi4 Optimization
+Sun May 16 21:39:22 2021  Calling: psi4 benzene_3D-opt_1.psi4 benzene_3D-opt_1.log path = /home/daniele/Downloads/poltype/Examples/benzene
+Optimizer: Optimization complete!
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+At level 1: Red. Int., RFO, no backsteps, dynamic trust
+Sun May 16 21:39:32 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/benzene/benzene_3D-opt_1.log path=/home/daniele/Downloads/poltype/Examples/benzene
+Sun May 16 21:40:02 2021 All jobs have terminated 
+Sun May 16 21:40:02 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/benzene/benzene_3D-opt_1.log path=/home/daniele/Downloads/poltype/Examples/benzene
+Sun May 16 21:40:32 2021 All jobs have terminated 
+Sun May 16 21:40:36 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle       402   401   401      35.25     120.00     120.50       0.00
+ QM value = 120.01429267479436, parameters are transferred from [('H', '"Benzene HC"'), ('C', '"Benzene C"'), ('C', '"Benzene C"')]. Will use QM value.
+Sun May 16 21:40:36 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle       402   401   401      35.25     120.00     120.50       0.00
+ QM value = 120.02851413984936, parameters are transferred from [('H', '"Benzene HC"'), ('C', '"Benzene C"'), ('C', '"Benzene C"')]. Will use QM value.
+Sun May 16 21:40:36 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle       402   401   401      35.25     120.00     120.50       0.00
+ QM value = 119.93994269434897, parameters are transferred from [('H', '"Benzene HC"'), ('C', '"Benzene C"'), ('C', '"Benzene C"')]. Will use QM value.
+Sun May 16 21:40:36 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle       402   401   401      35.25     120.00     120.50       0.00
+ QM value = 120.0814336245671, parameters are transferred from [('H', '"Benzene HC"'), ('C', '"Benzene C"'), ('C', '"Benzene C"')]. Will use QM value.
+Sun May 16 21:40:36 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle       402   401   401      35.25     120.00     120.50       0.00
+ QM value = 120.0005204208218, parameters are transferred from [('H', '"Benzene HC"'), ('C', '"Benzene C"'), ('C', '"Benzene C"')]. Will use QM value.
+Sun May 16 21:40:36 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle       402   401   401      35.25     120.00     120.50       0.00
+ QM value = 119.93712098747308, parameters are transferred from [('H', '"Benzene HC"'), ('C', '"Benzene C"'), ('C', '"Benzene C"')]. Will use QM value.
+Sun May 16 21:40:36 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle       402   401   401      35.25     120.00     120.50       0.00
+ QM value = 119.97413046028574, parameters are transferred from [('H', '"Benzene HC"'), ('C', '"Benzene C"'), ('C', '"Benzene C"')]. Will use QM value.
+Sun May 16 21:40:36 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle       402   401   401      35.25     120.00     120.50       0.00
+ QM value = 119.93513696289097, parameters are transferred from [('H', '"Benzene HC"'), ('C', '"Benzene C"'), ('C', '"Benzene C"')]. Will use QM value.
+Sun May 16 21:40:36 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle       402   401   401      35.25     120.00     120.50       0.00
+ QM value = 120.04313412716114, parameters are transferred from [('H', '"Benzene HC"'), ('C', '"Benzene C"'), ('C', '"Benzene C"')]. Will use QM value.
+Sun May 16 21:40:36 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle       402   401   401      35.25     120.00     120.50       0.00
+ QM value = 120.0122429823307, parameters are transferred from [('H', '"Benzene HC"'), ('C', '"Benzene C"'), ('C', '"Benzene C"')]. Will use QM value.
+Sun May 16 21:40:36 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle       402   401   401      35.25     120.00     120.50       0.00
+ QM value = 119.991069512058, parameters are transferred from [('H', '"Benzene HC"'), ('C', '"Benzene C"'), ('C', '"Benzene C"')]. Will use QM value.
+Sun May 16 21:40:36 2021 Parameter transferred equilibrium value is too far from QM structure value , transferred parameters =angle       402   401   401      35.25     120.00     120.50       0.00
+ QM value = 120.04246137932499, parameters are transferred from [('H', '"Benzene HC"'), ('C', '"Benzene C"'), ('C', '"Benzene C"')]. Will use QM value.
+Sun May 16 21:40:36 2021 Calling: Psi4 Gradient for DMA
+Sun May 16 21:40:36 2021  Calling: psi4 benzene_3D-dma.psi4 benzene_3D-dma.log path = /home/daniele/Downloads/poltype/Examples/benzene
+Sun May 16 21:40:42 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/benzene/benzene_3D-dma.log path=/home/daniele/Downloads/poltype/Examples/benzene
+Sun May 16 21:41:12 2021 All jobs have terminated 
+Sun May 16 21:41:12 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/benzene/benzene_3D-dma.log path=/home/daniele/Downloads/poltype/Examples/benzene
+Sun May 16 21:41:42 2021 All jobs have terminated 
+Sun May 16 21:41:42 2021 NEED DMA: Executing GDMA
+Sun May 16 21:41:42 2021  Calling: /home/daniele/gdma/bin/gdma < benzene_3D.gdmain > benzene_3D.gdmaout path = /home/daniele/Downloads/poltype/Examples/benzene
+Sun May 16 21:41:42 2021  Calling: poledit.x 1 benzene_3D.gdmaout /home/daniele/Downloads/poltype/ParameterFiles/amoebabio18_header.prm < benzene_3D-peditin.txt path = /home/daniele/Downloads/poltype/Examples/benzene
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                       Version 8.9.1  February 2021                       ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2021               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Global Frame Cartesian Multipole Moments :
+
+ Site:       1         Name:   C         Atomic Number:       6
+
+ Coordinates:            1.255271      -0.608727       0.010578
+
+ Charge:                  0.01792
+ Dipole:                 -0.07221        0.03551       -0.00062
+ Quadrupole:              0.18301
+                         -0.10429        0.02325
+                          0.00120       -0.00526       -0.20626
+
+ Site:       2         Name:   C         Atomic Number:       6
+
+ Coordinates:            1.155255       0.782552      -0.023146
+
+ Charge:                 -0.01491
+ Dipole:                  0.02015        0.00408       -0.00017
+ Quadrupole:              0.08490
+                         -0.06655        0.11725
+                          0.00064       -0.00759       -0.20214
+
+ Site:       3         Name:   C         Atomic Number:       6
+
+ Coordinates:            0.100658      -1.392195       0.033736
+
+ Charge:                 -0.01119
+ Dipole:                  0.00164       -0.02250        0.00054
+ Quadrupole:              0.18145
+                          0.01081        0.02976
+                         -0.00162       -0.00595       -0.21120
+
+ Site:       4         Name:   C         Atomic Number:       6
+
+ Coordinates:           -0.100453       1.392244      -0.033737
+
+ Charge:                 -0.01128
+ Dipole:                 -0.00190        0.02251       -0.00054
+ Quadrupole:              0.18141
+                          0.01084        0.02975
+                         -0.00162       -0.00594       -0.21116
+
+ Site:       5         Name:   C         Atomic Number:       6
+
+ Coordinates:           -1.155285      -0.782374       0.023142
+
+ Charge:                 -0.01485
+ Dipole:                 -0.01996       -0.00431        0.00018
+ Quadrupole:              0.08494
+                         -0.06656        0.11714
+                          0.00064       -0.00759       -0.20208
+
+ Site:       6         Name:   C         Atomic Number:       6
+
+ Coordinates:           -1.255471       0.608461      -0.010572
+
+ Charge:                  0.01796
+ Dipole:                  0.07236       -0.03528        0.00061
+ Quadrupole:              0.18637
+                         -0.10216        0.02008
+                          0.00114       -0.00519       -0.20645
+
+ Site:       7         Name:   H         Atomic Number:       1
+
+ Coordinates:            2.233619      -1.082240       0.018792
+
+ Charge:                  0.00262
+ Dipole:                  0.17911       -0.08663        0.00150
+ Quadrupole:             -0.02083
+                          0.02129        0.01293
+                         -0.00042       -0.00020        0.00790
+
+ Site:       8         Name:   H         Atomic Number:       1
+
+ Coordinates:            2.055151       1.392143      -0.041171
+
+ Charge:                  0.00272
+ Dipole:                  0.16474        0.11170       -0.00330
+ Quadrupole:             -0.01400
+                         -0.02532        0.00605
+                          0.00070        0.00013        0.00795
+
+ Site:       9         Name:   H         Atomic Number:       1
+
+ Coordinates:            0.179144      -2.475781       0.060007
+
+ Charge:                  0.00284
+ Dipole:                  0.01441       -0.19860        0.00481
+ Quadrupole:              0.02303
+                          0.00395       -0.03102
+                         -0.00015        0.00094        0.00799
+
+ Site:      10         Name:   H         Atomic Number:       1
+
+ Coordinates:           -0.179677       2.475823      -0.059996
+
+ Charge:                  0.00287
+ Dipole:                 -0.01462        0.19857       -0.00481
+ Quadrupole:              0.02301
+                          0.00404       -0.03099
+                         -0.00015        0.00094        0.00799
+
+ Site:      11         Name:   H         Atomic Number:       1
+
+ Coordinates:           -2.054739      -1.392502       0.041171
+
+ Charge:                  0.00269
+ Dipole:                 -0.16461       -0.11184        0.00330
+ Quadrupole:             -0.01391
+                         -0.02533        0.00598
+                          0.00069        0.00014        0.00793
+
+ Site:      12         Name:   H         Atomic Number:       1
+
+ Coordinates:           -2.233211       1.083028      -0.018813
+
+ Charge:                  0.00262
+ Dipole:                 -0.17895        0.08698       -0.00151
+ Quadrupole:             -0.02069
+                          0.02140        0.01279
+                         -0.00043       -0.00019        0.00790
+
+ Local Frame Definition for Multipole Sites :
+
+     Atom     Name      Axis Type     Z Axis  X Axis  Y Axis
+
+       1      C         Bisector         2       3       0
+       2      C         Bisector         1       4       0
+       3      C         Bisector         1       5       0
+       4      C         Bisector         2       6       0
+       5      C         Bisector         3       6       0
+       6      C         Bisector         4       5       0
+       7      H         Z-then-X         1       2       0
+       8      H         Z-then-X         2       1       0
+       9      H         Z-then-X         3       1       0
+      10      H         Z-then-X         4       2       0
+      11      H         Z-then-X         5       3       0
+      12      H         Z-then-X         6       4       0
+
+ Enter Altered Local Frame Definition [<Enter>=Exit] :  
+ Choose Either the AMOEBA or HIPPO Polarization Model [A] :  
+ Polarizability Parameters for Multipole Sites :
+
+     Atom     Name       Polarize          Thole
+
+       1      C            1.7500         0.3900
+       2      C            1.7500         0.3900
+       3      C            1.7500         0.3900
+       4      C            1.7500         0.3900
+       5      C            1.7500         0.3900
+       6      C            1.7500         0.3900
+       7      H            0.6960         0.3900
+       8      H            0.6960         0.3900
+       9      H            0.6960         0.3900
+      10      H            0.6960         0.3900
+      11      H            0.6960         0.3900
+      12      H            0.6960         0.3900
+
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Enter Atom Number, Polarizability & Thole Values :  
+ Atomic Polarizabilities for Multipole Sites :
+
+     Atom     Name       Polarize          Thole
+
+       1      C            1.7500         0.3900
+       2      C            1.7500         0.3900
+       3      C            1.7500         0.3900
+       4      C            1.7500         0.3900
+       5      C            1.7500         0.3900
+       6      C            1.7500         0.3900
+       7      H            0.6960         0.3900
+       8      H            0.6960         0.3900
+       9      H            0.6960         0.3900
+      10      H            0.6960         0.3900
+      11      H            0.6960         0.3900
+      12      H            0.6960         0.3900
+
+ Choose Method for Division into Polarization Groups :
+
+    (1) Put All Atoms in One Polarization Group
+    (2) Separate into Groups at Rotatable Bonds
+    (3) Manual Entry of Bonds Separating Groups
+
+ Enter the Number of the Desired Choice [1] :  
+ Polarization Groups for Multipole Sites :
+
+     Atom     Name       Polarization Group Definition
+
+       1      C               2     3     7
+       2      C               1     4     8
+       3      C               1     5     9
+       4      C               2     6    10
+       5      C               3     6    11
+       6      C               4     5    12
+       7      H               1
+       8      H               2
+       9      H               3
+      10      H               4
+      11      H               5
+      12      H               6
+
+ Electrostatic and Polarization Scale Factors :
+
+                    1-2         1-3         1-4         1-5
+
+ M-Scale:         0.0000      0.0000      0.4000      0.8000
+ P-Inter:         0.0000      0.0000      1.0000      1.0000
+ P-Intra:         0.0000      0.0000      0.5000      1.0000
+ W-Scale:         1.0000      1.0000      1.0000      1.0000
+
+                    1-1         1-2         1-3         1-4
+
+ D-Scale:         0.0000      1.0000      1.0000      1.0000
+ U-Scale:         1.0000      1.0000      1.0000      1.0000
+
+ Use Thole Damping:           True
+ Charge Penetration:          False
+ Set D Equal to P:            False
+
+ Determination of Intergroup Induced Dipoles :
+
+    Iter        RMS Change (Debye)
+
+       1           0.0000000000
+
+ Local Frame Intergroup Induced Dipole Moments (Debye) :
+
+    Atom              X           Y           Z         Total
+
+       1           0.0000      0.0000      0.0000      0.0000
+       2           0.0000      0.0000      0.0000      0.0000
+       3           0.0000      0.0000      0.0000      0.0000
+       4           0.0000      0.0000      0.0000      0.0000
+       5           0.0000      0.0000      0.0000      0.0000
+       6           0.0000      0.0000      0.0000      0.0000
+       7           0.0000      0.0000      0.0000      0.0000
+       8           0.0000      0.0000      0.0000      0.0000
+       9           0.0000      0.0000      0.0000      0.0000
+      10           0.0000      0.0000      0.0000      0.0000
+      11           0.0000      0.0000      0.0000      0.0000
+      12           0.0000      0.0000      0.0000      0.0000
+
+ Condense Symmetric Atoms to Equivalent Types [Y] :  
+ Remove Multipole Components Zeroed by Symmetry [Y] :  
+ Final Atomic Multipole Moments after Regularization :
+
+ Atom:       1         Name:   C         Atomic Number:       6
+
+ Local Frame:            Bisector             2       3       0
+
+ Charge:                  0.01792
+ Dipole:                  0.00000        0.00000        0.08047
+ Quadrupole:             -0.02813
+                          0.00000       -0.20638
+                          0.00000        0.00000        0.23451
+
+ Atom:       2         Name:   C         Atomic Number:       6
+
+ Local Frame:            Bisector             1       4       0
+
+ Charge:                 -0.01491
+ Dipole:                  0.00000        0.00000       -0.01897
+ Quadrupole:              0.16900
+                          0.00000       -0.20233
+                          0.00000        0.00000        0.03333
+
+ Atom:       3         Name:   C         Atomic Number:       6
+
+ Local Frame:            Bisector             1       5       0
+
+ Charge:                 -0.01119
+ Dipole:                  0.00000        0.00000       -0.02257
+ Quadrupole:              0.18222
+                          0.00000       -0.21135
+                          0.00000        0.00000        0.02913
+
+ Atom:       4         Name:   C         Atomic Number:       6
+
+ Local Frame:            Bisector             2       6       0
+
+ Charge:                 -0.01128
+ Dipole:                  0.00000        0.00000       -0.02260
+ Quadrupole:              0.18219
+                          0.00000       -0.21131
+                          0.00000        0.00000        0.02912
+
+ Atom:       5         Name:   C         Atomic Number:       6
+
+ Local Frame:            Bisector             3       6       0
+
+ Charge:                 -0.01485
+ Dipole:                  0.00000        0.00000       -0.01895
+ Quadrupole:              0.16894
+                          0.00000       -0.20226
+                          0.00000        0.00000        0.03332
+
+ Atom:       6         Name:   C         Atomic Number:       6
+
+ Local Frame:            Bisector             4       5       0
+
+ Charge:                  0.01795
+ Dipole:                  0.00000        0.00000        0.08050
+ Quadrupole:             -0.02838
+                          0.00000       -0.20657
+                          0.00000        0.00000        0.23495
+
+ Atom:       7         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             1       2       0
+
+ Charge:                  0.00262
+ Dipole:                  0.00005        0.00000       -0.19897
+ Quadrupole:              0.02322
+                          0.00000        0.00789
+                          0.00003        0.00000       -0.03111
+
+ Atom:       8         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             2       1       0
+
+ Charge:                  0.00272
+ Dipole:                 -0.00009        0.00000       -0.19907
+ Quadrupole:              0.02327
+                          0.00000        0.00795
+                         -0.00008        0.00000       -0.03122
+
+ Atom:       9         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             3       1       0
+
+ Charge:                  0.00284
+ Dipole:                  0.00003        0.00000       -0.19918
+ Quadrupole:              0.02332
+                          0.00000        0.00801
+                          0.00002        0.00000       -0.03133
+
+ Atom:      10         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             4       2       0
+
+ Charge:                  0.00287
+ Dipole:                 -0.00010        0.00000       -0.19917
+ Quadrupole:              0.02331
+                          0.00000        0.00801
+                         -0.00007        0.00000       -0.03132
+
+ Atom:      11         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             5       3       0
+
+ Charge:                  0.00269
+ Dipole:                  0.00015        0.00000       -0.19904
+ Quadrupole:              0.02325
+                          0.00000        0.00794
+                          0.00012        0.00000       -0.03119
+
+ Atom:      12         Name:   H         Atomic Number:       1
+
+ Local Frame:            Z-then-X             6       4       0
+
+ Charge:                  0.00262
+ Dipole:                  0.00011        0.00000       -0.19897
+ Quadrupole:              0.02323
+                          0.00000        0.00789
+                          0.00009        0.00000       -0.03112
+Sun May 16 21:41:43 2021  Calling: potential.x 1 benzene_3D.xyz -k benzene_3D.key path = /home/daniele/Downloads/poltype/Examples/benzene
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                       Version 8.9.1  February 2021                       ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2021               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+        1     1     C     benzene_3D                   6     12.011     3
+        2     2     C     benzene_3D                   6     12.011     3
+        3     3     C     benzene_3D                   6     12.011     3
+        4     4     C     benzene_3D                   6     12.011     3
+        5     5     C     benzene_3D                   6     12.011     3
+        6     6     C     benzene_3D                   6     12.011     3
+        7     7     H     benzene_3D                   1      1.008     1
+        8     8     H     benzene_3D                   1      1.008     1
+        9     9     H     benzene_3D                   1      1.008     1
+       10    10     H     benzene_3D                   1      1.008     1
+       11    11     H     benzene_3D                   1      1.008     1
+       12    12     H     benzene_3D                   1      1.008     1
+
+ Electrostatic Potential Grid Points :                  8560
+
+ Gaussian CUBEGEN Input Written To :   benzene_3D.grid
+
+ Next, run the Gaussian CUBEGEN program; for example:
+ cubegen 0 potential=MP2 xxx.fchk xxx.cube -5 h < xxx.grid
+
+ See the Gaussian documentation for additional details;
+ After CUBEGEN, rerun Tinker POTENTIAL using Option 2
+Sun May 16 21:41:43 2021 Calling: Psi4 Gradient for ESP
+Sun May 16 21:41:43 2021  Calling: psi4 benzene_3D-esp.psi4 benzene_3D-esp.log path = /home/daniele/Downloads/poltype/Examples/benzene
+Sun May 16 21:47:09 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/benzene/benzene_3D-esp.log path=/home/daniele/Downloads/poltype/Examples/benzene
+Sun May 16 21:47:39 2021 All jobs have terminated 
+Sun May 16 21:47:39 2021 Normal termination: logfile=/home/daniele/Downloads/poltype/Examples/benzene/benzene_3D-esp.log path=/home/daniele/Downloads/poltype/Examples/benzene
+Sun May 16 21:48:09 2021 All jobs have terminated 
+Sun May 16 21:48:10 2021 Calling: Generating CUBE File from PSI4
+Sun May 16 21:48:10 2021  Calling: potential.x 2 benzene_3D_fortinker.cube path = /home/daniele/Downloads/poltype/Examples/benzene
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                       Version 8.9.1  February 2021                       ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2021               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Electrostatic Potential Written To :  benzene_3D_fortinker.pot
+Sun May 16 21:48:10 2021  Calling: /home/daniele/Downloads/poltype/PoltypeModules/avgmpoles.pl benzene_3D.key benzene_3D.xyz benzene_3D-groups.txt benzene_3D.key_2 benzene_3D.xyz_2 401 path = /home/daniele/Downloads/poltype/Examples/benzene
+About to zero the x dipole and xz quadrupoleSun May 16 21:48:10 2021  Calling: potential.x 6 benzene_3D.xyz_2 -k benzene_3D.key_2 benzene_3D_fortinker.pot N 0.1 path = /home/daniele/Downloads/poltype/Examples/benzene
+
+     ######################################################################
+   ##########################################################################
+  ###                                                                      ###
+ ###            Tinker  ---  Software Tools for Molecular Design            ###
+ ##                                                                          ##
+ ##                       Version 8.9.1  February 2021                       ##
+ ##                                                                          ##
+ ##               Copyright (c)  Jay William Ponder  1990-2021               ##
+ ###                           All Rights Reserved                          ###
+  ###                                                                      ###
+   ##########################################################################
+     ######################################################################
+
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+      401   401     C     benzene_3D                   6     12.011     3
+      402   402     H     benzene_3D                   1      1.008     1
+
+ Electrostatic Potential Grid Points :                  8560
+
+ Electrostatic Parameter Restraint Value :            1.0000
+
+ Additional Atom Definition Parameters :
+
+     Type  Class  Symbol  Description               Atomic    Mass   Valence
+
+      401   401     C     benzene_3D                   6     12.011     3
+      402   402     H     benzene_3D                   1      1.008     1
+
+ Additional Atomic Multipole Parameters :
+
+     Atom Type     Coordinate Frame Definition         Multipole Moments
+
+         401      401    401      0   Bisector    -0.00273
+                                                   0.00000  0.00000  0.01298
+                                                   0.10764
+                                                   0.00000 -0.20670
+                                                   0.00000  0.00000  0.09906
+
+         402      401    401      0   Z-then-X     0.00273
+                                                   0.00003  0.00000 -0.19907
+                                                   0.02327
+                                                   0.00000  0.00795
+                                                   0.00002  0.00000 -0.03121
+
+ Additional Atomic Dipole Polarizability Parameters :
+
+     Atom Type           Alpha       Thole     Group Atom Types
+
+         401             1.750       0.390         401  402
+         402             0.696       0.390         401
+
+ Average Electrostatic Potential over Atoms :
+      (Kcal/mole per unit charge)
+
+   Structure   Atom      Points      Potential        Target        RMS Diff
+
+        1        1         544        -4.5014        -3.9077         0.6758
+        1        2         548        -4.4528        -3.8574         0.6711
+        1        3         551        -4.5279        -3.9197         0.6891
+        1        4         542        -4.4696        -3.8719         0.6736
+        1        5         537        -4.4570        -3.8638         0.6690
+        1        6         544        -4.5330        -3.9319         0.6821
+        1        7         880         2.0058         1.8202         0.3110
+        1        8         882         1.9986         1.8171         0.3093
+        1        9         884         1.9926         1.8201         0.3021
+        1       10         886         2.0077         1.8342         0.3024
+        1       11         887         1.9945         1.8159         0.3078
+        1       12         875         2.0118         1.8269         0.3101
+
+ Electrostatic Potential over all Grid Points :
+
+ Average Potential Value for Model :                 -0.4752
+ Average Potential Magnitude for Model :              3.0180
+ Average Potential Value for Target :                -0.3579
+ Average Potential Magnitude for Target :             2.6740
+
+ Average Signed Potential Difference :               -0.1173
+ Average Unsigned Potential Difference :              0.3786
+ Root Mean Square Potential Difference :              0.4828
+
+ Potential Fitting of Electrostatic Parameters :
+
+ Parameter      Atom Type         Category            Value         Fixed
+
+    --            401             Monopole          -0.00273          X
+    --            401             X-Dipole           0.00000          X
+    --            401             Y-Dipole           0.00000          X
+     1            401             Z-Dipole           0.01298
+     2            401             XX-Quad            0.10764
+    --            401             XY-Quad            0.00000          X
+    --            401             XZ-Quad            0.00000          X
+     3            401             YY-Quad           -0.20670
+    --            401             YZ-Quad            0.00000          X
+    --            401             ZZ-Quad            0.09906
+    --            402             Monopole           0.00273          X
+     4            402             X-Dipole           0.00003
+    --            402             Y-Dipole           0.00000          X
+     5            402             Z-Dipole          -0.19907
+     6            402             XX-Quad            0.02327
+    --            402             XY-Quad            0.00000          X
+     7            402             XZ-Quad            0.00002
+     8            402             YY-Quad            0.00795
+    --            402             YZ-Quad            0.00000          X
+    --            402             ZZ-Quad           -0.03122
+
+ Levenberg-Marquardt Nonlinear Least Squares :
+
+ LS Iter     F Value      Total G     Active G    N Active   F Calls
+
+     0      997.7677    4432.5964    4432.5964         8         9
+     1      203.5670    1278.2029    1278.2029         8        18
+     2       92.4926       0.0000       0.0000         8        27
+
+ SQUARE  --  Normal Termination of Least Squares
+
+ Potential Fitting of Electrostatic Parameters :
+
+ Parameter      Atom Type         Category            Value         Fixed
+
+    --            401             Monopole          -0.00273          X
+    --            401             X-Dipole           0.00000          X
+    --            401             Y-Dipole           0.00000          X
+     1            401             Z-Dipole           0.01376
+     2            401             XX-Quad            0.10981
+    --            401             XY-Quad            0.00000          X
+    --            401             XZ-Quad            0.00000          X
+     3            401             YY-Quad           -0.20885
+    --            401             YZ-Quad            0.00000          X
+    --            401             ZZ-Quad            0.09904
+    --            402             Monopole           0.00273          X
+     4            402             X-Dipole           0.00001
+    --            402             Y-Dipole           0.00000          X
+     5            402             Z-Dipole          -0.17150
+     6            402             XX-Quad            0.05239
+    --            402             XY-Quad            0.00000          X
+     7            402             XZ-Quad           -0.00021
+     8            402             YY-Quad            0.01357
+    --            402             YZ-Quad            0.00000          X
+    --            402             ZZ-Quad           -0.06596
+
+ Average Electrostatic Potential over Atoms :
+      (Kcal/mole per unit charge)
+
+   Structure   Atom      Points      Potential        Target        RMS Diff
+
+        1        1         544        -3.9581        -3.9077         0.1185
+        1        2         548        -3.9113        -3.8574         0.1225
+        1        3         551        -3.9792        -3.9197         0.1313
+        1        4         542        -3.9269        -3.8719         0.1211
+        1        5         537        -3.9151        -3.8638         0.1161
+        1        6         544        -3.9843        -3.9319         0.1230
+        1        7         880         1.7748         1.8202         0.1067
+        1        8         882         1.7688         1.8171         0.1086
+        1        9         884         1.7638         1.8201         0.1118
+        1       10         886         1.7777         1.8342         0.1134
+        1       11         887         1.7666         1.8159         0.1094
+        1       12         875         1.7807         1.8269         0.1068
+
+ Electrostatic Potential over all Grid Points :
+
+ Average Potential Value for Model :                 -0.4096
+ Average Potential Magnitude for Model :              2.6582
+ Average Potential Value for Target :                -0.3579
+ Average Potential Magnitude for Target :             2.6740
+
+ Average Signed Potential Difference :               -0.0517
+ Average Unsigned Potential Difference :              0.0651
+ Root Mean Square Potential Difference :              0.1145
+Sun May 16 21:48:10 2021 
+Sun May 16 21:48:10 2021 =========================================================
+Sun May 16 21:48:10 2021 Electrostatic Potential Comparison
+
+Sun May 16 21:48:10 2021  Calling: potential.x 5 benzene_3D.xyz_2 -k benzene_3D.key_3 benzene_3D_fortinker.pot N > RMSPD.txt path = /home/daniele/Downloads/poltype/Examples/benzene
+Sun May 16 21:48:11 2021 
+Sun May 16 21:48:11 2021 =========================================================
+Sun May 16 21:48:11 2021 Minimizing structure
+
+Sun May 16 21:48:11 2021  Calling: minimize.x -k final.key final.xyz 0.1 > Minimized_final.out path = /home/daniele/Downloads/poltype/Examples/benzene
+Sun May 16 21:48:11 2021 
+
+Sun May 16 21:48:11 2021 =========================================================
+
+Sun May 16 21:48:11 2021 Structure RMSD Comparison
+
+
+Sun May 16 21:48:11 2021  Calling: superpose.x benzene_3D.xyz_2 final.xyz_2 1 Y M N 0  > benzene_3D-superin.txt path = /home/daniele/Downloads/poltype/Examples/benzene
+Sun May 16 21:48:12 2021 
+Sun May 16 21:48:12 2021 =========================================================
+Sun May 16 21:48:12 2021 QM Dipole moment
+
+Sun May 16 21:48:12 2021 QM Dipole moment = 0.0
+Sun May 16 21:48:12 2021 
+Sun May 16 21:48:12 2021 =========================================================
+Sun May 16 21:48:12 2021 MM Dipole moment
+
+Sun May 16 21:48:12 2021  Calling: analyze.x benzene_3D.xyz_2 -k final.key em | grep -A11 Charge>MMDipole.txt path = /home/daniele/Downloads/poltype/Examples/benzene
+Sun May 16 21:48:12 2021 MM Dipole moment = 0.0
+Sun May 16 21:48:12 2021 Poltype Job Finished
+
+Sun May 16 21:48:12 2021 Poltype has completed successfully, but this software is still under active development. It is your responsibility to check your own final parameters, while we are still in development phase.
