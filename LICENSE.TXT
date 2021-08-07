@@ -1,2 +1,1 @@
-POLTYPE uses the same license as Tinker.
-https://github.com/TinkerTools/tinker/blob/release/LICENSE.pdf  
+
